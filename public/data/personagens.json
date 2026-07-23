@@ -1,0 +1,47 @@
+[
+  {
+    "id": "moises",
+    "nome": "Moisés",
+    "sexo": "Masculino",
+    "testamento": "Antigo Testamento",
+    "divisao": "Pentateuco",
+    "livroPrincipal": "Êxodo",
+    "historiaPrincipal": "Abertura do Mar Vermelho",
+    "local": "Egito e Sinai",
+    "nacionalidade": "Israelita (Hebreu)",
+    "nascimento": "~1393 a.C.",
+    "ocupacao": "Profeta e Líder",
+    "dica1": "Conduziu o povo de Deus pelo deserto durante quarenta anos.",
+    "dica2": "Recebeu as Tábuas dos Dez Mandamentos no Monte Sinai."
+  },
+  {
+    "id": "pedro",
+    "nome": "Pedro",
+    "sexo": "Masculino",
+    "testamento": "Novo Testamento",
+    "divisao": "Evangelhos",
+    "livroPrincipal": "Mateus",
+    "historiaPrincipal": "Caminhar sobre as águas",
+    "local": "Galileia",
+    "nacionalidade": "Judeu Galileu",
+    "nascimento": "~1 a.C.",
+    "ocupacao": "Pescador e Apóstolo",
+    "dica1": "Era irmão de André e um dos três discípulos mais próximos do Mestre.",
+    "dica2": "Negou a Cristo três vezes antes do galo cantar no pátio do sumo sacerdote."
+  },
+  {
+    "id": "maria",
+    "nome": "Maria",
+    "sexo": "Feminino",
+    "testamento": "Novo Testamento",
+    "divisao": "Evangelhos",
+    "livroPrincipal": "Lucas",
+    "historiaPrincipal": "Mãe de Jesus Cristo",
+    "local": "Nazaré e Belém",
+    "nacionalidade": "Judéia (Israelita)",
+    "nascimento": "~18 a.C.",
+    "ocupacao": "Mãe e Serva do Senhor",
+    "dica1": "Recebeu a anunciação do anjo Gabriel sobre o nascimento do Salvador.",
+    "dica2": "Estava presente nas bodas de Caná e permaneceu ao pé da cruz."
+  }
+]

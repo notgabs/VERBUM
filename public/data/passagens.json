@@ -1,0 +1,38 @@
+[
+  {
+    "id": "joao-3-16",
+    "texto": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.",
+    "livro": "João",
+    "capitulo": 3,
+    "versiculo": 16,
+    "testamento": "Novo Testamento",
+    "divisao": "Evangelhos",
+    "contexto": "Diálogo noturno de Jesus com Nicodemos sobre o novo nascimento.",
+    "dica1": "Esta passagem encontra-se em um dos quatro Santos Evangelhos.",
+    "dica2": "O capítulo narra a conversa com Nicodemos sobre nascer do Espírito."
+  },
+  {
+    "id": "salmos-23-1",
+    "texto": "O Senhor é o meu pastor; nada me faltará.",
+    "livro": "Salmos",
+    "capitulo": 23,
+    "versiculo": 1,
+    "testamento": "Antigo Testamento",
+    "divisao": "Livros Poéticos",
+    "contexto": "Cântico do Rei Davi expressando plena confiança no cuidado divino.",
+    "dica1": "Pertence aos Livros Poéticos e Sapienciais do Antigo Testamento.",
+    "dica2": "É o mais famoso hino de confiança composto pelo Rei Davi."
+  },
+  {
+    "id": "filipenses-4-13",
+    "texto": "Tudo posso naquele que me fortalece.",
+    "livro": "Filipenses",
+    "capitulo": 4,
+    "versiculo": 13,
+    "testamento": "Novo Testamento",
+    "divisao": "Epístolas Paulinas",
+    "contexto": "Carta de Paulo agradecendo aos irmãos da Macedônia e falando sobre o contentamento.",
+    "dica1": "É uma das epístolas do Apóstolo Paulo escrita aos irmãos da Macedônia.",
+    "dica2": "O capítulo é o último desta carta e fala sobre o contentamento em qualquer situação."
+  }
+]
