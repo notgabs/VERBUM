@@ -2,74 +2,72 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
-import confetti from "canvas-confetti";
 import { playClickSound } from "@/utils/sound";
+import { CharacterPhoto } from "@/components/CharacterPhoto";
+import { ModalBase } from "@/components/ModalBase";
 
 interface VictoryModalProps {
   solutionName: string;
+  solutionImage?: string;
+  solutionImageId?: string;
   attemptsCount: number;
   hintsUsedCount: number;
   nextGameHref: string;
   nextGameLabel: string;
   nextGameDescription: string;
   nextGameIcon: string;
+  passageTitle?: string;
+  passageExplanation?: string;
+  onClose?: () => void;
+  onReplay?: () => void;
 }
 
-export const VictoryModal: React.FC<VictoryModalProps> = ({
-  solutionName,
-  attemptsCount,
-  hintsUsedCount,
-  nextGameHref,
-  nextGameLabel,
-  nextGameDescription,
-  nextGameIcon,
-}) => {
+export const VictoryModal: React.FC<VictoryModalProps> = (props) => {
+  const isPassage = Boolean(props.passageTitle);
+
   useEffect(() => {
-    confetti({
-      particleCount: 75,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ["#f5c458", "#e6af2e", "#ffffff", "#4ec25f", "#c98a1a"],
-    });
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    void import("canvas-confetti").then(({ default: confetti }) => confetti({ particleCount: 75, spread: 70, origin: { y: 0.6 }, colors: ["#f5c458", "#e6af2e", "#ffffff", "#4ec25f", "#c98a1a"] }));
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xs animate-fadeIn">
-      <section className="w-full max-w-md border-2 border-[#62f3ad] bg-[linear-gradient(180deg,#0e542d_0%,#10271d_100%)] p-5 sm:p-6 text-center text-[#f4ecd8] shadow-[0_0_28px_rgba(98,243,173,0.25)]">
-        <h2 className="font-serif text-4xl font-black lowercase leading-none text-white sm:text-5xl">
-          amém! amém!
-        </h2>
+    <ModalBase label="Vitória" onClose={props.onClose} className="w-full max-w-md border-2 border-[#62f3ad] bg-[linear-gradient(180deg,#0e542d_0%,#10271d_100%)] p-5 sm:p-6 text-center text-[#f4ecd8] shadow-[0_0_28px_rgba(98,243,173,0.25)] animate-fadeIn">
+        <h2 className="font-serif text-4xl font-black lowercase leading-none text-white sm:text-5xl">amém! amém!</h2>
+        {props.onClose && <button type="button" onClick={() => { playClickSound(); props.onClose?.(); }} className="pixel-btn-wood mt-4 px-4 py-2 text-xs font-bold uppercase">Fechar</button>}
 
-        <div className="mx-auto mt-5 flex w-fit items-center gap-3 text-left">
-          <div className="flex h-16 w-16 items-center justify-center border-2 border-white bg-[#183628] p-1">
-            <img src="/cubo-interrogacao.svg" alt="Personagem acertado" className="h-full w-full object-contain" />
+        {isPassage ? (
+          <div className="mt-5">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#c9e0d1]">Você acertou a passagem</p>
+            <p className="mt-2 font-serif text-2xl font-black leading-tight text-white">{props.passageTitle}</p>
+            <div className="mx-auto mt-4 w-fit border-2 border-[#35e8e1] bg-[#10271d] px-4 py-2 font-serif text-lg font-bold text-[#35e8e1]">
+              {props.solutionName}
+            </div>
+            <div className="mt-5 border-2 border-[#f5c458]/70 bg-[#10271d]/80 p-4 text-left shadow-inner">
+              <p className="text-xs font-black uppercase tracking-widest text-[#f5c458]">Sobre esta passagem</p>
+              <p className="mt-2 font-serif text-base leading-relaxed text-[#f4ecd8]">{props.passageExplanation}</p>
+            </div>
           </div>
-          <div>
-            <p className="text-sm font-black">Você acertou</p>
-            <p className="font-serif text-2xl font-black text-white">{solutionName}</p>
+        ) : (
+          <div className="mx-auto mt-5 flex w-fit items-center gap-3 text-left">
+            <div className={`flex items-center justify-center border-2 border-white bg-[#183628] ${props.solutionImage ? "h-28 w-28 sm:h-32 sm:w-32" : "h-16 w-16 p-1"}`}>
+              <CharacterPhoto key={props.solutionImageId || props.solutionName} id={props.solutionImageId} image={props.solutionImage} alt={`Imagem de ${props.solutionName}`} className="h-full w-full object-cover" />
+            </div>
+            <div>
+              <p className="text-sm font-black">Você acertou</p>
+              <p className="font-serif text-2xl font-black text-white">{props.solutionName}</p>
+            </div>
           </div>
-        </div>
+        )}
 
-        <p className="mt-4 text-sm font-bold">
-          Número de tentativas: <span className="text-[#35e8e1]">{attemptsCount}</span>
-        </p>
-        <p className="mt-1 text-xs text-[#c9e0d1]">Dicas usadas: {hintsUsedCount}</p>
-
+        <p className="mt-4 text-sm font-bold">Número de tentativas: <span className="text-[#35e8e1]">{props.attemptsCount}</span></p>
+        <p className="mt-1 text-xs text-[#c9e0d1]">Dicas usadas: {props.hintsUsedCount}</p>
+        {props.onReplay && <button type="button" onClick={() => { playClickSound(); props.onReplay?.(); }} className="pixel-btn-wood mt-4 px-4 py-2 text-xs font-bold uppercase">Jogar novamente</button>}
         <div className="my-5 h-px w-36 bg-white/80 mx-auto" />
-
         <p className="mb-2 font-serif text-xl font-black text-white">Próximo jogo</p>
-        <Link
-          href={nextGameHref}
-          onClick={() => playClickSound()}
-          className="mx-auto flex max-w-xs items-center gap-3 border-2 border-[#35e8e1] bg-[#1c2421] p-3 text-left transition-colors hover:bg-[#28342e]"
-        >
-          <img src={nextGameIcon} alt="" className="h-12 w-12 shrink-0 object-contain" />
-          <span>
-            <span className="block font-serif text-xl font-black text-white">{nextGameLabel}</span>
-            <span className="block text-xs font-bold text-[#d7e7dd]">{nextGameDescription}</span>
-          </span>
+        <Link href={props.nextGameHref} onClick={() => playClickSound()} className="mx-auto flex max-w-xs items-center gap-3 border-2 border-[#35e8e1] bg-[#1c2421] p-3 text-left transition-colors hover:bg-[#28342e]">
+          <img src={props.nextGameIcon} alt="" className="h-12 w-12 shrink-0 object-contain" />
+          <span><span className="block font-serif text-xl font-black text-white">{props.nextGameLabel}</span><span className="block text-xs font-bold text-[#d7e7dd]">{props.nextGameDescription}</span></span>
         </Link>
-      </section>
-    </div>
+    </ModalBase>
   );
 };

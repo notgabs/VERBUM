@@ -1,65 +1,72 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import { Personagem, PersonagemGuessComparison, TileMatch } from "@/types/game";
-import {
-  comparePersonagem,
-} from "@/game/characterLogic";
+import { comparePersonagem } from "@/game/characterLogic";
 import { useGameStats } from "@/hooks/useGameStats";
 import {
   playClickSound,
-  playCorrectSound,
-  playWrongSound,
+  playRevealSound,
   playVictorySound,
 } from "@/utils/sound";
 import { VictoryModal } from "@/components/VictoryModal";
-import confetti from "canvas-confetti";
+import { CharacterPhoto } from "@/components/CharacterPhoto";
+import { normalizeForSearch } from "@/utils/text";
+import { GAME_CONFIG } from "@/config/game";
+import { selectDailyId } from "@/domain/game/dailyChallenge";
+import { isPersonagem } from "@/domain/game/catalogContracts";
+import { useJsonCatalog } from "@/hooks/useJsonCatalog";
+import { useTimeoutRegistry } from "@/hooks/useTimeoutRegistry";
+import { CatalogState } from "@/components/CatalogState";
+import { ModalBase } from "@/components/ModalBase";
 
 export const CharacterGame: React.FC = () => {
-  const [characters, setCharacters] = useState<Personagem[]>([]);
-  const [targetChar, setTargetChar] = useState<Personagem | null>(null);
+  const revealStepDuration = 200;
+  const comparisonGridClass =
+    "comparison-grid grid w-full grid-cols-[1.3fr_0.9fr_1.2fr_1fr_1.2fr_1.85fr_1.25fr_1.2fr] gap-1";
   const [query, setQuery] = useState("");
   const [guesses, setGuesses] = useState<PersonagemGuessComparison[]>([]);
   const [isWon, setIsWon] = useState(false);
+  const [isVictoryModalOpen, setIsVictoryModalOpen] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
   const [hintsUnlocked, setHintsUnlocked] = useState<{
     h1: boolean;
     h2: boolean;
   }>({ h1: false, h2: false });
+  const [activeHint, setActiveHint] = useState<"h1" | "h2" | null>(null);
   const [activeDropdown, setActiveDropdown] = useState(false);
+  const [activeOptionIndex, setActiveOptionIndex] = useState(-1);
+  const [revealingGuessId, setRevealingGuessId] = useState<string | null>(null);
+  const [isRevealing, setIsRevealing] = useState(false);
 
   const { recordGameResult } = useGameStats();
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const { schedule } = useTimeoutRegistry();
+  const { data: characters, isLoading, error, retry } = useJsonCatalog("/data/personagens.json", isPersonagem);
 
-  // Load characters from public/data/personagens.json
-  useEffect(() => {
-    fetch("/data/personagens.json")
-      .then((res) => res.json())
-      .then((data: Personagem[]) => {
-        setCharacters(data);
-        if (data.length > 0) {
-          // Select a target character
-          const rand = data[Math.floor(Math.random() * data.length)];
-          setTargetChar(rand);
-        }
-      })
-      .catch((err) => console.error("Error loading characters:", err));
-  }, []);
+  const targetChar = useMemo(() => {
+    if (characters.length === 0) return null;
+    const configuredId = GAME_CONFIG.developmentMode ? GAME_CONFIG.fixedCharacterId : undefined;
+    const dailyId = GAME_CONFIG.enableDailyChallenge ? selectDailyId(characters.map((character) => character.id)) : undefined;
+    return characters.find((character) => character.id === configuredId || character.id === dailyId) ?? characters[0];
+  }, [characters]);
 
-  // Update hints when guesses change
-  useEffect(() => {
-    if (guesses.length >= 6) {
-      setHintsUnlocked((prev) => ({ ...prev, h1: true }));
-    }
-    if (guesses.length >= 8) {
-      setHintsUnlocked((prev) => ({ ...prev, h2: true }));
-    }
-  }, [guesses.length]);
+  const hint1Available = guesses.length >= 6;
+  const hint2Available = guesses.length >= 12;
+
+  const handleHintClick = (hint: "h1" | "h2") => {
+    const isAvailable = hint === "h1" ? hint1Available : hint2Available;
+
+    if (!isAvailable) return;
+
+    playClickSound();
+    setHintsUnlocked((prev) => ({ ...prev, [hint]: true }));
+    setActiveHint(hint);
+  };
 
   const handleSelectCharacter = (selected: Personagem) => {
-    if (!targetChar || isWon) return;
+    if (!targetChar || isWon || isRevealing) return;
 
-    // Check if already guessed
     const alreadyGuessed = guesses.some((g) => g.character.id === selected.id);
     if (alreadyGuessed) {
       setQuery("");
@@ -69,35 +76,48 @@ export const CharacterGame: React.FC = () => {
 
     const result = comparePersonagem(selected, targetChar);
     const updatedGuesses = [result, ...guesses];
+    const revealDuration = 8 * revealStepDuration + 250;
+
     setGuesses(updatedGuesses);
+    setRevealingGuessId(selected.id);
+    setIsRevealing(true);
     setQuery("");
     setActiveDropdown(false);
 
+    schedule(() => setIsRevealing(false), revealDuration);
+    Array.from({ length: 8 }, (_, index) =>
+      schedule(playRevealSound, index * revealStepDuration)
+    );
+
     if (result.isFullyCorrect) {
       setIsWon(true);
-      playVictorySound();
-      confetti({
-        particleCount: 100,
-        spread: 80,
-        origin: { y: 0.6 },
-        colors: ["#ffd700", "#4ec25f", "#ffffff"],
-      });
+      schedule(() => {
+        setIsVictoryModalOpen(true);
+        playVictorySound();
+        void import("canvas-confetti").then(({ default: confetti }) => confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 }, colors: ["#ffd700", "#4ec25f", "#ffffff"] }));
 
-      const hintsCount =
-        (hintsUnlocked.h1 ? 1 : 0) + (hintsUnlocked.h2 ? 1 : 0);
-      recordGameResult(true, updatedGuesses.length, hintsCount);
+        const hintsCount =
+          (hintsUnlocked.h1 ? 1 : 0) + (hintsUnlocked.h2 ? 1 : 0);
+        recordGameResult(true, updatedGuesses.length, hintsCount);
+      }, revealDuration);
     } else {
-      playWrongSound();
       setIsShaking(true);
-      setTimeout(() => setIsShaking(false), 400);
+      schedule(() => setIsShaking(false), 400);
     }
   };
 
-  const filteredCharacters = characters.filter(
+  const filteredCharacters = useMemo(() => characters.filter(
     (c) =>
-      c.nome.toLowerCase().includes(query.toLowerCase().trim()) &&
+      normalizeForSearch(c.nome).includes(normalizeForSearch(query.trim())) &&
       !guesses.some((g) => g.character.id === c.id)
-  );
+  ), [characters, guesses, query]);
+
+  const replay = () => {
+    if (!GAME_CONFIG.allowReplay) return;
+    setGuesses([]); setIsWon(false); setIsVictoryModalOpen(false); setHintsUnlocked({ h1: false, h2: false }); setActiveHint(null); inputRef.current?.focus();
+  };
+
+  if (isLoading || error) return <CatalogState error={error} onRetry={retry} />;
 
   const getTileClass = (match: TileMatch) => {
     switch (match) {
@@ -107,19 +127,18 @@ export const CharacterGame: React.FC = () => {
         return "pixel-tile-yellow";
       case "WRONG":
         return "pixel-tile-red";
+      default:
+        return "pixel-tile-red";
     }
   };
 
-  const getTileLabel = (match: TileMatch) => {
-    switch (match) {
-      case "CORRECT":
-        return "🟩";
-      case "PARTIAL":
-        return "🟨";
-      case "WRONG":
-        return "🟥";
-    }
-  };
+  const getRevealClass = (characterId: string) =>
+    characterId === revealingGuessId ? "animate-character-reveal" : "";
+
+  const getRevealStyle = (characterId: string, index: number) =>
+    characterId === revealingGuessId
+      ? { animationDelay: `${index * revealStepDuration}ms` }
+      : undefined;
 
   return (
     <div
@@ -128,35 +147,41 @@ export const CharacterGame: React.FC = () => {
       }`}
     >
       {/* Title Parchment Banner */}
-      <div className="pixel-parchment-dark w-full p-4 text-center relative">
+      <div className="pixel-parchment-dark w-full max-w-xl p-4 text-center relative">
         <div className="absolute -top-10 left-0 z-10 flex gap-1">
-          <div
+          <button type="button"
             title="Dica 1"
+            disabled={!hint1Available}
+            aria-label="Abrir dica 1"
+            onClick={() => handleHintClick("h1")}
             className={`flex h-8 w-8 items-center justify-center border-2 text-sm ${
-              hintsUnlocked.h1
-                ? "border-[#b57a0d] bg-[#f5c458] text-[#2b1810]"
-                : "border-[#382112] bg-[#2b1f13] text-[#6b513c]"
+              hint1Available
+                ? "border-[#0b3558] bg-[#174d78] text-[#fff7e7]"
+                : "border-[#0b3558] bg-[#174d78]/60 text-[#b5d5e8]"
             }`}
           >
             💡
-          </div>
-          <div
+          </button>
+          <button type="button"
             title="Dica 2"
+            disabled={!hint2Available}
+            aria-label="Abrir dica 2"
+            onClick={() => handleHintClick("h2")}
             className={`flex h-8 w-8 items-center justify-center border-2 text-sm ${
-              hintsUnlocked.h2
-                ? "border-[#b57a0d] bg-[#f5c458] text-[#2b1810]"
-                : "border-[#382112] bg-[#2b1f13] text-[#6b513c]"
+              hint2Available
+                ? "border-[#0b3558] bg-[#174d78] text-[#fff7e7]"
+                : "border-[#0b3558] bg-[#174d78]/60 text-[#b5d5e8]"
             }`}
           >
             💡
-          </div>
+          </button>
         </div>
-        <h1 className="text-xl sm:text-2xl font-black tracking-widest text-[#f5c458] uppercase flex items-center justify-center gap-2">
+        <h1 className="character-game-title text-xl sm:text-2xl font-black tracking-widest text-[#c98712] uppercase flex items-center justify-center gap-2">
           <span>📖</span>
           <span>Adivinhe o Personagem</span>
           <span>📖</span>
         </h1>
-        <p className="text-xs sm:text-sm text-[#d4b996] mt-1">
+        <p className="text-xs sm:text-sm text-[#285b7f] mt-1">
           Digite o nome de uma figura bíblica para comparar seus atributos
         </p>
       </div>
@@ -165,44 +190,72 @@ export const CharacterGame: React.FC = () => {
       {!isWon && (
         <div className="relative order-3 w-full max-w-xl">
           <div className="flex gap-2">
-            <input
+            <label htmlFor="character-search" className="sr-only">Nome do personagem</label><input
+              id="character-search"
               ref={inputRef}
               type="text"
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
                 setActiveDropdown(true);
+                setActiveOptionIndex(-1);
               }}
               onFocus={() => setActiveDropdown(true)}
+              onKeyDown={(event) => {
+                if (event.key === "ArrowDown") {
+                  event.preventDefault();
+                  setActiveOptionIndex((index) => Math.min(index + 1, filteredCharacters.length - 1));
+                } else if (event.key === "ArrowUp") {
+                  event.preventDefault();
+                  setActiveOptionIndex((index) => Math.max(index - 1, 0));
+                } else if (event.key === "Enter" && activeOptionIndex >= 0) {
+                  event.preventDefault();
+                  const selected = filteredCharacters[activeOptionIndex];
+                  if (selected) { playClickSound(); handleSelectCharacter(selected); }
+                } else if (event.key === "Escape") {
+                  setActiveDropdown(false);
+                  setActiveOptionIndex(-1);
+                }
+              }}
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded={activeDropdown && query.trim().length > 0}
+              aria-controls="character-options"
+              aria-activedescendant={activeOptionIndex >= 0 ? `character-option-${filteredCharacters[activeOptionIndex]?.id}` : undefined}
               placeholder="Digite o nome"
-              className="flex-1 bg-[#1e1008] text-[#f4ecd8] border-4 border-[#52311c] px-4 py-2.5 text-sm font-bold focus:outline-none focus:border-[#f5c458] placeholder:text-[#8a6b52]"
+              className="flex-1 bg-[#fffaf0] text-[#183c5b] border-4 border-[#2875a8] px-4 py-2.5 text-sm font-bold focus:outline-none focus:border-[#e3ab32] placeholder:text-[#6d8fa7]"
             />
           </div>
 
-          {/* Autocomplete Dropdown */}
           {activeDropdown && query.trim().length > 0 && (
-            <div className="absolute top-full left-0 right-0 mt-1 z-40 bg-[#2b1810] border-4 border-[#52311c] shadow-2xl max-h-60 overflow-y-auto">
+            <div id="character-options" role="listbox" className="absolute top-full left-0 right-0 mt-1 z-40 bg-[#f5ecd8] border-4 border-[#2875a8] shadow-2xl max-h-60 overflow-y-auto">
               {filteredCharacters.length > 0 ? (
                 filteredCharacters.map((char) => (
                   <button
                     key={char.id}
+                    id={`character-option-${char.id}`}
                     onClick={() => {
                       playClickSound();
                       handleSelectCharacter(char);
                     }}
-                    className="w-full text-left px-4 py-3 hover:bg-[#4a2b1b] border-b border-[#3b2012] flex items-center justify-between text-sm font-bold text-[#f5eedc] cursor-pointer"
+                    role="option" aria-selected={activeOptionIndex === filteredCharacters.indexOf(char)} className={`w-full text-left px-4 py-3 hover:bg-[#dceefa] border-b border-[#b5d5e8] flex items-center justify-between text-sm font-bold text-[#183c5b] cursor-pointer ${activeOptionIndex === filteredCharacters.indexOf(char) ? "bg-[#dceefa]" : ""}`}
                   >
                     <span className="flex items-center gap-2">
-                      <span>📜</span>
+                      <CharacterPhoto
+                        id={char.id}
+                        image={char.imagem}
+                        alt={`Retrato de ${char.nome}`}
+                        className="h-8 w-8 shrink-0 border border-[#2875a8] object-cover"
+                      />
                       <span>{char.nome}</span>
                     </span>
-                    <span className="text-xs text-[#c2a87c]">
+                    <span className="text-xs text-[#527c98]">
                       {char.testamento}
                     </span>
                   </button>
                 ))
               ) : (
-                <div className="px-4 py-3 text-xs text-[#997c65]">
+                <div className="px-4 py-3 text-xs text-[#527c98]">
                   Nenhum personagem correspondente encontrado.
                 </div>
               )}
@@ -211,47 +264,19 @@ export const CharacterGame: React.FC = () => {
         </div>
       )}
 
-      {/* Hints Section (Unlocks after 6 and 8 attempts) */}
-      <div className="hidden order-2 w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div
-          className={`p-3 border-2 ${
-            hintsUnlocked.h1
-              ? "bg-[#2b1f13] border-[#f5c458] text-[#f4ecd8]"
-              : "bg-[#160d07] border-[#382112] text-[#6b513c]"
-          }`}
-        >
-          <div className="flex items-center justify-between text-xs font-black uppercase mb-1">
-            <span>💡 Dica 1 (6 tentativas)</span>
-            <span>{hintsUnlocked.h1 ? "🔓 Revelada" : "🔒 Bloqueada"}</span>
-          </div>
-          <p className="text-xs font-serif italic">
-            {hintsUnlocked.h1
-              ? targetChar?.dica1
-              : `Realize mais ${Math.max(0, 6 - guesses.length)} tentativa(s) para desbloquear.`}
-          </p>
-        </div>
-
-        <div
-          className={`p-3 border-2 ${
-            hintsUnlocked.h2
-              ? "bg-[#2b1f13] border-[#f5c458] text-[#f4ecd8]"
-              : "bg-[#160d07] border-[#382112] text-[#6b513c]"
-          }`}
-        >
-          <div className="flex items-center justify-between text-xs font-black uppercase mb-1">
-            <span>💡 Dica 2 (8 tentativas)</span>
-            <span>{hintsUnlocked.h2 ? "🔓 Revelada" : "🔒 Bloqueada"}</span>
-          </div>
-          <p className="text-xs font-serif italic">
-            {hintsUnlocked.h2
-              ? targetChar?.dica2
-              : `Realize mais ${Math.max(0, 8 - guesses.length)} tentativa(s) para desbloquear.`}
-          </p>
-        </div>
-      </div>
+      {activeHint && targetChar && (
+        <ModalBase labelledBy="hint-dialog-title" onClose={() => setActiveHint(null)} className="pixel-parchment-dark w-full max-w-md border-4 border-[#f5c458] p-6 text-center shadow-2xl">
+            <p className="mb-2 text-xs font-black uppercase tracking-widest text-[#b57a0d]">
+              Dica {activeHint === "h1" ? "1" : "2"}
+            </p>
+            <p id="hint-dialog-title" className="font-serif text-lg italic text-[#f4ecd8]">
+              {activeHint === "h1" ? targetChar.dica1 : targetChar.dica2}
+            </p>
+        </ModalBase>
+      )}
 
       {/* Comparison Legend */}
-      <div className="order-4 flex flex-wrap items-center justify-center gap-3 text-xs font-bold bg-[#140a04] px-3 py-1.5 border border-[#3e2413]">
+      <div className="order-4 flex flex-wrap items-center justify-center gap-3 text-xs font-bold bg-[#174d78] text-[#fff7e7] px-3 py-1.5 border border-[#0b3558]">
         <span className="flex items-center gap-1">
           <span className="inline-block w-3 h-3 bg-[#2b7a35]"></span> Correto
         </span>
@@ -263,120 +288,77 @@ export const CharacterGame: React.FC = () => {
         </span>
       </div>
 
-      {/* Comparison Grid Table */}
+      {/* Comparison Grid Table - 8 colunas */}
       {guesses.length > 0 && (
         <div className="order-5 w-full overflow-visible pb-4">
           <div className="w-full min-w-0 flex flex-col gap-2">
-            {/* Headers */}
-            <div className="grid grid-cols-10 gap-1 text-center text-[10px] sm:text-xs font-black uppercase text-[#e2ceaa]">
+            <div className={`${comparisonGridClass} text-center text-[10px] sm:text-xs font-black uppercase text-[#e2ceaa]`}>
               <div className="comparison-header">Personagem</div>
-              <div className="comparison-header">Sexo</div>
-              <div className="comparison-header">Testamento</div>
+              <div className="comparison-header">Gênero</div>
+              <div className="comparison-header text-[9px] sm:text-xs">Testamento</div>
               <div className="comparison-header">Divisão</div>
-              <div className="comparison-header">Livro</div>
-              <div className="comparison-header">História</div>
-              <div className="comparison-header">Local</div>
-              <div className="comparison-header">Nacionalidade</div>
+              <div className="comparison-header">História na Bíblia</div>
+              <div className="comparison-header">Conhecido Por</div>
               <div className="comparison-header">Nascimento</div>
-              <div className="comparison-header">Ocupação</div>
+              <div className="comparison-header text-[9px] sm:text-xs">Ocupação</div>
             </div>
 
-            {/* Guesses Rows */}
-            {guesses.map((g, idx) => (
+            {guesses.map((g) => (
               <div
-                key={idx}
-                className="grid grid-cols-10 gap-1 text-center font-bold"
+                key={g.character.id}
+                className={`${comparisonGridClass} text-center font-bold`}
               >
-                {/* Character Name */}
-                <div className="comparison-cell comparison-character-cell">
-                  <img
-                    src="/cubo-interrogacao.svg"
+                <div
+                  className={`comparison-cell comparison-character-cell ${getRevealClass(g.character.id)}`}
+                  style={getRevealStyle(g.character.id, 0)}
+                  title={g.character.nome}
+                >
+                  <CharacterPhoto
+                    key={g.character.id}
+                    id={g.character.id}
+                    image={g.character.imagem}
                     alt={`Imagem de ${g.character.nome}`}
-                    className="h-full w-full object-contain p-1"
+                    className="h-full w-full object-cover"
                   />
-                </div>
-
-                {/* Sexo */}
-                <div
-                  className={`comparison-cell ${getTileClass(
-                    g.sexoMatch
-                  )}`}
-                >
-                  <span>{g.character.sexo}</span>
-                </div>
-
-                {/* Testamento */}
-                <div
-                  className={`comparison-cell ${getTileClass(
-                    g.testamentoMatch
-                  )}`}
-                >
-                  <span className="leading-tight">{g.character.testamento}</span>
-                </div>
-
-                {/* Divisão */}
-                <div
-                  className={`comparison-cell ${getTileClass(
-                    g.divisaoMatch
-                  )}`}
-                >
-                  <span className="leading-tight">{g.character.divisao}</span>
-                </div>
-
-                {/* Livro Principal */}
-                <div
-                  className={`comparison-cell ${getTileClass(
-                    g.livroMatch
-                  )}`}
-                >
-                  <span>{g.character.livroPrincipal}</span>
-                </div>
-
-                {/* História Principal */}
-                <div
-                  className={`comparison-cell ${getTileClass(
-                    g.historiaMatch
-                  )}`}
-                >
-                  <span className="leading-tight">
-                    {g.character.historiaPrincipal}
+                  <span className="character-name-tooltip" role="tooltip">
+                    {g.character.nome}
                   </span>
                 </div>
 
-                {/* Local */}
-                <div
-                  className={`comparison-cell ${getTileClass(
-                    g.localMatch
-                  )}`}
-                >
-                  <span className="leading-tight">{g.character.local}</span>
+                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.sexoMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.sexoMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 1) }}>
+                  <span>{g.character.sexo}</span>
                 </div>
 
-                {/* Nacionalidade */}
-                <div
-                  className={`comparison-cell ${getTileClass(
-                    g.nacionalidadeMatch
-                  )}`}
-                >
-                  <span className="leading-tight">{g.character.nacionalidade}</span>
+                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.testamentoMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.testamentoMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 2) }}>
+                  <span className="leading-tight">{g.character.testamento}</span>
                 </div>
 
-                {/* Nascimento */}
-                <div
-                  className={`comparison-cell ${getTileClass(
-                    g.nascimentoMatch
-                  )}`}
-                >
+                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.divisaoMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.divisaoMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 3) }}>
+                  <span className="comparison-division-text leading-tight">{g.character.divisao}</span>
+                </div>
+
+                <div className={`comparison-cell ${getRevealClass(g.character.id)} ${g.historiaNaBibliaMatch === "WRONG" && g.historiaNaBibliaComparison !== "EQUAL" ? g.historiaNaBibliaComparison === "HIGHER" ? "character-arrow-up" : "character-arrow-down" : ""}`} style={{ backgroundColor: getTileClass(g.historiaNaBibliaMatch) === 'pixel-tile-green' ? '#2b7a35' : '#8f2020', ...getRevealStyle(g.character.id, 4) }}>
+                  <span className="comparison-history-text">
+                    {g.character.historiaNaBiblia.split(/[;,]/).map((passagem) => (
+                      <span key={passagem} className="block">
+                        {passagem.trim()}
+                      </span>
+                    ))}
+                  </span>
+                </div>
+
+                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.conhecidoPorMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.conhecidoPorMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 5) }}>
+                  <span className="leading-tight">
+                    {g.character.conhecidoPor}
+                  </span>
+                </div>
+
+                <div className={`comparison-cell ${getRevealClass(g.character.id)} ${g.nascimentoMatch === "WRONG" ? g.nascimentoComparison === "HIGHER" ? "character-arrow-up" : "character-arrow-down" : ""}`} style={{ backgroundColor: getTileClass(g.nascimentoMatch) === 'pixel-tile-green' ? '#2b7a35' : '#8f2020', ...getRevealStyle(g.character.id, 6) }}>
                   <span>{g.character.nascimento}</span>
                 </div>
 
-                {/* Ocupação */}
-                <div
-                  className={`comparison-cell ${getTileClass(
-                    g.ocupacaoMatch
-                  )}`}
-                >
-                  <span className="leading-tight">
+                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.ocupacaoMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.ocupacaoMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 7) }}>
+                  <span className="comparison-occupation-text leading-tight">
                     {g.character.ocupacao}
                   </span>
                 </div>
@@ -386,10 +368,11 @@ export const CharacterGame: React.FC = () => {
         </div>
       )}
 
-      {/* Victory Modal */}
-      {isWon && targetChar && (
+      {isWon && isVictoryModalOpen && targetChar && (
         <VictoryModal
           solutionName={targetChar.nome}
+          solutionImage={targetChar.imagem}
+          solutionImageId={targetChar.id}
           attemptsCount={guesses.length}
           hintsUsedCount={
             (hintsUnlocked.h1 ? 1 : 0) + (hintsUnlocked.h2 ? 1 : 0)
@@ -398,6 +381,8 @@ export const CharacterGame: React.FC = () => {
           nextGameLabel="Passagem"
           nextGameDescription="Adivinhe livro, capítulo e versículo"
           nextGameIcon="/passagem-emoji.svg"
+          onClose={() => setIsVictoryModalOpen(false)}
+          onReplay={GAME_CONFIG.allowReplay ? replay : undefined}
         />
       )}
     </div>

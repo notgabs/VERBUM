@@ -1,31 +1,30 @@
+export type TileMatch = "CORRECT" | "PARTIAL" | "WRONG";
+
 export interface Personagem {
   id: string;
   nome: string;
+  imagem?: string; // Preparado para quando você for colocar as fotos
   sexo: "Masculino" | "Feminino" | string;
-  testamento: "Antigo Testamento" | "Novo Testamento" | string;
+  testamento: "Antigo" | "Novo" | string;
   divisao: string;
-  livroPrincipal: string;
-  historiaPrincipal: string;
-  local: string;
-  nacionalidade: string;
+  historiaNaBiblia: string;
+  conhecidoPor: string;
   nascimento: string;
   ocupacao: string;
   dica1: string;
   dica2: string;
 }
 
-export type TileMatch = "CORRECT" | "PARTIAL" | "WRONG";
-
 export interface PersonagemGuessComparison {
   character: Personagem;
   sexoMatch: TileMatch;
   testamentoMatch: TileMatch;
   divisaoMatch: TileMatch;
-  livroMatch: TileMatch;
-  historiaMatch: TileMatch;
-  localMatch: TileMatch;
-  nacionalidadeMatch: TileMatch;
+  historiaNaBibliaMatch: TileMatch;
+  historiaNaBibliaComparison: NumberComparison;
+  conhecidoPorMatch: TileMatch;
   nascimentoMatch: TileMatch;
+  nascimentoComparison: NumberComparison;
   ocupacaoMatch: TileMatch;
   isFullyCorrect: boolean;
 }
@@ -36,6 +35,8 @@ export interface Passagem {
   livro: string;
   capitulo: number;
   versiculo: number;
+  capituloFim?: number;
+  versiculoFim?: number;
   testamento: string;
   divisao: string;
   contexto?: string;

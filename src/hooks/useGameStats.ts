@@ -19,16 +19,20 @@ export function useGameStats() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    try {
-      const item = localStorage.getItem(STORAGE_KEY);
-      if (item) {
-        setStats(JSON.parse(item));
+    const frame = requestAnimationFrame(() => {
+      try {
+        const item = localStorage.getItem(STORAGE_KEY);
+        if (item) {
+          setStats(JSON.parse(item));
+        }
+      } catch {
+        // Ignore local storage error
+      } finally {
+        setIsLoaded(true);
       }
-    } catch {
-      // Ignore local storage error
-    } finally {
-      setIsLoaded(true);
-    }
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   const recordGameResult = (won: boolean, attempts: number, hintsUsed: number) => {

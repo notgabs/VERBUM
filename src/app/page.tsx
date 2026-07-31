@@ -31,9 +31,9 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Two Large Buttons/Cards: Personagem and Passagem */}
+        {/* Two Large Game Cards */}
         <div className="w-full max-w-sm grid grid-cols-1 gap-3 sm:gap-4">
-          {/* Personagem Card/Button */}
+          {/* Clássico Card/Button */}
           <Link
             href="/personagem"
             onClick={() => playClickSound()}
@@ -44,7 +44,7 @@ export default function HomePage() {
             </span>
             <span className="flex flex-col items-start gap-0.5">
               <span className="text-lg sm:text-xl font-black text-[#f5c458] uppercase tracking-wider">
-                Personagem
+                Clássico
               </span>
               <span className="text-[11px] text-[#e2ceaa] font-serif italic">
                 Adivinhe a figura bíblica
@@ -52,7 +52,7 @@ export default function HomePage() {
             </span>
           </Link>
 
-          {/* Passagem Card/Button */}
+          {/* Acerte a Passagem Card/Button */}
           <Link
             href="/passagem"
             onClick={() => playClickSound()}
@@ -63,7 +63,7 @@ export default function HomePage() {
             </span>
             <span className="flex flex-col items-start gap-0.5">
               <span className="text-lg sm:text-xl font-black text-[#f5c458] uppercase tracking-wider">
-                Passagem
+                Acerte a Passagem
               </span>
               <span className="text-[11px] text-[#e2ceaa] font-serif italic">
                 Adivinhe livro, cap e versículo
@@ -73,34 +73,34 @@ export default function HomePage() {
         </div>
 
         {/* Below those buttons display: Jogos realizados, Sequência atual, Taxa de vitória */}
-        <div className="absolute inset-x-0 bottom-0 w-full bg-[#201007]/90 border-4 border-[#472714] p-2 sm:p-3 shadow-2xl">
+        <div className="absolute inset-x-0 bottom-0 w-full bg-[#f5ecd8]/90 border-4 border-[#2875a8] p-2 sm:p-3 shadow-2xl">
           <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
             {/* Jogos realizados */}
-            <div className="flex flex-col items-center justify-center p-2 bg-[#120804] border-2 border-[#381f10]">
-              <span className="text-[10px] sm:text-xs font-bold text-[#c7ab7c] uppercase">
+            <div className="flex flex-col items-center justify-center p-2 bg-[#fffaf0] border-2 border-[#b5d5e8]">
+              <span className="text-[10px] sm:text-xs font-bold text-[#d6f0ff] uppercase">
                 Jogos realizados
               </span>
-              <span className="text-xl sm:text-2xl font-black text-[#f5c458] mt-1">
+              <span className="font-sf-display text-xl sm:text-2xl font-semibold text-[#f5c458] mt-1">
                 {isLoaded ? stats.jogosRealizados : 0}
               </span>
             </div>
 
             {/* Sequência atual */}
-            <div className="flex flex-col items-center justify-center p-2 bg-[#120804] border-2 border-[#381f10]">
-              <span className="text-[10px] sm:text-xs font-bold text-[#c7ab7c] uppercase">
+            <div className="flex flex-col items-center justify-center p-2 bg-[#fffaf0] border-2 border-[#b5d5e8]">
+              <span className="text-[10px] sm:text-xs font-bold text-[#d6f0ff] uppercase">
                 Sequência atual
               </span>
-              <span className="text-xl sm:text-2xl font-black text-[#4ec25f] mt-1">
+              <span className="font-sf-display text-xl sm:text-2xl font-semibold text-[#4ec25f] mt-1">
                 {isLoaded ? stats.sequenciaAtual : 0} 🔥
               </span>
             </div>
 
             {/* Taxa de vitória */}
-            <div className="flex flex-col items-center justify-center p-2 bg-[#120804] border-2 border-[#381f10]">
-              <span className="text-[10px] sm:text-xs font-bold text-[#c7ab7c] uppercase">
+            <div className="flex flex-col items-center justify-center p-2 bg-[#fffaf0] border-2 border-[#b5d5e8]">
+              <span className="text-[10px] sm:text-xs font-bold text-[#d6f0ff] uppercase">
                 Taxa de vitória
               </span>
-              <span className="text-xl sm:text-2xl font-black text-[#f5c458] mt-1">
+              <span className="font-sf-display text-xl sm:text-2xl font-semibold text-[#f5c458] mt-1">
                 {isLoaded ? `${winRate}%` : "0%"}
               </span>
             </div>

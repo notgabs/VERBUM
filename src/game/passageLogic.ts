@@ -4,6 +4,7 @@ import {
   NumberComparison,
   TileMatch,
 } from "@/types/game";
+import { normalizeBibleBookName } from "@/domain/bible/catalog";
 
 export function comparePassagem(
   guessBook: string,
@@ -11,11 +12,11 @@ export function comparePassagem(
   guessVerse: number,
   target: Passagem
 ): PassagemGuessComparison {
-  const cleanGuess = guessBook.trim().toLowerCase();
-  const cleanTarget = target.livro.trim().toLowerCase();
+  const cleanGuess = normalizeBibleBookName(guessBook);
+  const cleanTarget = normalizeBibleBookName(target.livro);
 
   const livroMatch: TileMatch =
-    cleanGuess === cleanTarget ? "CORRECT" : "WRONG";
+    cleanGuess && cleanGuess === cleanTarget ? "CORRECT" : "WRONG";
 
   let capituloComparison: NumberComparison = "EQUAL";
   if (guessChapter < target.capitulo) {
