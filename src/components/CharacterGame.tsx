@@ -229,14 +229,14 @@ export const CharacterGame: React.FC = () => {
               aria-controls="character-options"
               aria-activedescendant={activeOptionIndex >= 0 ? `character-option-${filteredCharacters[activeOptionIndex]?.id}` : undefined}
               placeholder="Digite o nome"
-              className="flex-1 bg-[#fffaf0] text-[#183c5b] border-4 border-[#2875a8] px-4 py-2.5 text-sm font-bold focus:outline-none focus:border-[#e3ab32] placeholder:text-[#6d8fa7]"
+              className="flex-1 bg-[var(--bg-surface)] text-[var(--text-main)] border border-[var(--border-subtle)] rounded-xl shadow-[var(--shadow-soft)] px-4 py-3 text-sm font-sans font-bold focus:outline-none focus:border-[var(--border-accent)] focus:ring-1 focus:ring-[var(--border-accent)] placeholder:text-[var(--text-muted)] transition-colors"
             />
           </div>
 
           {activeDropdown && query.trim().length > 0 && (
-            <div id="character-options" role="listbox" className="absolute top-full left-0 right-0 mt-1 z-40 bg-[#f5ecd8] border-4 border-[#2875a8] shadow-2xl max-h-60 overflow-y-auto">
+            <div id="character-options" role="listbox" className="absolute top-full left-0 right-0 mt-2 z-40 bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-xl shadow-[var(--shadow-elevated)] max-h-60 overflow-y-auto py-1">
               {filteredCharacters.length > 0 ? (
-                filteredCharacters.map((char) => (
+                filteredCharacters.map((char, index) => (
                   <button
                     key={char.id}
                     id={`character-option-${char.id}`}
@@ -244,25 +244,25 @@ export const CharacterGame: React.FC = () => {
                       playClickSound();
                       handleSelectCharacter(char);
                     }}
-                    role="option" aria-selected={activeOptionIndex === filteredCharacters.indexOf(char)} className={`w-full text-left px-4 py-3 hover:bg-[#dceefa] border-b border-[#b5d5e8] flex items-center justify-between text-sm font-bold text-[#183c5b] cursor-pointer ${activeOptionIndex === filteredCharacters.indexOf(char) ? "bg-[#dceefa]" : ""}`}
+                    role="option" aria-selected={activeOptionIndex === index} className={`w-full text-left px-4 py-3 hover:bg-[var(--status-correct-bg)] border-b border-[var(--border-subtle)] flex items-center justify-between text-sm font-sans font-bold text-[var(--text-main)] cursor-pointer transition-colors ${activeOptionIndex === index ? "bg-[var(--status-correct-bg)]" : ""}`}
                   >
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-3">
                       <CharacterPhoto
                         id={char.id}
                         image={char.imagem}
                         alt={`Retrato de ${char.nome}`}
-                        className="h-8 w-8 shrink-0 border border-[#2875a8] object-cover"
+                        className="h-8 w-8 shrink-0 rounded-full border border-[var(--border-subtle)] object-cover"
                       />
                       <span>{char.nome}</span>
                     </span>
-                    <span className="text-xs text-[#527c98]">
+                    <span className="text-xs text-[var(--text-muted)] font-medium">
                       {char.testamento}
                     </span>
                   </button>
                 ))
               ) : (
-                <div className="px-4 py-3 text-xs text-[#527c98]">
-                  Nenhum personagem correspondente encontrado.
+                <div className="px-4 py-3 text-sm text-[var(--text-muted)] font-sans">
+                  Nenhum personagem encontrado.
                 </div>
               )}
             </div>

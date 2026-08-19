@@ -22,6 +22,7 @@ import { useJsonCatalog } from "@/hooks/useJsonCatalog";
 import { useTimeoutRegistry } from "@/hooks/useTimeoutRegistry";
 import { CatalogState } from "@/components/CatalogState";
 import { ModalBase } from "@/components/ModalBase";
+import { Button } from "@/components/ui/Button";
 
 const REVEAL_STEP_DURATION = 350;
 
@@ -64,6 +65,7 @@ export const PassageGame: React.FC = () => {
   }>({ h1: false, h2: false });
   const [activeHint, setActiveHint] = useState<"h1" | "h2" | null>(null);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [activeOptionIndex, setActiveOptionIndex] = useState(-1);
 
   const { recordGameResult } = useGameStats();
   const { schedule } = useTimeoutRegistry();
@@ -231,24 +233,46 @@ export const PassageGame: React.FC = () => {
                   updateBook(e.target.value);
                   setInvalidFields((fields) => ({ ...fields, book: false }));
                   setShowDropdown(true);
+                  setActiveOptionIndex(-1);
                 }}
                 onFocus={() => setShowDropdown(true)}
-                role="combobox" aria-autocomplete="list" aria-expanded={showDropdown && inputBook.trim().length > 0} aria-controls="passage-book-options"
+                onKeyDown={(event) => {
+                  if (event.key === "ArrowDown") {
+                    event.preventDefault();
+                    setActiveOptionIndex((index) => Math.min(index + 1, filteredBooks.length - 1));
+                  } else if (event.key === "ArrowUp") {
+                    event.preventDefault();
+                    setActiveOptionIndex((index) => Math.max(index - 1, 0));
+                  } else if (event.key === "Enter") {
+                    if (showDropdown && inputBook.trim().length > 0 && filteredBooks.length > 0) {
+                      event.preventDefault();
+                      const indexToSelect = activeOptionIndex >= 0 ? activeOptionIndex : 0;
+                      const selected = filteredBooks[indexToSelect];
+                      if (selected) { updateBook(selected); setShowDropdown(false); }
+                    }
+                  } else if (event.key === "Escape") {
+                    setShowDropdown(false);
+                    setActiveOptionIndex(-1);
+                  }
+                }}
+                role="combobox" aria-autocomplete="list" aria-expanded={showDropdown && inputBook.trim().length > 0} aria-controls="passage-book-options" aria-activedescendant={activeOptionIndex >= 0 ? `passage-book-option-${filteredBooks[activeOptionIndex]}` : undefined}
                 placeholder="Ex: João, Salmos..."
                 className={`w-full bg-[#fffaf0] text-[#183c5b] border-2 px-3 py-2 text-xs font-bold focus:outline-none focus:border-[#e3ab32] ${invalidFields.book ? "border-[#d83a32] animate-input-shake" : "border-[#2875a8]"}`}
               />
 
               {showDropdown && inputBook.trim().length > 0 && (
-                <div id="passage-book-options" role="listbox" className="absolute top-full left-0 right-0 z-40 bg-[#f5ecd8] border-2 border-[#2875a8] max-h-48 overflow-y-auto mt-1">
-                  {filteredBooks.map((b) => (
+                <div id="passage-book-options" role="listbox" className="absolute top-full left-0 right-0 z-40 bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-xl shadow-[var(--shadow-elevated)] max-h-48 overflow-y-auto mt-2 py-1">
+                  {filteredBooks.map((b, index) => (
                     <button
                       key={b}
+                      id={`passage-book-option-${b}`}
                       type="button"
                       onClick={() => {
                         updateBook(b);
                         setShowDropdown(false);
+                        setActiveOptionIndex(-1);
                       }}
-                      role="option" aria-selected="false" className="w-full text-left px-3 py-1.5 text-xs text-[#183c5b] hover:bg-[#dceefa] border-b border-[#b5d5e8]"
+                      role="option" aria-selected={activeOptionIndex === index} className={`w-full text-left px-3 py-2 text-sm font-bold text-[var(--text-main)] hover:bg-[var(--status-correct-bg)] border-b border-[var(--border-subtle)] ${activeOptionIndex === index ? "bg-[var(--status-correct-bg)]" : ""}`}
                     >
                       {b}
                     </button>
@@ -258,15 +282,16 @@ export const PassageGame: React.FC = () => {
             </div>
 
             {/* Chapter Input */}
-            <div className="pixel-box p-3">
-              <label htmlFor="passage-chapter" className="block text-[10px] font-black uppercase text-[#f5c458] mb-1">
+            <div className="bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-xl p-3 shadow-[var(--shadow-soft)]">
+              <label htmlFor="passage-chapter" className="block text-[10px] font-sans font-bold uppercase text-[var(--text-muted)] tracking-wider mb-2">
                 Capítulo
               </label>
-              <div className="flex items-center">
+              <div className="flex items-center gap-1">
                 <button
                   type="button"
+                  aria-label="Diminuir capítulo"
                   onClick={() => { playStepperSound(); updateChapter(Math.max(1, (Number(inputChapter) || 1) - 1)); }}
-                  className="pixel-btn-wood px-2.5 py-1.5 text-xs font-black cursor-pointer"
+                  className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-md border border-[var(--border-subtle)] bg-[var(--bg-app)] text-[var(--text-main)] font-bold transition-colors hover:bg-[var(--border-subtle)] active:bg-[var(--bg-surface)]"
                 >
                   -
                 </button>
@@ -276,12 +301,13 @@ export const PassageGame: React.FC = () => {
                   max={maxChapter}
                   value={inputChapter}
                   onChange={(e) => { updateChapter(e.target.value === "" ? "" : Number(e.target.value)); setInvalidFields((fields) => ({ ...fields, chapter: false })); }}
-                  className={`number-input-no-spinner w-full text-center bg-[#180e07] text-[#f4ecd8] border-y-2 py-2 text-xs font-bold ${invalidFields.chapter ? "border-[#d83a32] animate-input-shake" : "border-[#52311c]"}`}
+                  className={`number-input-no-spinner flex-1 w-full text-center bg-transparent text-[var(--text-main)] font-sans font-bold text-lg h-[44px] focus:outline-none ${invalidFields.chapter ? "text-[var(--status-wrong)] animate-input-shake" : ""}`}
                 />
                 <button
                   type="button"
+                  aria-label="Aumentar capítulo"
                   onClick={() => { playStepperSound(); updateChapter((Number(inputChapter) || 0) + 1); }}
-                  className="pixel-btn-wood px-2.5 py-1.5 text-xs font-black cursor-pointer"
+                  className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-md border border-[var(--border-subtle)] bg-[var(--bg-app)] text-[var(--text-main)] font-bold transition-colors hover:bg-[var(--border-subtle)] active:bg-[var(--bg-surface)]"
                 >
                   +
                 </button>
@@ -289,15 +315,16 @@ export const PassageGame: React.FC = () => {
             </div>
 
             {/* Verse Input */}
-            <div className="pixel-box p-3">
-              <label htmlFor="passage-verse" className="block text-[10px] font-black uppercase text-[#f5c458] mb-1">
+            <div className="bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-xl p-3 shadow-[var(--shadow-soft)]">
+              <label htmlFor="passage-verse" className="block text-[10px] font-sans font-bold uppercase text-[var(--text-muted)] tracking-wider mb-2">
                 Versículo
               </label>
-              <div className="flex items-center">
+              <div className="flex items-center gap-1">
                 <button
                   type="button"
+                  aria-label="Diminuir versículo"
                   onClick={() => { playStepperSound(); updateVerse(Math.max(1, (Number(inputVerse) || 1) - 1)); }}
-                  className="pixel-btn-wood px-2.5 py-1.5 text-xs font-black cursor-pointer"
+                  className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-md border border-[var(--border-subtle)] bg-[var(--bg-app)] text-[var(--text-main)] font-bold transition-colors hover:bg-[var(--border-subtle)] active:bg-[var(--bg-surface)]"
                 >
                   -
                 </button>
@@ -307,12 +334,13 @@ export const PassageGame: React.FC = () => {
                   max={maxVerse}
                   value={inputVerse}
                   onChange={(e) => { updateVerse(e.target.value === "" ? "" : Number(e.target.value)); setInvalidFields((fields) => ({ ...fields, verse: false })); }}
-                  className={`number-input-no-spinner w-full text-center bg-[#180e07] text-[#f4ecd8] border-y-2 py-2 text-xs font-bold ${invalidFields.verse ? "border-[#d83a32] animate-input-shake" : "border-[#52311c]"}`}
+                  className={`number-input-no-spinner flex-1 w-full text-center bg-transparent text-[var(--text-main)] font-sans font-bold text-lg h-[44px] focus:outline-none ${invalidFields.verse ? "text-[var(--status-wrong)] animate-input-shake" : ""}`}
                 />
                 <button
                   type="button"
+                  aria-label="Aumentar versículo"
                   onClick={() => { playStepperSound(); updateVerse((Number(inputVerse) || 0) + 1); }}
-                  className="pixel-btn-wood px-2.5 py-1.5 text-xs font-black cursor-pointer"
+                  className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-md border border-[var(--border-subtle)] bg-[var(--bg-app)] text-[var(--text-main)] font-bold transition-colors hover:bg-[var(--border-subtle)] active:bg-[var(--bg-surface)]"
                 >
                   +
                 </button>
@@ -320,12 +348,12 @@ export const PassageGame: React.FC = () => {
             </div>
           </div>
 
-          <button
+          <Button
             type="submit"
-            className="pixel-btn-gold py-2.5 px-4 font-black uppercase text-xs sm:text-sm tracking-wider cursor-pointer mt-1"
+            className="w-full mt-2"
           >
             Confirmar Palpite
-          </button>
+          </Button>
         </form>
       )}
 
