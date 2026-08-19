@@ -174,17 +174,17 @@ export const PassageGame: React.FC = () => {
       }`}
     >
       {/* Passage Display Scroll */}
-      <div className="pixel-parchment w-full p-6 sm:p-9 text-center relative shadow-2xl">
-        <div className="absolute -top-10 left-0 z-10 flex gap-1">
+      <div className="bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-xl w-full p-6 sm:p-9 text-center relative shadow-[var(--shadow-elevated)]">
+        <div className="absolute -top-4 right-4 z-10 flex gap-2">
           <button type="button"
             title="Dica 1"
             disabled={!hint1Available}
             aria-label="Abrir dica 1"
             onClick={() => handleHintClick("h1")}
-            className={`flex h-8 w-8 items-center justify-center border-2 text-sm ${
+            className={`flex h-10 w-10 rounded-full shadow-sm items-center justify-center border text-sm transition-colors ${
               hint1Available
-                ? "border-[#0b3558] bg-[#174d78] text-[#fff7e7]"
-                : "border-[#0b3558] bg-[#174d78]/60 text-[#b5d5e8]"
+                ? "bg-[var(--primary)] border-[var(--border-accent)] text-white hover:bg-[var(--primary-hover)] cursor-pointer"
+                : "bg-[var(--bg-app)] border-[var(--border-subtle)] text-[var(--text-muted)] cursor-not-allowed"
             }`}
           >
             💡
@@ -194,16 +194,16 @@ export const PassageGame: React.FC = () => {
             disabled={!hint2Available}
             aria-label="Abrir dica 2"
             onClick={() => handleHintClick("h2")}
-            className={`flex h-8 w-8 items-center justify-center border-2 text-sm ${
+            className={`flex h-10 w-10 rounded-full shadow-sm items-center justify-center border text-sm transition-colors ${
               hint2Available
-                ? "border-[#0b3558] bg-[#174d78] text-[#fff7e7]"
-                : "border-[#0b3558] bg-[#174d78]/60 text-[#b5d5e8]"
+                ? "bg-[var(--primary)] border-[var(--border-accent)] text-white hover:bg-[var(--primary-hover)] cursor-pointer"
+                : "bg-[var(--bg-app)] border-[var(--border-subtle)] text-[var(--text-muted)] cursor-not-allowed"
             }`}
           >
             💡
           </button>
         </div>
-        <blockquote className="text-lg sm:text-xl md:text-2xl font-serif italic font-bold text-[#261308] leading-relaxed px-2">
+        <blockquote className="text-lg sm:text-xl md:text-2xl font-serif italic text-[var(--text-main)] leading-relaxed px-2">
           &ldquo;{targetPassage?.texto}&rdquo;
         </blockquote>
       </div>
@@ -408,13 +408,13 @@ export const PassageGame: React.FC = () => {
       )}
 
       {activeHint && targetPassage && (
-        <ModalBase labelledBy="hint-dialog-title" onClose={() => setActiveHint(null)} className="pixel-parchment-dark w-full max-w-md border-4 border-[#f5c458] p-6 text-center shadow-2xl">
-            <p className="mb-2 text-xs font-black uppercase tracking-widest text-[#b57a0d]">
-              Dica {activeHint === "h1" ? "1" : "2"}
-            </p>
-            <p id="hint-dialog-title" className="font-serif text-lg italic text-[#183c5b]">
-              {activeHint === "h1" ? targetPassage.dica1 : targetPassage.dica2}
-            </p>
+        <ModalBase labelledBy="hint-dialog-title" onClose={() => setActiveHint(null)} className="bg-[var(--bg-surface)] w-full max-w-md border border-[var(--border-accent)] rounded-xl p-6 text-center shadow-[var(--shadow-elevated)]">
+          <h2 id="hint-dialog-title" className="font-serif text-2xl font-black text-[var(--text-main)] uppercase tracking-wider mb-4">
+            Dica {activeHint === "h1" ? "1" : "2"}
+          </h2>
+          <p className="text-lg text-[var(--text-main)] mb-6">
+            {activeHint === "h1" ? targetPassage.dica1 : targetPassage.dica2}
+          </p>
         </ModalBase>
       )}
 

@@ -271,11 +271,11 @@ export const CharacterGame: React.FC = () => {
       )}
 
       {activeHint && targetChar && (
-        <ModalBase labelledBy="hint-dialog-title" onClose={() => setActiveHint(null)} className="pixel-parchment-dark w-full max-w-md border-4 border-[#f5c458] p-6 text-center shadow-2xl">
-            <p className="mb-2 text-xs font-black uppercase tracking-widest text-[#b57a0d]">
+        <ModalBase labelledBy="hint-dialog-title" onClose={() => setActiveHint(null)} className="bg-[var(--bg-surface)] w-full max-w-md border border-[var(--border-accent)] rounded-xl p-6 text-center shadow-[var(--shadow-elevated)]">
+            <h2 id="hint-dialog-title" className="font-serif text-2xl font-black text-[var(--text-main)] uppercase tracking-wider mb-4">
               Dica {activeHint === "h1" ? "1" : "2"}
-            </p>
-            <p id="hint-dialog-title" className="font-serif text-lg italic text-[#183c5b]">
+            </h2>
+            <p className="text-lg text-[var(--text-main)] mb-6">
               {activeHint === "h1" ? targetChar.dica1 : targetChar.dica2}
             </p>
         </ModalBase>
