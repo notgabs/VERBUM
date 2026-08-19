@@ -8,8 +8,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "validate:data": "node scripts/validate-data.mjs",
-    "test": "node --experimental-strip-types --test test/dailyChallenge.test.ts test/gameConfig.test.ts",
-    "test:watch": "node --experimental-strip-types --test --watch test/dailyChallenge.test.ts test/gameConfig.test.ts"
+    "test": "node --experimental-strip-types --test test/dailyChallenge.test.ts test/gameConfig.test.ts test/passageLogic.test.ts",
+    "test:watch": "node --experimental-strip-types --test --watch test/dailyChallenge.test.ts test/gameConfig.test.ts test/passageLogic.test.ts"
   },
   "dependencies": {
     "@types/canvas-confetti": "^1.9.0",

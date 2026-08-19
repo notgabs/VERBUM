@@ -18,6 +18,8 @@ interface VictoryModalProps {
   nextGameIcon: string;
   passageTitle?: string;
   passageExplanation?: string;
+  characterReference?: string;
+  characterKnownFor?: string;
   onClose?: () => void;
   onReplay?: () => void;
 }
@@ -48,14 +50,25 @@ export const VictoryModal: React.FC<VictoryModalProps> = (props) => {
             </div>
           </div>
         ) : (
-          <div className="mx-auto mt-5 flex w-fit items-center gap-3 text-left">
-            <div className={`flex items-center justify-center border-2 border-white bg-[#183628] ${props.solutionImage ? "h-28 w-28 sm:h-32 sm:w-32" : "h-16 w-16 p-1"}`}>
+          <div className="mt-5 flex flex-col items-center text-center">
+            <div className={`flex items-center justify-center border-2 border-white bg-[#183628] mx-auto ${props.solutionImage ? "h-28 w-28 sm:h-32 sm:w-32" : "h-16 w-16 p-1"}`}>
               <CharacterPhoto key={props.solutionImageId || props.solutionName} id={props.solutionImageId} image={props.solutionImage} alt={`Imagem de ${props.solutionName}`} className="h-full w-full object-cover" />
             </div>
-            <div>
-              <p className="text-sm font-black">Você acertou</p>
-              <p className="font-serif text-2xl font-black text-white">{props.solutionName}</p>
-            </div>
+            
+            <p className="mt-3 font-serif text-2xl font-black text-white uppercase">{props.solutionName}</p>
+
+            {props.characterReference && (
+              <p className="mt-2 text-sm font-bold text-[#f5c458]">
+                📖 {props.characterReference}
+              </p>
+            )}
+
+            {props.characterKnownFor && (
+              <div className="mt-5 border-2 border-[#2875a8] bg-[#f5ecd8] p-4 text-left shadow-inner w-full max-w-sm mx-auto">
+                <p className="text-xs font-black uppercase tracking-widest text-[#b57a0d]">Conhecido por</p>
+                <p className="mt-2 font-serif text-base leading-relaxed text-[#183c5b]">{props.characterKnownFor}</p>
+              </div>
+            )}
           </div>
         )}
 

@@ -51,6 +51,7 @@ export interface PassagemGuessComparison {
   capitulo: number;
   versiculo: number;
   livroMatch: TileMatch;
+  livroComparison: NumberComparison;
   capituloComparison: NumberComparison;
   versiculoComparison: NumberComparison;
   isFullyCorrect: boolean;

@@ -16,7 +16,7 @@ import {
 } from "@/utils/sound";
 import { VictoryModal } from "@/components/VictoryModal";
 import { GAME_CONFIG } from "@/config/game";
-import { selectDailyId } from "@/domain/game/dailyChallenge";
+import { selectDailyId, selectRandomId } from "@/domain/game/dailyChallenge";
 import { isPassagem } from "@/domain/game/catalogContracts";
 import { useJsonCatalog } from "@/hooks/useJsonCatalog";
 import { useTimeoutRegistry } from "@/hooks/useTimeoutRegistry";
@@ -101,7 +101,8 @@ export const PassageGame: React.FC = () => {
     if (passages.length === 0) return null;
     const fixedId = GAME_CONFIG.developmentMode ? GAME_CONFIG.fixedPassageId : undefined;
     const dailyId = GAME_CONFIG.enableDailyChallenge ? selectDailyId(passages.map((passage) => passage.id)) : undefined;
-    return passages.find((passage) => passage.id === fixedId || passage.id === dailyId) ?? passages[0];
+    const targetId = fixedId ?? dailyId ?? selectRandomId(passages.map((passage) => passage.id));
+    return passages.find((passage) => passage.id === targetId) ?? passages[0];
   }, [passages]);
 
   const handleHintClick = (hint: "h1" | "h2") => {
@@ -221,7 +222,10 @@ export const PassageGame: React.FC = () => {
                 Livro
               </label>
               <input
-                id="passage-book" type="text"
+                id="passage-book"
+                name="passage-book-search"
+                autoComplete="off"
+                type="text"
                 value={inputBook}
                 onChange={(e) => {
                   updateBook(e.target.value);
@@ -342,9 +346,13 @@ export const PassageGame: React.FC = () => {
               {/* Book Tile */}
               <div
                 className={`passage-result-tile ${i === 0 && isRevealing ? "animate-passage-reveal" : ""} ${
-                  g.livroMatch === "CORRECT"
-                    ? "pixel-tile-green"
-                    : "pixel-tile-red"
+                  g.livroComparison === "EQUAL"
+                    ? (g.livroMatch === "CORRECT" ? "pixel-tile-green" : "pixel-tile-red")
+                    : `pixel-tile-red ${
+                        g.livroComparison === "HIGHER"
+                          ? "passage-arrow-up"
+                          : "passage-arrow-down"
+                      }`
                 }`}
                 style={
                   i === 0 && isRevealing
@@ -404,7 +412,7 @@ export const PassageGame: React.FC = () => {
             <p className="mb-2 text-xs font-black uppercase tracking-widest text-[#b57a0d]">
               Dica {activeHint === "h1" ? "1" : "2"}
             </p>
-            <p id="hint-dialog-title" className="font-serif text-lg italic text-[#f4ecd8]">
+            <p id="hint-dialog-title" className="font-serif text-lg italic text-[#183c5b]">
               {activeHint === "h1" ? targetPassage.dica1 : targetPassage.dica2}
             </p>
         </ModalBase>

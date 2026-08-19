@@ -43,10 +43,10 @@ export default function HomePage() {
               <img src="/personagem-emoji.svg" alt="" className="h-full w-full object-contain" />
             </span>
             <span className="flex flex-col items-start gap-0.5">
-              <span className="text-lg sm:text-xl font-black text-[#f5c458] uppercase tracking-wider">
+              <span className="text-lg sm:text-xl font-black text-[#183c5b] uppercase tracking-wider">
                 Clássico
               </span>
-              <span className="text-[11px] text-[#e2ceaa] font-serif italic">
+              <span className="text-[11px] text-[#183c5b] font-serif italic">
                 Adivinhe a figura bíblica
               </span>
             </span>
@@ -62,10 +62,10 @@ export default function HomePage() {
               <img src="/passagem-emoji.svg" alt="" className="h-full w-full object-contain" />
             </span>
             <span className="flex flex-col items-start gap-0.5">
-              <span className="text-lg sm:text-xl font-black text-[#f5c458] uppercase tracking-wider">
+              <span className="text-lg sm:text-xl font-black text-[#183c5b] uppercase tracking-wider">
                 Acerte a Passagem
               </span>
-              <span className="text-[11px] text-[#e2ceaa] font-serif italic">
+              <span className="text-[11px] text-[#183c5b] font-serif italic">
                 Adivinhe livro, cap e versículo
               </span>
             </span>
@@ -77,30 +77,30 @@ export default function HomePage() {
           <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
             {/* Jogos realizados */}
             <div className="flex flex-col items-center justify-center p-2 bg-[#fffaf0] border-2 border-[#b5d5e8]">
-              <span className="text-[10px] sm:text-xs font-bold text-[#d6f0ff] uppercase">
+              <span className="text-[10px] sm:text-xs font-bold text-[#183c5b] uppercase">
                 Jogos realizados
               </span>
-              <span className="font-sf-display text-xl sm:text-2xl font-semibold text-[#f5c458] mt-1">
+              <span className="font-sf-display text-xl sm:text-2xl font-semibold text-[#183c5b] mt-1">
                 {isLoaded ? stats.jogosRealizados : 0}
               </span>
             </div>
 
             {/* Sequência atual */}
             <div className="flex flex-col items-center justify-center p-2 bg-[#fffaf0] border-2 border-[#b5d5e8]">
-              <span className="text-[10px] sm:text-xs font-bold text-[#d6f0ff] uppercase">
+              <span className="text-[10px] sm:text-xs font-bold text-[#183c5b] uppercase">
                 Sequência atual
               </span>
-              <span className="font-sf-display text-xl sm:text-2xl font-semibold text-[#4ec25f] mt-1">
+              <span className="font-sf-display text-xl sm:text-2xl font-semibold text-[#2b7a35] mt-1">
                 {isLoaded ? stats.sequenciaAtual : 0} 🔥
               </span>
             </div>
 
             {/* Taxa de vitória */}
             <div className="flex flex-col items-center justify-center p-2 bg-[#fffaf0] border-2 border-[#b5d5e8]">
-              <span className="text-[10px] sm:text-xs font-bold text-[#d6f0ff] uppercase">
+              <span className="text-[10px] sm:text-xs font-bold text-[#183c5b] uppercase">
                 Taxa de vitória
               </span>
-              <span className="font-sf-display text-xl sm:text-2xl font-semibold text-[#f5c458] mt-1">
+              <span className="font-sf-display text-xl sm:text-2xl font-semibold text-[#183c5b] mt-1">
                 {isLoaded ? `${winRate}%` : "0%"}
               </span>
             </div>

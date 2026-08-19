@@ -1,5 +1,5 @@
-import { BIBLE_STRUCTURE as PROTESTANT_BIBLE_STRUCTURE, type BibleBook } from "@/data/bibleStructure";
-import { normalizeForSearch } from "@/utils/text";
+import { BIBLE_STRUCTURE as PROTESTANT_BIBLE_STRUCTURE, type BibleBook } from "../../data/bibleStructure.ts";
+import { normalizeForSearch } from "../../utils/text.ts";
 
 export type CatholicBibleBook = BibleBook & {
   testament: "Antigo" | "Novo";

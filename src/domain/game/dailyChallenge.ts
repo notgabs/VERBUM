@@ -21,3 +21,11 @@ export function selectDailyId(ids: readonly string[], date = new Date()): string
   return ids[stableHash(getLocalDayKey(date)) % ids.length];
 }
 
+/** Seleciona um alvo novo a cada carregamento da página. */
+export function selectRandomId(
+  ids: readonly string[],
+  random: () => number = Math.random
+): string | undefined {
+  if (ids.length === 0) return undefined;
+  return ids[Math.floor(random() * ids.length)];
+}

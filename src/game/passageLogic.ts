@@ -1,10 +1,10 @@
-import {
+import type {
   Passagem,
   PassagemGuessComparison,
   NumberComparison,
   TileMatch,
-} from "@/types/game";
-import { normalizeBibleBookName } from "@/domain/bible/catalog";
+} from "../types/game.ts";
+import { normalizeBibleBookName, getBibleBookOrder } from "../domain/bible/catalog.ts";
 
 export function comparePassagem(
   guessBook: string,
@@ -17,6 +17,15 @@ export function comparePassagem(
 
   const livroMatch: TileMatch =
     cleanGuess && cleanGuess === cleanTarget ? "CORRECT" : "WRONG";
+
+  let livroComparison: NumberComparison = "EQUAL";
+  if (livroMatch === "WRONG" && cleanGuess && cleanTarget) {
+    const guessIndex = getBibleBookOrder(cleanGuess);
+    const targetIndex = getBibleBookOrder(cleanTarget);
+    if (guessIndex !== -1 && targetIndex !== -1) {
+      livroComparison = guessIndex < targetIndex ? "LOWER" : "HIGHER";
+    }
+  }
 
   let capituloComparison: NumberComparison = "EQUAL";
   if (guessChapter < target.capitulo) {
@@ -42,6 +51,7 @@ export function comparePassagem(
     capitulo: guessChapter,
     versiculo: guessVerse,
     livroMatch,
+    livroComparison,
     capituloComparison,
     versiculoComparison,
     isFullyCorrect,
@@ -55,7 +65,12 @@ export function generatePassagemShareText(
 ): string {
   const rows = guesses
     .map((g) => {
-      const bookEmoji = g.livroMatch === "CORRECT" ? "🟩" : "🟥";
+      const bookEmoji =
+        g.livroComparison === "EQUAL"
+          ? (g.livroMatch === "CORRECT" ? "🟩" : "🟥")
+          : g.livroComparison === "HIGHER"
+          ? "⬆️"
+          : "⬇️";
       const capEmoji =
         g.capituloComparison === "EQUAL"
           ? "🟩"

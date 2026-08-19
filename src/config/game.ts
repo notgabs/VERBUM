@@ -8,9 +8,8 @@
  */
 export const GAME_CONFIG = {
   developmentMode: true,
-  fixedCharacterId: "abel",
+  fixedCharacterId: undefined as string | undefined,
   fixedPassageId: undefined as string | undefined,
   allowReplay: true,
   enableDailyChallenge: false,
 } as const;
-

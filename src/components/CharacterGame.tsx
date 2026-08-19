@@ -13,7 +13,7 @@ import { VictoryModal } from "@/components/VictoryModal";
 import { CharacterPhoto } from "@/components/CharacterPhoto";
 import { normalizeForSearch } from "@/utils/text";
 import { GAME_CONFIG } from "@/config/game";
-import { selectDailyId } from "@/domain/game/dailyChallenge";
+import { selectDailyId, selectRandomId } from "@/domain/game/dailyChallenge";
 import { isPersonagem } from "@/domain/game/catalogContracts";
 import { useJsonCatalog } from "@/hooks/useJsonCatalog";
 import { useTimeoutRegistry } from "@/hooks/useTimeoutRegistry";
@@ -48,7 +48,8 @@ export const CharacterGame: React.FC = () => {
     if (characters.length === 0) return null;
     const configuredId = GAME_CONFIG.developmentMode ? GAME_CONFIG.fixedCharacterId : undefined;
     const dailyId = GAME_CONFIG.enableDailyChallenge ? selectDailyId(characters.map((character) => character.id)) : undefined;
-    return characters.find((character) => character.id === configuredId || character.id === dailyId) ?? characters[0];
+    const targetId = configuredId ?? dailyId ?? selectRandomId(characters.map((character) => character.id));
+    return characters.find((character) => character.id === targetId) ?? characters[0];
   }, [characters]);
 
   const hint1Available = guesses.length >= 6;
@@ -192,6 +193,8 @@ export const CharacterGame: React.FC = () => {
           <div className="flex gap-2">
             <label htmlFor="character-search" className="sr-only">Nome do personagem</label><input
               id="character-search"
+              name="character-search"
+              autoComplete="off"
               ref={inputRef}
               type="text"
               value={query}
@@ -208,10 +211,13 @@ export const CharacterGame: React.FC = () => {
                 } else if (event.key === "ArrowUp") {
                   event.preventDefault();
                   setActiveOptionIndex((index) => Math.max(index - 1, 0));
-                } else if (event.key === "Enter" && activeOptionIndex >= 0) {
+                } else if (event.key === "Enter") {
                   event.preventDefault();
-                  const selected = filteredCharacters[activeOptionIndex];
-                  if (selected) { playClickSound(); handleSelectCharacter(selected); }
+                  if (activeDropdown && query.trim().length > 0 && filteredCharacters.length > 0) {
+                    const indexToSelect = activeOptionIndex >= 0 ? activeOptionIndex : 0;
+                    const selected = filteredCharacters[indexToSelect];
+                    if (selected) { playClickSound(); handleSelectCharacter(selected); }
+                  }
                 } else if (event.key === "Escape") {
                   setActiveDropdown(false);
                   setActiveOptionIndex(-1);
@@ -269,7 +275,7 @@ export const CharacterGame: React.FC = () => {
             <p className="mb-2 text-xs font-black uppercase tracking-widest text-[#b57a0d]">
               Dica {activeHint === "h1" ? "1" : "2"}
             </p>
-            <p id="hint-dialog-title" className="font-serif text-lg italic text-[#f4ecd8]">
+            <p id="hint-dialog-title" className="font-serif text-lg italic text-[#183c5b]">
               {activeHint === "h1" ? targetChar.dica1 : targetChar.dica2}
             </p>
         </ModalBase>
@@ -373,6 +379,8 @@ export const CharacterGame: React.FC = () => {
           solutionName={targetChar.nome}
           solutionImage={targetChar.imagem}
           solutionImageId={targetChar.id}
+          characterReference={targetChar.historiaNaBiblia}
+          characterKnownFor={targetChar.conhecidoPor}
           attemptsCount={guesses.length}
           hintsUsedCount={
             (hintsUnlocked.h1 ? 1 : 0) + (hintsUnlocked.h2 ? 1 : 0)
