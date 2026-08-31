@@ -28,17 +28,23 @@ export function comparePassagem(
   }
 
   let capituloComparison: NumberComparison = "EQUAL";
+  let capituloMatch: TileMatch = "CORRECT";
   if (guessChapter < target.capitulo) {
     capituloComparison = "HIGHER"; // correct is higher
+    capituloMatch = (target.capitulo - guessChapter) <= 2 ? "PARTIAL" : "WRONG";
   } else if (guessChapter > target.capitulo) {
     capituloComparison = "LOWER"; // correct is lower
+    capituloMatch = (guessChapter - target.capitulo) <= 2 ? "PARTIAL" : "WRONG";
   }
 
   let versiculoComparison: NumberComparison = "EQUAL";
+  let versiculoMatch: TileMatch = "CORRECT";
   if (guessVerse < target.versiculo) {
     versiculoComparison = "HIGHER"; // correct is higher
+    versiculoMatch = (target.versiculo - guessVerse) <= 2 ? "PARTIAL" : "WRONG";
   } else if (guessVerse > target.versiculo) {
     versiculoComparison = "LOWER"; // correct is lower
+    versiculoMatch = (guessVerse - target.versiculo) <= 2 ? "PARTIAL" : "WRONG";
   }
 
   const isFullyCorrect =
@@ -51,6 +57,8 @@ export function comparePassagem(
     capitulo: guessChapter,
     versiculo: guessVerse,
     livroMatch,
+    capituloMatch,
+    versiculoMatch,
     livroComparison,
     capituloComparison,
     versiculoComparison,
@@ -59,33 +67,4 @@ export function comparePassagem(
   };
 }
 
-export function generatePassagemShareText(
-  guesses: PassagemGuessComparison[],
-  targetRef: string
-): string {
-  const rows = guesses
-    .map((g) => {
-      const bookEmoji =
-        g.livroComparison === "EQUAL"
-          ? (g.livroMatch === "CORRECT" ? "🟩" : "🟥")
-          : g.livroComparison === "HIGHER"
-          ? "⬆️"
-          : "⬇️";
-      const capEmoji =
-        g.capituloComparison === "EQUAL"
-          ? "🟩"
-          : g.capituloComparison === "HIGHER"
-          ? "⬆️"
-          : "⬇️";
-      const verEmoji =
-        g.versiculoComparison === "EQUAL"
-          ? "🟩"
-          : g.versiculoComparison === "HIGHER"
-          ? "⬆️"
-          : "⬇️";
-      return `${bookEmoji} ${capEmoji} ${verEmoji}`;
-    })
-    .join("\n");
 
-  return `Verbum 📜 Passagem Bíblica\nTentativas: ${guesses.length}\n\n${rows}\n\nJogue em: verbum.game`;
-}

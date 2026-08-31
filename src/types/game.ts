@@ -51,6 +51,8 @@ export interface PassagemGuessComparison {
   capitulo: number;
   versiculo: number;
   livroMatch: TileMatch;
+  capituloMatch: TileMatch;
+  versiculoMatch: TileMatch;
   livroComparison: NumberComparison;
   capituloComparison: NumberComparison;
   versiculoComparison: NumberComparison;
@@ -65,4 +67,30 @@ export interface GameStats {
   tentativasMedias: number;
   dicasUtilizadas: number;
   vitorias: number;
+  musicGamesPlayed?: number;
+  musicWins?: number;
+}
+
+export interface RawQuemSouEu {
+  id: string;
+  personagemId?: string;
+  nome?: string;
+  imagem?: string;
+  aliases?: string[];
+  tipo: "Biblico" | "Santo" | "Anjo" | "Papa" | "Clero" | "Outro";
+  dicas: [string, string, string, string, string, string];
+  resumo: string;
+  conhecidoPor: string;
+}
+
+export interface QuemSouEu {
+  id: string;
+  personagemId?: string;
+  nome: string;
+  imagem?: string;
+  aliases: string[];
+  tipo: "Biblico" | "Santo" | "Anjo" | "Papa" | "Clero" | "Outro";
+  dicas: [string, string, string, string, string, string];
+  resumo: string;
+  conhecidoPor: string;
 }

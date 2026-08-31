@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { isAudioMuted, setAudioMuted, playClickSound } from "@/utils/sound";
+import { ModalBase } from "@/components/ModalBase";
 
 interface MonasteryBackgroundProps {
   children: React.ReactNode;
@@ -56,7 +57,7 @@ export const MonasteryBackground: React.FC<MonasteryBackgroundProps> = ({
     if (!ctx) return;
 
     let animId: number | undefined;
-    let paused = window.matchMedia("(prefers-reduced-motion: reduce)").matches || document.hidden;
+    let paused = document.hidden;
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
@@ -107,7 +108,7 @@ export const MonasteryBackground: React.FC<MonasteryBackgroundProps> = ({
     };
 
     const handleVisibility = () => {
-      paused = document.hidden || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      paused = document.hidden;
       if (!paused) render();
       else if (animId) cancelAnimationFrame(animId);
     };
@@ -146,7 +147,7 @@ export const MonasteryBackground: React.FC<MonasteryBackgroundProps> = ({
             <Link
               href="/"
               onClick={() => playClickSound()}
-              className="pixel-btn-wood px-3 py-1.5 text-xs sm:text-sm font-bold flex items-center gap-1.5 uppercase tracking-wider cursor-pointer"
+              className="bg-[var(--color-surface)] border border-[var(--color-border-subtle)] text-[var(--color-text-main)] px-3 py-1.5 text-xs sm:text-sm font-bold flex items-center gap-1.5 uppercase tracking-wider rounded-lg shadow-sm hover:bg-[var(--color-surface-elevated)] transition-colors cursor-pointer"
             >
               <span>🏰</span>
               <span>Início</span>
@@ -167,9 +168,9 @@ export const MonasteryBackground: React.FC<MonasteryBackgroundProps> = ({
               aria-expanded={isLogoMessageOpen}
             >
               <img
-                src="/verbum-verbum.svg"
+                src="/logo-verbum.png"
                 alt="Verbum"
-                className="mt-4 h-8 w-auto origin-center scale-[6.5] object-contain sm:h-9"
+                className="h-8 sm:h-10 w-auto object-contain drop-shadow-sm scale-[3.5] sm:scale-[4] transition-transform hover:scale-[3.7] sm:hover:scale-[4.2]"
               />
             </button>
           ) : (
@@ -180,23 +181,23 @@ export const MonasteryBackground: React.FC<MonasteryBackgroundProps> = ({
               aria-label="Verbum — início"
             >
               <img
-                src="/verbum-verbum.svg"
+                src="/logo-verbum.png"
                 alt="Verbum"
-                className="mt-4 h-8 w-auto origin-center scale-[6.5] object-contain sm:h-9"
+                className="h-8 sm:h-10 w-auto object-contain drop-shadow-sm scale-[3.5] sm:scale-[4] transition-transform hover:scale-[3.7] sm:hover:scale-[4.2]"
               />
             </Link>
           )}</div>
         )}
 
         {/* Game controls */}
-        <div className="relative justify-self-end flex items-center gap-3">
+        <div className="relative justify-self-end flex items-center gap-2 sm:gap-3">
           {infoContent && (
             <button
               onClick={() => {
                 playClickSound();
                 setIsInfoOpen(true);
               }}
-              className="pixel-btn-wood px-2.5 py-1 text-xs sm:text-sm font-bold uppercase cursor-pointer"
+              className="bg-[var(--color-surface)] border border-[var(--color-border-subtle)] text-[var(--color-text-main)] px-3 py-1.5 text-xs sm:text-sm font-bold flex items-center uppercase tracking-wider rounded-lg shadow-sm hover:bg-[var(--color-surface-elevated)] transition-colors cursor-pointer"
               aria-haspopup="dialog"
               aria-expanded={isInfoOpen}
             >
@@ -204,46 +205,41 @@ export const MonasteryBackground: React.FC<MonasteryBackgroundProps> = ({
             </button>
           )}
           {/* Sound Toggle Button */}
-          <button
-            onClick={handleToggleSound}
-            title={muted ? "Ativar som" : "Silenciar som"}
-            aria-label={muted ? "Ativar som" : "Silenciar som"}
-            aria-pressed={!muted}
-            className="sound-toggle pixel-btn-wood px-2.5 py-1 text-xs sm:text-sm flex items-center gap-1 cursor-pointer"
-          >
-            <span>{muted ? "🔇" : "🔊"}</span>
-            <span className="hidden sm:inline">{muted ? "Mudo" : "Som"}</span>
-          </button>
+          {showBackButton && (
+            <button
+              onClick={handleToggleSound}
+              title={muted ? "Ativar som" : "Silenciar som"}
+              aria-label={muted ? "Ativar som" : "Silenciar som"}
+              aria-pressed={!muted}
+              className="bg-[var(--color-surface)] border border-[var(--color-border-subtle)] text-[var(--color-text-main)] px-3 py-1.5 text-xs sm:text-sm font-bold flex items-center gap-1.5 uppercase tracking-wider rounded-lg shadow-sm hover:bg-[var(--color-surface-elevated)] transition-colors cursor-pointer"
+            >
+              <span>{muted ? "🔇" : "🔊"}</span>
+              <span className="hidden sm:inline">{muted ? "Mudo" : "Som"}</span>
+            </button>
+          )}
         </div>
       </header>
 
       {isInfoOpen && infoContent && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
-          onClick={handleCloseInfo}
+        <ModalBase
+          labelledBy="game-info-title"
+          onClose={handleCloseInfo}
+          className="bg-[var(--color-bg-app)] w-full max-w-lg border border-[var(--color-border-subtle)] rounded-xl p-6 sm:p-8 shadow-2xl custom-scrollbar"
         >
-          <section
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="game-info-title"
-            className="pixel-parchment-dark w-full max-w-lg border-4 border-[#f5c458] p-5 shadow-2xl"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="mb-4 flex items-center justify-between gap-4">
-              <h2 id="game-info-title" className="text-lg font-black uppercase tracking-wider text-[#f5c458]">
-                Como jogar
-              </h2>
-              <button
-                onClick={handleCloseInfo}
-                className="pixel-btn-wood -translate-y-1 px-2.5 py-1 text-xs font-bold"
-                aria-label="Fechar informações"
-              >
-                Fechar
-              </button>
-            </div>
-            {infoContent}
-          </section>
-        </div>
+          <div className="mb-6 flex items-start justify-between gap-4">
+            <h2 id="game-info-title" className="font-serif text-2xl font-black uppercase tracking-wider text-[var(--color-text-accent)]">
+              Como jogar
+            </h2>
+            <button
+              onClick={handleCloseInfo}
+              className="flex h-8 w-8 items-center justify-center rounded-md border border-[var(--color-border-subtle)] bg-[var(--color-bg-app)] text-[var(--color-text-main)] transition-colors hover:bg-[var(--color-border-subtle)]"
+              aria-label="Fechar informações"
+            >
+              ✕
+            </button>
+          </div>
+          {infoContent}
+        </ModalBase>
       )}
 
       {isLogoMessageOpen && logoMessage && (

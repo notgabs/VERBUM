@@ -1,28 +1,11 @@
-import {
+import type {
   NumberComparison,
   Personagem,
   PersonagemGuessComparison,
   TileMatch,
-} from "@/types/game";
-import { CATHOLIC_BIBLE_BOOK_NAMES, getBibleBookOrder } from "@/domain/bible/catalog";
+} from "../types/game.ts";
+import { CATHOLIC_BIBLE_BOOK_NAMES, getBibleBookOrder } from "../domain/bible/catalog.ts";
 
-const OCCUPATION_CATEGORIES: Record<string, string[]> = {
-  pastor: ["pastor", "criador de ovelhas", "criador"],
-  militar: ["guerreiro", "soldado", "general", "comandante", "lider militar"],
-  realeza: ["rei", "rainha", "imperador", "farao"],
-  lideranca: ["lider", "governador", "lider militar"],
-  profetico: ["profeta", "profetisa"],
-  sacerdotal: ["sacerdote", "levita"],
-  apostolico: ["apostolo"],
-  judicial: ["juiz", "juiza"],
-  discipulado: ["discipulo", "discipula"],
-  missao: ["missionario", "missionaria", "evangelista", "pregador"],
-  servico: ["servo", "serva"],
-  pais: ["pai", "mae"],
-  conjuges: ["esposa", "esposo"],
-  filhos: ["filho", "filha"],
-  moradores: ["morador", "moradora"],
-};
 
 export function comparePersonagem(
   guess: Personagem,
@@ -36,11 +19,7 @@ export function comparePersonagem(
   const divisaoMatch: TileMatch =
     guess.divisao === target.divisao ? "CORRECT" : "WRONG";
 
-  const historiaNaBibliaMatch: TileMatch =
-    guess.historiaNaBiblia.toLowerCase() === target.historiaNaBiblia.toLowerCase()
-      ? "CORRECT"
-      : "WRONG";
-  const historiaNaBibliaComparison = compareBibleHistory(
+  const { match: historiaNaBibliaMatch, comparison: historiaNaBibliaComparison } = evaluateBibleHistory(
     guess.historiaNaBiblia,
     target.historiaNaBiblia
   );
@@ -73,14 +52,32 @@ export function comparePersonagem(
   };
 }
 
+const OCCUPATION_CATEGORIES: Record<string, string[]> = {
+  realeza: ["rei", "rainha", "imperador", "imperador romano", "farao"],
+  militar: ["guerreiro", "soldado", "general", "comandante", "lider militar"],
+  lideranca: ["lider", "governador", "lider militar", "administrador", "conselheiro", "patriarca", "anciao"],
+  profetico: ["profeta", "profetisa"],
+  sacerdotal: ["sacerdote", "sumo sacerdote", "levita", "diacono", "diaconisa", "chefe religioso"],
+  seguidores_de_jesus: ["apostolo", "discipulo", "discipula"],
+  judicial: ["juiz", "juiza"],
+  missao: ["missionario", "missionaria", "evangelista", "pregador"],
+  servico: ["servo", "serva", "diacono", "diaconisa"],
+  familiar: ["pai", "mae", "esposa", "esposo", "filho", "filha", "viuva", "patriarca", "matriarca"],
+  intelectual_religioso: ["escriba", "mestre da lei", "sabio", "conselheiro"],
+  sobrenatural: ["anjo", "arcanjo", "demonio"],
+  pastoril: ["pastor", "criador de ovelhas", "criador"],
+};
+
 function normalize(value: string) {
   return value
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, " ");
 }
 
-function compareOccupation(guessOccupation: string, targetOccupation: string): TileMatch {
+export function compareOccupation(guessOccupation: string, targetOccupation: string): TileMatch {
   if (normalize(guessOccupation) === normalize(targetOccupation)) return "CORRECT";
 
   const splitOccupations = (occupation: string) =>
@@ -88,57 +85,59 @@ function compareOccupation(guessOccupation: string, targetOccupation: string): T
       .split(/\s+e\s+/)
       .map((item) => item.trim());
 
-  const getCategories = (occupation: string) => {
-    const normalizedOccupation = ` ${normalize(occupation)} `;
-    return Object.entries(OCCUPATION_CATEGORIES).filter(([, terms]) =>
-      terms.some((term) => normalizedOccupation.includes(` ${normalize(term)} `))
-    ).map(([category]) => category);
+  const getCategories = (component: string) => {
+    return Object.entries(OCCUPATION_CATEGORIES)
+      .filter(([, terms]) => terms.includes(component))
+      .map(([category]) => category);
   };
 
   const guessOccupations = splitOccupations(guessOccupation);
   const targetOccupations = splitOccupations(targetOccupation);
-  const sharesOccupation = guessOccupations.some((occupation) =>
-    targetOccupations.includes(occupation)
-  );
-  if (sharesOccupation) return "PARTIAL";
 
-  const guessCategories = getCategories(guessOccupation);
-  const targetCategories = getCategories(targetOccupation);
-  return guessCategories.some((category) => targetCategories.includes(category))
-    ? "PARTIAL"
-    : "WRONG";
+  const hasExactComponentIntersection = guessOccupations.some((g) => targetOccupations.includes(g));
+  if (hasExactComponentIntersection) return "PARTIAL";
+
+  const guessCategories = new Set(guessOccupations.flatMap(getCategories));
+  const targetCategories = new Set(targetOccupations.flatMap(getCategories));
+
+  const hasCategoryIntersection = Array.from(guessCategories).some(c => targetCategories.has(c));
+  if (hasCategoryIntersection) return "PARTIAL";
+
+  return "WRONG";
 }
 
-function compareBibleHistory(guessHistory: string, targetHistory: string): NumberComparison {
+export function evaluateBibleHistory(guessHistory: string, targetHistory: string): { match: TileMatch, comparison: NumberComparison } {
+  if (normalize(guessHistory) === normalize(targetHistory)) {
+    return { match: "CORRECT", comparison: "EQUAL" };
+  }
+
   const getPosition = (history: string) => {
     const normalizedHistory = normalize(history);
     const bookName = CATHOLIC_BIBLE_BOOK_NAMES.find((book) => normalizedHistory.startsWith(normalize(book)));
     const bookIndex = bookName ? getBibleBookOrder(bookName) : -1;
     if (bookIndex === -1) return null;
-
-    const chapter = normalizedHistory
-      .slice(normalize(bookName ?? "").length)
-      .match(/\d+/)?.[0];
-    return { bookIndex, chapter: chapter ? Number(chapter) : null };
+    return { bookIndex };
   };
 
   const guessPosition = getPosition(guessHistory);
   const targetPosition = getPosition(targetHistory);
-  if (!guessPosition || !targetPosition) return "EQUAL";
 
-  if (guessPosition.bookIndex !== targetPosition.bookIndex) {
-    return guessPosition.bookIndex > targetPosition.bookIndex ? "HIGHER" : "LOWER";
+  if (!guessPosition || !targetPosition) {
+    return { match: "WRONG", comparison: "EQUAL" };
   }
 
-  if (
-    guessPosition.chapter !== null &&
-    targetPosition.chapter !== null &&
-    guessPosition.chapter !== targetPosition.chapter
-  ) {
-    return guessPosition.chapter > targetPosition.chapter ? "HIGHER" : "LOWER";
+  if (guessPosition.bookIndex === targetPosition.bookIndex) {
+    return { match: "PARTIAL", comparison: "EQUAL" };
   }
 
-  return "EQUAL";
+  const distance = Math.abs(guessPosition.bookIndex - targetPosition.bookIndex);
+  const comparison = guessPosition.bookIndex > targetPosition.bookIndex ? "HIGHER" : "LOWER";
+
+  if (distance <= 2) {
+    return { match: "PARTIAL", comparison };
+  } else {
+    return { match: "WRONG", comparison };
+  }
 }
 
 function compareBirthDates(guessBirth: string, targetBirth: string): "EQUAL" | "HIGHER" | "LOWER" {
@@ -166,34 +165,4 @@ function compareBirthDates(guessBirth: string, targetBirth: string): "EQUAL" | "
   return guessYear < targetYear ? "HIGHER" : "LOWER";
 }
 
-export function generatePersonagemShareText(
-  guesses: PersonagemGuessComparison[],
-  targetName: string
-): string {
-  const matchToEmoji = (match: TileMatch) => {
-    switch (match) {
-      case "CORRECT":
-        return "🟩";
-      case "PARTIAL":
-        return "🟨";
-      case "WRONG":
-        return "🟥";
-    }
-  };
 
-  const grid = guesses
-    .map((g) => {
-      return [
-        matchToEmoji(g.sexoMatch),
-        matchToEmoji(g.testamentoMatch),
-        matchToEmoji(g.divisaoMatch),
-        matchToEmoji(g.historiaNaBibliaMatch),
-        matchToEmoji(g.conhecidoPorMatch),
-        matchToEmoji(g.nascimentoMatch),
-        matchToEmoji(g.ocupacaoMatch),
-      ].join("");
-    })
-    .join("\n");
-
-  return `Verbum 📖 Personagem Bíblico\nTentativas: ${guesses.length}\n\n${grid}\n\nJogue em: verbum.game`;
-}

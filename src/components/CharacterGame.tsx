@@ -8,6 +8,9 @@ import {
   playClickSound,
   playRevealSound,
   playVictorySound,
+  playCorrectSound,
+  playWrongSound,
+  playPartialSound,
 } from "@/utils/sound";
 import { VictoryModal } from "@/components/VictoryModal";
 import { CharacterPhoto } from "@/components/CharacterPhoto";
@@ -19,8 +22,10 @@ import { useJsonCatalog } from "@/hooks/useJsonCatalog";
 import { useTimeoutRegistry } from "@/hooks/useTimeoutRegistry";
 import { CatalogState } from "@/components/CatalogState";
 import { ModalBase } from "@/components/ModalBase";
+import { motion, useReducedMotion } from "motion/react";
 
 export const CharacterGame: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
   const revealStepDuration = 200;
   const comparisonGridClass =
     "comparison-grid grid w-full grid-cols-[1.3fr_0.9fr_1.2fr_1fr_1.2fr_1.85fr_1.25fr_1.2fr] gap-1";
@@ -86,9 +91,28 @@ export const CharacterGame: React.FC = () => {
     setActiveDropdown(false);
 
     schedule(() => setIsRevealing(false), revealDuration);
-    Array.from({ length: 8 }, (_, index) =>
-      schedule(playRevealSound, index * revealStepDuration)
-    );
+    
+    const playSoundForMatch = (match: TileMatch | "IMAGE") => {
+      if (match === "CORRECT") playCorrectSound();
+      else if (match === "PARTIAL") playPartialSound();
+      else if (match === "IMAGE") playClickSound(); // Som neutro para a imagem inicial
+      else playWrongSound();
+    };
+
+    const soundSequence: (TileMatch | "IMAGE")[] = [
+      "IMAGE", // 0: Imagem/Nome
+      result.sexoMatch, // 1
+      result.testamentoMatch, // 2
+      result.divisaoMatch, // 3
+      result.historiaNaBibliaMatch, // 4
+      result.conhecidoPorMatch, // 5
+      result.nascimentoMatch, // 6
+      result.ocupacaoMatch, // 7
+    ];
+
+    soundSequence.forEach((match, index) => {
+      schedule(() => playSoundForMatch(match), index * revealStepDuration);
+    });
 
     if (result.isFullyCorrect) {
       setIsWon(true);
@@ -120,69 +144,63 @@ export const CharacterGame: React.FC = () => {
 
   if (isLoading || error) return <CatalogState error={error} onRetry={retry} />;
 
-  const getTileClass = (match: TileMatch) => {
+  const getTileColor = (match: TileMatch) => {
     switch (match) {
       case "CORRECT":
-        return "pixel-tile-green";
+        return "var(--color-status-correct)";
       case "PARTIAL":
-        return "pixel-tile-yellow";
+        return "var(--color-status-partial)";
       case "WRONG":
-        return "pixel-tile-red";
+        return "var(--color-status-wrong)";
       default:
-        return "pixel-tile-red";
+        return "var(--color-status-wrong)";
     }
   };
 
-  const getRevealClass = (characterId: string) =>
-    characterId === revealingGuessId ? "animate-character-reveal" : "";
-
-  const getRevealStyle = (characterId: string, index: number) =>
-    characterId === revealingGuessId
-      ? { animationDelay: `${index * revealStepDuration}ms` }
-      : undefined;
-
   return (
-    <div
-      className={`w-full max-w-4xl flex flex-col items-center gap-4 ${
-        isShaking ? "animate-shake" : ""
-      }`}
+    <motion.div
+      animate={!shouldReduceMotion && isShaking ? { x: [0, -4, 4, -2, 2, 0] } : {}}
+      transition={{ duration: 0.3 }}
+      className="w-full max-w-4xl flex flex-col items-center gap-4"
     >
-      {/* Title Parchment Banner */}
-      <div className="pixel-parchment-dark w-full max-w-xl p-4 text-center relative">
-        <div className="absolute -top-10 left-0 z-10 flex gap-1">
-          <button type="button"
+      {/* Title Banner */}
+      <div className="bg-[var(--color-bg-app)] border border-[var(--color-border-subtle)] rounded-xl w-full max-w-xl p-6 sm:p-9 text-center relative shadow-[var(--shadow-elevated)]">
+        <div className="absolute -top-4 right-4 z-10 flex gap-2">
+          <motion.button type="button"
             title="Dica 1"
             disabled={!hint1Available}
             aria-label="Abrir dica 1"
             onClick={() => handleHintClick("h1")}
-            className={`flex h-8 w-8 items-center justify-center border-2 text-sm ${
+            animate={hint1Available && !hintsUnlocked.h1 ? { scale: [1, 1.2, 1], boxShadow: ["0 0 0 rgba(0,0,0,0)", "0 0 10px rgba(255,215,0,0.5)", "0 0 0 rgba(0,0,0,0)"] } : { scale: 1 }}
+            transition={{ duration: 0.4 }}
+            className={`flex h-10 w-10 rounded-full shadow-sm items-center justify-center border text-sm transition-colors ${
               hint1Available
-                ? "border-[#0b3558] bg-[#174d78] text-[#fff7e7]"
-                : "border-[#0b3558] bg-[#174d78]/60 text-[#b5d5e8]"
+                ? "bg-[var(--color-primary)] border-[var(--color-border-accent)] text-white hover:bg-[var(--color-primary-hover)] cursor-pointer"
+                : "bg-[var(--color-surface)] border-[var(--color-border-subtle)] text-[var(--color-text-muted)] opacity-50 cursor-not-allowed"
             }`}
           >
             💡
-          </button>
-          <button type="button"
+          </motion.button>
+          <motion.button type="button"
             title="Dica 2"
             disabled={!hint2Available}
             aria-label="Abrir dica 2"
             onClick={() => handleHintClick("h2")}
-            className={`flex h-8 w-8 items-center justify-center border-2 text-sm ${
+            animate={hint2Available && !hintsUnlocked.h2 ? { scale: [1, 1.2, 1], boxShadow: ["0 0 0 rgba(0,0,0,0)", "0 0 10px rgba(255,215,0,0.5)", "0 0 0 rgba(0,0,0,0)"] } : { scale: 1 }}
+            transition={{ duration: 0.4 }}
+            className={`flex h-10 w-10 rounded-full shadow-sm items-center justify-center border text-sm transition-colors ${
               hint2Available
-                ? "border-[#0b3558] bg-[#174d78] text-[#fff7e7]"
-                : "border-[#0b3558] bg-[#174d78]/60 text-[#b5d5e8]"
+                ? "bg-[var(--color-primary)] border-[var(--color-border-accent)] text-white hover:bg-[var(--color-primary-hover)] cursor-pointer"
+                : "bg-[var(--color-surface)] border-[var(--color-border-subtle)] text-[var(--color-text-muted)] opacity-50 cursor-not-allowed"
             }`}
           >
             💡
-          </button>
+          </motion.button>
         </div>
-        <h1 className="character-game-title text-xl sm:text-2xl font-black tracking-widest text-[#c98712] uppercase flex items-center justify-center gap-2">
-          <span>📖</span>
+        <h1 className="text-xl sm:text-2xl font-black tracking-widest text-[var(--color-text-accent)] uppercase flex items-center justify-center gap-2">
           <span>Adivinhe o Personagem</span>
-          <span>📖</span>
         </h1>
-        <p className="text-xs sm:text-sm text-[#285b7f] mt-1">
+        <p className="text-sm text-[var(--color-text-main)] opacity-80 mt-2 font-medium">
           Digite o nome de uma figura bíblica para comparar seus atributos
         </p>
       </div>
@@ -229,12 +247,16 @@ export const CharacterGame: React.FC = () => {
               aria-controls="character-options"
               aria-activedescendant={activeOptionIndex >= 0 ? `character-option-${filteredCharacters[activeOptionIndex]?.id}` : undefined}
               placeholder="Digite o nome"
-              className="flex-1 bg-[var(--bg-surface)] text-[var(--text-main)] border border-[var(--border-subtle)] rounded-xl shadow-[var(--shadow-soft)] px-4 py-3 text-sm font-sans font-bold focus:outline-none focus:border-[var(--border-accent)] focus:ring-1 focus:ring-[var(--border-accent)] placeholder:text-[var(--text-muted)] transition-colors"
+              className="flex-1 bg-[var(--color-interactive-surface)]/95 text-white border border-[var(--color-interactive-border)] rounded-xl shadow-lg px-4 py-3 text-sm font-sans font-bold focus:outline-none focus:border-[#4693cb] focus:ring-1 focus:ring-[#4693cb] placeholder:text-[var(--color-interactive-text-muted)] transition-colors"
             />
           </div>
 
           {activeDropdown && query.trim().length > 0 && (
-            <div id="character-options" role="listbox" className="absolute top-full left-0 right-0 mt-2 z-40 bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-xl shadow-[var(--shadow-elevated)] max-h-60 overflow-y-auto py-1">
+            <motion.div
+              initial={{ opacity: 0, y: -4, scale: 0.99 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.15 }}
+              id="character-options" role="listbox" className="absolute top-full left-0 right-0 mt-2 z-40 bg-[var(--color-interactive-surface)]/95 backdrop-blur-sm border border-[var(--color-interactive-border)] rounded-xl shadow-xl max-h-60 overflow-y-auto py-1 custom-scrollbar">
               {filteredCharacters.length > 0 ? (
                 filteredCharacters.map((char, index) => (
                   <button
@@ -244,19 +266,19 @@ export const CharacterGame: React.FC = () => {
                       playClickSound();
                       handleSelectCharacter(char);
                     }}
-                    role="option" aria-selected={activeOptionIndex === index} className={`w-full text-left px-4 py-3 hover:bg-[var(--status-correct-bg)] border-b border-[var(--border-subtle)] flex items-center justify-between text-sm font-sans font-bold text-[var(--text-main)] cursor-pointer transition-colors ${activeOptionIndex === index ? "bg-[var(--status-correct-bg)]" : ""}`}
+                    role="option" aria-selected={activeOptionIndex === index} className={`w-full text-left px-4 py-3 border-b border-[#2a6894] flex items-center justify-between text-sm font-sans font-bold text-white cursor-pointer transition-colors ${activeOptionIndex === index ? "bg-[var(--color-interactive-surface-hover)]" : "hover:bg-[var(--color-interactive-surface-hover)]"}`}
                   >
                     <span className="flex items-center gap-3">
                       <CharacterPhoto
                         id={char.id}
                         image={char.imagem}
                         alt={`Retrato de ${char.nome}`}
-                        className="h-8 w-8 shrink-0 rounded-full border border-[var(--border-subtle)] object-cover"
+                        className="h-8 w-8 shrink-0 rounded-full border border-[var(--color-interactive-border)] object-cover"
                       />
                       <span>{char.nome}</span>
                     </span>
-                    <span className="text-xs text-[var(--text-muted)] font-medium">
-                      {char.testamento}
+                    <span className="text-xs text-[var(--color-interactive-text-muted)] font-medium">
+                      {char.testamento === "Antigo Testamento" ? "AT" : "NT"}
                     </span>
                   </button>
                 ))
@@ -265,13 +287,13 @@ export const CharacterGame: React.FC = () => {
                   Nenhum personagem encontrado.
                 </div>
               )}
-            </div>
+            </motion.div>
           )}
         </div>
       )}
 
       {activeHint && targetChar && (
-        <ModalBase labelledBy="hint-dialog-title" onClose={() => setActiveHint(null)} className="bg-[var(--bg-surface)] w-full max-w-md border border-[var(--border-accent)] rounded-xl p-6 text-center shadow-[var(--shadow-elevated)]">
+        <ModalBase labelledBy="hint-dialog-title" onClose={() => setActiveHint(null)} className="bg-[var(--color-surface)] w-full max-w-md border border-[var(--border-accent)] rounded-xl p-6 text-center shadow-[var(--shadow-elevated)]">
             <h2 id="hint-dialog-title" className="font-serif text-2xl font-black text-[var(--text-main)] uppercase tracking-wider mb-4">
               Dica {activeHint === "h1" ? "1" : "2"}
             </h2>
@@ -282,22 +304,22 @@ export const CharacterGame: React.FC = () => {
       )}
 
       {/* Comparison Legend */}
-      <div className="order-4 flex flex-wrap items-center justify-center gap-3 text-xs font-bold bg-[#174d78] text-[#fff7e7] px-3 py-1.5 border border-[#0b3558]">
-        <span className="flex items-center gap-1">
-          <span className="inline-block w-3 h-3 bg-[#2b7a35]"></span> Correto
+      <div className="order-4 flex flex-wrap items-center justify-center gap-4 text-[10px] sm:text-[11px] font-sans font-bold text-[var(--color-interactive-text)] bg-[var(--color-interactive-surface)]/40 px-4 py-2 rounded-full border border-[var(--color-interactive-border)]/50 shadow-sm backdrop-blur-sm mx-auto mb-2 mt-4">
+        <span className="flex items-center gap-1.5">
+          <span className="inline-block w-2.5 h-2.5 rounded-[3px] bg-[var(--color-status-correct)] shadow-sm border border-[#1a4a20]"></span> Correto
         </span>
-        <span className="flex items-center gap-1">
-          <span className="inline-block w-3 h-3 bg-[#b57a0d]"></span> Parcial
+        <span className="flex items-center gap-1.5">
+          <span className="inline-block w-2.5 h-2.5 rounded-[3px] bg-[var(--color-status-partial)] shadow-sm border border-[#7a5005]"></span> Parcial
         </span>
-        <span className="flex items-center gap-1">
-          <span className="inline-block w-3 h-3 bg-[#8f2020]"></span> Incorreto
+        <span className="flex items-center gap-1.5">
+          <span className="inline-block w-2.5 h-2.5 rounded-[3px] bg-[var(--color-status-wrong)] shadow-sm border border-[#521010]"></span> Incorreto
         </span>
       </div>
 
       {/* Comparison Grid Table - 8 colunas */}
       {guesses.length > 0 && (
-        <div className="order-5 w-full overflow-visible pb-4">
-          <div className="w-full min-w-0 flex flex-col gap-2">
+        <div className="order-5 w-full overflow-x-auto custom-scrollbar pb-6 px-1">
+          <div className="min-w-0 flex flex-col gap-3">
             <div className={`${comparisonGridClass} text-center text-[10px] sm:text-xs font-black uppercase text-[#e2ceaa]`}>
               <div className="comparison-header">Personagem</div>
               <div className="comparison-header">Gênero</div>
@@ -312,11 +334,13 @@ export const CharacterGame: React.FC = () => {
             {guesses.map((g) => (
               <div
                 key={g.character.id}
-                className={`${comparisonGridClass} text-center font-bold`}
+                className={`${comparisonGridClass} text-center font-bold items-stretch bg-[var(--color-interactive-surface)]/20 rounded-xl p-1 shadow-sm border border-[var(--color-interactive-border)]/30`}
               >
-                <div
-                  className={`comparison-cell comparison-character-cell ${getRevealClass(g.character.id)}`}
-                  style={getRevealStyle(g.character.id, 0)}
+                <motion.div
+                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
+                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
+                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 0 : 0 }}
+                  className="comparison-cell comparison-character-cell"
                   title={g.character.nome}
                 >
                   <CharacterPhoto
@@ -324,26 +348,42 @@ export const CharacterGame: React.FC = () => {
                     id={g.character.id}
                     image={g.character.imagem}
                     alt={`Imagem de ${g.character.nome}`}
-                    className="h-full w-full object-cover"
+                    className="w-full h-full object-contain drop-shadow-md rounded-[0.35rem]"
                   />
                   <span className="character-name-tooltip" role="tooltip">
                     {g.character.nome}
                   </span>
-                </div>
+                </motion.div>
 
-                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.sexoMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.sexoMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 1) }}>
+                <motion.div
+                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
+                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
+                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 1 * (revealStepDuration / 1000) : 0 }}
+                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.sexoMatch) }}>
                   <span>{g.character.sexo}</span>
-                </div>
+                </motion.div>
 
-                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.testamentoMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.testamentoMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 2) }}>
+                <motion.div
+                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
+                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
+                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 2 * (revealStepDuration / 1000) : 0 }}
+                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.testamentoMatch) }}>
                   <span className="leading-tight">{g.character.testamento}</span>
-                </div>
+                </motion.div>
 
-                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.divisaoMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.divisaoMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 3) }}>
+                <motion.div
+                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
+                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
+                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 3 * (revealStepDuration / 1000) : 0 }}
+                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.divisaoMatch) }}>
                   <span className="comparison-division-text leading-tight">{g.character.divisao}</span>
-                </div>
+                </motion.div>
 
-                <div className={`comparison-cell ${getRevealClass(g.character.id)} ${g.historiaNaBibliaMatch === "WRONG" && g.historiaNaBibliaComparison !== "EQUAL" ? g.historiaNaBibliaComparison === "HIGHER" ? "character-arrow-up" : "character-arrow-down" : ""}`} style={{ backgroundColor: getTileClass(g.historiaNaBibliaMatch) === 'pixel-tile-green' ? '#2b7a35' : '#8f2020', ...getRevealStyle(g.character.id, 4) }}>
+                <motion.div
+                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
+                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
+                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 4 * (revealStepDuration / 1000) : 0 }}
+                  className={`comparison-cell ${g.historiaNaBibliaMatch === "WRONG" && g.historiaNaBibliaComparison !== "EQUAL" ? g.historiaNaBibliaComparison === "HIGHER" ? "character-arrow-up" : "character-arrow-down" : ""}`} style={{ backgroundColor: getTileColor(g.historiaNaBibliaMatch) }}>
                   <span className="comparison-history-text">
                     {g.character.historiaNaBiblia.split(/[;,]/).map((passagem) => (
                       <span key={passagem} className="block">
@@ -351,23 +391,35 @@ export const CharacterGame: React.FC = () => {
                       </span>
                     ))}
                   </span>
-                </div>
+                </motion.div>
 
-                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.conhecidoPorMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.conhecidoPorMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 5) }}>
+                <motion.div
+                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
+                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
+                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 5 * (revealStepDuration / 1000) : 0 }}
+                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.conhecidoPorMatch) }}>
                   <span className="leading-tight">
                     {g.character.conhecidoPor}
                   </span>
-                </div>
+                </motion.div>
 
-                <div className={`comparison-cell ${getRevealClass(g.character.id)} ${g.nascimentoMatch === "WRONG" ? g.nascimentoComparison === "HIGHER" ? "character-arrow-up" : "character-arrow-down" : ""}`} style={{ backgroundColor: getTileClass(g.nascimentoMatch) === 'pixel-tile-green' ? '#2b7a35' : '#8f2020', ...getRevealStyle(g.character.id, 6) }}>
+                <motion.div
+                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
+                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
+                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 6 * (revealStepDuration / 1000) : 0 }}
+                  className={`comparison-cell ${g.nascimentoMatch === "WRONG" ? g.nascimentoComparison === "HIGHER" ? "character-arrow-up" : "character-arrow-down" : ""}`} style={{ backgroundColor: getTileColor(g.nascimentoMatch) }}>
                   <span>{g.character.nascimento}</span>
-                </div>
+                </motion.div>
 
-                <div className={`comparison-cell ${getRevealClass(g.character.id)}`} style={{ backgroundColor: getTileClass(g.ocupacaoMatch) === 'pixel-tile-green' ? '#2b7a35' : getTileClass(g.ocupacaoMatch) === 'pixel-tile-yellow' ? '#b57a0d' : '#8f2020', ...getRevealStyle(g.character.id, 7) }}>
+                <motion.div
+                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
+                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
+                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 7 * (revealStepDuration / 1000) : 0 }}
+                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.ocupacaoMatch) }}>
                   <span className="comparison-occupation-text leading-tight">
                     {g.character.ocupacao}
                   </span>
-                </div>
+                </motion.div>
               </div>
             ))}
           </div>
@@ -393,6 +445,6 @@ export const CharacterGame: React.FC = () => {
           onReplay={GAME_CONFIG.allowReplay ? replay : undefined}
         />
       )}
-    </div>
+    </motion.div>
   );
 };

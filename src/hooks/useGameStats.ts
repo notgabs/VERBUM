@@ -12,6 +12,8 @@ const DEFAULT_STATS: GameStats = {
   tentativasMedias: 0,
   dicasUtilizadas: 0,
   vitorias: 0,
+  musicGamesPlayed: 0,
+  musicWins: 0,
 };
 
 export function useGameStats() {
@@ -23,7 +25,8 @@ export function useGameStats() {
       try {
         const item = localStorage.getItem(STORAGE_KEY);
         if (item) {
-          setStats(JSON.parse(item));
+          const parsed = JSON.parse(item);
+          setStats({ ...DEFAULT_STATS, ...parsed });
         }
       } catch {
         // Ignore local storage error
@@ -57,6 +60,8 @@ export function useGameStats() {
         tentativasMedias: newAverageAttempts,
         dicasUtilizadas: newHints,
         vitorias: newVitorias,
+        musicGamesPlayed: prev.musicGamesPlayed ?? 0,
+        musicWins: prev.musicWins ?? 0,
       };
 
       try {
@@ -65,6 +70,31 @@ export function useGameStats() {
         // Storage fail fallback
       }
 
+      return updated;
+    });
+  };
+
+  const recordMusicResult = (won: boolean) => {
+    setStats((prev) => {
+      const newJogos = prev.jogosRealizados + 1;
+      const newVitorias = won ? prev.vitorias + 1 : prev.vitorias;
+      const newStreak = won ? prev.sequenciaAtual + 1 : 0;
+      const newMaxStreak = Math.max(prev.maiorSequencia, newStreak);
+      
+      const updated: GameStats = {
+        ...prev,
+        jogosRealizados: newJogos,
+        vitorias: newVitorias,
+        sequenciaAtual: newStreak,
+        maiorSequencia: newMaxStreak,
+        musicGamesPlayed: (prev.musicGamesPlayed ?? 0) + 1,
+        musicWins: (prev.musicWins ?? 0) + (won ? 1 : 0),
+      };
+
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+      } catch {}
+      
       return updated;
     });
   };
@@ -79,5 +109,6 @@ export function useGameStats() {
     winRate,
     isLoaded,
     recordGameResult,
+    recordMusicResult,
   };
 }

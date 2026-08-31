@@ -72,4 +72,11 @@ export const PASSAGE_EXPLANATIONS: Record<string, string> = {
   "lucas-15-11": "Um filho abandona a casa, perde tudo e retorna arrependido. O pai o acolhe com festa, revelando a alegria de Deus diante de quem volta.",
   "joao-11-1": "Diante da morte de Lázaro, Jesus partilha a dor da família e o chama para fora do túmulo. O sinal aponta para sua autoridade sobre a morte.",
   "atos-9-1": "No caminho de Damasco, Saulo encontra o Cristo ressuscitado. Sua vida muda, e ele é acolhido por Ananias para iniciar uma nova missão.",
+  "tobias-4-15": "A famosa regra de ouro (na sua forma negativa) é ensinada por um pai ao seu filho como um conselho de sabedoria antes da viagem.",
+  "judite-13-8": "Para salvar sua cidade do cerco assírio, a corajosa viúva decapita o general Holofernes usando a própria espada dele.",
+  "1-macabeus-2-27": "Matatias, recusando-se a adorar deuses pagãos sob ordem do rei, dá o grito de guerra que inicia a revolta judaica em defesa da Lei.",
+  "2-macabeus-7-28": "Durante o martírio de seus sete filhos, a mãe os encoraja com uma das mais claras afirmações do Antigo Testamento sobre a criação a partir do nada.",
+  "sabedoria-3-1": "Uma passagem clássica e consoladora que assegura a recompensa eterna e a paz imperturbável para aqueles que viveram na justiça.",
+  "eclesiastico-2-1": "Ben Sira ensina que seguir a Deus não significa uma vida sem dificuldades, e que a verdadeira fé exige resistência para enfrentar a provação.",
+  "baruc-3-14": "O livro, escrito no contexto do exílio, personifica a sabedoria divina como a verdadeira fonte de paz, força e vida duradoura.",
 };

@@ -10,7 +10,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     if (variant === "primary") {
       variantClasses = "bg-[var(--primary)] text-white border border-[var(--border-accent)] shadow-[var(--shadow-soft)] hover:bg-[var(--primary-hover)] active:translate-y-[1px] active:shadow-none";
     } else if (variant === "secondary") {
-      variantClasses = "bg-[var(--bg-surface)] text-[var(--text-main)] border border-[var(--border-subtle)] shadow-[var(--shadow-soft)] hover:bg-[var(--bg-app)] active:translate-y-[1px] active:shadow-none";
+      variantClasses = "bg-[var(--color-surface)] text-[var(--text-main)] border border-[var(--border-subtle)] shadow-[var(--shadow-soft)] hover:bg-[var(--color-bg-app)] active:translate-y-[1px] active:shadow-none";
     } else if (variant === "ghost") {
       variantClasses = "bg-transparent text-[var(--text-main)] hover:bg-[var(--border-subtle)] active:translate-y-[1px]";
     }

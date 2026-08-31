@@ -22,6 +22,8 @@ interface VictoryModalProps {
   passageExplanation?: string;
   characterReference?: string;
   characterKnownFor?: string;
+  characterType?: string;
+  characterSummary?: string;
   onClose?: () => void;
   onReplay?: () => void;
 }
@@ -35,7 +37,7 @@ export const VictoryModal: React.FC<VictoryModalProps> = (props) => {
   }, []);
 
   return (
-    <ModalBase label="Vitória" onClose={props.onClose} className="w-full max-w-md border-2 border-[#62f3ad] bg-[linear-gradient(180deg,#0e542d_0%,#10271d_100%)] p-5 sm:p-6 text-center text-[#f4ecd8] shadow-[0_0_28px_rgba(98,243,173,0.25)] animate-fadeIn">
+    <ModalBase label="Vitória" onClose={props.onClose} className="w-full max-w-md border-2 border-[#62f3ad] bg-[linear-gradient(180deg,#0e542d_0%,#10271d_100%)] p-5 sm:p-6 text-center text-[#f4ecd8] shadow-[0_0_28px_rgba(98,243,173,0.25)]">
         <h2 className="font-serif text-4xl font-black lowercase leading-none text-white sm:text-5xl">amém! amém!</h2>
         {props.onClose && <Button variant="secondary" onClick={() => { playClickSound(); props.onClose?.(); }} className="mt-4 text-xs uppercase px-4 py-2">Fechar</Button>}
 
@@ -59,6 +61,18 @@ export const VictoryModal: React.FC<VictoryModalProps> = (props) => {
             
             <p className="mt-3 font-serif text-2xl font-black text-white uppercase">{props.solutionName}</p>
 
+            {props.characterType && (
+              <p className="mt-1 text-xs font-bold uppercase tracking-widest text-[#f5c458]">
+                {props.characterType}
+              </p>
+            )}
+
+            {props.characterSummary && (
+              <p className="mt-3 font-serif text-[15px] leading-relaxed text-[#c9e0d1] max-w-sm px-2">
+                {props.characterSummary}
+              </p>
+            )}
+
             {props.characterReference && (
               <p className="mt-2 text-sm font-bold text-[#f5c458]">
                 📖 {props.characterReference}
@@ -74,8 +88,9 @@ export const VictoryModal: React.FC<VictoryModalProps> = (props) => {
           </div>
         )}
 
-        <p className="mt-4 text-sm font-bold">Número de tentativas: <span className="text-[#35e8e1]">{props.attemptsCount}</span></p>
-        <p className="mt-1 text-xs text-[#c9e0d1]">Dicas usadas: {props.hintsUsedCount}</p>
+        <p className="mt-5 text-[13px] font-bold text-[#c9e0d1] uppercase tracking-wide">
+          Você acertou com <span className="text-[#35e8e1]">{props.attemptsCount}</span> {props.attemptsCount === 1 ? 'palpite' : 'palpites'} e <span className="text-[#f5c458]">{props.hintsUsedCount}</span> {props.hintsUsedCount === 1 ? 'dica' : 'dicas'}
+        </p>
         {props.onReplay && <Button variant="secondary" onClick={() => { playClickSound(); props.onReplay?.(); }} className="mt-4 text-xs uppercase px-4 py-2">Jogar novamente</Button>}
         <div className="my-5 h-px w-36 bg-white/80 mx-auto" />
         <p className="mb-2 font-serif text-xl font-black text-white">Próximo jogo</p>

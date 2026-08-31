@@ -12,6 +12,12 @@
   --color-primary: #2875a8;
   --color-primary-hover: #1f608c;
   --color-accent: #c98a1a;
+  
+  --color-interactive-surface: #1f608c;
+  --color-interactive-surface-hover: #183c5b;
+  --color-interactive-border: #357dad;
+  --color-interactive-text: #ffffff;
+  --color-interactive-text-muted: #bce1f7;
 
   --color-status-correct: #2b7a35;
   --color-status-correct-bg: #e6f4ea;
@@ -61,20 +67,21 @@
 
   .home-screen {
     gap: clamp(0.15rem, 0.7vh, 0.45rem);
-    padding-top: clamp(3.5rem, 8vh, 7rem);
+    padding-top: 0;
   }
 
   .home-logo {
-    width: clamp(16rem, 46vh, 40rem);
+    width: clamp(24rem, 65vh, 56rem);
+    max-width: 95vw;
   }
 
   @media (max-height: 700px) {
     .home-screen {
-      padding-top: 3.5rem;
+      padding-top: 0;
     }
 
     .home-logo {
-      width: clamp(15rem, 36vh, 20rem);
+      width: clamp(18rem, 48vh, 32rem);
     }
   }
 }
@@ -100,13 +107,24 @@ table {
 /* Replace remaining legacy serif utilities with the requested text face. */
 .font-serif { font-family: var(--font-sf-text); }
 
-/* Em celulares, a tabela de oito atributos vira uma grade de pares legíveis.
-   O desktop mantém exatamente as oito colunas originais. */
+/* Permite scroll horizontal fluido em telas pequenas mantendo o layout de 8 colunas */
 @media (max-width: 639px) {
-  .comparison-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .comparison-grid .comparison-header,
-  .comparison-grid .comparison-cell { min-width: 0; overflow-wrap: anywhere; }
-  .comparison-grid .comparison-character-cell { min-height: 8.5rem; }
+  .comparison-grid {
+    min-width: 700px; /* Força scroll horizontal se a tela for menor */
+  }
+}
+
+.comparison-grid {
+  position: relative;
+}
+
+/* Primeira coluna fixa ao realizar scroll horizontal */
+.comparison-character-cell,
+.comparison-header:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  box-shadow: 2px 0 5px -1px rgba(0,0,0,0.3);
 }
 
 /* Retro Pixel Border Utilities */
@@ -189,38 +207,38 @@ table {
 /* Character-game comparison grid */
 .comparison-header {
   min-width: 0;
-  min-height: 3.5rem;
+  min-height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem;
-  background: #f1e4c9;
-  color: #183c5b;
-  border: 3px solid #2875a8;
-  line-height: 1.1;
-  white-space: normal;
-  overflow-wrap: normal;
-  word-break: normal;
-  hyphens: none;
+  padding: 0.5rem 0.25rem;
+  background: var(--color-interactive-surface);
+  color: var(--color-interactive-text-muted);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--color-interactive-border);
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .comparison-cell {
   position: relative;
   min-width: 0;
-  min-height: 7rem;
-  height: auto;
-  overflow: visible;
+  min-height: 5rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.4rem;
+  padding: 0.25rem 0.15rem;
   text-align: center;
-  font-size: clamp(0.58rem, 1.05vw, 0.9rem);
-  line-height: 1.1;
-  white-space: normal;
-  overflow-wrap: normal;
-  word-break: normal;
-  hyphens: none;
+  font-size: clamp(0.55rem, 0.9vw, 0.8rem);
+  line-height: 1.15;
+  border-radius: 0.35rem;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
 }
 
 .comparison-cell > span {
@@ -233,16 +251,30 @@ table {
 .comparison-character-cell {
   padding: 0;
   overflow: hidden;
+  background: transparent;
+  align-self: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Aspect ratio hack for guaranteed square in grid */
+.comparison-character-cell::before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 .comparison-character-cell img {
   position: absolute;
-  inset: 0;
-  display: block;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  border-radius: 0.35rem;
 }
+
+
 
 .character-game-title > span:first-child,
 .character-game-title > span:last-child {
@@ -315,7 +347,9 @@ table {
   opacity: 0.9;
 }
 
-.character-arrow-down::before { transform: rotate(180deg); }
+.character-arrow-down::before {
+  transform: rotate(180deg);
+}
 
 .passage-result-tile {
   position: relative;
@@ -349,7 +383,9 @@ table {
 }
 
 .passage-arrow-up::before,
-.passage-arrow-down::before {
+.passage-arrow-down::before,
+.passage-arrow-up-yellow::before,
+.passage-arrow-down-yellow::before {
   position: absolute;
   top: 14%;
   left: 19%;
@@ -362,11 +398,18 @@ table {
   opacity: 0.9;
 }
 
-.passage-arrow-up::before {
+.passage-arrow-up-yellow::before,
+.passage-arrow-down-yellow::before {
+  background: #7a5006;
+}
+
+.passage-arrow-up::before,
+.passage-arrow-up-yellow::before {
   content: "";
 }
 
-.passage-arrow-down::before {
+.passage-arrow-down::before,
+.passage-arrow-down-yellow::before {
   transform: rotate(180deg);
 }
 
