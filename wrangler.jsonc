@@ -1,0 +1,11 @@
+{
+  // Site 100% estático: o Cloudflare só publica a pasta gerada pelo build (npm run build -> out/).
+  // Sem este arquivo, o `wrangler deploy` tenta converter o projeto para servidor (OpenNext) e falha.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "verbum",
+  "compatibility_date": "2026-11-17",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
