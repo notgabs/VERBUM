@@ -37,11 +37,15 @@ test("▶ Quem Sou Eu Logic", async (t) => {
 
   const hydrated = hydrateQuemSouEu(quemSouEuRaw, personagens);
 
-  await t.test("hidratação bíblica funciona sem duplicar no JSON", () => {
-    const davi = hydrated.find(h => h.id === "qse-davi");
-    assert.ok(davi);
-    assert.strictEqual(davi.nome, "Davi");
-    assert.ok(davi.dicas.length === 6);
+  await t.test("o catálogo só tem figuras do catolicismo, cada uma com foto e 6 pistas", () => {
+    assert.ok(hydrated.length >= 50);
+    for (const h of hydrated) {
+      assert.ok(!["Biblico", "Anjo"].includes(h.tipo), `${h.id} não deveria estar neste modo`);
+      assert.ok(!h.personagemId, `${h.id} não deveria depender do catálogo bíblico`);
+      assert.ok(h.imagem?.startsWith("/quem-sou-eu/"), `${h.id} sem foto`);
+      assert.strictEqual(new Set(h.dicas).size, 6);
+      assert.ok(fs.existsSync(`./public${h.imagem}`), `foto ausente: ${h.imagem}`);
+    }
   });
 
   await t.test("entrada externa funciona e aliases são mantidos", () => {

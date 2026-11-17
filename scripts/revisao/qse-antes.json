@@ -1,0 +1,1948 @@
+[
+  {
+    "id": "qse-davi",
+    "personagemId": "davi",
+    "tipo": "Biblico",
+    "dicas": [
+      "Em determinado momento, precisei buscar proteção entre um povo que também era inimigo de Israel.",
+      "Antes de ocupar minha posição mais conhecida, passei um longo período vivendo como fugitivo.",
+      "Mantive uma amizade marcada por uma aliança que sobreviveu ao conflito entre nossas famílias.",
+      "Minha trajetória reuniu liderança política, guerra e composição de cânticos religiosos.",
+      "Antes de ser rei, servi na corte do primeiro rei de Israel.",
+      "Quando jovem, derrotei Golias com uma funda."
+    ],
+    "resumo": "Foi o segundo rei de Israel e autor de muitos salmos, conhecido como 'um homem segundo o coração de Deus'.",
+    "conhecidoPor": "Matar o gigante Golias e unificar as tribos de Israel."
+  },
+  {
+    "id": "qse-moises",
+    "personagemId": "moises",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui instruído em toda a sabedoria e conhecimento literário do povo que posteriormente enfrentei.",
+      "Passe grande parte da minha vida como pastor em um deserto estrangeiro após fugir da justiça.",
+      "Tive a experiência de me deparar com um fenômeno sobrenatural no topo de um monte.",
+      "Atuei como mediador central de uma aliança sagrada entre Deus e uma nação recém-libertada.",
+      "Minha liderança foi marcada por queixas constantes do povo que conduzia por quarenta anos.",
+      "Recebi as tábuas da Lei no Monte Sinai."
+    ],
+    "resumo": "O grande libertador e legislador de Israel, que tirou o povo hebreu do Egito.",
+    "conhecidoPor": "Abrir o Mar Vermelho e receber os Dez Mandamentos."
+  },
+  {
+    "id": "qse-maria",
+    "personagemId": "maria-mae-jesus",
+    "tipo": "Biblico",
+    "dicas": [
+      "Minha resposta diante de um acontecimento inesperado foi não falar, mas guardar tudo no coração.",
+      "Acompanhei minha família em uma viagem de recenseamento que terminou em um local provisório.",
+      "Minha presença é descrita tanto em uma vila da Galileia quanto entre os fiéis antes de Pentecostes.",
+      "A única fala pública extensa associada a mim é um cântico que exalta a ação divina.",
+      "Fui confiada aos cuidados de um jovem apóstolo pouco antes da morte do meu filho.",
+      "Sou reverenciada como a Mãe de Jesus."
+    ],
+    "resumo": "A mãe de Jesus Cristo, venerada como a figura central da devoção católica e o maior exemplo de aceitação da vontade de Deus.",
+    "conhecidoPor": "Aceitar o plano divino na Anunciação."
+  },
+  {
+    "id": "qse-pedro",
+    "personagemId": "pedro",
+    "tipo": "Biblico",
+    "dicas": [
+      "Minha cidade natal era Betsaida, mas estabeleci minha casa na cidade costeira de Cafarnaum.",
+      "Fui repreendido publicamente por um companheiro devido à minha incoerência sobre regras alimentares.",
+      "Tive uma visão de um lençol descendo do céu, mudando minha compreensão sobre rituais de pureza.",
+      "Impulsivamente, usei uma espada de forma violenta no momento em que meu mestre foi preso.",
+      "Falhei tragicamente em manter minha lealdade, negando conhecer meu líder três vezes na mesma noite.",
+      "Fui um pescador da Galileia e me tornei o primeiro Papa da Igreja."
+    ],
+    "resumo": "O apóstolo escolhido para ser a rocha sobre a qual a Igreja foi construída, e primeiro bispo de Roma.",
+    "conhecidoPor": "Ser o líder dos Doze Apóstolos e possuir as chaves do Reino."
+  },
+  {
+    "id": "qse-paulo",
+    "personagemId": "paulo",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui educado sob a tutela de Gamaliel, um dos mais respeitados mestres judeus da minha época.",
+      "Sustentei a mim mesmo durante minhas viagens missionárias trabalhando na fabricação de tendas.",
+      "Utilizei minha cidadania romana para evitar punições locais e exigir um julgamento formal.",
+      "Durante uma viagem, fiquei repentinamente cego por três dias após um encontro no caminho.",
+      "Sou o autor da maior parte das cartas que compõem o Novo Testamento.",
+      "De perseguidor de cristãos, me tornei o grande Apóstolo dos Gentios."
+    ],
+    "resumo": "De perseguidor implacável a maior missionário do cristianismo primitivo, escreveu a maioria das epístolas do Novo Testamento.",
+    "conhecidoPor": "Sua conversão a caminho de Damasco e viagens missionárias."
+  },
+  {
+    "id": "qse-joao-batista",
+    "personagemId": "joao-batista",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu nascimento quebrou um longo período de silêncio profético na história do meu povo.",
+      "Escolhi habitar em um ambiente hostil e isolado, longe dos centros de poder religioso e político.",
+      "Minha mensagem principal não era de conforto, mas uma exortação severa à mudança radical de vida.",
+      "Fui vítima de uma vingança pessoal tramada durante uma celebração luxuosa.",
+      "Apresentei e apontei para a chegada de alguém muito superior a mim, cujo caminho eu vim preparar.",
+      "Sou conhecido por batizar multidões nas águas do rio Jordão."
+    ],
+    "resumo": "O último grande profeta que preparou o caminho para o ministério público de Jesus, chamando o povo ao arrependimento.",
+    "conhecidoPor": "Batizar Jesus e pregar a conversão no deserto."
+  },
+  {
+    "id": "qse-jose-pai-jesus",
+    "personagemId": "jose-pai-jesus",
+    "tipo": "Biblico",
+    "dicas": [
+      "As Escrituras não registram uma única palavra dita por mim, embora minhas ações tenham sido fundamentais.",
+      "Minhas decisões mais críticas e difíceis foram tomadas a partir de revelações dadas durante o sono.",
+      "Tive que conduzir minha família em uma perigosa fuga internacional para escapar de uma ordem de execução.",
+      "Apesar de minha origem nobre ligada a uma antiga dinastia real, exerci uma vida simples em uma vila modesta.",
+      "Fui escolhido para ser o protetor terreno das duas maiores figuras da fé cristã.",
+      "Trabalhei como carpinteiro em Nazaré."
+    ],
+    "resumo": "Esposo da Virgem Maria e pai adotivo de Jesus, o Padroeiro da Igreja Universal e exemplo de silenciosa obediência.",
+    "conhecidoPor": "Proteger a Sagrada Família e ser o pai nutrício de Jesus."
+  },
+  {
+    "id": "qse-abraao",
+    "personagemId": "abraao",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fiz uma arriscada manobra diplomática no Egito envolvendo minha esposa para salvar minha própria vida.",
+      "Mobilizei meus próprios servos para resgatar meu sobrinho de uma coalizão de reis invasores.",
+      "Aceitei iniciar uma jornada longa abandonando minha terra nativa, guiado apenas por uma promessa.",
+      "Intercedi para evitar a destruição de cidades vizinhas imersas em grave corrupção moral.",
+      "Fui submetido ao teste de ter que sacrificar meu próprio filho, a quem eu havia esperado por décadas.",
+      "Sou reconhecido pelas três grandes religiões monoteístas como o grande Patriarca e Pai da Fé."
+    ],
+    "resumo": "O primeiro patriarca de Israel, reverenciado por sua inabalável confiança nas promessas divinas.",
+    "conhecidoPor": "Sua aliança com Deus e a disposição de sacrificar Isaac."
+  },
+  {
+    "id": "qse-sao-francisco",
+    "nome": "São Francisco de Assis",
+    "aliases": [
+      "Francisco de Assis",
+      "São Francisco",
+      "Francisco"
+    ],
+    "imagem": "/images/sao-francisco.png",
+    "tipo": "Santo",
+    "dicas": [
+      "Na juventude, tive experiências ligadas à guerra e ao cativeiro antes de mudar radicalmente de vida.",
+      "Minha conversão me levou a romper com expectativas familiares e sociais bastante confortáveis.",
+      "Passei a defender uma forma de vida marcada por pobreza voluntária e simplicidade radical.",
+      "Uma comunidade religiosa cresceu ao meu redor e recebeu posteriormente aprovação da Igreja.",
+      "Minha espiritualidade ficou especialmente associada à fraternidade com os pobres e com toda a criação.",
+      "Meu nome ficou inseparavelmente ligado à cidade italiana de Assis."
+    ],
+    "resumo": "Um dos santos mais populares da história, abandonou uma vida de riquezas para abraçar a pobreza evangélica e a fraternidade.",
+    "conhecidoPor": "Fundar a Ordem dos Frades Menores (Franciscanos) e sua comunhão com a natureza."
+  },
+  {
+    "id": "qse-santa-clara",
+    "nome": "Santa Clara de Assis",
+    "aliases": [
+      "Clara de Assis",
+      "Santa Clara"
+    ],
+    "imagem": "/images/santa-clara.png",
+    "tipo": "Santo",
+    "dicas": [
+      "Abandonei a casa da minha família furtivamente durante a noite de Domingo de Ramos para seguir uma vocação.",
+      "Fui a primeira mulher na história da Igreja a redigir uma regra de vida religiosa aprovada pelo Papa.",
+      "Lutei incansavelmente para garantir o Privilégio da Pobreza absoluto para minha comunidade.",
+      "Compartilhei um profundo vínculo espiritual com um dos mais famosos santos italianos de Assis.",
+      "Segundo a tradição, protegi meu monastério de invasores segurando um ostensório com a Eucaristia.",
+      "Sou a fundadora da Ordem das Clarissas."
+    ],
+    "resumo": "Nobre italiana que deixou tudo para seguir a pobreza franciscana, sendo uma defensora implacável da vida contemplativa austera.",
+    "conhecidoPor": "Fundar as Clarissas e repelir mercenários com o Santíssimo Sacramento."
+  },
+  {
+    "id": "qse-santo-antonio",
+    "nome": "Santo Antônio de Pádua",
+    "aliases": [
+      "Santo Antônio",
+      "Antônio de Pádua",
+      "Fernando de Bulhões",
+      "Santo Antônio de Lisboa"
+    ],
+    "imagem": "/images/santo-antonio.png",
+    "tipo": "Santo",
+    "dicas": [
+      "Iniciei minha jornada religiosa em uma ordem monástica diferente daquela que me tornaria famoso.",
+      "Meu grande desejo de martírio missionário na África foi frustrado por uma grave doença.",
+      "Fiquei conhecido por possuir um domínio teológico tão profundo que fui nomeado o primeiro leitor de teologia da minha ordem.",
+      "A tradição atribui a mim um milagre inusitado de pregação voltada para criaturas do mar quando os homens não me escutaram.",
+      "Embora seja frequentemente chamado pelo nome de uma cidade italiana, na verdade nasci em Portugal.",
+      "Sou amplamente invocado pelos fiéis católicos para encontrar objetos perdidos."
+    ],
+    "resumo": "Frade franciscano de origem portuguesa, famoso por sua brilhante oratória, profundo conhecimento bíblico e diversos milagres.",
+    "conhecidoPor": "Ser um exímio pregador e intercessor pelas coisas perdidas."
+  },
+  {
+    "id": "qse-santa-teresinha",
+    "nome": "Santa Teresinha do Menino Jesus",
+    "aliases": [
+      "Santa Teresinha",
+      "Teresa de Lisieux",
+      "Teresa do Menino Jesus",
+      "Pequena Flor",
+      "Therese de Lisieux"
+    ],
+    "imagem": "/images/santa-teresinha.png",
+    "tipo": "Santo",
+    "dicas": [
+      "Meu desejo de ingressar no Carmelo ainda jovem me fez pedir autorização diretamente ao Papa.",
+      "Perdi minha mãe muito cedo e fui criada sob forte influência religiosa por meu pai e minhas irmãs.",
+      "Durante minha vida oculta, enfrentei um longo período de aridez que descrevi como uma noite escura.",
+      "Desenvolvi uma via baseada em realizar pequenas ações cotidianas com extraordinário amor.",
+      "Apesar de nunca ter saído do meu claustro na França, fui proclamada padroeira das missões.",
+      "Meus escritos compõem a 'História de uma Alma', e sou associada a uma chuva de rosas."
+    ],
+    "resumo": "Monja carmelita francesa cuja \"Pequena Via\" de confiança e amor transformou a espiritualidade católica moderna.",
+    "conhecidoPor": "Sua Pequena Via e os Manuscritos Autobiográficos (História de uma Alma)."
+  },
+  {
+    "id": "qse-madre-teresa",
+    "nome": "Santa Teresa de Calcutá",
+    "aliases": [
+      "Madre Teresa",
+      "Madre Teresa de Calcutá",
+      "Teresa de Calcutá",
+      "Anjezë Gonxhe Bojaxhiu"
+    ],
+    "imagem": "/images/madre-teresa.png",
+    "tipo": "Santo",
+    "dicas": [
+      "Vivi a maior parte de minha vida servindo em um continente diferente de onde nasci, na região dos Balcãs.",
+      "Durante décadas de meu apostolado mais frutífero, sofri intimamente uma dolorosa noite escura da alma.",
+      "Recebi um chamado claro para abandonar minha posição como professora e viver nas ruas com os mais desamparados.",
+      "O trabalho da minha congregação tornou-se tão conhecido que me rendeu reconhecimento global, incluindo um Prêmio Nobel.",
+      "Fundei uma congregação religiosa focada no serviço exclusivo aos mais pobres dos pobres.",
+      "Meu ministério ficou inseparavelmente associado ao cuidado dos marginalizados na Índia."
+    ],
+    "resumo": "Religiosa de etnia albanesa que fundou as Missionárias da Caridade para servir aos marginalizados nas favelas indianas.",
+    "conhecidoPor": "Seu imenso trabalho de caridade com os destituídos de Calcutá."
+  },
+  {
+    "id": "qse-joao-paulo-ii",
+    "nome": "São João Paulo II",
+    "aliases": [
+      "João Paulo II",
+      "Papa João Paulo II",
+      "João Paulo 2",
+      "Karol Wojtyła",
+      "Karol Wojtyla"
+    ],
+    "imagem": "/images/joao-paulo-ii.png",
+    "tipo": "Papa",
+    "dicas": [
+      "Na juventude, trabalhei em uma pedreira e em uma fábrica química para evitar a deportação.",
+      "Atuei secretamente no teatro e escrevi poesia durante um período de severa ocupação militar.",
+      "Minha formação sacerdotal ocorreu de forma clandestina, vivendo escondido na residência do arcebispo.",
+      "Meu longo pontificado foi marcado por um número recorde de viagens internacionais e canonizações.",
+      "Criei as Jornadas Mundiais da Juventude e sobrevivi a um atentado a tiros em praça pública.",
+      "Sou lembrado como o Papa polonês que ajudou a derrubar o comunismo no leste europeu."
+    ],
+    "resumo": "Um Papa carismático e intelectual que liderou a Igreja por mais de 26 anos, defendendo a vida e a dignidade humana.",
+    "conhecidoPor": "Seu longo papado, viagens apostólicas e por criar a Jornada Mundial da Juventude."
+  },
+  {
+    "id": "qse-sao-bento",
+    "nome": "São Bento de Núrsia",
+    "aliases": [
+      "São Bento",
+      "Bento de Núrsia"
+    ],
+    "imagem": "/images/sao-bento.png",
+    "tipo": "Santo",
+    "dicas": [
+      "A decepção com a moralidade urbana me levou a abandonar os estudos para viver em uma gruta isolada.",
+      "Escapei de duas tentativas de envenenamento orquestradas por monges que rejeitavam minha disciplina.",
+      "Fui acompanhado em minha jornada espiritual por minha irmã gêmea, que também fundou comunidades.",
+      "Estabeleci um grande centro espiritual no Monte Cassino, que serviu de modelo para a vida monástica.",
+      "Sintetizei minha via no equilíbrio perfeito entre oração litúrgica comunitária e trabalho braçal.",
+      "Escrevi a célebre Regra que se tornou o pilar fundamental do monaquismo no Ocidente."
+    ],
+    "resumo": "Patriarca do monaquismo no Ocidente, cuja Regra equilibrou 'ora et labora', influenciando toda a cultura europeia.",
+    "conhecidoPor": "Escrever a Regra de São Bento e fundar a Ordem Beneditina."
+  },
+  {
+    "id": "qse-santo-agostinho",
+    "nome": "Santo Agostinho de Hipona",
+    "aliases": [
+      "Santo Agostinho",
+      "Agostinho de Hipona",
+      "Aurélio Agostinho"
+    ],
+    "imagem": "/images/santo-agostinho.png",
+    "tipo": "Santo",
+    "dicas": [
+      "Na juventude acadêmica, envolvi-me ativamente por anos com a seita dualista dos maniqueus.",
+      "Busquei prestígio como professor de retórica, mudando-me de Cartago para Roma e, finalmente, para Milão.",
+      "Fiquei impressionado pela eloquência intelectual de um bispo que desconstruiu minhas objeções filosóficas.",
+      "Minha conversão final foi impulsionada pelo canto de uma criança que dizia repetidamente 'toma e lê'.",
+      "Ao me tornar bispo na África, combati intensamente as heresias e refleti sobre o papel da graça.",
+      "Sou o autor das célebres 'Confissões' e o filho da persistente Santa Mônica."
+    ],
+    "resumo": "Um dos maiores teólogos e filósofos do cristianismo primitivo, cujos escritos fundaram bases duradouras para a Igreja Ocidental.",
+    "conhecidoPor": "Escrever as Confissões, A Cidade de Deus e combater heresias."
+  },
+  {
+    "id": "qse-sao-tomas",
+    "nome": "São Tomás de Aquino",
+    "aliases": [
+      "São Tomás de Aquino",
+      "Tomás de Aquino",
+      "Doutor Angélico",
+      "Doctor Angelicus"
+    ],
+    "imagem": "/images/sao-tomas.png",
+    "tipo": "Santo",
+    "dicas": [
+      "Minha própria nobre família me manteve prisioneiro em um castelo para me impedir de ingressar em uma ordem mendicante.",
+      "Na academia, minha estatura robusta e comportamento silencioso renderam-me um apelido pejorativo entre os colegas.",
+      "Nos últimos meses de vida, vivenciei uma visão tão sublime que chamei tudo o que havia escrito de 'palha'.",
+      "Minha grande contribuição foi integrar o rigor do pensamento filosófico grego antigo com a revelação cristã.",
+      "Sou reconhecido pela Igreja Católica com o título de Doutor Angélico.",
+      "Sou o autor da grandiosa Suma Teológica."
+    ],
+    "resumo": "O maior teólogo escolástico da Igreja Católica, cuja obra harmonizou magistralmente a fé cristã com a filosofia aristotélica.",
+    "conhecidoPor": "Escrever a Suma Teológica e formular as cinco vias da existência de Deus."
+  },
+  {
+    "id": "qse-sao-miguel",
+    "nome": "São Miguel Arcanjo",
+    "aliases": [
+      "São Miguel",
+      "Miguel Arcanjo",
+      "Arcanjo Miguel",
+      "Miguel"
+    ],
+    "imagem": "/images/sao-miguel.png",
+    "tipo": "Anjo",
+    "dicas": [
+      "Sou citado explicitamente nas profecias do Antigo Testamento e em uma das cartas do Novo Testamento.",
+      "Fui descrito no livro de Daniel como o príncipe protetor do povo de Israel em tempos de angústia.",
+      "A tradição da Igreja costuma me invocar como uma defesa espiritual importante no momento da morte.",
+      "No livro do Apocalipse, sou retratado liderando um exército em uma grande batalha celestial.",
+      "Meu nome, de origem hebraica, é uma pergunta direta que desafia o orgulho e a rebelião espiritual.",
+      "Sou o arcanjo tradicionalmente representado com uma espada, pisando e derrotando o demônio."
+    ],
+    "resumo": "Líder dos exércitos celestiais, reverenciado como protetor da Igreja e padroeiro dos agonizantes.",
+    "conhecidoPor": "Combater Satanás e defender a fé divina."
+  },
+  {
+    "id": "qse-sao-gabriel",
+    "nome": "São Gabriel Arcanjo",
+    "aliases": [
+      "São Gabriel",
+      "Gabriel Arcanjo",
+      "Arcanjo Gabriel",
+      "Gabriel"
+    ],
+    "imagem": "/images/sao-gabriel.png",
+    "tipo": "Anjo",
+    "dicas": [
+      "Nas Escrituras, minha função é geralmente revelar o significado de acontecimentos ou visões complexas.",
+      "Fui encarregado de explicar as profecias sobre o fim dos tempos recebidas por um profeta no exílio.",
+      "Afirmei que minha posição constante é assistir de pé diante do trono de Deus.",
+      "Deixei um sacerdote temporariamente mudo porque ele duvidou da notícia sobre o nascimento de seu filho.",
+      "Minha saudação mais famosa tornou-se a primeira parte da oração mariana mais repetida do catolicismo.",
+      "Fui o anjo responsável por realizar a Anunciação à Virgem Maria."
+    ],
+    "resumo": "O mensageiro celestial que anunciou o nascimento de João Batista e a Encarnação de Jesus Cristo.",
+    "conhecidoPor": "Trazer as boas novas da Anunciação a Maria."
+  },
+  {
+    "id": "qse-sao-rafael",
+    "nome": "São Rafael Arcanjo",
+    "aliases": [
+      "São Rafael",
+      "Rafael Arcanjo",
+      "Arcanjo Rafael",
+      "Rafael"
+    ],
+    "imagem": "/images/sao-rafael.png",
+    "tipo": "Anjo",
+    "dicas": [
+      "Minha participação bíblica está confinada a um único livro da tradição deuterocanônica.",
+      "Apresentei-me usando um nome humano falso para ocultar minha identidade durante uma longa jornada.",
+      "Fui responsável por libertar uma jovem de uma terrível aflição espiritual causada por um demônio.",
+      "Forneci instruções usando fel de peixe para curar a cegueira de um ancião hebraico.",
+      "Ao me revelar, declarei ser um dos sete espíritos que assistem diante do Senhor.",
+      "Meu nome significa 'Deus cura' e sou conhecido como o arcanjo companheiro do jovem Tobias."
+    ],
+    "resumo": "Um dos sete arcanjos diante do trono de Deus, venerado como padroeiro dos viajantes, dos jovens e dos médicos.",
+    "conhecidoPor": "Guiar e proteger Tobias, além de curar a cegueira de Tobit."
+  },
+  {
+    "id": "qse-salomao",
+    "personagemId": "salomao",
+    "tipo": "Biblico",
+    "dicas": [
+      "Para garantir minha ascensão ao trono, contei com o apoio decisivo de um profeta e de minha mãe contra as pretensões do meu meio-irmão.",
+      "Estabeleci alianças diplomáticas complexas e formei uma frota naval que trazia mercadorias exóticas a cada três anos.",
+      "Minhas decisões governamentais e tolerância a cultos estrangeiros criaram tensões que culminariam na divisão da nação após minha morte.",
+      "A tradição atribui a mim a autoria de milhares de provérbios e de um conhecido cântico poético.",
+      "Fui o responsável pela construção do primeiro grande Templo em Jerusalém.",
+      "Sou lembrado nas Escrituras como o rei mais sábio e rico de toda a história de Israel."
+    ],
+    "resumo": "Terceiro rei de Israel, filho de Davi, construtor do Templo, célebre por sua sabedoria inigualável e posterior declínio.",
+    "conhecidoPor": "Sua sabedoria e a construção do Templo de Jerusalém."
+  },
+  {
+    "id": "qse-sansao",
+    "personagemId": "sansao",
+    "tipo": "Biblico",
+    "dicas": [
+      "Minha concepção foi anunciada por um anjo que impôs regras estritas sobre a minha alimentação e comportamento desde o ventre.",
+      "Organizei um banquete de casamento que terminou em tragédia por causa de um enigma que eu mesmo propus aos convidados.",
+      "Minha atuação militar não envolveu exércitos, mas ataques individuais e isolados contra uma nação inimiga.",
+      "Fui traído por uma mulher que foi repetidamente subornada para descobrir a origem da minha vantagem tática.",
+      "Em meu ato final, derrubei as colunas de um templo pagão, sacrificando minha própria vida.",
+      "Sou conhecido por minha força física sobrenatural que estava ligada ao comprimento do meu cabelo."
+    ],
+    "resumo": "Um dos juízes de Israel, consagrado como nazireu desde o ventre, possuidor de força sobre-humana e uma fraqueza trágica.",
+    "conhecidoPor": "Sua força extraordinária e a traição de Dalila."
+  },
+  {
+    "id": "qse-elias",
+    "personagemId": "elias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Minha primeira aparição pública registrada foi uma declaração abrupta ao governante local anunciando uma severa crise climática.",
+      "Durante um período de fuga, fui abrigado e sustentado por uma viúva estrangeira que morava em uma cidade costeira.",
+      "Após uma exaustiva vitória espiritual, fiquei tão desanimado e temeroso que fugi para o deserto e pedi para morrer.",
+      "Desafiei centenas de sacerdotes de outra religião para um teste público que terminaria em fogo caindo do céu.",
+      "Meu ministério terreno não terminou com a morte natural, mas com um arrebatamento repentino.",
+      "Sou o profeta do Antigo Testamento que subiu aos céus em um redemoinho acompanhado por carruagens de fogo."
+    ],
+    "resumo": "O grande profeta de Israel que combateu a idolatria no reinado de Acabe e foi arrebatado aos céus.",
+    "conhecidoPor": "O desafio no Monte Carmelo e o arrebatamento em carruagens de fogo."
+  },
+  {
+    "id": "qse-eliseu",
+    "personagemId": "eliseu",
+    "tipo": "Biblico",
+    "dicas": [
+      "No momento em que fui repentinamente chamado para o meu ministério, eu estava arando um campo com dezenas de bois.",
+      "Minha primeira ação independente como profeta foi sanear as águas de uma cidade usando apenas uma tigela com sal.",
+      "Fui alvo de zombaria por causa da minha aparência, o que resultou em um castigo trágico para um grupo de rapazes.",
+      "Instruí um comandante estrangeiro a mergulhar em um rio específico para ser curado de uma doença de pele.",
+      "Mesmo após a minha morte, o contato de um corpo com os meus ossos causou uma ressurreição acidental no sepulcro.",
+      "Fui o profeta sucessor de Elias, pedindo e recebendo uma porção dobrada do seu espírito."
+    ],
+    "resumo": "Profeta que sucedeu Elias, realizou numerosos milagres e teve grande influência política em Israel.",
+    "conhecidoPor": "Receber porção dobrada do espírito de Elias e seus inúmeros milagres."
+  },
+  {
+    "id": "qse-samuel",
+    "personagemId": "samuel",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui dedicado ao serviço religioso desde a infância como cumprimento de uma promessa que minha mãe fez sob profunda angústia.",
+      "Ainda menino, fui instruído por um sacerdote idoso a responder a uma voz que me chamava no meio da noite.",
+      "Eu viajava anualmente fazendo um circuito fixo por algumas cidades para julgar e liderar os problemas do povo.",
+      "Minha advertência mais severa alertava o povo sobre os impostos, perigos e abusos que acompanhariam uma monarquia.",
+      "Apesar das minhas reservas pessoais, fui o líder responsável por ungir os dois primeiros reis da história de Israel.",
+      "Sou o último dos juízes e o primeiro grande profeta do período monárquico israelita."
+    ],
+    "resumo": "Juiz, sacerdote e profeta que marcou a transição da era dos juízes para o estabelecimento da monarquia em Israel.",
+    "conhecidoPor": "Ouvir a voz de Deus ainda menino e ungir Saul e Davi."
+  },
+  {
+    "id": "qse-noe",
+    "personagemId": "noe",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu nascimento trouxe esperança de alívio para o trabalho duro na terra, conforme registrado nas palavras proféticas do meu pai.",
+      "Vivi em uma época de corrupção tão generalizada que fui descrito como um homem justo e íntegro entre os de minha geração.",
+      "Minha história inclui um polêmico episódio de embriaguez que resultou em uma maldição proclamada sobre um dos meus descendentes.",
+      "Fui o destinatário da primeira aliança divina registrada explicitamente, selada com um sinal visual no céu.",
+      "Recebi instruções precisas de engenharia com medidas exatas para construir um abrigo flutuante de madeira.",
+      "Sou conhecido por ter sobrevivido ao grande Dilúvio dentro de uma arca com minha família e casais de animais."
+    ],
+    "resumo": "Patriarca escolhido para preservar a humanidade e as espécies animais através do Dilúvio universal.",
+    "conhecidoPor": "A construção da Arca para escapar do Dilúvio."
+  },
+  {
+    "id": "qse-jo",
+    "personagemId": "jo",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu morava na terra de Uz e minha riqueza era contada principalmente pelo vasto número de animais que possuía.",
+      "Costumava oferecer sacrifícios religiosos preventivos por meus filhos, temendo que eles tivessem pecado secretamente.",
+      "Toda a desgraça que caiu sobre mim foi precedida por um diálogo inusitado em uma assembleia celestial.",
+      "O núcleo da minha história envolve longos e tensos debates teológicos com três amigos que vieram me consolar.",
+      "Fui curado da minha aflição e tive minha fortuna dobrada após orar de coração por aqueles que me julgaram injustamente.",
+      "Sou o personagem bíblico mais famoso por minha perseverança ao perder filhos, bens e saúde."
+    ],
+    "resumo": "Homem íntegro que suportou a perda de tudo que possuía para provar que sua fé não dependia de recompensas materiais.",
+    "conhecidoPor": "Sua lendária paciência em meio a sofrimentos severos e inexplicáveis."
+  },
+  {
+    "id": "qse-maria-madalena",
+    "personagemId": "maria-madalena",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui uma das poucas pessoas nominalmente citadas que sustentavam o grupo itinerante do meu mestre com os próprios recursos financeiros.",
+      "As narrativas evangélicas mencionam especificamente o número exato de demônios dos quais fui libertada no passado.",
+      "Fui uma das raras seguidoras que não fugiram, estando presente na colina durante a execução do nosso líder.",
+      "Fui a um cemitério ainda de madrugada carregando aromas com a intenção de concluir os rituais funerários tradicionais.",
+      "No momento de maior surpresa da minha vida, confundi temporariamente uma pessoa importantíssima com um jardineiro.",
+      "Fui a primeira testemunha ocular registrada a ver e anunciar o Senhor ressuscitado aos apóstolos."
+    ],
+    "resumo": "Discípula fiel de Jesus que O seguiu até a cruz e foi a primeira testemunha da Ressurreição.",
+    "conhecidoPor": "Encontrar o túmulo vazio e anunciar a Ressurreição."
+  },
+  {
+    "id": "qse-marta",
+    "personagemId": "marta",
+    "tipo": "Biblico",
+    "dicas": [
+      "As narrativas bíblicas costumam me identificar de imediato como a dona e anfitriã da casa que recebia meu grupo religioso.",
+      "Minha reação diante de uma perda profunda não foi ficar em luto passivo; saí rapidamente ao encontro de quem poderia ajudar.",
+      "Minha confissão de fé é uma das mais diretas dos Evangelhos, afirmando crer que ele era o Filho de Deus que devia vir ao mundo.",
+      "Em um momento de forte tensão e tristeza, expressei abertamente minha preocupação técnica com o mau cheiro de um cadáver.",
+      "Fui gentilmente repreendida por estar agitada com o serviço da casa enquanto minha irmã escolheu sentar para ouvir ensinamentos.",
+      "Sou a irmã hospitaleira de Maria e Lázaro, moradora da aldeia de Betânia."
+    ],
+    "resumo": "Discípula próxima a Jesus, conhecida por sua hospitalidade em Betânia e por sua sólida confissão de fé.",
+    "conhecidoPor": "Sua agitação com os afazeres da casa e ser irmã de Lázaro."
+  },
+  {
+    "id": "qse-lazaro",
+    "personagemId": "lazaro-betania",
+    "tipo": "Biblico",
+    "dicas": [
+      "A notícia da minha grave doença chegou a quem poderia me ajudar, mas ele decidiu permanecer ainda dois dias onde estava.",
+      "O milagre que me envolveu gerou uma comoção tão grande que consolidou o complô das autoridades para matar quem me curou.",
+      "Fui convidado para um jantar especial após meu retorno, onde muitos curiosos se aglomeravam apenas para me ver de perto.",
+      "O local onde meu corpo foi inicialmente colocado era uma caverna comum fechada por uma grande pedra rolar.",
+      "Saí do meu próprio túmulo ainda completamente envolto em faixas de linho após ouvir uma ordem em voz alta.",
+      "Sou o homem de Betânia que foi ressuscitado após estar morto por quatro dias."
+    ],
+    "resumo": "Amigo íntimo de Jesus que protagonizou um dos milagres mais impressionantes e definitivos do Evangelho de João.",
+    "conhecidoPor": "Ter sido ressuscitado após quatro dias no sepulcro."
+  },
+  {
+    "id": "qse-faustina",
+    "nome": "Santa Faustina Kowalska",
+    "aliases": [
+      "Irmã Faustina",
+      "Helena Kowalska",
+      "Faustina Kowalska",
+      "Maria Faustina"
+    ],
+    "imagem": "",
+    "tipo": "Santo",
+    "dicas": [
+      "Trabalhei como empregada doméstica na juventude para sustentar minha família, sendo rejeitada por vários conventos antes de ser aceita.",
+      "Durante minha vida religiosa no período entreguerras, exerci funções muito simples, trabalhando como cozinheira, jardineira e porteira.",
+      "Tive como diretor espiritual um sacerdote dedicado que não apenas acreditou nas minhas visões, mas me ajudou a propagar a devoção.",
+      "Recebi a curiosa tarefa de orientar a pintura de uma imagem mística que deveria conter uma inscrição específica na parte inferior.",
+      "Registrei minhas extensas reflexões e colóquios espirituais em cadernos manuscritos que formaram o meu famoso Diário.",
+      "Sou a freira polonesa conhecida mundialmente como a apóstola e secretária da Divina Misericórdia."
+    ],
+    "resumo": "Freira mística polonesa escolhida para ser a mensageira e propagadora da devoção e da festa da Divina Misericórdia.",
+    "conhecidoPor": "O Diário e a propagação do quadro de Jesus Misericordioso."
+  },
+  {
+    "id": "qse-rita-cassia",
+    "nome": "Santa Rita de Cássia",
+    "aliases": [
+      "Rita de Cássia",
+      "Margherita Lotti"
+    ],
+    "imagem": "",
+    "tipo": "Santo",
+    "dicas": [
+      "Na juventude, minha vontade de ingressar imediatamente no convento foi adiada porque meus pais arranjaram um matrimônio civil para mim.",
+      "Fiquei viúva ainda jovem, depois que meu marido se envolveu em violentos conflitos de gangues políticas locais e foi assassinado.",
+      "Segundo a tradição, pedi a Deus que levasse meus filhos em paz antes que eles crescessem e cometessem um crime de vingança familiar.",
+      "Após ser finalmente aceita como freira, a tradição conta que recebi um estigma em forma de espinho na testa.",
+      "Meu corpo permanece preservado em um grande santuário construído para peregrinações em uma pequena cidade italiana.",
+      "Sou popularmente invocada pelos fiéis como a intercessora das causas impossíveis ou desesperadas."
+    ],
+    "resumo": "Mulher que vivenciou os estados de esposa, viúva, mãe enlutada e monja augustiniana, suportando o estigma do espinho de Cristo.",
+    "conhecidoPor": "Ser a padroeira das causas impossíveis."
+  },
+  {
+    "id": "qse-padre-pio",
+    "nome": "São Padre Pio",
+    "aliases": [
+      "Padre Pio",
+      "Pio de Pietrelcina",
+      "Padre Pio de Pietrelcina",
+      "Francesco Forgione"
+    ],
+    "imagem": "",
+    "tipo": "Santo",
+    "dicas": [
+      "Fui convocado para prestar serviço médico militar durante a Primeira Guerra Mundial, mas fui seguidamente dispensado por motivos de saúde crônica.",
+      "Fui proibido por decreto do Vaticano de celebrar missas em público e ouvir confissões por vários anos como medida de extrema precaução.",
+      "Em meu ministério ativo, era muito comum que meus momentos no confessionário durassem mais de dez horas seguidas sem interrupção.",
+      "Relatos persistentes da época afirmavam que eu tinha o dom da bilocação e que exalava um característico perfume de flores.",
+      "Fui o idealizador e fundador de um grande e moderno complexo hospitalar no sul da Itália chamado Casa Alívio do Sofrimento.",
+      "Sou o famoso frade capuchinho italiano que carregou de forma visível as chagas da crucificação por cinquenta anos."
+    ],
+    "resumo": "Sacerdote capuchinho estigmatizado, que dedicou sua vida intensamente ao sacramento da confissão e à direção espiritual.",
+    "conhecidoPor": "Os estigmas e suas horas infindáveis dedicadas à confissão."
+  },
+  {
+    "id": "qse-maximiliano-kolbe",
+    "nome": "São Maximiliano Kolbe",
+    "aliases": [
+      "Maximiliano Kolbe",
+      "Padre Kolbe",
+      "Rajmund Kolbe",
+      "Maximilian Kolbe"
+    ],
+    "imagem": "",
+    "tipo": "Santo",
+    "dicas": [
+      "Na infância, uma visão com duas coroas simbólicas de cores diferentes marcou definitivamente a direção e a gravidade das minhas escolhas.",
+      "Aproveitei o potencial das mídias emergentes fundando uma estação de rádio e uma revista católica de circulação massiva em meu país.",
+      "Estendi minha missão até o Japão, onde o mosteiro que construí permaneceu de pé após a explosão de uma bomba atômica nas proximidades.",
+      "Fui preso pela polícia secreta após o meu mosteiro abrigar deliberadamente milhares de refugiados poloneses e judeus durante uma guerra.",
+      "Minha vida terrena terminou através de uma injeção letal, depois que sobrevivi por duas semanas em um sombrio bunker de fome.",
+      "Sou o padre polonês que deu um passo à frente no campo de Auschwitz oferecendo a própria vida em troca de um pai de família."
+    ],
+    "resumo": "Sacerdote franciscano pioneiro na imprensa católica, que alcançou o grau máximo da caridade através do martírio em um campo de concentração.",
+    "conhecidoPor": "Oferecer a vida no lugar de um prisioneiro no campo de extermínio de Auschwitz."
+  },
+  {
+    "id": "qse-sao-domingos",
+    "nome": "São Domingos",
+    "aliases": [
+      "São Domingos",
+      "Domingos de Gusmão",
+      "São Domingos de Gusmão",
+      "Domingo de Guzmán"
+    ],
+    "imagem": "",
+    "tipo": "Santo",
+    "dicas": [
+      "Segundo uma antiga tradição, antes de meu nascimento minha mãe sonhou com um cão que carregava uma tocha acesa na boca.",
+      "Quando estudante, tomei a atitude drástica de vender meus próprios e caros manuscritos de estudo para ajudar a alimentar famintos em uma crise.",
+      "Uma missão diplomática que fiz no sul da França acabou se tornando a semente para uma campanha apostólica que duraria o resto da minha vida.",
+      "Concentrei todos os meus esforços intelectuais e pregações em refutar pacificamente as doutrinas errôneas da forte heresia dos cátaros.",
+      "A tradição da Igreja me atribui a difusão, a estruturação e a popularização da oração do Santo Rosário.",
+      "Sou o santo espanhol que fundou a Ordem dos Pregadores, cujos membros são mundialmente conhecidos pelo meu nome."
+    ],
+    "resumo": "Sacerdote espanhol focado no rigor teológico, fundou a Ordem dos Pregadores para defender a fé através do estudo profundo e oratória.",
+    "conhecidoPor": "Fundar a Ordem dos Dominicanos e propagar a oração do Rosário."
+  },
+  {
+    "id": "qse-sao-vicente-paulo",
+    "nome": "São Vicente de Paulo",
+    "aliases": [
+      "Vicente de Paulo",
+      "São Vicente",
+      "Vincent de Paul"
+    ],
+    "imagem": "",
+    "tipo": "Santo",
+    "dicas": [
+      "No início da minha carreira, confessei ter buscado uma posição eclesiástica visando principalmente garantir uma aposentadoria financeira para minha família.",
+      "Embora os fatos exatos sejam debatidos por historiadores, relatei ter sido capturado por piratas e vendido como escravo no norte da África.",
+      "Após uma conversão espiritual, tomei a decisão de mobilizar os vastos recursos de senhoras da nobreza para fundar confrarias de assistência.",
+      "Atuei diretamente no difícil apostolado de garantir assistência religiosa e melhora nas condições dos prisioneiros condenados às galés.",
+      "Junto com uma viúva nobre da minha época, fundei uma congregação feminina ativa e totalmente voltada ao cuidado prático de órfãos e doentes.",
+      "Sou o padre francês amplamente lembrado pela Igreja como o grande padroeiro das obras de caridade."
+    ],
+    "resumo": "Sacerdote que revolucionou o cuidado aos pobres no século XVII, organizando a caridade sistêmica e o clero.",
+    "conhecidoPor": "Seu intenso trabalho na caridade e fundação das Filhas da Caridade."
+  },
+  {
+    "id": "qse-luis-gonzaga",
+    "nome": "São Luís Gonzaga",
+    "aliases": [
+      "Luís Gonzaga",
+      "Aloysius Gonzaga",
+      "São Luis Gonzaga"
+    ],
+    "imagem": "",
+    "tipo": "Santo",
+    "dicas": [
+      "Nasci em uma das famílias aristocráticas mais ricas, violentas e politicamente influentes de minha época na região norte da Itália.",
+      "Passei uma pequena parte da infância em acampamentos militares, chegando a disparar um canhão não carregado apenas por brincadeira.",
+      "Fui obrigado pelo meu pai a assinar um documento formal renunciando a todos os meus títulos de nobreza e herança antes de seguir vocação.",
+      "Tive meu primeiro contato formal com a religião pelas mãos de outro santo famoso, Carlos Borromeu, que me preparou para a primeira comunhão.",
+      "Minha vida foi precocemente interrompida aos vinte e três anos porque contraí uma doença contagiosa enquanto cuidava de vítimas de uma praga romana.",
+      "Sou o jovem e fervoroso santo jesuíta instituído pela Igreja como o padroeiro dos estudantes e da juventude cristã."
+    ],
+    "resumo": "Jovem nobre que renunciou aos confortos de uma das famílias mais poderosas da Itália para ser religioso jesuíta, morrendo ao cuidar de doentes.",
+    "conhecidoPor": "Renunciar à riqueza e ser o padroeiro da juventude e dos estudantes."
+  },
+  {
+    "id": "qse-lourenco",
+    "nome": "São Lourenço",
+    "aliases": [
+      "São Lourenço",
+      "Mártir Lourenço",
+      "Lourenço de Roma",
+      "San Lorenzo"
+    ],
+    "imagem": "",
+    "tipo": "Santo",
+    "dicas": [
+      "Sou frequentemente citado nas antigas listas cristãs como o líder de um grupo de sete auxiliares administrativos do Bispo de Roma.",
+      "Fui instruído pelo meu superior a distribuir silenciosamente as posses da nossa comunidade aos necessitados logo antes da sua própria execução.",
+      "Quando o imperador ordenou que eu entregasse as riquezas que administrava, pedi um prazo de três dias para reunir tudo.",
+      "Ao invés de entregar ouro, reuni uma multidão de cegos, mendigos e doentes e os apresentei fisicamente às autoridades militares romanas.",
+      "Afirmei corajosamente em praça pública que os marginalizados que eu havia reunido eram o verdadeiro e duradouro tesouro da Igreja.",
+      "Sou o antigo mártir romano conhecido por, segundo a hagiografia clássica, dizer aos algozes para me virarem no fogo pois já estava assado."
+    ],
+    "resumo": "Diácono romano do terceiro século, celebrizou-se por apresentar os pobres como a riqueza da Igreja antes de sofrer um martírio atroz.",
+    "conhecidoPor": "Distribuir os bens da Igreja aos pobres e morrer assado em uma grelha."
+  },
+  {
+    "id": "qse-bento-xvi",
+    "nome": "Papa Bento XVI",
+    "aliases": [
+      "Bento XVI",
+      "Joseph Ratzinger",
+      "Papa Emérito",
+      "Ratzinger"
+    ],
+    "imagem": "",
+    "tipo": "Papa",
+    "dicas": [
+      "Minha formação educacional foi abruptamente interrompida na adolescência quando fui forçado a prestar serviços militares em baterias antiaéreas.",
+      "Minha carreira intelectual despontou quando atuei como um jovem e brilhante perito teológico durante um famoso concílio ecumênico.",
+      "Em meu testamento espiritual público, mencionei com carinho minha gratidão às montanhas, lagos e tradições da minha região natal, a Baviera.",
+      "Antes de alcançar o posto máximo, exerci a delicada função de chefe do departamento que guarda a pureza da doutrina por mais de vinte anos.",
+      "Sou considerado pela crítica especializada como um dos maiores intelectuais, teólogos e escritores contemporâneos do catolicismo.",
+      "Em uma decisão histórica que surpreendeu o mundo, renunciei voluntariamente ao papado, adotando o título de Papa Emérito."
+    ],
+    "resumo": "Brilhante teólogo alemão que atuou décadas como Prefeito da Doutrina da Fé antes de seu papado, tornando-se célebre por sua renúncia.",
+    "conhecidoPor": "Sua excepcional densidade teológica e a renúncia histórica."
+  },
+  {
+    "id": "qse-papa-francisco",
+    "nome": "Papa Francisco",
+    "aliases": [
+      "Papa Francisco",
+      "Jorge Mario Bergoglio",
+      "Jorge Bergoglio",
+      "Francisco"
+    ],
+    "imagem": "",
+    "tipo": "Papa",
+    "dicas": [
+      "Na minha juventude antes do seminário, trabalhei temporariamente como porteiro e segurança de uma danceteria local para ajudar a me sustentar.",
+      "Tive formação técnica em química e trabalhei em um laboratório de testes antes de me dedicar aos estudos filosóficos.",
+      "Durante quase toda a minha vida eclesiástica, operei com apenas parte de um dos meus pulmões, devido a uma infecção severa que sofri ainda jovem.",
+      "Desde que assumi meu posto mais alto, adotei um vestuário simplificado, dispensando acessórios luxuosos tradicionais e recusando o uso dos sapatos vermelhos.",
+      "Quebrei um protocolo de mais de um século ao escolher viver em uma hospedaria comum do Vaticano em vez dos amplos aposentos oficiais.",
+      "Fui o primeiro papa do continente americano e o primeiro jesuíta a ocupar o cargo."
+    ],
+    "resumo": "Primeiro pontífice latino-americano e jesuíta da história, reconhecido por seu estilo pastoral voltado às periferias existenciais.",
+    "conhecidoPor": "Ser o primeiro papa latino-americano e jesuíta, além de sua simplicidade e ênfase pastoral."
+  },
+  {
+    "id": "qse-adao",
+    "personagemId": "adao",
+    "tipo": "Biblico",
+    "dicas": [
+      "Recebi a responsabilidade única de observar e nomear todos os animais terrestres e aves.",
+      "Minha primeira reação instintiva ao ouvir os passos do meu Criador foi me esconder.",
+      "Ao ser confrontado sobre um erro grave, tentei transferir a culpa para minha companheira e para o próprio Deus.",
+      "Fui sentenciado a tirar o sustento da terra através do suor do meu rosto até o fim da vida.",
+      "Fui colocado no Jardim do Éden para cultivá-lo e guardá-lo.",
+      "Sou o primeiro homem da história, formado diretamente do pó da terra."
+    ],
+    "resumo": "O primeiro ser humano criado por Deus, que caiu em pecado ao desobedecer a única proibição no Jardim do Éden.",
+    "conhecidoPor": "Ser o primeiro homem e cometer o pecado original."
+  },
+  {
+    "id": "qse-eva",
+    "personagemId": "eva",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui enganada por uma criatura astuta que distorceu as palavras do Criador durante um diálogo.",
+      "Achei que o fruto proibido era agradável aos olhos e desejável para obter sabedoria.",
+      "Após tomar a decisão de comer o fruto, ofereci-o também ao meu marido, que estava comigo.",
+      "Como consequência do meu erro, fui advertida de que minhas dores de parto seriam severamente multiplicadas.",
+      "Meu nome significa literalmente \"mãe de todos os seres vivos\".",
+      "Fui a primeira mulher, formada a partir da costela do primeiro homem."
+    ],
+    "resumo": "A primeira mulher, criada como auxiliadora de Adão e enganada pela serpente no Jardim do Éden.",
+    "conhecidoPor": "Ser a primeira mulher e comer o fruto proibido."
+  },
+  {
+    "id": "qse-caim",
+    "personagemId": "caim",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou o primeiro ser humano a nascer através de reprodução natural de que se tem registro.",
+      "Construí a primeira cidade mencionada nas Escrituras e dei a ela o nome do meu filho, Enoque.",
+      "Minha oferta, vinda dos frutos da terra que eu cultivava, não foi vista com agrado por Deus.",
+      "Fui marcado com um sinal divino para evitar que fosse assassinado por quem me encontrasse.",
+      "Respondi a um questionamento de Deus com a famosa frase: \"Acaso sou o guarda do meu irmão?\".",
+      "Sou tristemente lembrado como o primeiro assassino da história bíblica."
+    ],
+    "resumo": "Filho mais velho de Adão e Eva, trabalhador do solo, que assassinou seu irmão por inveja.",
+    "conhecidoPor": "Ter cometido o primeiro assassinato da humanidade."
+  },
+  {
+    "id": "qse-abel",
+    "personagemId": "abel",
+    "tipo": "Biblico",
+    "dicas": [
+      "Minha principal ocupação diária era o cuidado e pastoreio de ovelhas.",
+      "Trouxe como oferta as partes gordas das primeiras crias do meu rebanho.",
+      "Deus olhou com aprovação para mim e para a oferta que apresentei.",
+      "Segundo as Escrituras, o meu sangue derramado clamou a Deus desde a terra.",
+      "Fui morto no campo em um ataque motivado por pura inveja e ciúme religioso.",
+      "Sou o irmão mais novo de Caim e a primeira vítima de homicídio da história."
+    ],
+    "resumo": "Segundo filho de Adão e Eva, um pastor cujo sacrifício agradou a Deus, mas que foi morto por seu irmão Caim.",
+    "conhecidoPor": "Sua oferta agradável a Deus e ser o primeiro mártir."
+  },
+  {
+    "id": "qse-set",
+    "personagemId": "set",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui concebido e nasci após uma tragédia irreparável que abalou a minha família.",
+      "O significado do meu nome é \"concedido\" ou \"apontado\", refletindo meu papel de substituto.",
+      "Foi nos meus dias, através da linhagem do meu filho Enos, que os homens começaram a invocar o nome do Senhor.",
+      "A genealogia registra que vivi exatos 912 anos antes de morrer.",
+      "Sou o ancestral direto do patriarca Noé, garantindo a continuidade da linhagem justa.",
+      "Fui o terceiro filho nomeado de Adão e Eva, substituindo Abel."
+    ],
+    "resumo": "O terceiro filho de Adão e Eva, de cuja linhagem descenderam Noé e, eventualmente, Abraão.",
+    "conhecidoPor": "Continuar a linhagem justa após a morte de Abel."
+  },
+  {
+    "id": "qse-enoque",
+    "personagemId": "enoque",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou listado na genealogia de Gênesis como filho de Jarede e pai de Matusalém.",
+      "O número de anos que vivi na terra coincide com o número de dias de um ano solar.",
+      "Minha biografia é resumida pela simples mas profunda frase: \"andou com Deus\".",
+      "Não deixei um corpo para ser sepultado, pois subitamente \"já não era\".",
+      "Fui poupado de experimentar a morte física, sendo transladado diretamente por Deus.",
+      "Sou o primeiro homem na Bíblia a ser arrebatado vivo aos céus."
+    ],
+    "resumo": "Patriarca antediluviano notável por sua íntima comunhão com Deus e por ter sido levado ao céu sem morrer.",
+    "conhecidoPor": "Andar com Deus e ser arrebatado."
+  },
+  {
+    "id": "qse-melquisedeque",
+    "personagemId": "melquisedeque",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu nome é traduzido literalmente como \"Rei da Justiça\".",
+      "O autor de Hebreus destaca que eu não possuo registro de pai, mãe ou genealogia nas Escrituras.",
+      "Saí ao encontro de um grande patriarca quando ele retornava da batalha em que resgatou seu sobrinho.",
+      "Fui o primeiro a oferecer pão e vinho em um contexto sagrado e abençoador.",
+      "Exercia o ofício duplo de rei de Salém e sacerdote do Deus Altíssimo.",
+      "Sou a figura misteriosa a quem Abraão pagou o dízimo de todos os seus despojos."
+    ],
+    "resumo": "Misterioso rei e sacerdote que abençoou Abraão e prefigura o sacerdócio eterno de Cristo.",
+    "conhecidoPor": "Oferecer pão e vinho e receber o dízimo de Abraão."
+  },
+  {
+    "id": "qse-sara",
+    "personagemId": "sara",
+    "tipo": "Biblico",
+    "dicas": [
+      "Quando faleci aos 127 anos, meu marido precisou comprar a caverna de Macpela para me sepultar.",
+      "Em uma tentativa de cumprir uma promessa divina com minhas próprias mãos, entreguei minha serva Agar ao meu marido.",
+      "Duvidei e ri intimamente ao ouvir três visitantes misteriosos preverem que eu ficaria grávida no ano seguinte.",
+      "Deus mudou meu nome original, que significava \"minha princesa\", para uma versão que significa \"princesa de multidões\".",
+      "Dei à luz de forma milagrosa na velhice, chamando meu filho de Isaque.",
+      "Sou a esposa do patriarca Abraão e matriarca do povo de Israel."
+    ],
+    "resumo": "A esposa de Abraão, que após décadas de esterilidade deu à luz Isaque na velhice.",
+    "conhecidoPor": "Rir da promessa divina e ser a mãe de Isaque."
+  },
+  {
+    "id": "qse-isaque",
+    "personagemId": "isaque",
+    "tipo": "Biblico",
+    "dicas": [
+      "O significado do meu nome reflete a reação inicial dos meus pais à notícia do meu nascimento.",
+      "A Escritura menciona especificamente que orei ao Senhor em favor de minha esposa, porque ela era estéril.",
+      "Passei grande parte da vida desobstruindo poços que meus inimigos haviam entulhado, incluindo o de Berseba.",
+      "Na velhice, com a visão debilitada, fui enganado por um filho que usou roupas do irmão e peles de cabrito.",
+      "Na juventude, fui amarrado e colocado sobre a lenha de um altar no topo de um monte.",
+      "Sou o filho da promessa de Abraão e o pai dos gêmeos Esaú e Jacó."
+    ],
+    "resumo": "O segundo grande patriarca, filho de Abraão e pai de Jacó, figura central na transição da promessa divina.",
+    "conhecidoPor": "Quase ter sido sacrificado por seu pai no Monte Moriá."
+  },
+  {
+    "id": "qse-jaco",
+    "personagemId": "jaco",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui enganado por meu sogro e acabei precisando trabalhar catorze anos para me casar com as mulheres que amava.",
+      "Fugi da minha terra natal apenas com um cajado para escapar das ameaças de morte do meu próprio irmão.",
+      "Dormi com a cabeça sobre uma pedra e sonhei com uma escada que ligava a terra ao céu, com anjos subindo e descendo.",
+      "Lutei fisicamente com um homem misterioso até o amanhecer, saindo do combate com a articulação da coxa deslocada.",
+      "Após esse combate, recebi de Deus um novo nome que significa \"aquele que luta com Deus\".",
+      "Sou o patriarca cujos doze filhos deram origem às doze tribos de Israel."
+    ],
+    "resumo": "Patriarca que comprou a primogenitura de seu irmão, lutou com Deus e tornou-se pai das 12 tribos.",
+    "conhecidoPor": "Roubar a bênção de Esaú e lutar com o anjo."
+  },
+  {
+    "id": "qse-jose-egito",
+    "personagemId": "jose-genesis",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui injustamente preso sob falsa acusação porque fugi e deixei minha capa nas mãos da esposa do meu mestre.",
+      "Na prisão, interpretei corretamente os sonhos premonitórios de um padeiro e de um copeiro.",
+      "Fui renomeado pelo governante local com o título egípcio de Zafenate-Paneia.",
+      "Criei uma política de armazenamento massivo de grãos durante sete anos de abundância para evitar a fome.",
+      "Chorei de emoção e perdoei os meus irmãos mais velhos que me haviam vendido como escravo no passado.",
+      "Sou o filho favorito de Jacó, famoso por minha túnica colorida e meus sonhos."
+    ],
+    "resumo": "Filho de Jacó que, após ser vendido como escravo, tornou-se governador do Egito e salvou sua família da fome.",
+    "conhecidoPor": "Sua túnica colorida, seus sonhos e o perdão aos irmãos."
+  },
+  {
+    "id": "qse-juda",
+    "personagemId": "juda",
+    "tipo": "Biblico",
+    "dicas": [
+      "Convenci meus irmãos de que seria mais proveitoso vender nosso irmão aos ismaelitas do que deixá-lo morrer na cisterna.",
+      "Envolvi-me em um escândalo familiar ao me deitar com minha nora, Tamar, que estava disfarçada.",
+      "Anos mais tarde, ofereci-me como escravo no Egito para que meu irmão mais novo, Benjamim, pudesse voltar para o nosso pai.",
+      "Recebi do meu pai, em seu leito de morte, a profecia de que o cetro não se arredaria de mim.",
+      "Meu nome acabou servindo para batizar o reino do sul após a divisão da monarquia.",
+      "Sou o ancestral direto da tribo da qual descendem o Rei Davi e Jesus Cristo."
+    ],
+    "resumo": "Quarto filho de Jacó e Lia, que liderou os irmãos no Egito e recebeu a promessa da linhagem real.",
+    "conhecidoPor": "Ser o patriarca da tribo real de Davi."
+  },
+  {
+    "id": "qse-abimeleque",
+    "personagemId": "abimeleque",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou filho do famoso juiz Gideão com uma de suas concubinas da cidade de Siquém.",
+      "Paguei mercenários com prata do templo de Baal para me ajudarem a executar 70 de meus meio-irmãos sobre uma mesma pedra.",
+      "Fui coroado rei pelos cidadãos de Siquém junto ao carvalho da cidade.",
+      "Em retaliação a uma rebelião, incendiei a torre de Siquém com mil pessoas escondidas no seu interior.",
+      "Tive meu crânio esmagado por uma pedra de moinho arremessada por uma mulher do alto de uma muralha.",
+      "Pedi ao meu escudeiro que me matasse com a espada para não entrar para a história como um homem morto por uma mulher."
+    ],
+    "resumo": "Filho de Gideão que usurpou o poder matando seus irmãos e governou como um tirano até sua morte trágica.",
+    "conhecidoPor": "Matar 70 irmãos e morrer atingido por uma pedra de moinho atirada por uma mulher."
+  },
+  {
+    "id": "qse-jefte",
+    "personagemId": "jefte",
+    "tipo": "Biblico",
+    "dicas": [
+      "Por ser filho de uma prostituta, fui expulso de casa por meus meio-irmãos para não herdar as terras do meu pai.",
+      "Fugi para a terra de Tobe, onde formei um bando paramilitar com homens sem lei que me seguiam.",
+      "Minhas habilidades militares fizeram com que os líderes que me expulsaram implorassem meu retorno para defendê-los de Amom.",
+      "Em uma guerra civil contra Efraim, usei a pronúncia da palavra \"Xibolete\" como senha para identificar os fugitivos.",
+      "No afã de garantir a vitória, fiz a promessa irresponsável de sacrificar a primeira coisa que saísse da minha casa.",
+      "Sou o juiz trágico que cumpriu seu voto entregando a própria filha única como sacrifício."
+    ],
+    "resumo": "Um guerreiro marginalizado que se tornou Juiz de Israel, famoso por uma vitória militar ofuscada por um voto desastroso.",
+    "conhecidoPor": "Fazer o voto que resultou no sacrifício de sua única filha."
+  },
+  {
+    "id": "qse-dalila",
+    "personagemId": "dalila",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu vivia no vale de Soreque e me envolvi intimamente com o homem mais temido da minha época.",
+      "Fui procurada pelos líderes filisteus, que me prometeram 1.100 peças de prata cada um caso eu os ajudasse.",
+      "Nas minhas primeiras três tentativas de descobrir o segredo que me pediram, fui enganada com mentiras sobre cordas e teares.",
+      "Insisti diariamente com o meu companheiro até que ele ficasse cansado a ponto de querer morrer.",
+      "Enquanto ele dormia no meu colo, chamei um homem para cortar as sete tranças do seu cabelo.",
+      "Sou a mulher que traiu Sansão e entregou seu segredo aos inimigos."
+    ],
+    "resumo": "A mulher filisteia subornada para descobrir a fonte da força de Sansão e entregá-lo aos inimigos.",
+    "conhecidoPor": "Cortar o cabelo de Sansão e traí-lo."
+  },
+  {
+    "id": "qse-rute",
+    "personagemId": "rute",
+    "tipo": "Biblico",
+    "dicas": [
+      "Minhas origens estão em Moabe, um povo frequentemente inimigo de Israel.",
+      "Após me tornar viúva precocemente, recusei a sugestão de voltar para a casa dos meus pais e aos meus antigos deuses.",
+      "Trabalhei arduamente recolhendo espigas esquecidas no campo atrás dos ceifeiros para sustentar a mim e minha sogra.",
+      "Seguindo instruções, fui a uma eira de madrugada e me deitei discretamente aos pés de um homem adormecido.",
+      "Casou comigo o homem que exerceu o direito de resgate familiar.",
+      "Sou a bisavó do rei Davi e a mulher que disse: \"O teu povo será o meu povo\"."
+    ],
+    "resumo": "Mulher moabita que, por lealdade à sua sogra, uniu-se a Israel e entrou para a genealogia de Jesus.",
+    "conhecidoPor": "Sua lealdade a Noemi e o casamento com Boaz."
+  },
+  {
+    "id": "qse-noemi",
+    "personagemId": "noemi",
+    "tipo": "Biblico",
+    "dicas": [
+      "Deixei minha cidade natal, Belém, por causa de uma severa fome e emigrei para as planícies de Moabe.",
+      "Sofri a imensa tragédia de enterrar meu marido, Elimeleque, e meus dois filhos jovens no espaço de dez anos.",
+      "Ao retornar para minha terra, pedi às mulheres da cidade que não me chamassem pelo meu nome, mas de \"Mara\", que significa amarga.",
+      "Instruí minha nora sobre como ela deveria se vestir e agir para pedir o direito de resgate a um parente rico.",
+      "Terminei meus dias segurando meu neto no colo, sendo chamada de ama daquela criança.",
+      "Sou a sogra de Rute."
+    ],
+    "resumo": "A viúva que retornou amargurada de Moabe, mas cuja fé e esperança foram restauradas através de sua nora Rute.",
+    "conhecidoPor": "Ser a sogra de Rute e orientar seu casamento com Boaz."
+  },
+  {
+    "id": "qse-boaz",
+    "personagemId": "boaz",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu era um homem rico e influente em Belém, pertencente à tribo de Judá e ao clã de Elimeleque.",
+      "Demonstrei generosidade instruindo meus trabalhadores a deixarem espigas caírem de propósito para uma jovem estrangeira.",
+      "Acordei assustado no meio da noite e descobri uma mulher deitada aos meus pés na eira.",
+      "Conduzi um negócio jurídico formal na porta da cidade, tirando a sandália, para garantir meu direito de resgatador.",
+      "Tornei-me marido de Rute, a moabita.",
+      "Sou o bisavô do Rei Davi."
+    ],
+    "resumo": "Fazendeiro justo e generoso de Belém que exerceu o papel de resgatador familiar ao casar-se com Rute.",
+    "conhecidoPor": "Ser o marido de Rute e bisavô de Davi."
+  },
+  {
+    "id": "qse-eli",
+    "personagemId": "eli",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu ocupava a dupla posição de juiz de Israel e sumo sacerdote no santuário de Siló.",
+      "Cometi um erro de julgamento ao pensar que uma mulher angustiada orando no templo estava embriagada.",
+      "Fui repreendido por Deus porque vi meus filhos roubando ofertas e cometendo imoralidades, mas não os impedi firmemente.",
+      "Orientei um garoto sobre como ele deveria responder caso escutasse seu nome ser chamado novamente durante a noite.",
+      "Ao receber a notícia de que a Arca da Aliança fora capturada em batalha, caí da cadeira para trás e quebrei o pescoço.",
+      "Sou o sacerdote idoso que criou e instruiu o jovem profeta Samuel."
+    ],
+    "resumo": "Sumo sacerdote e juiz cujo fraco pulso com os filhos profanos levou à tragédia de sua família e à perda da Arca.",
+    "conhecidoPor": "Criar Samuel e morrer ao saber da captura da Arca."
+  },
+  {
+    "id": "qse-abigail",
+    "personagemId": "abigail",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui descrita nas Escrituras como uma mulher inteligente e muito bela, presa em um casamento com um homem rude e mau.",
+      "Sem o conhecimento do meu marido, preparei rapidamente dezenas de pães, ovelhas e cachos de passas para interceptar um exército.",
+      "Minha diplomacia evitou que um futuro rei cometesse um terrível massacre por vingança contra a minha família.",
+      "Quando meu marido descobriu pela manhã o perigo que havia corrido, sofreu um colapso, ficando paralisado como uma pedra.",
+      "Dias após a morte do meu marido Nabal, aceitei um pedido de casamento que chegou até mim.",
+      "Sou uma das esposas do rei Davi, famosa por ter salvo sua honra no deserto."
+    ],
+    "resumo": "Mulher sábia e formosa que agiu rapidamente para impedir que Davi matasse a família de seu marido Nabal.",
+    "conhecidoPor": "Sua sabedoria ao pacificar a ira de Davi."
+  },
+  {
+    "id": "qse-absalao",
+    "personagemId": "absalao",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou o terceiro filho de um famoso rei, nascido na cidade de Hebrom.",
+      "Ordenei aos meus servos que matassem meu meio-irmão para vingar a desonra de minha irmã Tamar.",
+      "Passei três anos no exílio e mais dois anos em Jerusalém sem ver o rosto do meu pai.",
+      "Eu ficava na porta da cidade abraçando o povo e roubando os corações dos homens de Israel.",
+      "Durante uma batalha na floresta, meu cabelo farto ficou preso nos galhos de uma grande árvore.",
+      "Sou o filho que organizou uma grande rebelião militar contra o próprio pai, o rei Davi."
+    ],
+    "resumo": "Filho de Davi que se rebelou contra o pai e morreu tragicamente preso pelos próprios cabelos.",
+    "conhecidoPor": "Sua bela cabeleira e a rebelião contra Davi."
+  },
+  {
+    "id": "qse-acabe",
+    "personagemId": "acabe",
+    "tipo": "Biblico",
+    "dicas": [
+      "Casei-me com uma princesa estrangeira para firmar uma vantajosa aliança política com os sidônios.",
+      "Construí em Samaria um templo e um altar dedicados ao deus Baal, irritando a Deus.",
+      "Fiquei tão frustrado por não conseguir comprar uma vinha vizinha que deitei na cama e recusei comer.",
+      "Fui confrontado e repreendido duramente por um grande profeta que usava mantos de pelos.",
+      "Morri em batalha depois que uma flecha atirada ao acaso me atingiu nas juntas da armadura.",
+      "Sou considerado um dos reis mais perversos de Israel, o marido da rainha Jezabel."
+    ],
+    "resumo": "Rei de Israel que sucumbiu à idolatria e enfrentou a oposição contundente do profeta Elias.",
+    "conhecidoPor": "Ser um rei ímpio e casar-se com Jezabel."
+  },
+  {
+    "id": "qse-jezabel",
+    "personagemId": "jezabel",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou filha de Etbaal, rei dos sidônios, e trouxe meus costumes religiosos para Israel.",
+      "Organizei o massacre sistemático de quase todos os profetas do Senhor que encontrei no país.",
+      "Usei o selo do meu marido para forjar cartas e encomendar a morte de um homem inocente por apedrejamento.",
+      "Enviei uma ameaça de morte tão aterrorizante que fiz o maior profeta da minha época fugir para o deserto.",
+      "Pintei meus olhos e enfeitei minha cabeça antes de encarar pela janela o general que vinha me matar.",
+      "Fui jogada da janela do palácio e meu corpo foi devorado por cães, como havia sido profetizado."
+    ],
+    "resumo": "Rainha estrangeira em Israel, promoveu o culto a Baal e tentou exterminar os profetas de Deus.",
+    "conhecidoPor": "Sua perversidade, oposição a Elias e morte trágica."
+  },
+  {
+    "id": "qse-josias",
+    "personagemId": "josias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui coroado rei de Judá quando tinha apenas oito anos de idade, após o assassinato do meu pai.",
+      "Ainda jovem, comecei a buscar a Deus e, anos depois, ordenei a grande restauração do Templo.",
+      "Rasguei minhas vestes em desespero quando meu secretário me leu um rolo antigo recém-descoberto.",
+      "Liderei uma massiva reforma nacional, destruindo os altares idólatras de todo o país.",
+      "Morri tragicamente em uma batalha desnecessária contra o faraó Neco na planície de Megido.",
+      "Sou lembrado como o bom rei que descobriu o Livro da Lei e restaurou a Páscoa em Jerusalém."
+    ],
+    "resumo": "Rei de Judá que implementou a maior reforma religiosa e de purificação no templo após a descoberta do Livro da Lei.",
+    "conhecidoPor": "A grande reforma religiosa e a descoberta do Livro da Lei."
+  },
+  {
+    "id": "qse-esdras",
+    "personagemId": "esdras",
+    "tipo": "Biblico",
+    "dicas": [
+      "Minha genealogia traça minha linhagem sacerdotal diretamente até Arão, o primeiro sumo sacerdote.",
+      "Viajei da Babilônia para Jerusalém amparado por uma carta e recursos do rei persa Artaxerxes.",
+      "Fiquei horrorizado e arranquei cabelos da cabeça ao descobrir que os exilados haviam se casado com mulheres estrangeiras.",
+      "Liderei um movimento de arrependimento profundo e separação religiosa no meio da congregação.",
+      "Li o Livro da Lei para o povo desde o amanhecer até o meio-dia, em praça pública.",
+      "Sou o sacerdote e escriba cujo nome dá título a um dos livros históricos do Antigo Testamento."
+    ],
+    "resumo": "Sacerdote e mestre da Lei que liderou um dos grupos de exilados de volta a Jerusalém e restaurou a observância da Torá.",
+    "conhecidoPor": "Restaurar a Lei em Jerusalém após o exílio babilônico."
+  },
+  {
+    "id": "qse-neemias",
+    "personagemId": "neemias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu exercia um cargo de altíssima confiança, trabalhando como copeiro no palácio de um rei persa.",
+      "Chorei e jejuei por dias ao receber a notícia de que os portões da cidade dos meus antepassados estavam em ruínas.",
+      "Organizei os construtores em turnos, fazendo com que trabalhassem com uma ferramenta numa mão e uma arma na outra.",
+      "Recusei me encontrar com inimigos numa aldeia, afirmando que estava fazendo uma grande obra e não podia parar.",
+      "Como governador, concluí a impressionante reconstrução das muralhas da cidade em apenas 52 dias.",
+      "Liderei a reconstrução das defesas físicas de Jerusalém após o exílio babilônico."
+    ],
+    "resumo": "Líder judeu e governador que organizou a rápida reconstrução das muralhas de Jerusalém apesar de severa oposição.",
+    "conhecidoPor": "Reconstruir os muros de Jerusalém."
+  },
+  {
+    "id": "qse-ester",
+    "personagemId": "ester",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu nome hebraico original era Hadassa, antes de ser levada para a corte.",
+      "Fui criada como órfã na cidadela de Susã, sob a tutela cuidadosa de um primo mais velho.",
+      "Passei doze meses em um rigoroso processo de tratamentos de beleza antes de ser apresentada a um monarca.",
+      "Arrisquei a própria vida ao entrar no pátio interno do rei sem ter sido oficialmente convocada.",
+      "Expus o plano maligno do conselheiro Hamã durante um banquete exclusivo que preparei.",
+      "Sou a rainha judia do Império Persa que salvou seu povo do extermínio."
+    ],
+    "resumo": "Uma órfã judia que se tornou rainha da Pérsia e arriscou a vida para salvar o povo judeu do massacre.",
+    "conhecidoPor": "Tornar-se rainha da Pérsia e impedir o genocídio judeu."
+  },
+  {
+    "id": "qse-tobit",
+    "personagemId": "tobit",
+    "tipo": "Biblico",
+    "dicas": [
+      "Pertenço à tribo de Naftali e fui levado como prisioneiro exilado para a cidade de Nínive.",
+      "Arrisquei minha liberdade para enterrar secretamente os corpos dos meus compatriotas mortos na rua.",
+      "Certa noite, ao dormir ao ar livre, fezes de pássaros caíram em meus olhos e causaram minha cegueira.",
+      "Lembrei-me que havia deixado uma grande quantia de prata guardada com um amigo na região da Média.",
+      "Fui curado da cegueira quando esfregaram em meus olhos o fel de um peixe.",
+      "Sou o patriarca cujo nome intitula um famoso livro deuterocanônico."
+    ],
+    "resumo": "Judeu exilado piedoso, que ficou cego ao praticar obras de misericórdia e foi curado pela intervenção do anjo Rafael.",
+    "conhecidoPor": "Ficar cego e ser o pai do jovem Tobias."
+  },
+  {
+    "id": "qse-tobias",
+    "personagemId": "tobias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui enviado por meu pai cego a uma cidade distante para recuperar uma grande quantia de dinheiro.",
+      "Contratei um guia de viagem sem saber que ele era, na verdade, um anjo disfarçado.",
+      "Durante a viagem, fui atacado por um grande peixe no rio Tigre, o qual derrotei e tirei as entranhas.",
+      "Usei o fígado e o coração desse peixe na fogueira para espantar um demônio na minha noite de núpcias.",
+      "Utilizei o fel do mesmo peixe para curar a cegueira de meu pai quando retornei para casa.",
+      "Viajei com o Arcanjo Rafael, libertei a jovem Sara de sua maldição e me casei com ela."
+    ],
+    "resumo": "Jovem que, acompanhado pelo anjo Rafael, realizou uma longa jornada que resultou em cura e casamento.",
+    "conhecidoPor": "Sua viagem com o anjo Rafael e a cura com o fel do peixe."
+  },
+  {
+    "id": "qse-sara-tobias",
+    "personagemId": "sara-esposa-de-tobias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu morava em Ecbátana, na Média, e chorava em meu quarto por causa das humilhações de uma das servas do meu pai.",
+      "Pensei em tirar minha própria vida, mas desisti orando a Deus para não trazer vergonha ao meu velho pai.",
+      "Sofria de uma possessão ou maldição terrível que matava todos os homens que se aproximavam de mim.",
+      "Antes do meu casamento definitivo, sete maridos anteriores foram mortos na própria noite de núpcias.",
+      "Fui libertada quando a fumaça de um coração de peixe espantou o demônio que me afligia.",
+      "Sou a personagem liberta do demônio Asmodeu e que se casou com o jovem Tobias."
+    ],
+    "resumo": "Mulher piedosa atormentada pelo demônio Asmodeu, que matava seus maridos, até ser curada e casar-se com Tobias.",
+    "conhecidoPor": "Ter perdido sete maridos para um demônio e casar-se com Tobias."
+  },
+  {
+    "id": "qse-judite",
+    "personagemId": "judite",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu era uma viúva de excepcional beleza e riqueza, que vivia em jejum quase todos os dias.",
+      "Repreendi duramente os líderes da minha cidade por estipularem um prazo de cinco dias para que Deus os salvasse.",
+      "Vesti minhas roupas de festa mais elegantes e atravessei as linhas inimigas carregando meu próprio alimento.",
+      "Ganhei a confiança do comandante invasor dizendo-lhe exatamente o que ele queria ouvir sobre a derrota do meu povo.",
+      "No momento decisivo, aproveitei que o general estava embriagado e o decapitei com a sua própria espada.",
+      "Sou a heroína de Betúlia que salvou a nação de Israel ao matar Holofernes."
+    ],
+    "resumo": "Viúva judia destemida que usou sua beleza e coragem para assassinar um general assírio e salvar seu povo.",
+    "conhecidoPor": "Ter decapitado o general Holofernes."
+  },
+  {
+    "id": "qse-isaias",
+    "personagemId": "isaias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Exerci meu longo ministério durante o reinado de quatro reis diferentes da nação de Judá.",
+      "Minha vocação aconteceu no templo, no mesmo ano em que o rei Uzias faleceu.",
+      "Durante a visão do meu chamado, um serafim tocou meus lábios com uma brasa viva tirada do altar.",
+      "Certa vez, por ordem de Deus, andei descalço e sem roupas por três anos como sinal contra o Egito.",
+      "Escrevi extensivamente sobre um \"Servo Sofredor\" que seria esmagado por nossas iniquidades.",
+      "Sou o chamado \"profeta messiânico\" do Antigo Testamento, cujos textos são muito lidos no Advento."
+    ],
+    "resumo": "Profeta Maior de estilo refinado, famoso pelas abundantes e claras profecias sobre o nascimento e o sofrimento do Messias.",
+    "conhecidoPor": "Suas profecias sobre o Messias e o \"Servo Sofredor\"."
+  },
+  {
+    "id": "qse-jeremias",
+    "personagemId": "jeremias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui chamado para o ministério ainda muito jovem, argumentando com Deus que não passava de uma criança.",
+      "Recebi a dura instrução divina de não me casar nem ter filhos devido ao julgamento que viria sobre a nação.",
+      "Cheguei a ser jogado em uma cisterna profunda cheia de lama por oficiais que me consideravam um traidor desmoralizante.",
+      "Fui testemunha ocular da destruição da minha própria cidade pelos exércitos babilônios, evento que eu havia previsto.",
+      "Sou conhecido pelas minhas intensas lamentações e profundo pesar pelo destino do meu povo.",
+      "Sou o Profeta Maior conhecido como o \"Profeta Chorão\"."
+    ],
+    "resumo": "Profeta que previu a queda de Jerusalém para a Babilônia, sofrendo grande perseguição e dor por seu próprio povo.",
+    "conhecidoPor": "Ser o profeta chorão e autor de Lamentações."
+  },
+  {
+    "id": "qse-ezequiel",
+    "personagemId": "ezequiel",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu era um sacerdote que foi levado para o exílio babilônico antes da destruição total do Templo.",
+      "Na minha vocação, recebi um rolo escrito com lamentações, fui ordenado a comê-lo, e achei-o doce como mel.",
+      "Fiz encenações estranhas em público, como ficar deitado sobre o mesmo lado por centenas de dias para ilustrar um cerco.",
+      "Descrevi com riqueza de detalhes a glória de Deus partindo do templo de Jerusalém rumo ao leste.",
+      "Fui levado pelo Espírito a contemplar e profetizar sobre um vale cheio de ossos secos que ganharam vida.",
+      "Sou o profeta exilado famoso por ter visões altamente místicas, incluindo os querubins e as rodas de fogo."
+    ],
+    "resumo": "Sacerdote e profeta no exílio babilônico, marcado por visões místicas extremas e atos simbólicos impactantes.",
+    "conhecidoPor": "A visão do vale de ossos secos."
+  },
+  {
+    "id": "qse-daniel",
+    "personagemId": "daniel",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui levado cativo para a Babilônia ainda na juventude, recebendo da corte o nome pagão de Beltessazar.",
+      "Minha primeira prova de fé foi resolver não me contaminar com as carnes finas e o vinho servidos no palácio.",
+      "Consegui revelar a um monarca furioso não apenas a interpretação de um pesadelo, mas qual havia sido o próprio sonho.",
+      "Atravessei a queda do império babilônico e acabei me tornando um alto funcionário no império medo-persa.",
+      "Continuei orando com as janelas abertas voltadas para Jerusalém, desafiando um decreto imperial.",
+      "Sou o profeta que sobreviveu ileso após ser atirado em uma cova cheia de leões esfomeados."
+    ],
+    "resumo": "Jovem cativo em Babilônia que ascendeu na corte por sua sabedoria e pureza, recebendo revelações apocalípticas notáveis.",
+    "conhecidoPor": "Sobreviver à cova dos leões e interpretar os sonhos do rei."
+  },
+  {
+    "id": "qse-jonas",
+    "personagemId": "jonas",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou um profeta nascido em Gate-Hefer que atuou durante a época de expansão do rei Jeroboão II.",
+      "Ao receber a instrução de pregar em uma metrópole estrangeira, comprei passagem de navio na direção oposta.",
+      "Fui responsabilizado por uma tempestade mortal em alto mar e eu mesmo pedi para ser lançado nas águas.",
+      "Fiquei extremamente irritado porque a cidade que eu avisei sobre a destruição fez penitência e foi poupada.",
+      "Fiquei furioso com Deus quando um verme destruiu a planta que me dava sombra no deserto.",
+      "Sou o profeta que passou três dias no ventre de um grande peixe."
+    ],
+    "resumo": "O profeta relutante que fugiu do chamado para pregar em Nínive e foi engolido por um grande peixe.",
+    "conhecidoPor": "Ter sido engolido por um grande peixe."
+  },
+  {
+    "id": "qse-oseias",
+    "personagemId": "oseias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Profetizei no Reino do Norte durante um período de prosperidade material, mas de profunda degradação e corrupção espiritual.",
+      "Dei nomes proféticos de advertência aos meus filhos, sendo eles \"Jezreel\", \"Não-Amada\" e \"Não-Meu-Povo\".",
+      "Minha vida conjugal pessoal foi usada abertamente como a principal ilustração e metáfora da minha mensagem profética.",
+      "Tive que ir e comprar de volta como escrava a esposa que havia me abandonado por outros amantes.",
+      "Recebi do próprio Deus a chocante ordem de me casar com uma mulher dada ao adultério.",
+      "Sou o profeta cuja relação conturbada com Gômer ilustrou a infidelidade de Israel e o amor perdoador de Deus."
+    ],
+    "resumo": "Profeta cuja dolorosa vida conjugal serviu de analogia viva para mostrar a infidelidade de Israel para com Deus.",
+    "conhecidoPor": "Casar-se com a prostituta Gômer por ordem divina."
+  },
+  {
+    "id": "qse-amos",
+    "personagemId": "amos",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fiz questão de declarar que eu não era um profeta de profissão nem pertencia às tradicionais escolas de profetas.",
+      "Minha ocupação original era ser pastor de ovelhas e cultivador de figos silvestres na cidade de Tecoa.",
+      "Embora fosse do Reino do Sul, recebi o chamado para ir ao próspero Reino do Norte e profetizar duramente contra eles.",
+      "Fui ameaçado e expulso do santuário de Betel pelo sacerdote Amazias, que não suportou minhas pregações.",
+      "Minha mensagem central atacava violentamente a injustiça social e as práticas religiosas vazias que exploravam os pobres.",
+      "Sou o profeta camponês famoso pela exortação: \"Corra a justiça como um rio, e a retidão como um ribeiro perene\"."
+    ],
+    "resumo": "Pastor e agricultor chamado por Deus para denunciar a corrupção social e religiosa no Reino de Israel.",
+    "conhecidoPor": "Sua forte denúncia da injustiça social."
+  },
+  {
+    "id": "qse-miqueias",
+    "personagemId": "miqueias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui contemporâneo de Isaías, mas minha pregação se originou de uma pequena vila e focava nas dores do homem do campo.",
+      "Denunciei de forma perturbadora os líderes corruptos, dizendo que eles \"arrancavam a pele do meu povo\".",
+      "Previ o impensável na minha época: que a cidade de Jerusalém se tornaria um montão de ruínas e o templo ficaria coberto de mato.",
+      "Resumi as exigências divinas de forma memorável: \"praticar a justiça, amar a misericórdia e andar humildemente com teu Deus\".",
+      "Minha profecia mais famosa foi citada aos magos do oriente séculos depois por sacerdotes que nem acreditavam nela.",
+      "Sou o profeta do Antigo Testamento que cravou que o Messias nasceria na pequena cidade de Belém."
+    ],
+    "resumo": "Profeta de origem humilde contemporâneo de Isaías, que resumiu a essência da religião autêntica e previu o nascimento em Belém.",
+    "conhecidoPor": "Profetizar que o Messias nasceria em Belém."
+  },
+  {
+    "id": "qse-nabucodonosor",
+    "personagemId": "nabucodonosor",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui o grande líder militar estrangeiro responsável por cercar e destruir os muros e o Templo de Jerusalém.",
+      "Certa vez ordenei a execução de todos os sábios do meu reino porque eles não conseguiram adivinhar o sonho que eu havia esquecido.",
+      "Após ter um sonho com uma árvore monumental que era cortada, passei sete anos vivendo nos campos como um animal selvagem.",
+      "Em um acesso de raiva contra judeus exilados, ordenei que uma fornalha fosse aquecida sete vezes mais do que o normal.",
+      "Erigi uma gigantesca estátua de ouro na planície e decretei que todos se prostrassem ao som de instrumentos musicais.",
+      "Sou o mais famoso, temido e duradouro rei do Império Babilônico."
+    ],
+    "resumo": "O grande e orgulhoso imperador da Babilônia, instrumento de Deus para exilar Judá, que foi temporariamente enlouquecido por sua arrogância.",
+    "conhecidoPor": "Destruir Jerusalém e atirar três jovens na fornalha."
+  },
+  {
+    "id": "qse-isabel",
+    "personagemId": "isabel",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou descendente direta do primeiro sumo sacerdote Arão e casei-me com um sacerdote.",
+      "Embora vivesse de forma irrepreensível, sofri durante décadas o pesado estigma social da esterilidade.",
+      "Ocultei-me em reclusão por cinco meses após finalmente engravidar na velhice.",
+      "Fui cheia do Espírito Santo no exato momento em que uma jovem parente minha entrou em minha casa.",
+      "Senti o bebê saltar de alegria no meu ventre ao ouvir a voz daquela que me saudava.",
+      "Sou a esposa de Zacarias e a mãe de João Batista."
+    ],
+    "resumo": "A idosa mãe de João Batista que, apesar de estéril, concebeu o precursor do Messias.",
+    "conhecidoPor": "Ser a mãe de João Batista e reconhecer a mãe do seu Senhor."
+  },
+  {
+    "id": "qse-zacarias-pai",
+    "personagemId": "zacarias-pai-de-joao-batista",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu pertencia ao turno sacerdotal de Abias e servia fielmente a Deus no templo.",
+      "Fui escolhido por sorteio sagrado para entrar no santuário e queimar incenso.",
+      "Fiquei aterrorizado quando vi um anjo aparecer de pé, à direita do altar do incenso.",
+      "Duvidei de uma promessa angelical e, por isso, fui punido ficando mudo e surdo durante toda a gestação.",
+      "Recuperei instantaneamente a fala logo após escrever numa tabuinha o nome que meu filho deveria ter.",
+      "Sou o sacerdote que entoou o cântico \"Benedictus\" e pai de João Batista."
+    ],
+    "resumo": "Sacerdote que ficou mudo por duvidar da promessa do anjo, recuperando a fala no nascimento de João Batista.",
+    "conhecidoPor": "Ficar mudo ao duvidar do anjo Gabriel."
+  },
+  {
+    "id": "qse-jose-arimateia",
+    "personagemId": "jose-arimateia",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu era um homem rico e um membro proeminente e respeitado do Sinédrio, o conselho judaico.",
+      "Tornara-me discípulo em segredo porque tinha muito medo das retaliações das autoridades religiosas.",
+      "Não concordei com a decisão do conselho que condenou o rabi que eu seguia de longe.",
+      "Tomei coragem de forma surpreendente e dirigi-me ao governador romano para fazer um pedido muito arriscado.",
+      "Envolvi um corpo morto em um lençol de linho limpo que eu havia comprado.",
+      "Sou o homem que cedeu o seu próprio túmulo novo escavado na rocha para o sepultamento de Jesus."
+    ],
+    "resumo": "Membro nobre do Sinédrio que assumiu publicamente sua fé ao pedir o corpo de Jesus para sepultar.",
+    "conhecidoPor": "Ceder o sepulcro para o enterro de Jesus."
+  },
+  {
+    "id": "qse-zaqueu",
+    "personagemId": "zaqueu",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu ocupava a chefia de uma rica coletoria de impostos em uma importante cidade oásis da Judeia.",
+      "Era alvo de imenso desprezo social por minha profissão e por ter enriquecido extorquindo o povo.",
+      "Fui impedido de enxergar o que acontecia na rua devido à minha estatura notavelmente baixa.",
+      "Decidi abrir mão do meu orgulho e subir nos galhos de uma figueira-brava apenas para ver um rabi passar.",
+      "Comovi-me tanto com a visita surpresa daquele mestre à minha casa que decidi devolver quadruplicado tudo o que roubei.",
+      "Sou o publicano de Jericó que recebeu Jesus em casa com grande alegria."
+    ],
+    "resumo": "Chefe dos publicanos em Jericó, que após um encontro com Jesus mudou de vida e restituiu os roubos.",
+    "conhecidoPor": "Sua baixa estatura e subir na árvore para ver Jesus."
+  },
+  {
+    "id": "qse-jairo",
+    "personagemId": "jairo",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu era um homem influente, líder de uma sinagoga numa das cidades às margens do Mar da Galileia.",
+      "Desesperei-me ao ponto de me jogar aos pés de um polêmico rabi em praça pública, implorando ajuda.",
+      "O meu socorro foi agonizantemente atrasado porque uma mulher na multidão tocou na orla do manto do rabi.",
+      "No meio do caminho, recebi a pior notícia possível de meus empregados: \"Não incomode mais o Mestre\".",
+      "Ouvi diretamente de Jesus a ordem reconfortante: \"Não tenhas medo; crê somente\".",
+      "Sou o pai de uma menina de doze anos que Jesus ressuscitou."
+    ],
+    "resumo": "Chefe da sinagoga que, mesmo diante da notícia da morte da filha, continuou a crer no poder de Jesus.",
+    "conhecidoPor": "Sua fé que resultou na ressurreição de sua filha de 12 anos."
+  },
+  {
+    "id": "qse-simao-cirene",
+    "personagemId": "simao-de-cirene",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu era um judeu da diáspora, vindo do norte da África, que havia viajado a Jerusalém.",
+      "Estava simplesmente retornando do campo e passando pela rua no momento mais dramático da história.",
+      "A Bíblia faz questão de me identificar como o pai de Alexandre e de Rufo, que seriam conhecidos pela comunidade.",
+      "Fui obrigado pelos soldados romanos a assumir um serviço braçal público e extremamente humilhante.",
+      "Obriguei-me a caminhar atrás de um homem condenado, suportando o peso do instrumento de sua execução.",
+      "Sou o homem requisitado para carregar a cruz de Jesus até o Gólgota."
+    ],
+    "resumo": "Transeunte forçado pelos romanos a carregar a cruz de Cristo, cujos filhos se tornaram cristãos influentes.",
+    "conhecidoPor": "Carregar a cruz de Jesus."
+  },
+  {
+    "id": "qse-barrabas",
+    "personagemId": "barrabas",
+    "tipo": "Biblico",
+    "dicas": [
+      "O meu nome significa \"filho do pai\" em aramaico.",
+      "Fui aprisionado por ter participado de um motim na cidade, durante o qual um assassinato foi cometido.",
+      "Eu encarnava a exata ameaça violenta e rebelde que as autoridades, falsamente, atribuíam a outro prisioneiro.",
+      "Os chefes dos sacerdotes persuadiram a multidão a exigir que o governador romano escolhesse o meu nome.",
+      "Fui libertado graças ao costume do governador de anistiar um prisioneiro durante a festa da Páscoa.",
+      "Sou o criminoso que a multidão preferiu libertar no lugar de Jesus."
+    ],
+    "resumo": "Rebelde e assassino que recebeu o perdão do governador romano após o clamor da multidão contra Jesus.",
+    "conhecidoPor": "Ser libertado por Pôncio Pilatos no lugar de Cristo."
+  },
+  {
+    "id": "qse-caifas",
+    "personagemId": "caifas",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu exercia um altíssimo cargo religioso, tendo sucedido Anás, que era o meu próprio sogro.",
+      "Fui eu quem profetizou de forma cínica, sem entender a profundidade, que \"era melhor um homem morrer pelo povo\".",
+      "No meio de um interrogatório noturno ilegal, rasguei minhas vestes em demonstração pública de escândalo.",
+      "Acusei um réu de blasfêmia máxima ao ouvi-lo dizer que se assentaria à direita do Poder e viria sobre as nuvens.",
+      "Chefiei as autoridades que entregaram um prisioneiro judaico ao tribunal do Império Romano exigindo sua crucificação.",
+      "Sou o sumo sacerdote que presidiu o julgamento religioso que condenou Jesus à morte."
+    ],
+    "resumo": "O astuto sumo sacerdote que arquitetou e presidiu o julgamento que levou Jesus à condenação perante Pilatos.",
+    "conhecidoPor": "Ser o sumo sacerdote que condenou Jesus."
+  },
+  {
+    "id": "qse-pilatos",
+    "personagemId": "poncio-pilatos",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu exercia grande autoridade política e militar, comandando a província da Judeia em nome de César.",
+      "Minha relação com os judeus já era tensa devido a massacres e ao desrespeito a objetos sagrados no passado.",
+      "Durante um interrogatório, fiz a famosa pergunta filosófica e cética: \"O que é a verdade?\", e saí sem esperar a resposta.",
+      "Minha esposa me enviou um recado urgente pedindo que eu não me envolvesse na condenação de um homem justo por causa de um pesadelo.",
+      "Para evitar uma insurreição iminente durante a Páscoa, decidi ceder à pressão da multidão, mas pedi uma bacia com água.",
+      "Sou o governador romano que lavou as mãos e ordenou a crucificação de Jesus de Nazaré."
+    ],
+    "resumo": "Governador romano da Judeia que, apesar de não ver culpa em Jesus, o entregou para ser crucificado sob pressão.",
+    "conhecidoPor": "Lavar as mãos e condenar Jesus à cruz."
+  },
+  {
+    "id": "qse-andre",
+    "personagemId": "andre",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui um pescador da cidade de Betsaida que começou a vida espiritual como discípulo de João Batista.",
+      "Após ouvir João Batista dizer \"Eis o Cordeiro de Deus\", mudei imediatamente de mestre.",
+      "Fui correndo procurar o meu irmão de sangue para lhe anunciar a descoberta de que havíamos achado o Messias.",
+      "Reparei em um menino na multidão faminta e levei até o mestre cinco pães de cevada e dois peixinhos.",
+      "Tenho a fama nas Escrituras de ser um apóstolo que estava constantemente apresentando e trazendo outras pessoas até Jesus.",
+      "Sou o irmão do apóstolo Pedro e o primeiro apóstolo a ser chamado."
+    ],
+    "resumo": "O primeiro discípulo chamado, que deixou as redes para seguir a Cristo e levou seu irmão Pedro até ele.",
+    "conhecidoPor": "Ser irmão de Pedro e apresentar os pães na multiplicação."
+  },
+  {
+    "id": "qse-tiago-maior",
+    "personagemId": "tiago-filho-do-trovao",
+    "tipo": "Biblico",
+    "dicas": [
+      "Juntamente com meu irmão e meu pai Zebedeu, deixei meus empregados e os barcos de pesca para seguir um rabi.",
+      "Meu temperamento era tão impetuoso que o mestre me deu, junto com meu irmão, o apelido de \"Filho do Trovão\".",
+      "Minha mãe gerou um enorme mal-estar no grupo ao pedir os dois melhores lugares no Reino para os seus filhos.",
+      "Fui um dos três únicos discípulos que puderam presenciar a Transfiguração e a agonia no Getsêmani de perto.",
+      "Tive o destino trágico de ser o primeiro dos apóstolos a ser martirizado, morto ao fio da espada pelo rei Herodes Agripa.",
+      "Sou o apóstolo conhecido como o Maior e irmão do apóstolo João."
+    ],
+    "resumo": "Um dos três apóstolos mais íntimos de Jesus, conhecido por seu zelo e por ser o primeiro apóstolo martirizado.",
+    "conhecidoPor": "Ser um dos \"Filhos do Trovão\" e o primeiro apóstolo mártir."
+  },
+  {
+    "id": "qse-joao-evangelista",
+    "personagemId": "joao-apostolo",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu pai era proprietário de barcos e redes de pesca no mar da Galileia, mas eu larguei tudo quando chamado.",
+      "Tive a coragem infeliz de sugerir que mandássemos descer fogo do céu para aniquilar uma vila samaritana inóspita.",
+      "Na madrugada de domingo, corri mais rápido que o mais velho dos apóstolos e cheguei primeiro ao sepulcro vazio.",
+      "Fui o único apóstolo que permaneceu fielmente aos pés da cruz durante as horas de tormento da crucificação.",
+      "Recebi das falas finais do mestre na cruz a tremenda missão de cuidar de sua mãe como se fosse minha.",
+      "Sou o apóstolo e evangelista que referia a si mesmo apenas como \"o discípulo a quem Jesus amava\"."
+    ],
+    "resumo": "O apóstolo mais jovem e amado, que esteve ao pé da cruz e recebeu Maria como mãe.",
+    "conhecidoPor": "Ser o \"discípulo amado\" e escrever o quarto Evangelho."
+  },
+  {
+    "id": "qse-filipe-apostolo",
+    "personagemId": "filipe-apostolo",
+    "tipo": "Biblico",
+    "dicas": [
+      "Compartilho Betsaida como cidade natal com dois famosos irmãos pescadores que se tornaram apóstolos.",
+      "Assim que fui chamado, não perdi tempo e fui chamar meu amigo Natanael com a frase pragmática \"Vem, e vê\".",
+      "Antes da multiplicação dos pães, fui testado pelo mestre com a pergunta: \"Onde compraremos pães para eles comerem?\".",
+      "Fui procurado por alguns gregos durante a festa porque eles queriam muito ver Jesus.",
+      "Na Última Ceia, fiz um pedido infantil que gerou uma repreensão célebre: \"Senhor, mostra-nos o Pai, e isso nos basta\".",
+      "Sou o apóstolo cujo nome tem origem grega e significa \"amador de cavalos\"."
+    ],
+    "resumo": "Apóstolo prático que apresentou Jesus a Natanael e a quem Jesus testou na multiplicação dos pães.",
+    "conhecidoPor": "O pedido \"Mostra-nos o Pai\" na Última Ceia."
+  },
+  {
+    "id": "qse-natanael",
+    "personagemId": "natanael",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu era originário de Caná da Galileia, onde seria realizado o primeiro milagre.",
+      "Ao receber a primeira notícia do Messias, deixei escapar um grande preconceito com o vilarejo de onde ele vinha.",
+      "Minha reação irônica e famosa foi: \"Pode vir alguma coisa boa de Nazaré?\".",
+      "Fiquei completamente atônito quando um homem que eu nunca tinha visto descreveu o meu caráter sem me conhecer.",
+      "Acreditei no mestre no instante em que ele revelou que me viu enquanto eu ainda estava debaixo de uma figueira.",
+      "Sou o apóstolo que foi elogiado por Jesus como \"um verdadeiro israelita em quem não há falsidade\", também conhecido como Bartolomeu."
+    ],
+    "resumo": "O apóstolo cético e sincero que foi chamado por Filipe e maravilhou-se ao saber que Jesus o viu sob a figueira.",
+    "conhecidoPor": "Duvidar se algo bom vinha de Nazaré e estar debaixo da figueira."
+  },
+  {
+    "id": "qse-mateus",
+    "personagemId": "mateus",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou também mencionado nos relatos evangélicos com meu nome alternativo, Levi, filho de Alfeu.",
+      "Exerci uma profissão que me garantia muito dinheiro, mas me cobrava o preço de ser tratado como traidor e herege pelo meu povo.",
+      "Eu estava trabalhando na alfândega local cobrando taxas quando um rabi me olhou e disse apenas: \"Segue-me\".",
+      "Minha primeira ação como discípulo foi organizar um grande banquete na minha casa para o mestre e meus velhos amigos.",
+      "O fato de Jesus ter comido à minha mesa gerou a crítica feroz dos fariseus de que ele andava com publicanos e pecadores.",
+      "Sou o cobrador de impostos que se tornou Apóstolo e, posteriormente, escreveu o primeiro Evangelho."
+    ],
+    "resumo": "Publicano rico que abandonou a coletoria de impostos e a exclusão social para se tornar apóstolo e evangelista.",
+    "conhecidoPor": "Ter sido um cobrador de impostos antes de seguir a Jesus."
+  },
+  {
+    "id": "qse-tome",
+    "personagemId": "tome",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu nome e também o meu apelido, Dídimo, significam literalmente \"o gêmeo\".",
+      "Quando o mestre decidiu arriscar a vida indo para a Judeia para ver Lázaro, sugeri em tom pessimista: \"Vamos nós também, para morrermos com ele\".",
+      "Na Última Ceia, cortei a fala do mestre perguntando objetivamente: \"Senhor, não sabemos para onde vais; como podemos saber o caminho?\".",
+      "Fui o único apóstolo ausente quando Jesus ressuscitado apareceu no cenáculo pela primeira vez no domingo à noite.",
+      "Declarei que só acreditaria na ressurreição se pudesse afundar o dedo no lugar dos cravos e a mão no lado furado.",
+      "Sou o apóstolo que duvidou, e a quem Cristo disse: \"Não sejas incrédulo, mas crente\"."
+    ],
+    "resumo": "Apóstolo leal, porém cético, cuja exigência por provas físicas da ressurreição culminou em uma forte declaração de fé.",
+    "conhecidoPor": "Exigir ver as marcas dos pregos para crer na ressurreição."
+  },
+  {
+    "id": "qse-tiago-menor",
+    "personagemId": "tiago-filho-de-alfeu",
+    "tipo": "Biblico",
+    "dicas": [
+      "Em todas as listas dos Doze, o nome de meu pai, Alfeu, é sempre destacado para evitar confusões.",
+      "Minha mãe, uma das mulheres que observavam de longe a crucificação, chamava-se Maria.",
+      "Não possuo nenhuma fala, diálogo ou episódio focado individualmente em mim nos Evangelhos.",
+      "Fui escolhido pelo Messias para compor o seleto círculo que receberia autoridade sobre curas e espíritos.",
+      "A tradição da Igreja costuma me atribuir o adjetivo \"Mais Jovem\" ou \"Menor\" devido à minha estatura ou idade em relação a outro apóstolo.",
+      "Sou o outro apóstolo chamado Tiago, mas não sou irmão de João."
+    ],
+    "resumo": "Um dos Doze Apóstolos originais, distinguido do filho de Zebedeu pelo título \"Filho de Alfeu\" ou \"Menor\".",
+    "conhecidoPor": "Ser o apóstolo filho de Alfeu."
+  },
+  {
+    "id": "qse-tadeu",
+    "personagemId": "tadeu",
+    "tipo": "Biblico",
+    "dicas": [
+      "Alguns Evangelhos preferem me listar apenas pelo meu segundo nome para evitar que as pessoas evitem mencionar o meu primeiro nome.",
+      "Sou listado junto com Simão nos evangelhos de Mateus e Marcos.",
+      "A única vez em que falo na Bíblia é durante a Última Ceia, fazendo uma pergunta profunda ao Mestre.",
+      "Perguntei a Jesus por que ele iria se manifestar abertamente apenas a nós e não ao resto do mundo.",
+      "No Evangelho de João, o autor faz questão de escrever \"não o Iscariotes\" ao lado do meu nome para não deixar nenhuma dúvida.",
+      "Sou o apóstolo frequentemente invocado na devoção popular como padroeiro das causas impossíveis."
+    ],
+    "resumo": "Um dos Doze, que possuía o mesmo primeiro nome do traidor de Cristo e perguntou a Jesus sobre Sua manifestação ao mundo.",
+    "conhecidoPor": "Ter o mesmo nome do traidor, mas ser padroeiro das causas impossíveis."
+  },
+  {
+    "id": "qse-simao-zelote",
+    "personagemId": "simao-o-zelote",
+    "tipo": "Biblico",
+    "dicas": [
+      "Tenho o mesmo primeiro nome do líder principal dos apóstolos.",
+      "Fui chamado a integrar um grupo que, de forma muito irônica, incluía alguém que cobrava impostos para o Império Romano.",
+      "O meu apelido em aramaico é \"o Cananeu\", que no contexto significa ardoroso ou fanático.",
+      "Lucas me identifica com um título grego que revelava claramente meu passado revolucionário radical.",
+      "Eu pertencia a um movimento que, historicamente, defendia lutar de forma violenta pela libertação de Israel contra Roma.",
+      "Sou o apóstolo cujo sobrenome político era \"o Zelote\"."
+    ],
+    "resumo": "Apóstolo cujo passado envolvia o engajamento num movimento de resistência extrema contra o domínio romano em Israel.",
+    "conhecidoPor": "Ter pertencido à seita dos zelotes antes de ser apóstolo."
+  },
+  {
+    "id": "qse-judas-iscariotes",
+    "personagemId": "judas-iscariotes",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui o único membro do grupo original dos Doze que era natural da região da Judeia, e não da Galileia.",
+      "Como eu era considerado confiável ou habilidoso no início, fui nomeado o administrador e tesoureiro da bolsa do grupo.",
+      "Gerei grande tensão quando reclamei do desperdício de um perfume caro, argumentando falsamente que o dinheiro deveria ir aos pobres.",
+      "Na calada da noite, durante a nossa ceia mais importante, fui dispensado pelo mestre com a frase: \"O que tens a fazer, faze-o depressa\".",
+      "Usei um beijo no rosto, tradicional sinal de afeto e respeito, para apontar o meu mestre na escuridão aos soldados.",
+      "Sou o apóstolo marcado para sempre na história humana por ter vendido Jesus por trinta moedas de prata."
+    ],
+    "resumo": "O tesoureiro dos Doze Apóstolos que, dominado pela avareza, entregou Jesus às autoridades e depois tirou a própria vida.",
+    "conhecidoPor": "Trair Jesus com um beijo por trinta moedas."
+  },
+  {
+    "id": "qse-joel",
+    "personagemId": "joel",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu nome hebraico significa \"Javé é Deus\".",
+      "Descrevi o juízo divino usando a invasão de uma nuvem de gafanhotos que devastou as colheitas.",
+      "Conclamei o povo ao arrependimento com a exortação: \"Rasguem o coração e não as vestes\".",
+      "Minhas profecias detalham repetidamente o \"Dia do Senhor\".",
+      "Prometi que Deus derramaria o seu Espírito sobre toda a carne, fazendo jovens e velhos profetizarem.",
+      "Sou o profeta cujas palavras foram citadas pelo apóstolo Pedro para explicar o que acontecia no Pentecostes."
+    ],
+    "resumo": "Profeta que usou a imagem de uma invasão de gafanhotos para conclamar ao arrependimento e prometeu o derramamento do Espírito Santo.",
+    "conhecidoPor": "Profetizar o derramamento do Espírito que se cumpriu em Pentecostes."
+  },
+  {
+    "id": "qse-abdias",
+    "personagemId": "abdias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Escrevi o livro mais curto do Antigo Testamento, que contém apenas um capítulo.",
+      "Meu nome significa \"Servo do Senhor\".",
+      "Diferente da maioria dos profetas, meu oráculo não foi dirigido a Israel ou Judá, mas a uma nação estrangeira vizinha.",
+      "Denunciei a atitude dos que ficaram no alto dos montes zombando enquanto Jerusalém era invadida e destruída.",
+      "Declarei que os descendentes de Esaú seriam totalmente aniquilados, consumidos como palha no fogo.",
+      "Sou o profeta menor que previu a ruína definitiva de Edom."
+    ],
+    "resumo": "O profeta autor do livro mais curto da Bíblia, dedicado a proclamar o castigo divino sobre Edom.",
+    "conhecidoPor": "Sua profecia de destruição contra os descendentes de Esaú."
+  },
+  {
+    "id": "qse-naum",
+    "personagemId": "naum",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu era de Elcós, uma cidade cuja localização não é mais conhecida.",
+      "Toda a minha mensagem se concentra na destruição da capital de um vasto império estrangeiro.",
+      "Anunciei a queda de uma cidade que, mais de um século antes, havia se arrependido através da pregação de Jonas.",
+      "Para descrever o ataque, relatei a presença de escudos vermelhos, carros velozes e o desespero nas muralhas.",
+      "Afirmei que quem devasta e saqueia as nações pagaria o preço de sua crueldade.",
+      "Sou o profeta menor que celebrou a queda militar definitiva da grande Nínive."
+    ],
+    "resumo": "Profeta menor que previu e detalhou o violento cerco e a queda da capital assíria, Nínive.",
+    "conhecidoPor": "Prever a destruição de Nínive."
+  },
+  {
+    "id": "qse-habacuque",
+    "personagemId": "habacuque",
+    "tipo": "Biblico",
+    "dicas": [
+      "Grande parte do meu livro é composta por queixas e questionamentos que fiz diretamente a Deus.",
+      "Escrevi que subi na minha torre de vigia para esperar o que Deus responderia às minhas dúvidas.",
+      "Reclamei que Deus estivesse tolerando que os babilônios, uma nação cruel, punissem o seu próprio povo.",
+      "Em meio às respostas que recebi, escrevi a frase que serviria de fundamento para a teologia do Novo Testamento.",
+      "Meu livro termina com um cântico afirmando que, mesmo que a figueira não floresça e falte gado, eu me alegrarei em Deus.",
+      "Sou o profeta famoso pela afirmação de que \"o justo viverá pela fé\"."
+    ],
+    "resumo": "Profeta que questionou os motivos de Deus perante a impunidade, recebendo a promessa de que o justo vive pela fidelidade.",
+    "conhecidoPor": "Dizer que \"o justo viverá pela fé\"."
+  },
+  {
+    "id": "qse-sofonias",
+    "personagemId": "sofonias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou o único profeta cujos escritos registram quatro gerações da genealogia para demonstrar descendência do rei Ezequias.",
+      "Minha pregação ocorreu durante os anos da reforma do rei Josias em Judá.",
+      "Iniciei minha profecia afirmando que Deus iria varrer tudo da terra, incluindo os homens, aves e peixes.",
+      "Fui o profeta que mais descreveu a amargura e as trevas do chamado \"Dia do Senhor\".",
+      "Terminei o livro prometendo que Deus mudaria o choro do povo e se alegraria sobre eles com cânticos de júbilo.",
+      "Sou o profeta menor de sangue real conhecido pelas exortações sobre o juízo final de Jerusalém."
+    ],
+    "resumo": "Profeta de descendência real que usou imagens apocalípticas para advertir Judá, mas terminou com promessas de restauração.",
+    "conhecidoPor": "Suas descrições impactantes sobre o Dia do Senhor."
+  },
+  {
+    "id": "qse-ageu",
+    "personagemId": "ageu",
+    "tipo": "Biblico",
+    "dicas": [
+      "Junto com Zacarias, fui um dos primeiros profetas a atuar após o retorno do exílio babilônico.",
+      "Meu tempo focado na atividade profética registrada foi bastante curto, durando poucos meses.",
+      "Mostrei à população que a crise econômica deles ocorria por descuido com as coisas sagradas e não por causas naturais.",
+      "Perguntei aos líderes judeus: \"Acaso é tempo de vocês morarem em casas forradas enquanto a Casa de Deus está em ruínas?\".",
+      "Para animar os idosos, afirmei que a glória futura do novo templo superaria a antiga glória da construção de Salomão.",
+      "Sou o profeta cujo objetivo foi exclusivamente repreender o comodismo e instar a construção do Segundo Templo."
+    ],
+    "resumo": "Profeta prático e direto que exortou o povo de Jerusalém a abandonar o comodismo e reconstruir o templo do Senhor.",
+    "conhecidoPor": "Mobilizar a nação para a reconstrução do Segundo Templo."
+  },
+  {
+    "id": "qse-zacarias",
+    "personagemId": "zacarias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Nasci na Babilônia e regressei a Jerusalém com o líder Zorobabel para ajudar a restabelecer a nação.",
+      "Tive diversas visões místicas, incluindo cavalos entre murtas, quatro chifres e ferreiros celestiais.",
+      "Vi em visão a maldade simbolizada por uma mulher trancada em um cesto com tampa de chumbo e levada embora.",
+      "Previ o luto nacional quando as pessoas olhassem \"para aquele a quem eles mesmos traspassaram\".",
+      "Fui quem previu em detalhes o valor de trinta moedas de prata atiradas ao oleiro no templo.",
+      "Sou o profeta menor que descreveu o Rei entrando em Jerusalém, montado humildemente num jumentinho."
+    ],
+    "resumo": "Profeta contemporâneo de Ageu, marcado por visões místicas noturnas e predições extremamente precisas sobre a paixão de Cristo.",
+    "conhecidoPor": "Prever a entrada de Jesus num jumentinho e o preço de 30 moedas de prata."
+  },
+  {
+    "id": "qse-malaquias",
+    "personagemId": "malaquias",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu nome é traduzido do hebraico literalmente como \"Meu Mensageiro\".",
+      "Sou a última voz de alerta antes do período de mais de quatro séculos de silêncio profético bíblico.",
+      "Minha escrita usa o formato de debates diretos, nos quais Deus acusa e o povo retruca de forma cínica.",
+      "Acusei frontalmente os sacerdotes por desprezarem o altar, oferecendo sacrifícios de animais cegos, mancos e doentes.",
+      "Denunciei abertamente que as pragas no campo ocorriam porque o povo estava furtando a Deus nos dízimos e ofertas.",
+      "Sou o profeta que prometeu a volta da figura de Elias como precursor do Messias."
+    ],
+    "resumo": "O último profeta do Antigo Testamento, que repreendeu o cinismo religioso da época e o desleixo nos sacrifícios e dízimos.",
+    "conhecidoPor": "Encerrar o cânon profético alertando sobre o roubo nos dízimos e a vinda de Elias."
+  },
+  {
+    "id": "qse-baruc",
+    "personagemId": "baruc",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu irmão, Seraías, era o chefe dos aposentos do rei Zedequias.",
+      "Possuía formação técnica de escriba em Jerusalém, mas abri mão do palácio para servir a um profeta impopular.",
+      "Como meu mentor estava proibido de entrar no Templo, fui eu quem leu o rolo de profecias diante dos oficiais reais.",
+      "Vi o rei Joaquim pegar friamente o manuscrito que eu tinha feito, cortá-lo com um canivete e jogá-lo no fogo.",
+      "Obedecendo instruções, providenciei novos pergaminhos para reescrever palavra por palavra tudo o que fora queimado.",
+      "Sou o escriba e leal assistente que redigiu os oráculos de Jeremias."
+    ],
+    "resumo": "O escrivão leal de Jeremias que arriscou a vida lendo e preservando os rolos proféticos originais.",
+    "conhecidoPor": "Ser o secretário e copista fiel de Jeremias."
+  },
+  {
+    "id": "qse-estevao",
+    "personagemId": "estevao",
+    "tipo": "Biblico",
+    "dicas": [
+      "Fui apontado pelos doze apóstolos originais como um homem repleto de sabedoria para um novo cargo na Igreja.",
+      "Minha função oficial era supervisionar a distribuição de alimentos e cuidar das viúvas helenistas necessitadas.",
+      "Fiz um extenso discurso no Sinédrio recordando a história de Israel e chamando as autoridades de \"pessoas de dura cerviz\".",
+      "Durante meu julgamento tenso, meus acusadores constataram que o meu rosto parecia o rosto de um anjo.",
+      "Enquanto era executado, supliquei em voz alta para que Deus não cobrasse o pecado dos meus executores.",
+      "Sou o primeiro diácono e o primeiro mártir da Igreja, cuja morte foi presenciada e aprovada pelo jovem Saulo."
+    ],
+    "resumo": "Diácono cujas críticas firmes contra o sistema judaico atraíram a fúria do Sinédrio, culminando no seu apedrejamento.",
+    "conhecidoPor": "Ser o primeiro mártir da Igreja."
+  },
+  {
+    "id": "qse-filipe-evangelista",
+    "personagemId": "filipe-evangelista",
+    "tipo": "Biblico",
+    "dicas": [
+      "Recebi a imposição das mãos dos apóstolos, junto com outros seis homens, para assumir funções de assistência social.",
+      "Com o aumento da perseguição, refugiei-me em Samaria e minha pregação gerou milagres e alegria na região.",
+      "Confrontei, converti e batizei Simão, o Mago, um feiticeiro que manipulava a cidade.",
+      "Fui instruído por um anjo a abandonar meu sucesso em Samaria e caminhar em direção a uma estrada deserta no sul.",
+      "Na estrada, alcancei a carruagem de um alto funcionário estrangeiro lendo Isaías e o batizei ali mesmo.",
+      "Sou lembrado no livro de Atos como \"o Evangelista\", responsável pela conversão do eunuco etíope."
+    ],
+    "resumo": "O pioneiro que levou o Evangelho a Samaria e que converteu o tesoureiro etíope na estrada de Gaza.",
+    "conhecidoPor": "Batizar o eunuco na estrada e realizar missões na Samaria."
+  },
+  {
+    "id": "qse-barnabe",
+    "personagemId": "barnabe",
+    "tipo": "Biblico",
+    "dicas": [
+      "Sou um levita nascido na ilha de Chipre, mas meu nome verdadeiro de registro era José.",
+      "Uma de minhas primeiras ações foi vender uma propriedade e colocar o dinheiro aos pés dos apóstolos em Jerusalém.",
+      "Fui o único membro influente da liderança que confiou em Saulo recém-convertido, apresentando-o aos outros discípulos.",
+      "Fui enviado a Antioquia da Síria para investigar a conversão de gentios e encorajei o crescimento daquela comunidade.",
+      "Tive um desentendimento grave com o apóstolo Paulo sobre levar João Marcos em uma viagem, o que nos fez seguir caminhos diferentes.",
+      "Meu tradicional apelido eclesiástico tem o significado grego de \"Filho da Consolação\"."
+    ],
+    "resumo": "Missionário acolhedor e integrador que assegurou o início do apostolado de Paulo e mediou crises nas comunidades gregas.",
+    "conhecidoPor": "Apresentar Paulo aos apóstolos e ser chamado \"Filho da Consolação\"."
+  },
+  {
+    "id": "qse-apolo",
+    "personagemId": "apolo",
+    "tipo": "Biblico",
+    "dicas": [
+      "De origem judaica e nascido na intelectual cidade de Alexandria, eu era exímio na oratória e na exposição do Antigo Testamento.",
+      "Ao chegar em Éfeso, ensinava com precisão sobre Jesus, mas conhecia de fato apenas o batismo de João Batista.",
+      "Fui instruído de maneira mais exata e corrigido teologicamente por um casal de fabricantes de tendas, Áquila e Priscila.",
+      "Viajei para a Grécia, onde fui de imensa utilidade para as igrejas locais na refutação dos opositores judeus em debates públicos.",
+      "Em Corinto, meu estilo retórico refinado atraiu seguidores, gerando sem querer facções na igreja contra o estilo de Paulo.",
+      "Sou o culto mestre de Alexandria cuja eloquência impressionou as primeiras comunidades cristãs."
+    ],
+    "resumo": "Mestre erudito e poderoso orador que, instruído sobre o batismo cristão, destacou-se na apologética judaico-cristã na Grécia.",
+    "conhecidoPor": "Sua pregação eloquente e por causar divisões estéticas nas igrejas de Corinto."
+  },
+  {
+    "id": "qse-marcos",
+    "personagemId": "marcos",
+    "tipo": "Biblico",
+    "dicas": [
+      "Meu nome hebraico original era João; na minha juventude, minha mãe Maria abria a casa para as reuniões da Igreja em Jerusalém.",
+      "Desisti precipitadamente e retornei a Jerusalém no meio da primeira jornada missionária com os líderes na região da Panfília.",
+      "Fui o motivo da triste e grande briga que causou a separação entre meu primo Barnabé e o apóstolo Paulo.",
+      "Anos depois de ter sido rejeitado, Paulo reconsiderou e mandou me chamar em sua prisão, dizendo que eu lhe era muito útil.",
+      "Atuei como escudeiro, intérprete e secretário pessoal das pregações de outro grande pilar da Igreja em Roma.",
+      "A tradição me atribui a autoria do Evangelho que resume por escrito a pregação oral do apóstolo Pedro."
+    ],
+    "resumo": "Jovem discípulo que falhou inicialmente com Paulo, mas amadureceu para tornar-se biógrafo das catequeses do apóstolo Pedro.",
+    "conhecidoPor": "Redigir o Evangelho segundo São Marcos com base na memória de Pedro."
+  },
+  {
+    "id": "qse-tiago-irmao",
+    "personagemId": "tiago-irmao-de-jesus",
+    "tipo": "Biblico",
+    "dicas": [
+      "Passei os anos do ministério de Jesus sem acreditar em seu chamado messiânico.",
+      "O apóstolo Paulo relata que recebi uma aparição particular de Jesus Cristo após a sua ressurreição.",
+      "A tradição diz que meus joelhos ficaram grossos como de camelo por causa das inúmeras horas rezando ajoelhado no Templo.",
+      "Não fui um dos Doze, mas acabei me tornando o principal bispo e pilar da comunidade cristã de Jerusalém.",
+      "Presidi o histórico Concílio de Jerusalém, dando o veredito conciliador final de isentar os gentios da maior parte da lei mosaica.",
+      "Sou o autor de uma epístola prática e dura sobre ética cristã que insiste na famosa frase: \"a fé sem obras é morta\"."
+    ],
+    "resumo": "Parente do Senhor e líder da comunidade cristã de Jerusalém, autor da carta que sublinha a imprescindibilidade das boas obras.",
+    "conhecidoPor": "Ser bispo de Jerusalém e afirmar que a fé sem obras é morta."
+  },
+  {
+    "id": "qse-lucas",
+    "personagemId": "lucas",
+    "tipo": "Biblico",
+    "dicas": [
+      "Pelo uso refinado do grego, sou considerado o único autor gentio confirmado no cânon do Novo Testamento.",
+      "Enderecei os meus minuciosos registros históricos e entrevistas a um nobre com o título honorífico de Excelentíssimo Teófilo.",
+      "Acompanhei lealmente o apóstolo Paulo em suas exaustivas e perigosas viagens de navio, cuidando de sua saúde.",
+      "Nas suas cartas aos Colossenses, Paulo se refere a mim com o carinhoso epíteto de \"o médico amado\".",
+      "Escrevi duas extensas obras que somadas constituem mais de 25% de todo o texto do Novo Testamento.",
+      "Sou o evangelista responsável pelo Evangelho que mais descreve milagres de cura e autor dos Atos dos Apóstolos."
+    ],
+    "resumo": "Médico cristão e companheiro de Paulo que usou de rigorosa pesquisa para redigir um Evangelho e os Atos dos Apóstolos.",
+    "conhecidoPor": "Escrever o terceiro Evangelho e documentar as missões em Atos dos Apóstolos."
+  },
+  {
+    "id": "qse-nicodemos",
+    "personagemId": "nicodemos",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu pertencia à alta corte judaica, atuando como um respeitado fariseu e mestre do Sinédrio em Jerusalém.",
+      "Decidi procurar secretamente um rabi recém-chegado à cidade apenas durante o silêncio e as sombras da noite.",
+      "Durante uma discussão com os sacerdotes, defendi legalmente que a lei exigia escutar um réu antes de condená-lo.",
+      "Tive dificuldade em interpretar a necessidade do novo nascimento perguntando: \"Como pode um homem velho entrar novamente no ventre materno?\".",
+      "Após a crucificação, trouxe cerca de trinta e cinco quilos de mirra e aloés para auxiliar na preparação fúnebre do corpo.",
+      "Sou o homem que ouviu pessoalmente de Jesus os ensinamentos sobre o novo nascimento pela água e pelo Espírito."
+    ],
+    "resumo": "Fariseu influente e cauteloso que visitou Jesus à noite e depois demonstrou publicamente sua lealdade ao ajudar no sepultamento com perfumes caros.",
+    "conhecidoPor": "A conversa noturna sobre o novo nascimento e ajudar a sepultar Cristo."
+  },
+  {
+    "id": "qse-maria-betania",
+    "personagemId": "maria-betania",
+    "tipo": "Biblico",
+    "dicas": [
+      "Nas minhas aparições nos Evangelhos, minha postura típica é estar fisicamente caída ou sentada aos pés de Cristo.",
+      "Fui repreendida por não ajudar nas tarefas da casa, mas Jesus me defendeu dizendo que eu havia escolhido \"a boa parte\".",
+      "Quando encontrei o Mestre, chorei e disse: \"Senhor, se tivesses estado aqui, meu irmão não teria morrido\".",
+      "Minha tristeza provocou uma das cenas mais tocantes da Bíblia, levando o Mestre a chorar abertamente junto ao túmulo.",
+      "Quebrei um frasco de alabastro de nardo puro e caríssimo para ungir os pés de Jesus e enxuguei-os com meus cabelos.",
+      "Sou a irmã contemplativa de Marta e do homem ressuscitado Lázaro."
+    ],
+    "resumo": "Discípula dedicada que preferia escutar os ensinamentos aos pés de Cristo e demonstrou sua reverência ao ungir seus pés com perfume raro.",
+    "conhecidoPor": "Escolher \"a melhor parte\" e ungir os pés de Jesus."
+  },
+  {
+    "id": "qse-silas",
+    "personagemId": "silas",
+    "tipo": "Biblico",
+    "dicas": [
+      "Eu atuava como um líder influente entre os cristãos de Jerusalém, sendo escolhido para entregar o decreto do Concílio apostólico em Antioquia.",
+      "Fui o companheiro selecionado pelo Apóstolo Paulo para seguir na missão após a triste desavença e separação deste com Barnabé.",
+      "Gozava do valioso privilégio político e jurídico de possuir plena cidadania romana civil no império, tal como Paulo.",
+      "Fui preso, açoitado severamente e preso no tronco em um porão por causa da expulsão de um demônio de adivinhação.",
+      "Minha reação ao aprisionamento brutal e doloroso foi ficar acordado à meia-noite orando e cantando louvores a Deus nas correntes.",
+      "O forte terremoto que ocorreu enquanto eu louvava na cadeia em Filipos resultou na conversão do carcereiro e sua família."
+    ],
+    "resumo": "Companheiro missionário de Paulo que, após o rompimento com Barnabé, sofreu prisões e milagrosos avivamentos em viagens na Ásia.",
+    "conhecidoPor": "Ser o fiel parceiro romano nas missões e cantar louvores nas masmorras de Filipos na noite do terremoto."
+  },
+  {
+    "id": "qse-judas-macabeu",
+    "personagemId": "judas-macabeu",
+    "tipo": "Biblico",
+    "dicas": [
+      "Liderei exércitos formados por voluntários mal armados nas montanhas de Israel enfrentando tropas invasoras muito mais bem equipadas.",
+      "Eu me recusei a observar os decretos sírios que exigiam manchar o templo do Senhor e erguer altares idólatras na minha pátria.",
+      "Expulsei as forças de Antíoco Epifânio e recuperei o Templo de Jerusalém, retirando as profanações instaladas nos pátios.",
+      "Celebrei e institui formalmente a grande Festa da Dedicação, marcando a purificação ininterrupta de oito dias no altar e o acendimento das candeias.",
+      "Mandei recolher ofertas entre as tropas para mandar a Jerusalém como sacrifício expiatório pelos soldados judeus que haviam caído pecando, confiante na ressurreição.",
+      "Sou o heroico terceiro filho do líder Matatias, e o meu apelido famoso significa \"O Martelo\"."
+    ],
+    "resumo": "Líder patriótico cujas vitórias guerrilheiras expulsaram as opressões pagãs helênicas, libertando a pátria e instituindo o festival de Hanukkah.",
+    "conhecidoPor": "Reconquistar o controle de Jerusalém nas revoltas nacionalistas, resgatar e reinstalar no santuário o festival das luzes em Hanukkah."
+  }
+]

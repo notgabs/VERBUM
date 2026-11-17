@@ -1,261 +1,194 @@
-// Browser-synthesized Web Audio API sound generator for retro 8-bit / medieval effects
+/**
+ * Sistema de som do VERBUM.
+ *
+ * Toca arquivos reais (pacotes CC0 do Kenney, ver public/sounds/CREDITS.txt)
+ * pela Web Audio API: os arquivos são baixados e decodificados uma vez,
+ * e cada toque sai sem atraso, com volume e leve variação de tom.
+ */
 
-let audioCtx: AudioContext | null = null;
-let soundMuted = false;
+import type { TileMatch } from "@/types/game";
+import { asset } from "@/utils/asset";
 
-function getAudioContext(): AudioContext | null {
-  if (typeof window === "undefined") return null;
-  if (!audioCtx) {
-    const AudioContextClass =
-      window.AudioContext ||
-      (window as unknown as { webkitAudioContext: typeof AudioContext })
-        .webkitAudioContext;
-    if (AudioContextClass) {
-      audioCtx = new AudioContextClass();
-    }
-  }
-  if (audioCtx && audioCtx.state === "suspended") {
-    audioCtx.resume().catch(() => {});
-  }
-  return audioCtx;
+const SOUND_FILES = {
+  click: asset("/sounds/click.mp3"),
+  correct: asset("/sounds/correct.mp3"),
+  partial: asset("/sounds/partial.mp3"),
+  wrong: asset("/sounds/wrong.mp3"),
+  wrongTile: asset("/sounds/wrong-tile.mp3"),
+  stepper: asset("/sounds/stepper.mp3"),
+  hint: asset("/sounds/hint.mp3"),
+  shiny: asset("/sounds/shiny.mp3"),
+  victory: asset("/sounds/victory.mp3"),
+} as const;
+
+type SoundName = keyof typeof SOUND_FILES;
+
+interface PlayOptions {
+  volume?: number;
+  /** Atraso em segundos. */
+  delay?: number;
+  /** Velocidade/tom (1 = original). */
+  rate?: number;
+  /** Variação aleatória de tom (ex.: 0.04 = ±4%). */
+  jitter?: number;
 }
+
+const MASTER_VOLUME = 0.8;
+
+let ctx: AudioContext | null = null;
+let master: GainNode | null = null;
+const buffers = new Map<SoundName, AudioBuffer>();
+let loading: Promise<void> | null = null;
+
+function getContext(): AudioContext | null {
+  if (typeof window === "undefined") return null;
+  if (!ctx) {
+    const Ctor = window.AudioContext ||
+      (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+    if (!Ctor) return null;
+    ctx = new Ctor();
+    master = ctx.createGain();
+    master.gain.value = MASTER_VOLUME;
+    master.connect(ctx.destination);
+  }
+  if (ctx.state === "suspended") ctx.resume().catch(() => {});
+  return ctx;
+}
+
+/** Baixa e decodifica todos os sons (≈90 KB). Seguro chamar várias vezes. */
+export function preloadSounds(): Promise<void> {
+  if (loading) return loading;
+  const audio = getContext();
+  if (!audio) return Promise.resolve();
+  loading = Promise.all(
+    (Object.entries(SOUND_FILES) as [SoundName, string][]).map(async ([name, url]) => {
+      try {
+        const res = await fetch(url);
+        const data = await res.arrayBuffer();
+        buffers.set(name, await audio.decodeAudioData(data));
+      } catch {
+        /* som ausente: o jogo segue em silêncio para esse efeito */
+      }
+    })
+  ).then(() => undefined);
+  return loading;
+}
+
+function play(name: SoundName, { volume = 1, delay = 0, rate = 1, jitter = 0 }: PlayOptions = {}): void {
+  if (isAudioMuted()) return;
+  const audio = getContext();
+  if (!audio || !master) return;
+
+  const start = (offset: number) => {
+    const buffer = buffers.get(name);
+    if (!buffer || !master) return;
+    const source = audio.createBufferSource();
+    source.buffer = buffer;
+    source.playbackRate.value = rate * (1 + (Math.random() * 2 - 1) * jitter);
+    const gain = audio.createGain();
+    gain.gain.value = volume;
+    source.connect(gain).connect(master);
+    source.start(audio.currentTime + Math.max(0, offset));
+  };
+
+  if (buffers.has(name)) {
+    start(delay);
+  } else {
+    const requestedAt = audio.currentTime;
+    void preloadSounds().then(() => {
+      const late = audio.currentTime - requestedAt;
+      // Se demorou demais para carregar, não toca fora de hora
+      if (late < 0.4) start(delay - late);
+    });
+  }
+}
+
+const fileBuffers = new Map<string, Promise<AudioBuffer | null>>();
+
+/** Toca um arquivo avulso (usado na página de teste de sons). */
+export function playFile(url: string, { volume = 1, delay = 0, rate = 1 }: PlayOptions = {}): void {
+  const audio = getContext();
+  if (!audio || !master) return;
+  if (!fileBuffers.has(url)) {
+    fileBuffers.set(url, fetch(url).then((r) => r.arrayBuffer()).then((d) => audio.decodeAudioData(d)).catch(() => null));
+  }
+  void fileBuffers.get(url)!.then((buffer) => {
+    if (!buffer || !master) return;
+    const source = audio.createBufferSource();
+    source.buffer = buffer;
+    source.playbackRate.value = rate;
+    const gain = audio.createGain();
+    gain.gain.value = volume;
+    source.connect(gain).connect(master);
+    source.start(audio.currentTime + delay);
+  });
+}
+
+const MUTE_KEY = "verbum_audio_muted";
+let soundMuted = false;
 
 export function isAudioMuted(): boolean {
   if (typeof window === "undefined") return false;
-  const stored = localStorage.getItem("verbum_audio_muted");
-  if (stored !== null) {
-    soundMuted = stored === "true";
-  }
+  try {
+    const stored = localStorage.getItem(MUTE_KEY);
+    if (stored !== null) soundMuted = stored === "true";
+  } catch { /* armazenamento indisponível */ }
   return soundMuted;
 }
 
 export function setAudioMuted(muted: boolean): void {
   soundMuted = muted;
-  if (typeof window !== "undefined") {
-    localStorage.setItem("verbum_audio_muted", String(muted));
-  }
+  try { localStorage.setItem(MUTE_KEY, String(muted)); } catch { /* ignora */ }
 }
+
+/* ---------- Efeitos de interface ---------- */
 
 export function playClickSound(): void {
-  if (isAudioMuted()) return;
-  const ctx = getAudioContext();
-  if (!ctx) return;
-
-  try {
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    osc.type = "triangle";
-    osc.frequency.setValueAtTime(440, ctx.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.05);
-
-    gain.gain.setValueAtTime(0.12, ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.06);
-
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-
-    osc.start(ctx.currentTime);
-    osc.stop(ctx.currentTime + 0.06);
-  } catch {
-    // Ignore audio error
-  }
-}
-
-export function playRevealSound(durationMs = 100): void {
-  if (isAudioMuted()) return;
-  const ctx = getAudioContext();
-  if (!ctx) return;
-
-  try {
-    const now = ctx.currentTime;
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    osc.type = "triangle";
-    osc.frequency.setValueAtTime(660, now);
-    const duration = Math.max(0.05, durationMs / 1000);
-    osc.frequency.exponentialRampToValueAtTime(880, now + duration * 0.6);
-
-    gain.gain.setValueAtTime(0.07, now);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
-
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-
-    osc.start(now);
-    osc.stop(now + duration);
-  } catch {
-    // Ignore audio error
-  }
+  play("click", { volume: 0.7, jitter: 0.05 });
 }
 
 export function playStepperSound(): void {
-  if (isAudioMuted()) return;
-  const ctx = getAudioContext();
-  if (!ctx) return;
-  try {
-    const now = ctx.currentTime;
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-    osc.type = "square";
-    osc.frequency.setValueAtTime(300, now);
-    osc.frequency.exponentialRampToValueAtTime(360, now + 0.04);
-    gain.gain.setValueAtTime(0.055, now);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    osc.start(now);
-    osc.stop(now + 0.06);
-  } catch {
-    // Ignore audio error
-  }
+  play("stepper", { volume: 0.6, jitter: 0.06 });
+}
+
+export function playHintSound(): void {
+  play("hint", { volume: 0.8 });
+  play("shiny", { volume: 0.5, delay: 0.12 });
 }
 
 export function playShinySound(): void {
-  if (isAudioMuted()) return;
-  const ctx = getAudioContext();
-  if (!ctx) return;
-  try {
-    const now = ctx.currentTime;
-    [659.25, 783.99, 1046.5, 1318.51].forEach((frequency, index) => {
-      const time = now + index * 0.11;
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(frequency, time);
-      gain.gain.setValueAtTime(0.09, time);
-      gain.gain.exponentialRampToValueAtTime(0.001, time + 0.42);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(time);
-      osc.stop(time + 0.45);
-    });
-  } catch {
-    // Ignore audio error
-  }
+  play("shiny", { volume: 0.7 });
 }
 
-export function playCorrectSound(): void {
-  if (isAudioMuted()) return;
-  const ctx = getAudioContext();
-  if (!ctx) return;
-
-  try {
-    const now = ctx.currentTime;
-    const notes = [523.25, 659.25, 783.99, 1046.5]; // C5, E5, G5, C6 (major harp arpeggio)
-    notes.forEach((freq, i) => {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(freq, now + i * 0.08);
-
-      gain.gain.setValueAtTime(0.15, now + i * 0.08);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.08 + 0.3);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-
-      osc.start(now + i * 0.08);
-      osc.stop(now + i * 0.08 + 0.35);
-    });
-  } catch {
-    // Ignore audio error
-  }
+/** Primeira peça de um palpite (retrato aparecendo): sem som de carta, só um toque leve. */
+export function playRevealSound(): void {
+  play("click", { volume: 0.5 });
 }
 
+/* ---------- Peças virando ---------- */
+
+/**
+ * Som de uma peça revelada (sem som de carta virando):
+ * brilho (correto), toque (parcial) ou um "toc" macio (errado).
+ */
+export function playTileSound(match: TileMatch): void {
+  if (match === "CORRECT") play("correct", { volume: 0.6 });
+  else if (match === "PARTIAL") play("partial", { volume: 0.55 });
+  else play("wrongTile", { volume: 0.55, jitter: 0.03 });
+}
+
+/** Mantidos por compatibilidade: correspondem a uma peça virando. */
+export function playCorrectSound(): void { playTileSound("CORRECT"); }
+export function playPartialSound(): void { playTileSound("PARTIAL"); }
+
+/** Palpite errado (fim da revelação ou chute recusado). */
 export function playWrongSound(): void {
-  if (isAudioMuted()) return;
-  const ctx = getAudioContext();
-  if (!ctx) return;
-
-  try {
-    const now = ctx.currentTime;
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    osc.type = "sawtooth";
-    osc.frequency.setValueAtTime(180, now);
-    osc.frequency.linearRampToValueAtTime(120, now + 0.18);
-
-    gain.gain.setValueAtTime(0.12, now);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
-
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-
-    osc.start(now);
-    osc.stop(now + 0.2);
-  } catch {
-    // Ignore audio error
-  }
+  play("wrong", { volume: 0.5 });
 }
 
-export function playPartialSound(): void {
-  if (isAudioMuted()) return;
-  const ctx = getAudioContext();
-  if (!ctx) return;
+/* ---------- Vitória ---------- */
 
-  try {
-    const now = ctx.currentTime;
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    osc.type = "square";
-    osc.frequency.setValueAtTime(392, now);
-    osc.frequency.setValueAtTime(440, now + 0.08);
-
-    gain.gain.setValueAtTime(0.08, now);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
-
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-
-    osc.start(now);
-    osc.stop(now + 0.2);
-  } catch {
-    // Ignore audio error
-  }
-}
-
+/** Fanfarra de vitória (metais e pratos, CC0 — ver public/sounds/CREDITS.txt). */
 export function playVictorySound(): void {
-  if (isAudioMuted()) return;
-  const ctx = getAudioContext();
-  if (!ctx) return;
-
-  try {
-    const now = ctx.currentTime;
-    // Triumphant medieval church organ / bell chime
-    const chords = [
-      { notes: [261.63, 329.63, 392.0], time: 0.0, dur: 0.25 }, // C Major
-      { notes: [293.66, 369.99, 440.0], time: 0.28, dur: 0.25 }, // D
-      { notes: [329.63, 415.3, 493.88], time: 0.56, dur: 0.25 }, // E
-      { notes: [523.25, 659.25, 783.99, 1046.5], time: 0.84, dur: 0.8 }, // High C Major fanfare
-    ];
-
-    chords.forEach((chord) => {
-      chord.notes.forEach((freq) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc.type = "triangle";
-        osc.frequency.setValueAtTime(freq, now + chord.time);
-
-        gain.gain.setValueAtTime(0.12, now + chord.time);
-        gain.gain.exponentialRampToValueAtTime(
-          0.001,
-          now + chord.time + chord.dur
-        );
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now + chord.time);
-        osc.stop(now + chord.time + chord.dur + 0.05);
-      });
-    });
-  } catch {
-    // Ignore audio error
-  }
+  play("victory", { volume: 0.85 });
 }

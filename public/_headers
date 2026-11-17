@@ -1,0 +1,13 @@
+# Cloudflare Pages: cache longo para arquivos que quase nunca mudam; páginas e dados sempre atualizados.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/sounds/*
+  Cache-Control: public, max-age=2592000
+/personagens/*
+  Cache-Control: public, max-age=2592000
+/quem-sou-eu/*
+  Cache-Control: public, max-age=2592000
+/menu/*
+  Cache-Control: public, max-age=2592000
+/data/*
+  Cache-Control: public, max-age=300

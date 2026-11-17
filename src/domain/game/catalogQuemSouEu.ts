@@ -33,10 +33,12 @@ export function hydrateQuemSouEu(
         throw new Error(`Entrada inválida sem personagemId deve ter nome e aliases: ${item.id}`);
       }
 
+      const safeImagem = item.imagem && item.imagem.trim() ? item.imagem : undefined;
+
       return {
         id: item.id,
         nome: item.nome,
-        imagem: item.imagem,
+        imagem: safeImagem,
         aliases: item.aliases,
         tipo: item.tipo,
         dicas: item.dicas,

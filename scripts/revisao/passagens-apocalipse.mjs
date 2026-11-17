@@ -1,0 +1,42 @@
+/**
+ * Passagens do Apocalipse.
+ * Mesmo formato de passagens.mjs: [capitulo, versiculo, versiculoFim|null, texto, dica2, contexto].
+ * Versículos iniciais e grafias conferidos na Bíblia Ave-Maria (bibliaonline.com.br/avm).
+ * O texto e a dica 2 nunca citam o nome do livro.
+ */
+
+export const passagensApocalipse = {
+  "Apocalipse": [
+    [1, 8, null, "\"Eu sou o Alfa e o Ômega, diz o Senhor Deus, aquele que é, que era e que vem, o Dominador.\"", "Alfa e Ômega são a primeira e a última letra do alfabeto grego.", "Deus se apresenta como o princípio e o fim de tudo. As letras são gravadas no círio pascal."],
+    [1, 9, null, "O vidente se apresenta como irmão e companheiro nas tribulações e conta que estava numa ilha por causa da Palavra de Deus.", "A ilha se chama Patmos.", "O autor recebe as visões no exílio, num domingo, o 'dia do Senhor'."],
+    [1, 17, null, "O vidente cai como morto, e aquele que lhe aparece põe a mão direita sobre ele: \"Não temas! Eu sou o Primeiro e o Último, e o que vive\".", "Ele tinha olhos como chama de fogo e uma espada de dois gumes saindo da boca.", "Cristo ressuscitado aparece glorioso entre sete candelabros de ouro."],
+    [2, 4, null, "\"Mas tenho contra ti que arrefeceste o teu primeiro amor.\"", "É a primeira das cartas às sete igrejas da Ásia.", "Cristo repreende a igreja de Éfeso, que trabalhava muito mas tinha perdido o fervor inicial."],
+    [2, 10, null, "\"Sê fiel até a morte, e eu te darei a coroa da vida.\"", "A igreja ia sofrer tribulações durante dez dias.", "A mensagem à igreja de Esmirna, perseguida e pobre, mas rica aos olhos de Deus."],
+    [3, 15, null, "\"Conheço as tuas obras: não és nem frio nem quente. Oxalá fosses frio ou quente!\"", "Logo depois: como és morno, vou vomitar-te.", "A mensagem à igreja de Laodiceia condena a tibieza, a fé morna."],
+    [3, 20, null, "\"Eis que estou à porta e bato: se alguém ouvir a minha voz e me abrir a porta, entrarei em sua casa e cearemos juntos.\"", "Faz parte da última das sete cartas às igrejas.", "Cristo bate à porta do coração e espera ser acolhido livremente."],
+    [4, 8, null, "Os quatro Animais, cada um com seis asas cobertas de olhos, não cessam de clamar dia e noite: \"Santo, Santo, Santo é o Senhor Deus Dominador\".", "Ao redor do trono estão também vinte e quatro Anciãos.", "A liturgia celeste ecoa o canto dos serafins de Isaías, repetido em toda missa."],
+    [5, 5, null, "Um dos Anciãos diz ao vidente que chorava: \"Não chores! O Leão da tribo de Judá, o descendente de Davi, venceu para abrir o livro e os seus sete selos\".", "Ninguém no céu nem na terra era digno de abrir o livro.", "Cristo, o Messias da linhagem de Davi, é o único capaz de revelar o sentido da história."],
+    [5, 6, null, "No meio do trono aparece um Cordeiro de pé, como que imolado, com sete chifres e sete olhos.", "Os Anciãos se prostram diante dele com harpas e taças de perfume.", "O Cordeiro imolado e vivo é Cristo morto e ressuscitado, adorado no céu."],
+    [6, 2, null, "Aberto o primeiro selo, aparece um cavalo branco, cujo cavaleiro tem um arco e recebe uma coroa.", "Depois vêm um cavalo vermelho, um preto e um esverdeado.", "Os quatro cavaleiros anunciam os flagelos que acompanham a história humana."],
+    [7, 9, null, "Uma grande multidão que ninguém podia contar, de toda nação, tribo, povo e língua, está de pé diante do trono e do Cordeiro, com palmas nas mãos.", "Antes, foram assinalados cento e quarenta e quatro mil das tribos de Israel.", "É lido na solenidade de Todos os Santos: a multidão dos salvos de todos os povos."],
+    [7, 14, null, "\"Esses são os sobreviventes da grande tribulação; lavaram as suas vestes e as alvejaram no sangue do Cordeiro.\"", "Quem explica é um dos Anciãos.", "Os mártires e santos foram purificados pelo sangue de Cristo."],
+    [8, 1, null, "Quando o Cordeiro abre o sétimo selo, faz-se silêncio no céu durante cerca de meia hora.", "Depois aparecem sete anjos com sete trombetas.", "O silêncio solene antecede uma nova série de visões e a oração dos santos subindo como incenso."],
+    [11, 19, null, "Abre-se o Templo de Deus no céu, e aparece no templo a arca do seu testamento.", "Logo depois aparece um grande sinal no céu.", "A liturgia da Assunção liga esta visão à Mulher do capítulo seguinte: Maria é a nova arca da aliança."],
+    [12, 1, null, "Aparece um grande sinal no céu: uma Mulher revestida do sol, a lua debaixo dos seus pés e na cabeça uma coroa de doze estrelas.", "Ela está para dar à luz, e um dragão vermelho espera para devorar o filho.", "A Igreja vê nesta Mulher a Virgem Maria e o povo de Deus. É lida na solenidade da Assunção."],
+    [12, 7, null, "Há uma batalha no céu: Miguel e seus anjos combatem o Dragão, e o Dragão e seus anjos combatem também.", "O Dragão é derrotado e perde seu lugar no céu.", "A vitória de São Miguel sobre o demônio inspirou a oração a São Miguel Arcanjo."],
+    [12, 9, null, "É precipitado o grande Dragão, a primitiva Serpente, chamado Demônio e Satanás, o sedutor do mundo inteiro.", "Seus anjos foram precipitados com ele na terra.", "O texto identifica o dragão com a serpente do Gênesis."],
+    [13, 18, null, "\"Quem tiver inteligência, calcule o número da Fera, porque é número de um homem, e esse número é seiscentos e sessenta e seis.\"", "A Fera tinha saído do mar, com sete cabeças e dez chifres.", "O número da Fera é uma das imagens mais famosas do livro, provavelmente uma referência ao imperador Nero."],
+    [14, 13, null, "Uma voz do céu diz: \"Escreve: Felizes os mortos que doravante morrem no Senhor. Descansem dos seus trabalhos, pois suas obras os seguem\".", "É lido muitas vezes nas missas de exéquias.", "Os que morrem unidos a Cristo encontram o repouso eterno."],
+    [16, 16, null, "Os reis da terra são reunidos num lugar chamado em hebraico Har-Magedon.", "Os espíritos imundos saíram da boca do dragão como rãs.", "Armagedom se tornou sinônimo da batalha final entre o bem e o mal."],
+    [17, 5, null, "Na fronte da mulher está escrito um nome simbólico: \"Babilônia, a Grande, a mãe da prostituição e das abominações da terra\".", "Ela está sentada sobre uma fera escarlate de sete cabeças.", "A grande Babilônia simboliza o poder perseguidor, identificado na época com Roma."],
+    [19, 9, null, "O anjo diz: \"Escreve: Felizes os convidados para a ceia das núpcias do Cordeiro\".", "O sacerdote ecoa essas palavras antes da comunhão.", "As núpcias do Cordeiro celebram a união de Cristo com a Igreja, sua esposa."],
+    [19, 16, null, "O cavaleiro do cavalo branco traz escrito no manto e na coxa: \"Rei dos reis e Senhor dos senhores!\".", "Ele se chama 'Fiel e Verdadeiro' e também 'o Verbo de Deus'.", "Cristo aparece como o vencedor definitivo de todas as forças do mal."],
+    [20, 2, null, "Um anjo apanha o Dragão, a primitiva Serpente, que é o Demônio e Satanás, e o acorrenta por mil anos.", "Depois ele será solto por pouco tempo.", "O 'milênio' é interpretado pela tradição católica, desde Santo Agostinho, como o tempo da Igreja."],
+    [20, 12, null, "Os mortos, grandes e pequenos, estão de pé diante do trono; abrem-se livros, e também o livro da vida, e eles são julgados segundo suas obras.", "O mar, a morte e o inferno entregam os seus mortos.", "A visão do juízo final, quando cada um será julgado pelas próprias obras."],
+    [21, 1, null, "\"Vi um novo céu e uma nova terra, pois o primeiro céu e a primeira terra desapareceram e o mar já não existia.\"", "Logo depois, a cidade santa desce do céu como uma noiva.", "A visão final da nova criação e da nova Jerusalém."],
+    [21, 4, null, "Deus enxugará toda lágrima dos olhos, e já não haverá morte, nem luto, nem grito, nem dor.", "Faz parte da visão da nova Jerusalém que desce do céu.", "A visão final anuncia a vitória definitiva de Deus e a nova criação."],
+    [21, 5, null, "O que está sentado no trono diz: \"Eis que eu renovo todas as coisas\".", "Ele manda escrever, porque essas palavras são fiéis e verdadeiras.", "Deus promete a renovação de toda a criação em Cristo."],
+    [22, 13, null, "\"Eu sou o Alfa e o Ômega, o Primeiro e o Último, o Começo e o Fim.\"", "Está no último capítulo da Bíblia.", "Cristo aplica a si os títulos divinos: ele é o sentido de toda a história."],
+    [22, 20, null, "Aquele que atesta estas coisas diz: \"Sim! Eu venho depressa!\". Amém. Vem, Senhor Jesus!", "É o penúltimo versículo de toda a Bíblia.", "A Bíblia termina com o clamor da Igreja pela volta de Cristo, o Maranatha."],
+  ],
+};

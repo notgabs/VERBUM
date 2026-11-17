@@ -1,429 +1,350 @@
 "use client";
 
-import React, { useState, useMemo, useRef } from "react";
+import React, { useState, useMemo, useRef, useEffect, Suspense } from "react";
 import { Personagem, PersonagemGuessComparison, TileMatch } from "@/types/game";
 import { comparePersonagem } from "@/game/characterLogic";
 import { useGameStats } from "@/hooks/useGameStats";
-import {
-  playClickSound,
-  playRevealSound,
-  playVictorySound,
-  playCorrectSound,
-  playWrongSound,
-  playPartialSound,
-} from "@/utils/sound";
+import { playClickSound, playHintSound, playRevealSound, playTileSound, playVictorySound, playWrongSound } from "@/utils/sound";
 import { VictoryModal } from "@/components/VictoryModal";
 import { CharacterPhoto } from "@/components/CharacterPhoto";
 import { normalizeForSearch } from "@/utils/text";
-import { GAME_CONFIG } from "@/config/game";
-import { selectDailyId, selectRandomId } from "@/domain/game/dailyChallenge";
+import { selectDailyId, getLocalDayKey } from "@/domain/game/dailyChallenge";
 import { isPersonagem } from "@/domain/game/catalogContracts";
 import { useJsonCatalog } from "@/hooks/useJsonCatalog";
 import { useTimeoutRegistry } from "@/hooks/useTimeoutRegistry";
 import { CatalogState } from "@/components/CatalogState";
-import { ModalBase } from "@/components/ModalBase";
+import { NextChallengeCountdown } from "@/components/NextChallengeCountdown";
+import { SearchCombobox } from "@/components/ui/SearchCombobox";
+import { HintOrb, HintDialog, type HintKey } from "@/components/ui/HintControls";
+import { Button } from "@/components/ui/Button";
+import { CheckIcon } from "@/components/ui/Icons";
 import { motion, useReducedMotion } from "motion/react";
+import { asset } from "@/utils/asset";
 
-export const CharacterGame: React.FC = () => {
-  const shouldReduceMotion = useReducedMotion();
-  const revealStepDuration = 200;
-  const comparisonGridClass =
-    "comparison-grid grid w-full grid-cols-[1.3fr_0.9fr_1.2fr_1fr_1.2fr_1.85fr_1.25fr_1.2fr] gap-1";
+const REVEAL_STEP_MS = 420;
+const FLIP_S = 0.55;
+const GRID_COLS = "comparison-grid grid w-full grid-cols-[1.1fr_0.85fr_1fr_1.1fr_1.3fr_1.2fr_1.2fr] gap-1.5";
+
+const TILE_CLASS: Record<TileMatch, string> = {
+  CORRECT: "tile-correct",
+  PARTIAL: "tile-partial",
+  WRONG: "tile-wrong",
+};
+
+type Arrow = "up" | "down" | null;
+
+interface CellSpec {
+  key: string;
+  match: TileMatch;
+  arrow: Arrow;
+  content: React.ReactNode;
+}
+
+function buildCells(g: PersonagemGuessComparison): CellSpec[] {
+  const c = g.character;
+  const historyArrow: Arrow =
+    g.historiaNaBibliaMatch === "WRONG" && g.historiaNaBibliaComparison !== "EQUAL"
+      ? g.historiaNaBibliaComparison === "HIGHER" ? "up" : "down"
+      : null;
+
+  return [
+    { key: "sexo", match: g.sexoMatch, arrow: null, content: c.sexo },
+    { key: "testamento", match: g.testamentoMatch, arrow: null, content: c.testamento },
+    { key: "divisao", match: g.divisaoMatch, arrow: null, content: c.divisao },
+    {
+      key: "historia",
+      match: g.historiaNaBibliaMatch,
+      arrow: historyArrow,
+      content: (
+        <span className="comparison-history-text">
+          {c.historiaNaBiblia.split(/[;,]/).map((p) => (
+            <span key={p} className="block">{p.trim()}</span>
+          ))}
+        </span>
+      ),
+    },
+    { key: "povo", match: g.povoMatch, arrow: null, content: <PovoLabel value={c.povo} /> },
+    { key: "ocupacao", match: g.ocupacaoMatch, arrow: null, content: c.ocupacao },
+  ];
+}
+
+const HEADERS = ["Personagem", "Gênero", "Testamento", "Divisão", "Passagem na Bíblia", "Povo", "Ocupação"];
+
+/** "Israelita (Judá)" em duas linhas: povo e, menor, a tribo/tipo. */
+function PovoLabel({ value }: { value: string }) {
+  const m = value.match(/^(.*?)\s*(?:\((.*)\))?$/);
+  return (
+    <span className="flex flex-col items-center leading-tight">
+      <span>{m?.[1] ?? value}</span>
+      {m?.[2] && <span className="text-[0.85em] font-medium opacity-85">{m[2]}</span>}
+    </span>
+  );
+}
+
+const CharacterGameInner: React.FC = () => {
+
+  const reduce = useReducedMotion();
   const [query, setQuery] = useState("");
   const [guesses, setGuesses] = useState<PersonagemGuessComparison[]>([]);
   const [isWon, setIsWon] = useState(false);
   const [isVictoryModalOpen, setIsVictoryModalOpen] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
-  const [hintsUnlocked, setHintsUnlocked] = useState<{
-    h1: boolean;
-    h2: boolean;
-  }>({ h1: false, h2: false });
-  const [activeHint, setActiveHint] = useState<"h1" | "h2" | null>(null);
-  const [activeDropdown, setActiveDropdown] = useState(false);
-  const [activeOptionIndex, setActiveOptionIndex] = useState(-1);
+  const [hintsUnlocked, setHintsUnlocked] = useState<Record<HintKey, boolean>>({ h1: false, h2: false });
+  const [activeHint, setActiveHint] = useState<HintKey | null>(null);
   const [revealingGuessId, setRevealingGuessId] = useState<string | null>(null);
   const [isRevealing, setIsRevealing] = useState(false);
 
   const { recordGameResult } = useGameStats();
   const inputRef = useRef<HTMLInputElement | null>(null);
   const { schedule } = useTimeoutRegistry();
-  const { data: characters, isLoading, error, retry } = useJsonCatalog("/data/personagens.json", isPersonagem);
+  const { data: characters, isLoading, error, retry } = useJsonCatalog(asset("/data/personagens.json"), isPersonagem);
 
   const targetChar = useMemo(() => {
     if (characters.length === 0) return null;
-    const configuredId = GAME_CONFIG.developmentMode ? GAME_CONFIG.fixedCharacterId : undefined;
-    const dailyId = GAME_CONFIG.enableDailyChallenge ? selectDailyId(characters.map((character) => character.id)) : undefined;
-    const targetId = configuredId ?? dailyId ?? selectRandomId(characters.map((character) => character.id));
+    const ids = characters.map((character) => character.id);
+    const targetId = selectDailyId(ids);
     return characters.find((character) => character.id === targetId) ?? characters[0];
   }, [characters]);
 
-  const hint1Available = guesses.length >= 6;
-  const hint2Available = guesses.length >= 12;
+  // Restaura o progresso do desafio diário
+  useEffect(() => {
+    if (characters.length === 0 || !targetChar) return;
+    const saved = localStorage.getItem("verbum_daily_state_v1");
+    if (!saved) return;
+    try {
+      const parsed = JSON.parse(saved);
+      if (parsed.date !== getLocalDayKey() || !parsed.guesses) return;
+      const loadedGuesses = (parsed.guesses as string[])
+        .map((id) => {
+          const char = characters.find((c) => c.id === id);
+          return char ? comparePersonagem(char, targetChar) : null;
+        })
+        .filter((g): g is PersonagemGuessComparison => g !== null)
+        .reverse();
 
-  const handleHintClick = (hint: "h1" | "h2") => {
-    const isAvailable = hint === "h1" ? hint1Available : hint2Available;
+      if (loadedGuesses.length === 0) return;
+      // Aplica no próximo quadro para não encadear renderizações dentro do efeito
+      const frame = requestAnimationFrame(() => {
+        setGuesses((current) => (current.length === 0 ? loadedGuesses : current));
+        if (loadedGuesses[0].character.id === targetChar.id) {
+          setIsWon(true);
+          setIsVictoryModalOpen(true);
+        }
+      });
+      return () => cancelAnimationFrame(frame);
+    } catch { /* estado salvo inválido: ignora */ }
+  }, [characters, targetChar]);
 
+  // Salva o progresso do desafio diário
+  useEffect(() => {
+    if (guesses.length === 0) return;
+    const guessIds = [...guesses].reverse().map((g) => g.character.id);
+    localStorage.setItem("verbum_daily_state_v1", JSON.stringify({ date: getLocalDayKey(), guesses: guessIds }));
+  }, [guesses]);
+
+  const hintsUsed = (hintsUnlocked.h1 ? 1 : 0) + (hintsUnlocked.h2 ? 1 : 0);
+
+  const handleHintClick = (hint: HintKey) => {
+    const isAvailable = guesses.length >= (hint === "h1" ? 6 : 12);
     if (!isAvailable) return;
-
-    playClickSound();
+    playHintSound();
     setHintsUnlocked((prev) => ({ ...prev, [hint]: true }));
     setActiveHint(hint);
   };
 
   const handleSelectCharacter = (selected: Personagem) => {
     if (!targetChar || isWon || isRevealing) return;
-
-    const alreadyGuessed = guesses.some((g) => g.character.id === selected.id);
-    if (alreadyGuessed) {
-      setQuery("");
-      setActiveDropdown(false);
-      return;
-    }
+    if (guesses.some((g) => g.character.id === selected.id)) { setQuery(""); return; }
 
     const result = comparePersonagem(selected, targetChar);
     const updatedGuesses = [result, ...guesses];
-    const revealDuration = 8 * revealStepDuration + 250;
+    const revealDuration = 6 * REVEAL_STEP_MS + FLIP_S * 1000 + 150;
 
     setGuesses(updatedGuesses);
     setRevealingGuessId(selected.id);
     setIsRevealing(true);
     setQuery("");
-    setActiveDropdown(false);
-
     schedule(() => setIsRevealing(false), revealDuration);
-    
-    const playSoundForMatch = (match: TileMatch | "IMAGE") => {
-      if (match === "CORRECT") playCorrectSound();
-      else if (match === "PARTIAL") playPartialSound();
-      else if (match === "IMAGE") playClickSound(); // Som neutro para a imagem inicial
-      else playWrongSound();
-    };
 
-    const soundSequence: (TileMatch | "IMAGE")[] = [
-      "IMAGE", // 0: Imagem/Nome
-      result.sexoMatch, // 1
-      result.testamentoMatch, // 2
-      result.divisaoMatch, // 3
-      result.historiaNaBibliaMatch, // 4
-      result.conhecidoPorMatch, // 5
-      result.nascimentoMatch, // 6
-      result.ocupacaoMatch, // 7
+    const sequence: (TileMatch | "IMAGE")[] = [
+      "IMAGE", result.sexoMatch, result.testamentoMatch, result.divisaoMatch,
+      result.historiaNaBibliaMatch, result.povoMatch, result.ocupacaoMatch,
     ];
-
-    soundSequence.forEach((match, index) => {
-      schedule(() => playSoundForMatch(match), index * revealStepDuration);
+    sequence.forEach((match, index) => {
+      schedule(() => {
+        if (match === "IMAGE") playRevealSound();
+        else playTileSound(match);
+      }, index * REVEAL_STEP_MS);
     });
 
     if (result.isFullyCorrect) {
-      setIsWon(true);
+      // Só declara a vitória depois que a última peça virar (todas verdes)
       schedule(() => {
+        setIsWon(true);
         setIsVictoryModalOpen(true);
         playVictorySound();
-        void import("canvas-confetti").then(({ default: confetti }) => confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 }, colors: ["#ffd700", "#4ec25f", "#ffffff"] }));
-
-        const hintsCount =
-          (hintsUnlocked.h1 ? 1 : 0) + (hintsUnlocked.h2 ? 1 : 0);
-        recordGameResult(true, updatedGuesses.length, hintsCount);
+        recordGameResult(true, updatedGuesses.length, hintsUsed);
       }, revealDuration);
     } else {
-      setIsShaking(true);
-      schedule(() => setIsShaking(false), 400);
+      schedule(() => { playWrongSound(); setIsShaking(true); schedule(() => setIsShaking(false), 400); }, revealDuration - 150);
     }
   };
 
-  const filteredCharacters = useMemo(() => characters.filter(
-    (c) =>
-      normalizeForSearch(c.nome).includes(normalizeForSearch(query.trim())) &&
-      !guesses.some((g) => g.character.id === c.id)
-  ), [characters, guesses, query]);
+  const filteredCharacters = useMemo(() => {
+    const q = normalizeForSearch(query.trim());
+    return characters.filter((c) => normalizeForSearch(c.nome).includes(q) && !guesses.some((g) => g.character.id === c.id));
+  }, [characters, guesses, query]);
 
-  const replay = () => {
-    if (!GAME_CONFIG.allowReplay) return;
-    setGuesses([]); setIsWon(false); setIsVictoryModalOpen(false); setHintsUnlocked({ h1: false, h2: false }); setActiveHint(null); inputRef.current?.focus();
-  };
 
   if (isLoading || error) return <CatalogState error={error} onRetry={retry} />;
 
-  const getTileColor = (match: TileMatch) => {
-    switch (match) {
-      case "CORRECT":
-        return "var(--color-status-correct)";
-      case "PARTIAL":
-        return "var(--color-status-partial)";
-      case "WRONG":
-        return "var(--color-status-wrong)";
-      default:
-        return "var(--color-status-wrong)";
-    }
+  const submitFirst = () => {
+    if (!query.trim() || isRevealing) return;
+    const first = filteredCharacters[0];
+    if (first) { playClickSound(); handleSelectCharacter(first); }
+    else { setIsShaking(true); schedule(() => setIsShaking(false), 400); }
   };
 
   return (
-    <motion.div
-      animate={!shouldReduceMotion && isShaking ? { x: [0, -4, 4, -2, 2, 0] } : {}}
-      transition={{ duration: 0.3 }}
-      className="w-full max-w-4xl flex flex-col items-center gap-4"
-    >
-      {/* Title Banner */}
-      <div className="bg-[var(--color-bg-app)] border border-[var(--color-border-subtle)] rounded-xl w-full max-w-xl p-6 sm:p-9 text-center relative shadow-[var(--shadow-elevated)]">
-        <div className="absolute -top-4 right-4 z-10 flex gap-2">
-          <motion.button type="button"
-            title="Dica 1"
-            disabled={!hint1Available}
-            aria-label="Abrir dica 1"
-            onClick={() => handleHintClick("h1")}
-            animate={hint1Available && !hintsUnlocked.h1 ? { scale: [1, 1.2, 1], boxShadow: ["0 0 0 rgba(0,0,0,0)", "0 0 10px rgba(255,215,0,0.5)", "0 0 0 rgba(0,0,0,0)"] } : { scale: 1 }}
-            transition={{ duration: 0.4 }}
-            className={`flex h-10 w-10 rounded-full shadow-sm items-center justify-center border text-sm transition-colors ${
-              hint1Available
-                ? "bg-[var(--color-primary)] border-[var(--color-border-accent)] text-white hover:bg-[var(--color-primary-hover)] cursor-pointer"
-                : "bg-[var(--color-surface)] border-[var(--color-border-subtle)] text-[var(--color-text-muted)] opacity-50 cursor-not-allowed"
-            }`}
-          >
-            💡
-          </motion.button>
-          <motion.button type="button"
-            title="Dica 2"
-            disabled={!hint2Available}
-            aria-label="Abrir dica 2"
-            onClick={() => handleHintClick("h2")}
-            animate={hint2Available && !hintsUnlocked.h2 ? { scale: [1, 1.2, 1], boxShadow: ["0 0 0 rgba(0,0,0,0)", "0 0 10px rgba(255,215,0,0.5)", "0 0 0 rgba(0,0,0,0)"] } : { scale: 1 }}
-            transition={{ duration: 0.4 }}
-            className={`flex h-10 w-10 rounded-full shadow-sm items-center justify-center border text-sm transition-colors ${
-              hint2Available
-                ? "bg-[var(--color-primary)] border-[var(--color-border-accent)] text-white hover:bg-[var(--color-primary-hover)] cursor-pointer"
-                : "bg-[var(--color-surface)] border-[var(--color-border-subtle)] text-[var(--color-text-muted)] opacity-50 cursor-not-allowed"
-            }`}
-          >
-            💡
-          </motion.button>
+    <div className="flex w-full flex-col gap-5">
+      {/* Tabuleiro principal */}
+      <motion.section
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 240, damping: 24 }}
+        className="surface relative z-20 mx-auto w-full max-w-3xl rounded-[30px] px-5 pb-6 pt-5 sm:px-8 sm:pb-8"
+      >
+        <div className="flex items-center justify-between">
+          <span />
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-fill)] px-3 py-1 text-[13px] font-extrabold tabular-nums">
+            <motion.span key={guesses.length} initial={{ scale: 1.6, color: "var(--color-primary)" }} animate={{ scale: 1, color: "var(--color-text-main)" }} transition={{ type: "spring", stiffness: 400, damping: 15 }}>
+              {guesses.length}
+            </motion.span>
+            <span className="text-[var(--color-text-muted)]">{guesses.length === 1 ? "palpite" : "palpites"}</span>
+          </span>
         </div>
-        <h1 className="text-xl sm:text-2xl font-black tracking-widest text-[var(--color-text-accent)] uppercase flex items-center justify-center gap-2">
-          <span>Adivinhe o Personagem</span>
-        </h1>
-        <p className="text-sm text-[var(--color-text-main)] opacity-80 mt-2 font-medium">
-          Digite o nome de uma figura bíblica para comparar seus atributos
-        </p>
-      </div>
 
-      {/* Autocomplete Search Bar */}
-      {!isWon && (
-        <div className="relative order-3 w-full max-w-xl">
-          <div className="flex gap-2">
-            <label htmlFor="character-search" className="sr-only">Nome do personagem</label><input
-              id="character-search"
-              name="character-search"
-              autoComplete="off"
-              ref={inputRef}
-              type="text"
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                setActiveDropdown(true);
-                setActiveOptionIndex(-1);
-              }}
-              onFocus={() => setActiveDropdown(true)}
-              onKeyDown={(event) => {
-                if (event.key === "ArrowDown") {
-                  event.preventDefault();
-                  setActiveOptionIndex((index) => Math.min(index + 1, filteredCharacters.length - 1));
-                } else if (event.key === "ArrowUp") {
-                  event.preventDefault();
-                  setActiveOptionIndex((index) => Math.max(index - 1, 0));
-                } else if (event.key === "Enter") {
-                  event.preventDefault();
-                  if (activeDropdown && query.trim().length > 0 && filteredCharacters.length > 0) {
-                    const indexToSelect = activeOptionIndex >= 0 ? activeOptionIndex : 0;
-                    const selected = filteredCharacters[indexToSelect];
-                    if (selected) { playClickSound(); handleSelectCharacter(selected); }
-                  }
-                } else if (event.key === "Escape") {
-                  setActiveDropdown(false);
-                  setActiveOptionIndex(-1);
-                }
-              }}
-              role="combobox"
-              aria-autocomplete="list"
-              aria-expanded={activeDropdown && query.trim().length > 0}
-              aria-controls="character-options"
-              aria-activedescendant={activeOptionIndex >= 0 ? `character-option-${filteredCharacters[activeOptionIndex]?.id}` : undefined}
-              placeholder="Digite o nome"
-              className="flex-1 bg-[var(--color-interactive-surface)]/95 text-white border border-[var(--color-interactive-border)] rounded-xl shadow-lg px-4 py-3 text-sm font-sans font-bold focus:outline-none focus:border-[#4693cb] focus:ring-1 focus:ring-[#4693cb] placeholder:text-[var(--color-interactive-text-muted)] transition-colors"
-            />
-          </div>
-
-          {activeDropdown && query.trim().length > 0 && (
+        <div className="mt-4 grid grid-cols-[auto_1fr_auto] items-center gap-2 sm:gap-6">
+          <HintOrb hint="h1" attempts={guesses.length} unlocked={hintsUnlocked.h1} onOpen={handleHintClick} />
+          <div className="flex flex-col items-center text-center">
             <motion.div
-              initial={{ opacity: 0, y: -4, scale: 0.99 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.15 }}
-              id="character-options" role="listbox" className="absolute top-full left-0 right-0 mt-2 z-40 bg-[var(--color-interactive-surface)]/95 backdrop-blur-sm border border-[var(--color-interactive-border)] rounded-xl shadow-xl max-h-60 overflow-y-auto py-1 custom-scrollbar">
-              {filteredCharacters.length > 0 ? (
-                filteredCharacters.map((char, index) => (
-                  <button
-                    key={char.id}
-                    id={`character-option-${char.id}`}
-                    onClick={() => {
-                      playClickSound();
-                      handleSelectCharacter(char);
-                    }}
-                    role="option" aria-selected={activeOptionIndex === index} className={`w-full text-left px-4 py-3 border-b border-[#2a6894] flex items-center justify-between text-sm font-sans font-bold text-white cursor-pointer transition-colors ${activeOptionIndex === index ? "bg-[var(--color-interactive-surface-hover)]" : "hover:bg-[var(--color-interactive-surface-hover)]"}`}
-                  >
-                    <span className="flex items-center gap-3">
-                      <CharacterPhoto
-                        id={char.id}
-                        image={char.imagem}
-                        alt={`Retrato de ${char.nome}`}
-                        className="h-8 w-8 shrink-0 rounded-full border border-[var(--color-interactive-border)] object-cover"
-                      />
-                      <span>{char.nome}</span>
-                    </span>
-                    <span className="text-xs text-[var(--color-interactive-text-muted)] font-medium">
-                      {char.testamento === "Antigo Testamento" ? "AT" : "NT"}
-                    </span>
-                  </button>
-                ))
+              animate={reduce || isWon ? undefined : { y: [0, -5, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="relative flex h-[84px] w-[84px] items-center justify-center overflow-hidden rounded-full bg-[linear-gradient(160deg,#1f4f8f,#0f2a4a)] shadow-[0_0_0_4px_var(--color-gold),0_0_28px_color-mix(in_srgb,var(--color-gold)_55%,transparent)] sm:h-24 sm:w-24"
+            >
+              {/* O personagem nunca é revelado aqui: só no modal de vitória */}
+              {isWon ? (
+                <CheckIcon size={44} className="text-[var(--color-gold)]" />
               ) : (
-                <div className="px-4 py-3 text-sm text-[var(--text-muted)] font-sans">
-                  Nenhum personagem encontrado.
-                </div>
+                <span className="text-[44px] font-black leading-none text-[var(--color-gold)] sm:text-[52px]">?</span>
               )}
             </motion.div>
-          )}
+            <h1 className="mt-3 text-[clamp(22px,4vw,32px)] font-black leading-tight tracking-[-0.02em]">
+              Clássico
+            </h1>
+            <p className="mt-1 text-[14px] font-semibold text-[var(--color-text-muted)]">
+              {isWon ? `Você acertou em ${guesses.length} ${guesses.length === 1 ? "palpite" : "palpites"}!` : ""}
+            </p>
+          </div>
+          <HintOrb hint="h2" attempts={guesses.length} unlocked={hintsUnlocked.h2} onOpen={handleHintClick} />
         </div>
+
+        {isWon ? (
+          <div className="mt-6 flex flex-col items-center gap-4">
+            <Button size="lg" variant="gold" onClick={() => { playClickSound(); setIsVictoryModalOpen(true); }}>
+              <CheckIcon size={18} /> Ver resultado
+            </Button>
+            <NextChallengeCountdown />
+          </div>
+        ) : (
+          <motion.div
+            animate={!reduce && isShaking ? { x: [0, -8, 8, -4, 4, 0] } : { x: 0 }}
+            transition={{ duration: 0.4 }}
+            className="mt-6 flex gap-2"
+          >
+            <SearchCombobox
+              id="character-search"
+              label="Nome do personagem"
+              className="flex-1"
+              inputClassName="!h-14 !rounded-full !border-2 !border-transparent !bg-[var(--color-fill)] !text-[17px] !font-bold !shadow-none focus:!border-[var(--color-primary)]"
+              value={query}
+              onChange={setQuery}
+              items={filteredCharacters}
+              getKey={(c) => c.id}
+              inputRef={inputRef}
+              placeholder={isRevealing ? "Revelando…" : "Digite um nome…"}
+              emptyText="Nenhum personagem encontrado"
+              onPick={(c) => { playClickSound(); handleSelectCharacter(c); }}
+              renderItem={(c) => (
+                <span className="flex items-center gap-3">
+                  <CharacterPhoto id={c.id} image={c.imagem} alt="" className="h-10 w-10 shrink-0 rounded-full bg-[var(--color-fill)] object-cover" />
+                  <span className="flex-1 text-[16px] font-bold">{c.nome}</span>
+                  <span className="rounded-full bg-[var(--color-fill)] px-2 py-0.5 text-[11px] font-extrabold text-[var(--color-text-muted)]">{c.testamento.startsWith("Antigo") ? "AT" : "NT"}</span>
+                </span>
+              )}
+            />
+            <Button size="lg" className="!h-14 shrink-0 px-7" disabled={!query.trim() || isRevealing} onClick={submitFirst}>
+              Chutar
+            </Button>
+          </motion.div>
+        )}
+
+      </motion.section>
+
+      {guesses.length > 0 && (
+        <section className="surface mx-auto w-full overflow-hidden rounded-[26px] p-3 sm:p-4">
+        <div className="overflow-x-auto">
+          <div className="flex min-w-0 flex-col gap-2">
+            <div className={GRID_COLS}>
+              {HEADERS.map((h, i) => (
+                <div key={h} className={`comparison-header ${i === 0 ? "comparison-sticky bg-[var(--color-surface)]" : ""}`}>{h}</div>
+              ))}
+            </div>
+
+            {guesses.map((g) => {
+              const isNew = g.character.id === revealingGuessId;
+              const flip = (index: number) => ({
+                initial: isNew ? { opacity: 0, rotateX: reduce ? 0 : -90 } : false,
+                animate: { opacity: 1, rotateX: 0 },
+                transition: { duration: FLIP_S, ease: [0.22, 1, 0.36, 1] as const, delay: isNew ? (index * REVEAL_STEP_MS) / 1000 : 0 },
+              });
+
+              return (
+                <motion.div
+                  key={g.character.id}
+                  layout={!reduce}
+                  initial={isNew ? { opacity: 0, y: -8 } : false}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={GRID_COLS}
+                  style={{ perspective: 800 }}
+                >
+                  <motion.div {...flip(0)} className="comparison-sticky relative aspect-square self-center overflow-hidden rounded-[12px] bg-[var(--color-fill)]">
+                    <CharacterPhoto id={g.character.id} image={g.character.imagem} alt={`Imagem de ${g.character.nome}`} className="h-full w-full object-cover" />
+                    <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-1.5 pb-1.5 pt-5 text-center text-[10px] font-semibold leading-tight text-white sm:text-[11px]">
+                      {g.character.nome}
+                    </span>
+                  </motion.div>
+
+                  {buildCells(g).map((cell, i) => (
+                    <motion.div
+                      key={cell.key}
+                      {...flip(i + 1)}
+                      className={`tile comparison-cell ${TILE_CLASS[cell.match]} ${cell.arrow ? `tile-arrow-${cell.arrow}` : ""}`}
+                      aria-label={cell.arrow ? `${cell.key}: ${cell.arrow === "up" ? "seta para cima" : "seta para baixo"}` : undefined}
+                    >
+                      <span>{cell.content}</span>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+        </section>
       )}
 
       {activeHint && targetChar && (
-        <ModalBase labelledBy="hint-dialog-title" onClose={() => setActiveHint(null)} className="bg-[var(--color-surface)] w-full max-w-md border border-[var(--border-accent)] rounded-xl p-6 text-center shadow-[var(--shadow-elevated)]">
-            <h2 id="hint-dialog-title" className="font-serif text-2xl font-black text-[var(--text-main)] uppercase tracking-wider mb-4">
-              Dica {activeHint === "h1" ? "1" : "2"}
-            </h2>
-            <p className="text-lg text-[var(--text-main)] mb-6">
-              {activeHint === "h1" ? targetChar.dica1 : targetChar.dica2}
-            </p>
-        </ModalBase>
-      )}
-
-      {/* Comparison Legend */}
-      <div className="order-4 flex flex-wrap items-center justify-center gap-4 text-[10px] sm:text-[11px] font-sans font-bold text-[var(--color-interactive-text)] bg-[var(--color-interactive-surface)]/40 px-4 py-2 rounded-full border border-[var(--color-interactive-border)]/50 shadow-sm backdrop-blur-sm mx-auto mb-2 mt-4">
-        <span className="flex items-center gap-1.5">
-          <span className="inline-block w-2.5 h-2.5 rounded-[3px] bg-[var(--color-status-correct)] shadow-sm border border-[#1a4a20]"></span> Correto
-        </span>
-        <span className="flex items-center gap-1.5">
-          <span className="inline-block w-2.5 h-2.5 rounded-[3px] bg-[var(--color-status-partial)] shadow-sm border border-[#7a5005]"></span> Parcial
-        </span>
-        <span className="flex items-center gap-1.5">
-          <span className="inline-block w-2.5 h-2.5 rounded-[3px] bg-[var(--color-status-wrong)] shadow-sm border border-[#521010]"></span> Incorreto
-        </span>
-      </div>
-
-      {/* Comparison Grid Table - 8 colunas */}
-      {guesses.length > 0 && (
-        <div className="order-5 w-full overflow-x-auto custom-scrollbar pb-6 px-1">
-          <div className="min-w-0 flex flex-col gap-3">
-            <div className={`${comparisonGridClass} text-center text-[10px] sm:text-xs font-black uppercase text-[#e2ceaa]`}>
-              <div className="comparison-header">Personagem</div>
-              <div className="comparison-header">Gênero</div>
-              <div className="comparison-header text-[9px] sm:text-xs">Testamento</div>
-              <div className="comparison-header">Divisão</div>
-              <div className="comparison-header">História na Bíblia</div>
-              <div className="comparison-header">Conhecido Por</div>
-              <div className="comparison-header">Nascimento</div>
-              <div className="comparison-header text-[9px] sm:text-xs">Ocupação</div>
-            </div>
-
-            {guesses.map((g) => (
-              <div
-                key={g.character.id}
-                className={`${comparisonGridClass} text-center font-bold items-stretch bg-[var(--color-interactive-surface)]/20 rounded-xl p-1 shadow-sm border border-[var(--color-interactive-border)]/30`}
-              >
-                <motion.div
-                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
-                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
-                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 0 : 0 }}
-                  className="comparison-cell comparison-character-cell"
-                  title={g.character.nome}
-                >
-                  <CharacterPhoto
-                    key={g.character.id}
-                    id={g.character.id}
-                    image={g.character.imagem}
-                    alt={`Imagem de ${g.character.nome}`}
-                    className="w-full h-full object-contain drop-shadow-md rounded-[0.35rem]"
-                  />
-                  <span className="character-name-tooltip" role="tooltip">
-                    {g.character.nome}
-                  </span>
-                </motion.div>
-
-                <motion.div
-                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
-                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
-                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 1 * (revealStepDuration / 1000) : 0 }}
-                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.sexoMatch) }}>
-                  <span>{g.character.sexo}</span>
-                </motion.div>
-
-                <motion.div
-                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
-                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
-                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 2 * (revealStepDuration / 1000) : 0 }}
-                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.testamentoMatch) }}>
-                  <span className="leading-tight">{g.character.testamento}</span>
-                </motion.div>
-
-                <motion.div
-                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
-                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
-                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 3 * (revealStepDuration / 1000) : 0 }}
-                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.divisaoMatch) }}>
-                  <span className="comparison-division-text leading-tight">{g.character.divisao}</span>
-                </motion.div>
-
-                <motion.div
-                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
-                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
-                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 4 * (revealStepDuration / 1000) : 0 }}
-                  className={`comparison-cell ${g.historiaNaBibliaMatch === "WRONG" && g.historiaNaBibliaComparison !== "EQUAL" ? g.historiaNaBibliaComparison === "HIGHER" ? "character-arrow-up" : "character-arrow-down" : ""}`} style={{ backgroundColor: getTileColor(g.historiaNaBibliaMatch) }}>
-                  <span className="comparison-history-text">
-                    {g.character.historiaNaBiblia.split(/[;,]/).map((passagem) => (
-                      <span key={passagem} className="block">
-                        {passagem.trim()}
-                      </span>
-                    ))}
-                  </span>
-                </motion.div>
-
-                <motion.div
-                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
-                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
-                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 5 * (revealStepDuration / 1000) : 0 }}
-                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.conhecidoPorMatch) }}>
-                  <span className="leading-tight">
-                    {g.character.conhecidoPor}
-                  </span>
-                </motion.div>
-
-                <motion.div
-                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
-                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
-                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 6 * (revealStepDuration / 1000) : 0 }}
-                  className={`comparison-cell ${g.nascimentoMatch === "WRONG" ? g.nascimentoComparison === "HIGHER" ? "character-arrow-up" : "character-arrow-down" : ""}`} style={{ backgroundColor: getTileColor(g.nascimentoMatch) }}>
-                  <span>{g.character.nascimento}</span>
-                </motion.div>
-
-                <motion.div
-                  initial={g.character.id === revealingGuessId ? { opacity: 0, rotateX: shouldReduceMotion ? 0 : -90, scale: shouldReduceMotion ? 1 : 0.9 } : false}
-                  animate={{ opacity: 1, rotateX: 0, scale: 1 }}
-                  transition={{ duration: 0.15, delay: g.character.id === revealingGuessId ? 7 * (revealStepDuration / 1000) : 0 }}
-                  className="comparison-cell" style={{ backgroundColor: getTileColor(g.ocupacaoMatch) }}>
-                  <span className="comparison-occupation-text leading-tight">
-                    {g.character.ocupacao}
-                  </span>
-                </motion.div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <HintDialog hint={activeHint} text={activeHint === "h1" ? targetChar.dica1 : targetChar.dica2} onClose={() => setActiveHint(null)} />
       )}
 
       {isWon && isVictoryModalOpen && targetChar && (
@@ -434,17 +355,21 @@ export const CharacterGame: React.FC = () => {
           characterReference={targetChar.historiaNaBiblia}
           characterKnownFor={targetChar.conhecidoPor}
           attemptsCount={guesses.length}
-          hintsUsedCount={
-            (hintsUnlocked.h1 ? 1 : 0) + (hintsUnlocked.h2 ? 1 : 0)
-          }
+          hintsUsedCount={hintsUsed}
           nextGameHref="/passagem"
           nextGameLabel="Passagem"
           nextGameDescription="Adivinhe livro, capítulo e versículo"
-          nextGameIcon="/passagem-emoji.svg"
+          nextGameIcon="/passagem-emoji.webp"
           onClose={() => setIsVictoryModalOpen(false)}
-          onReplay={GAME_CONFIG.allowReplay ? replay : undefined}
+          showCountdown
         />
       )}
-    </motion.div>
+    </div>
   );
 };
+
+export const CharacterGame: React.FC = () => (
+  <Suspense fallback={<CatalogState />}>
+    <CharacterGameInner />
+  </Suspense>
+);

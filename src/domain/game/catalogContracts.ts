@@ -5,7 +5,7 @@ const isNonEmptyString = (value: unknown): value is string => typeof value === "
 export function isPersonagem(value: unknown): value is Personagem {
   if (!value || typeof value !== "object") return false;
   const item = value as Record<string, unknown>;
-  return ["id", "nome", "sexo", "testamento", "divisao", "historiaNaBiblia", "conhecidoPor", "nascimento", "ocupacao", "dica1", "dica2"].every((key) => isNonEmptyString(item[key])) &&
+  return ["id", "nome", "sexo", "testamento", "divisao", "historiaNaBiblia", "conhecidoPor", "ocupacao", "povo", "dica1", "dica2"].every((key) => isNonEmptyString(item[key])) &&
     (item.imagem === undefined || isNonEmptyString(item.imagem));
 }
 

@@ -1,0 +1,17 @@
+Efeitos sonoros por Kenney (www.kenney.nl), licença CC0 1.0 (domínio público).
+Pacotes: Interface Sounds, Casino Audio, Music Jingles — obtidos em opengameart.org.
+Convertidos para MP3 mono e normalizados por pico.
+
+click.mp3    <- interfaceSounds/click_002
+correct.mp3  <- interfaceSounds/glass_002
+partial.mp3  <- interfaceSounds/pluck_001
+wrong.mp3    <- interfaceSounds/error_004
+stepper.mp3  <- interfaceSounds/tick_001
+hint.mp3     <- interfaceSounds/maximize_008
+shiny.mp3    <- interfaceSounds/glass_006
+wrong-tile   <- interfaceSounds/drop_002
+vitória      <- arpejo montado com correct.mp3 + shiny.mp3 (ver playVictorySound)
+
+Fanfarras de vitória (CC0, opengameart.org), cortadas para ~6-7 s com fade:
+victory.mp3  <- "Just a random fanfare" (Spring Spring)
+Peças: o som de carta virando foi removido; restam correct/partial/wrong-tile.

@@ -1,0 +1,778 @@
+{
+ "musicas": [
+  {
+   "id": "faz-um-milagre-em-mim",
+   "titulo": "Faz um Milagre em Mim",
+   "artista": "Padre Marcelo Rossi",
+   "deezerId": 13784053,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/13784053",
+   "youtube": "https://www.youtube.com/results?search_query=Faz%20um%20Milagre%20em%20Mim%20Padre%20Marcelo%20Rossi",
+   "spotify": "https://open.spotify.com/search/Faz%20um%20Milagre%20em%20Mim%20Padre%20Marcelo%20Rossi"
+  },
+  {
+   "id": "espirito-da-verdade",
+   "titulo": "Espírito da Verdade",
+   "artista": "Tony Allysson",
+   "deezerId": 826490532,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/826490532",
+   "youtube": "https://www.youtube.com/results?search_query=Esp%C3%ADrito%20da%20Verdade%20Tony%20Allysson",
+   "spotify": "https://open.spotify.com/search/Esp%C3%ADrito%20da%20Verdade%20Tony%20Allysson"
+  },
+  {
+   "id": "a-casa-e-sua",
+   "titulo": "A Casa É Sua",
+   "artista": "Casa Worship",
+   "deezerId": 1751492317,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/1751492317",
+   "youtube": "https://www.youtube.com/results?search_query=A%20Casa%20%C3%89%20Sua%20Casa%20Worship",
+   "spotify": "https://open.spotify.com/search/A%20Casa%20%C3%89%20Sua%20Casa%20Worship"
+  },
+  {
+   "id": "o-fogo-ardera",
+   "titulo": "O Fogo Arderá",
+   "artista": "Alexsander Lúcio",
+   "deezerId": 4187162112,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/4187162112",
+   "youtube": "https://www.youtube.com/results?search_query=O%20Fogo%20Arder%C3%A1%20Alexsander%20L%C3%BAcio",
+   "spotify": "https://open.spotify.com/search/O%20Fogo%20Arder%C3%A1%20Alexsander%20L%C3%BAcio"
+  },
+  {
+   "id": "se-hoje-me-toca",
+   "titulo": "Se Hoje Me Toca",
+   "artista": "José Jr",
+   "deezerId": 3275892691,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3275892691",
+   "youtube": "https://www.youtube.com/results?search_query=Se%20Hoje%20Me%20Toca%20Jos%C3%A9%20Jr",
+   "spotify": "https://open.spotify.com/search/Se%20Hoje%20Me%20Toca%20Jos%C3%A9%20Jr"
+  },
+  {
+   "id": "sacrario-do-amor",
+   "titulo": "Sacrário do Amor",
+   "artista": "Rodrigo Torres",
+   "deezerId": 3088163371,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3088163371",
+   "youtube": "https://www.youtube.com/results?search_query=Sacr%C3%A1rio%20do%20Amor%20Rodrigo%20Torres",
+   "spotify": "https://open.spotify.com/search/Sacr%C3%A1rio%20do%20Amor%20Rodrigo%20Torres"
+  },
+  {
+   "id": "me-leva-pra-casa",
+   "titulo": "Me Leva pra Casa",
+   "artista": "Gabriel Guedes de Almeida",
+   "deezerId": 4304445852,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/4304445852",
+   "youtube": "https://www.youtube.com/results?search_query=Me%20Leva%20pra%20Casa%20Gabriel%20Guedes%20de%20Almeida",
+   "spotify": "https://open.spotify.com/search/Me%20Leva%20pra%20Casa%20Gabriel%20Guedes%20de%20Almeida"
+  },
+  {
+   "id": "o-maior-vilao-sou-eu",
+   "titulo": "O Maior Vilão Sou Eu",
+   "artista": "Sarah Beatriz",
+   "deezerId": 384152091,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/384152091",
+   "youtube": "https://www.youtube.com/results?search_query=O%20Maior%20Vil%C3%A3o%20Sou%20Eu%20Sarah%20Beatriz",
+   "spotify": "https://open.spotify.com/search/O%20Maior%20Vil%C3%A3o%20Sou%20Eu%20Sarah%20Beatriz"
+  },
+  {
+   "id": "coracao-novo",
+   "titulo": "Coração Novo",
+   "artista": "Banda Arkanjos",
+   "deezerId": 3643102582,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3643102582",
+   "youtube": "https://www.youtube.com/results?search_query=Cora%C3%A7%C3%A3o%20Novo%20Banda%20Arkanjos",
+   "spotify": "https://open.spotify.com/search/Cora%C3%A7%C3%A3o%20Novo%20Banda%20Arkanjos"
+  },
+  {
+   "id": "aquieta-minhalma",
+   "titulo": "Aquieta Minh'alma",
+   "artista": "Ministério Zoe",
+   "deezerId": 1355420212,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/1355420212",
+   "youtube": "https://www.youtube.com/results?search_query=Aquieta%20Minh%27alma%20Minist%C3%A9rio%20Zoe",
+   "spotify": "https://open.spotify.com/search/Aquieta%20Minh%27alma%20Minist%C3%A9rio%20Zoe"
+  },
+  {
+   "id": "santo-espirito",
+   "titulo": "Santo Espírito",
+   "artista": "Dunamis Music e Laura Souguellis",
+   "deezerId": 4156462432,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/4156462432",
+   "youtube": "https://www.youtube.com/results?search_query=Santo%20Esp%C3%ADrito%20Dunamis%20Music%20e%20Laura%20Souguellis",
+   "spotify": "https://open.spotify.com/search/Santo%20Esp%C3%ADrito%20Dunamis%20Music%20e%20Laura%20Souguellis"
+  },
+  {
+   "id": "ousado-amor",
+   "titulo": "Ousado Amor",
+   "artista": "Isaías Saad",
+   "deezerId": 4303966412,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/4303966412",
+   "youtube": "https://www.youtube.com/results?search_query=Ousado%20Amor%20Isa%C3%ADas%20Saad",
+   "spotify": "https://open.spotify.com/search/Ousado%20Amor%20Isa%C3%ADas%20Saad"
+  },
+  {
+   "id": "chamado-irresistivel",
+   "titulo": "Chamado Irresistível",
+   "artista": "Renovação Carismática Católica",
+   "deezerId": 1604701862,
+   "apelidos": [
+    "Chamada Irresistível"
+   ],
+   "deezer": "https://www.deezer.com/track/1604701862",
+   "youtube": "https://www.youtube.com/results?search_query=Chamado%20Irresist%C3%ADvel%20Renova%C3%A7%C3%A3o%20Carism%C3%A1tica%20Cat%C3%B3lica",
+   "spotify": "https://open.spotify.com/search/Chamado%20Irresist%C3%ADvel%20Renova%C3%A7%C3%A3o%20Carism%C3%A1tica%20Cat%C3%B3lica"
+  },
+  {
+   "id": "ezequiel-47",
+   "titulo": "Ezequiel 47",
+   "artista": "Thiago Brito",
+   "deezerId": 3377057721,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3377057721",
+   "youtube": "https://www.youtube.com/results?search_query=Ezequiel%2047%20Thiago%20Brito",
+   "spotify": "https://open.spotify.com/search/Ezequiel%2047%20Thiago%20Brito"
+  },
+  {
+   "id": "eu-seguirei",
+   "titulo": "Eu Seguirei",
+   "artista": "Frei Gilson",
+   "deezerId": 3562109311,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3562109311",
+   "youtube": "https://www.youtube.com/results?search_query=Eu%20Seguirei%20Frei%20Gilson",
+   "spotify": "https://open.spotify.com/search/Eu%20Seguirei%20Frei%20Gilson"
+  },
+  {
+   "id": "o-poco",
+   "titulo": "O Poço",
+   "artista": "Juninho Cassimiro",
+   "deezerId": 1714365287,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/1714365287",
+   "youtube": "https://www.youtube.com/results?search_query=O%20Po%C3%A7o%20Juninho%20Cassimiro",
+   "spotify": "https://open.spotify.com/search/O%20Po%C3%A7o%20Juninho%20Cassimiro"
+  },
+  {
+   "id": "tua-alegria",
+   "titulo": "Tua Alegria",
+   "artista": "Drops INA e Paulo Vicente",
+   "deezerId": 4304114672,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/4304114672",
+   "youtube": "https://www.youtube.com/results?search_query=Tua%20Alegria%20Drops%20INA%20e%20Paulo%20Vicente",
+   "spotify": "https://open.spotify.com/search/Tua%20Alegria%20Drops%20INA%20e%20Paulo%20Vicente"
+  },
+  {
+   "id": "nada-te-perturbe",
+   "titulo": "Nada Te Perturbe",
+   "artista": "Ir. Míria T. Kolling",
+   "deezerId": 105759110,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/105759110",
+   "youtube": "https://www.youtube.com/results?search_query=Nada%20Te%20Perturbe%20Ir.%20M%C3%ADria%20T.%20Kolling",
+   "spotify": "https://open.spotify.com/search/Nada%20Te%20Perturbe%20Ir.%20M%C3%ADria%20T.%20Kolling"
+  },
+  {
+   "id": "vejam-eu-andei",
+   "titulo": "Vejam, Eu Andei",
+   "artista": "Padre Paulo Gonzales",
+   "deezerId": 937191082,
+   "apelidos": [
+    "Vejam Eu Andei pelas Vilas"
+   ],
+   "deezer": "https://www.deezer.com/track/937191082",
+   "youtube": "https://www.youtube.com/results?search_query=Vejam%2C%20Eu%20Andei%20Padre%20Paulo%20Gonzales",
+   "spotify": "https://open.spotify.com/search/Vejam%2C%20Eu%20Andei%20Padre%20Paulo%20Gonzales"
+  },
+  {
+   "id": "minha-essencia",
+   "titulo": "Minha Essência",
+   "artista": "Thiago Brado",
+   "deezerId": 138803131,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/138803131",
+   "youtube": "https://www.youtube.com/results?search_query=Minha%20Ess%C3%AAncia%20Thiago%20Brado",
+   "spotify": "https://open.spotify.com/search/Minha%20Ess%C3%AAncia%20Thiago%20Brado"
+  },
+  {
+   "id": "colo-de-mae",
+   "titulo": "Colo de Mãe",
+   "artista": "Frei Gilson",
+   "deezerId": 3565488001,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3565488001",
+   "youtube": "https://www.youtube.com/results?search_query=Colo%20de%20M%C3%A3e%20Frei%20Gilson",
+   "spotify": "https://open.spotify.com/search/Colo%20de%20M%C3%A3e%20Frei%20Gilson"
+  },
+  {
+   "id": "amar-como-jesus-amou",
+   "titulo": "Amar como Jesus Amou",
+   "artista": "Padre Marcelo Rossi",
+   "deezerId": 13784047,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/13784047",
+   "youtube": "https://www.youtube.com/results?search_query=Amar%20como%20Jesus%20Amou%20Padre%20Marcelo%20Rossi",
+   "spotify": "https://open.spotify.com/search/Amar%20como%20Jesus%20Amou%20Padre%20Marcelo%20Rossi"
+  },
+  {
+   "id": "noites-traicoeiras",
+   "titulo": "Noites Traiçoeiras",
+   "artista": "Padre Marcelo Rossi",
+   "deezerId": 128503847,
+   "apelidos": [
+    "Deus está aqui neste momento"
+   ],
+   "deezer": "https://www.deezer.com/track/128503847",
+   "youtube": "https://www.youtube.com/results?search_query=Noites%20Trai%C3%A7oeiras%20Padre%20Marcelo%20Rossi",
+   "spotify": "https://open.spotify.com/search/Noites%20Trai%C3%A7oeiras%20Padre%20Marcelo%20Rossi"
+  },
+  {
+   "id": "quem-e-esta-que-avanca",
+   "titulo": "Quem É Esta que Avança como a Aurora",
+   "artista": "Padre Marcelo Rossi",
+   "deezerId": 91275116,
+   "apelidos": [
+    "Quem é Esta"
+   ],
+   "deezer": "https://www.deezer.com/track/91275116",
+   "youtube": "https://www.youtube.com/results?search_query=Quem%20%C3%89%20Esta%20que%20Avan%C3%A7a%20como%20a%20Aurora%20Padre%20Marcelo%20Rossi",
+   "spotify": "https://open.spotify.com/search/Quem%20%C3%89%20Esta%20que%20Avan%C3%A7a%20como%20a%20Aurora%20Padre%20Marcelo%20Rossi"
+  },
+  {
+   "id": "tudo-e-do-pai",
+   "titulo": "Tudo É do Pai",
+   "artista": "Padre Marcelo Rossi",
+   "deezerId": 128503851,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/128503851",
+   "youtube": "https://www.youtube.com/results?search_query=Tudo%20%C3%89%20do%20Pai%20Padre%20Marcelo%20Rossi",
+   "spotify": "https://open.spotify.com/search/Tudo%20%C3%89%20do%20Pai%20Padre%20Marcelo%20Rossi"
+  },
+  {
+   "id": "perfeito-e-quem-te-criou",
+   "titulo": "Perfeito É Quem Te Criou",
+   "artista": "Vida Reluz",
+   "deezerId": 359188351,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/359188351",
+   "youtube": "https://www.youtube.com/results?search_query=Perfeito%20%C3%89%20Quem%20Te%20Criou%20Vida%20Reluz",
+   "spotify": "https://open.spotify.com/search/Perfeito%20%C3%89%20Quem%20Te%20Criou%20Vida%20Reluz"
+  },
+  {
+   "id": "como-es-lindo",
+   "titulo": "Como És Lindo",
+   "artista": "Vida Reluz",
+   "deezerId": 71698857,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/71698857",
+   "youtube": "https://www.youtube.com/results?search_query=Como%20%C3%89s%20Lindo%20Vida%20Reluz",
+   "spotify": "https://open.spotify.com/search/Como%20%C3%89s%20Lindo%20Vida%20Reluz"
+  },
+  {
+   "id": "diante-do-rei",
+   "titulo": "Diante do Rei",
+   "artista": "Vida Reluz",
+   "deezerId": 71698756,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/71698756",
+   "youtube": "https://www.youtube.com/results?search_query=Diante%20do%20Rei%20Vida%20Reluz",
+   "spotify": "https://open.spotify.com/search/Diante%20do%20Rei%20Vida%20Reluz"
+  },
+  {
+   "id": "confia-em-mim",
+   "titulo": "Confia em Mim",
+   "artista": "Vida Reluz",
+   "deezerId": 71698763,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/71698763",
+   "youtube": "https://www.youtube.com/results?search_query=Confia%20em%20Mim%20Vida%20Reluz",
+   "spotify": "https://open.spotify.com/search/Confia%20em%20Mim%20Vida%20Reluz"
+  },
+  {
+   "id": "cartas-ao-remetente",
+   "titulo": "Cartas ao Remetente",
+   "artista": "Rosa de Saron",
+   "deezerId": 78469883,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/78469883",
+   "youtube": "https://www.youtube.com/results?search_query=Cartas%20ao%20Remetente%20Rosa%20de%20Saron",
+   "spotify": "https://open.spotify.com/search/Cartas%20ao%20Remetente%20Rosa%20de%20Saron"
+  },
+  {
+   "id": "minha-historia-e-sua",
+   "titulo": "Minha História É Sua",
+   "artista": "Gerados pela Imaculada",
+   "deezerId": 2405970875,
+   "apelidos": [
+    "A Minha História É Sua"
+   ],
+   "deezer": "https://www.deezer.com/track/2405970875",
+   "youtube": "https://www.youtube.com/results?search_query=Minha%20Hist%C3%B3ria%20%C3%89%20Sua%20Gerados%20pela%20Imaculada",
+   "spotify": "https://open.spotify.com/search/Minha%20Hist%C3%B3ria%20%C3%89%20Sua%20Gerados%20pela%20Imaculada"
+  },
+  {
+   "id": "nao-se-apagara",
+   "titulo": "Não Se Apagará",
+   "artista": "Gerados pela Imaculada",
+   "deezerId": 3226473001,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3226473001",
+   "youtube": "https://www.youtube.com/results?search_query=N%C3%A3o%20Se%20Apagar%C3%A1%20Gerados%20pela%20Imaculada",
+   "spotify": "https://open.spotify.com/search/N%C3%A3o%20Se%20Apagar%C3%A1%20Gerados%20pela%20Imaculada"
+  },
+  {
+   "id": "odres-novos",
+   "titulo": "Odres Novos",
+   "artista": "Gerados pela Imaculada",
+   "deezerId": 3726143362,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3726143362",
+   "youtube": "https://www.youtube.com/results?search_query=Odres%20Novos%20Gerados%20pela%20Imaculada",
+   "spotify": "https://open.spotify.com/search/Odres%20Novos%20Gerados%20pela%20Imaculada"
+  },
+  {
+   "id": "me-deixa-ficar",
+   "titulo": "Me Deixa Ficar",
+   "artista": "Gerados pela Imaculada",
+   "deezerId": 4141888141,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/4141888141",
+   "youtube": "https://www.youtube.com/results?search_query=Me%20Deixa%20Ficar%20Gerados%20pela%20Imaculada",
+   "spotify": "https://open.spotify.com/search/Me%20Deixa%20Ficar%20Gerados%20pela%20Imaculada"
+  },
+  {
+   "id": "eis-me-aqui",
+   "titulo": "Eis-Me Aqui",
+   "artista": "Colo de Deus",
+   "deezerId": 1578393382,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/1578393382",
+   "youtube": "https://www.youtube.com/results?search_query=Eis-Me%20Aqui%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Eis-Me%20Aqui%20Colo%20de%20Deus"
+  },
+  {
+   "id": "riqueza-eterna",
+   "titulo": "Riqueza Eterna",
+   "artista": "Colo de Deus",
+   "deezerId": 2081137297,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2081137297",
+   "youtube": "https://www.youtube.com/results?search_query=Riqueza%20Eterna%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Riqueza%20Eterna%20Colo%20de%20Deus"
+  },
+  {
+   "id": "yeshua-colo-de-deus",
+   "titulo": "Yeshua",
+   "artista": "Colo de Deus",
+   "deezerId": 135756062,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/135756062",
+   "youtube": "https://www.youtube.com/results?search_query=Yeshua%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Yeshua%20Colo%20de%20Deus"
+  },
+  {
+   "id": "eu-nao-vou-parar-de-te-adorar",
+   "titulo": "Eu Não Vou Parar de Te Adorar",
+   "artista": "Colo de Deus",
+   "deezerId": 135756058,
+   "apelidos": [
+    "Não Vou Parar de Te Adorar"
+   ],
+   "deezer": "https://www.deezer.com/track/135756058",
+   "youtube": "https://www.youtube.com/results?search_query=Eu%20N%C3%A3o%20Vou%20Parar%20de%20Te%20Adorar%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Eu%20N%C3%A3o%20Vou%20Parar%20de%20Te%20Adorar%20Colo%20de%20Deus"
+  },
+  {
+   "id": "se-ninguem-te-adorar-eu-vou",
+   "titulo": "Se Ninguém Te Adorar Eu Vou",
+   "artista": "Colo de Deus",
+   "deezerId": 144868084,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/144868084",
+   "youtube": "https://www.youtube.com/results?search_query=Se%20Ningu%C3%A9m%20Te%20Adorar%20Eu%20Vou%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Se%20Ningu%C3%A9m%20Te%20Adorar%20Eu%20Vou%20Colo%20de%20Deus"
+  },
+  {
+   "id": "casa",
+   "titulo": "Casa",
+   "artista": "Colo de Deus",
+   "deezerId": 807602182,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/807602182",
+   "youtube": "https://www.youtube.com/results?search_query=Casa%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Casa%20Colo%20de%20Deus"
+  },
+  {
+   "id": "mistica-sublime",
+   "titulo": "Mística Sublime",
+   "artista": "Colo de Deus",
+   "deezerId": 1213157192,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/1213157192",
+   "youtube": "https://www.youtube.com/results?search_query=M%C3%ADstica%20Sublime%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/M%C3%ADstica%20Sublime%20Colo%20de%20Deus"
+  },
+  {
+   "id": "jesus-meu-esposo",
+   "titulo": "Jesus Meu Esposo",
+   "artista": "Colo de Deus",
+   "deezerId": 429754962,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/429754962",
+   "youtube": "https://www.youtube.com/results?search_query=Jesus%20Meu%20Esposo%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Jesus%20Meu%20Esposo%20Colo%20de%20Deus"
+  },
+  {
+   "id": "ave-maria",
+   "titulo": "Ave Maria",
+   "artista": "Colo de Deus",
+   "deezerId": 2864238492,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2864238492",
+   "youtube": "https://www.youtube.com/results?search_query=Ave%20Maria%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Ave%20Maria%20Colo%20de%20Deus"
+  },
+  {
+   "id": "como-nao-me-apaixonar",
+   "titulo": "Como Não Me Apaixonar",
+   "artista": "Colo de Deus",
+   "deezerId": 730829082,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/730829082",
+   "youtube": "https://www.youtube.com/results?search_query=Como%20N%C3%A3o%20Me%20Apaixonar%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Como%20N%C3%A3o%20Me%20Apaixonar%20Colo%20de%20Deus"
+  },
+  {
+   "id": "eu-em-seu-lugar",
+   "titulo": "Eu em Seu Lugar",
+   "artista": "Colo de Deus",
+   "deezerId": 2699267762,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2699267762",
+   "youtube": "https://www.youtube.com/results?search_query=Eu%20em%20Seu%20Lugar%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Eu%20em%20Seu%20Lugar%20Colo%20de%20Deus"
+  },
+  {
+   "id": "desejado-das-nacoes",
+   "titulo": "Desejado das Nações",
+   "artista": "Colo de Deus",
+   "deezerId": 1830232357,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/1830232357",
+   "youtube": "https://www.youtube.com/results?search_query=Desejado%20das%20Na%C3%A7%C3%B5es%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Desejado%20das%20Na%C3%A7%C3%B5es%20Colo%20de%20Deus"
+  },
+  {
+   "id": "isaias-53",
+   "titulo": "Isaías 53",
+   "artista": "Colo de Deus",
+   "deezerId": 2699267662,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2699267662",
+   "youtube": "https://www.youtube.com/results?search_query=Isa%C3%ADas%2053%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Isa%C3%ADas%2053%20Colo%20de%20Deus"
+  },
+  {
+   "id": "mae-da-sarca",
+   "titulo": "Mãe da Sarça",
+   "artista": "Colo de Deus",
+   "deezerId": 2385659295,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2385659295",
+   "youtube": "https://www.youtube.com/results?search_query=M%C3%A3e%20da%20Sar%C3%A7a%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/M%C3%A3e%20da%20Sar%C3%A7a%20Colo%20de%20Deus"
+  },
+  {
+   "id": "jesus",
+   "titulo": "Jesus",
+   "artista": "Colo de Deus",
+   "deezerId": 3210612741,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3210612741",
+   "youtube": "https://www.youtube.com/results?search_query=Jesus%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Jesus%20Colo%20de%20Deus"
+  },
+  {
+   "id": "fogo-santo",
+   "titulo": "Fogo Santo",
+   "artista": "Colo de Deus",
+   "deezerId": 112596636,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/112596636",
+   "youtube": "https://www.youtube.com/results?search_query=Fogo%20Santo%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Fogo%20Santo%20Colo%20de%20Deus"
+  },
+  {
+   "id": "amor-incomparavel",
+   "titulo": "Amor Incomparável",
+   "artista": "Colo de Deus",
+   "deezerId": 730829042,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/730829042",
+   "youtube": "https://www.youtube.com/results?search_query=Amor%20Incompar%C3%A1vel%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Amor%20Incompar%C3%A1vel%20Colo%20de%20Deus"
+  },
+  {
+   "id": "abba-pai",
+   "titulo": "Abba Pai",
+   "artista": "Colo de Deus",
+   "deezerId": 2868824372,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2868824372",
+   "youtube": "https://www.youtube.com/results?search_query=Abba%20Pai%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Abba%20Pai%20Colo%20de%20Deus"
+  },
+  {
+   "id": "perdulario",
+   "titulo": "Perdulário",
+   "artista": "Colo de Deus",
+   "deezerId": 3886549981,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3886549981",
+   "youtube": "https://www.youtube.com/results?search_query=Perdul%C3%A1rio%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Perdul%C3%A1rio%20Colo%20de%20Deus"
+  },
+  {
+   "id": "lazaro",
+   "titulo": "Lázaro",
+   "artista": "Colo de Deus",
+   "deezerId": 3088902021,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3088902021",
+   "youtube": "https://www.youtube.com/results?search_query=L%C3%A1zaro%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/L%C3%A1zaro%20Colo%20de%20Deus"
+  },
+  {
+   "id": "desperta",
+   "titulo": "Desperta",
+   "artista": "Colo de Deus",
+   "deezerId": 135756060,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/135756060",
+   "youtube": "https://www.youtube.com/results?search_query=Desperta%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Desperta%20Colo%20de%20Deus"
+  },
+  {
+   "id": "gavetas",
+   "titulo": "Gavetas",
+   "artista": "Colo de Deus",
+   "deezerId": 3724861672,
+   "apelidos": [
+    "Ministração Gavetas"
+   ],
+   "deezer": "https://www.deezer.com/track/3724861672",
+   "youtube": "https://www.youtube.com/results?search_query=Gavetas%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Gavetas%20Colo%20de%20Deus"
+  },
+  {
+   "id": "pare-o-tempo",
+   "titulo": "Pare o Tempo",
+   "artista": "Colo de Deus",
+   "deezerId": 526710172,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/526710172",
+   "youtube": "https://www.youtube.com/results?search_query=Pare%20o%20Tempo%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Pare%20o%20Tempo%20Colo%20de%20Deus"
+  },
+  {
+   "id": "cheiro-de-rosas",
+   "titulo": "Cheiro de Rosas",
+   "artista": "Colo de Deus",
+   "deezerId": 2385659285,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2385659285",
+   "youtube": "https://www.youtube.com/results?search_query=Cheiro%20de%20Rosas%20Colo%20de%20Deus",
+   "spotify": "https://open.spotify.com/search/Cheiro%20de%20Rosas%20Colo%20de%20Deus"
+  },
+  {
+   "id": "raboni",
+   "titulo": "Raboni",
+   "artista": "Cristo Alegria",
+   "deezerId": 3067683521,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3067683521",
+   "youtube": "https://www.youtube.com/results?search_query=Raboni%20Cristo%20Alegria",
+   "spotify": "https://open.spotify.com/search/Raboni%20Cristo%20Alegria"
+  },
+  {
+   "id": "arranca-teu-coracao",
+   "titulo": "Arranca Teu Coração",
+   "artista": "Cristo Alegria",
+   "deezerId": 4381615541,
+   "apelidos": [
+    "Arranca o Teu Coração"
+   ],
+   "deezer": "https://www.deezer.com/track/4381615541",
+   "youtube": "https://www.youtube.com/results?search_query=Arranca%20Teu%20Cora%C3%A7%C3%A3o%20Cristo%20Alegria",
+   "spotify": "https://open.spotify.com/search/Arranca%20Teu%20Cora%C3%A7%C3%A3o%20Cristo%20Alegria"
+  },
+  {
+   "id": "jardim",
+   "titulo": "Jardim",
+   "artista": "Fraternidade São João Paulo II",
+   "deezerId": 1366702632,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/1366702632",
+   "youtube": "https://www.youtube.com/results?search_query=Jardim%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II",
+   "spotify": "https://open.spotify.com/search/Jardim%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II"
+  },
+  {
+   "id": "romanos-12",
+   "titulo": "Romanos 12",
+   "artista": "Fraternidade São João Paulo II",
+   "deezerId": 2522317111,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2522317111",
+   "youtube": "https://www.youtube.com/results?search_query=Romanos%2012%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II",
+   "spotify": "https://open.spotify.com/search/Romanos%2012%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II"
+  },
+  {
+   "id": "99-ovelhas",
+   "titulo": "99 Ovelhas",
+   "artista": "Fraternidade São João Paulo II",
+   "deezerId": 3899608701,
+   "apelidos": [
+    "Noventa e Nove Ovelhas"
+   ],
+   "deezer": "https://www.deezer.com/track/3899608701",
+   "youtube": "https://www.youtube.com/results?search_query=99%20Ovelhas%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II",
+   "spotify": "https://open.spotify.com/search/99%20Ovelhas%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II"
+  },
+  {
+   "id": "perfume",
+   "titulo": "Perfume",
+   "artista": "Fraternidade São João Paulo II",
+   "deezerId": 3219201941,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/3219201941",
+   "youtube": "https://www.youtube.com/results?search_query=Perfume%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II",
+   "spotify": "https://open.spotify.com/search/Perfume%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II"
+  },
+  {
+   "id": "terra-seca",
+   "titulo": "Terra Seca",
+   "artista": "Fraternidade São João Paulo II",
+   "deezerId": 2721724432,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2721724432",
+   "youtube": "https://www.youtube.com/results?search_query=Terra%20Seca%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II",
+   "spotify": "https://open.spotify.com/search/Terra%20Seca%20Fraternidade%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II"
+  },
+  {
+   "id": "e-tudo-sobre-voce",
+   "titulo": "É Tudo Sobre Você / Ser Mudado",
+   "artista": "Morada",
+   "deezerId": 4304431622,
+   "apelidos": [
+    "É Tudo Sobre Você",
+    "Ser Mudado"
+   ],
+   "deezer": "https://www.deezer.com/track/4304431622",
+   "youtube": "https://www.youtube.com/results?search_query=%C3%89%20Tudo%20Sobre%20Voc%C3%AA%20/%20Ser%20Mudado%20Morada",
+   "spotify": "https://open.spotify.com/search/%C3%89%20Tudo%20Sobre%20Voc%C3%AA%20/%20Ser%20Mudado%20Morada"
+  },
+  {
+   "id": "nao-ha-amor-igual",
+   "titulo": "Não Há Amor Igual",
+   "artista": "Morada",
+   "deezerId": 4304431532,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/4304431532",
+   "youtube": "https://www.youtube.com/results?search_query=N%C3%A3o%20H%C3%A1%20Amor%20Igual%20Morada",
+   "spotify": "https://open.spotify.com/search/N%C3%A3o%20H%C3%A1%20Amor%20Igual%20Morada"
+  },
+  {
+   "id": "para-que-entre-o-rei",
+   "titulo": "Para Que Entre o Rei",
+   "artista": "Morada",
+   "deezerId": 4304424662,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/4304424662",
+   "youtube": "https://www.youtube.com/results?search_query=Para%20Que%20Entre%20o%20Rei%20Morada",
+   "spotify": "https://open.spotify.com/search/Para%20Que%20Entre%20o%20Rei%20Morada"
+  },
+  {
+   "id": "emaus",
+   "titulo": "Emaús",
+   "artista": "Morada",
+   "deezerId": 4304431542,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/4304431542",
+   "youtube": "https://www.youtube.com/results?search_query=Ema%C3%BAs%20Morada",
+   "spotify": "https://open.spotify.com/search/Ema%C3%BAs%20Morada"
+  },
+  {
+   "id": "rasga-os-ceus",
+   "titulo": "Rasga os Céus",
+   "artista": "Songs Five Music",
+   "deezerId": 2212091347,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2212091347",
+   "youtube": "https://www.youtube.com/results?search_query=Rasga%20os%20C%C3%A9us%20Songs%20Five%20Music",
+   "spotify": "https://open.spotify.com/search/Rasga%20os%20C%C3%A9us%20Songs%20Five%20Music"
+  },
+  {
+   "id": "na-fenda-da-rocha",
+   "titulo": "Na Fenda da Rocha",
+   "artista": "Songs Five Music",
+   "deezerId": 2212091357,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2212091357",
+   "youtube": "https://www.youtube.com/results?search_query=Na%20Fenda%20da%20Rocha%20Songs%20Five%20Music",
+   "spotify": "https://open.spotify.com/search/Na%20Fenda%20da%20Rocha%20Songs%20Five%20Music"
+  },
+  {
+   "id": "amar-como-voce",
+   "titulo": "Amar como Você",
+   "artista": "Songs Five Music",
+   "deezerId": 2212091367,
+   "apelidos": [
+    "Amar como Você Me Ama"
+   ],
+   "deezer": "https://www.deezer.com/track/2212091367",
+   "youtube": "https://www.youtube.com/results?search_query=Amar%20como%20Voc%C3%AA%20Songs%20Five%20Music",
+   "spotify": "https://open.spotify.com/search/Amar%20como%20Voc%C3%AA%20Songs%20Five%20Music"
+  },
+  {
+   "id": "yeshua-songs-five",
+   "titulo": "Yeshua",
+   "artista": "Songs Five Music",
+   "deezerId": 2212091377,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2212091377",
+   "youtube": "https://www.youtube.com/results?search_query=Yeshua%20Songs%20Five%20Music",
+   "spotify": "https://open.spotify.com/search/Yeshua%20Songs%20Five%20Music"
+  },
+  {
+   "id": "alfa-e-omega",
+   "titulo": "Alfa e Ômega",
+   "artista": "Songs Five Music",
+   "deezerId": 2753799351,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2753799351",
+   "youtube": "https://www.youtube.com/results?search_query=Alfa%20e%20%C3%94mega%20Songs%20Five%20Music",
+   "spotify": "https://open.spotify.com/search/Alfa%20e%20%C3%94mega%20Songs%20Five%20Music"
+  },
+  {
+   "id": "colado-a-ti",
+   "titulo": "Colado a Ti",
+   "artista": "Songs Five Music",
+   "deezerId": 2753799381,
+   "apelidos": [],
+   "deezer": "https://www.deezer.com/track/2753799381",
+   "youtube": "https://www.youtube.com/results?search_query=Colado%20a%20Ti%20Songs%20Five%20Music",
+   "spotify": "https://open.spotify.com/search/Colado%20a%20Ti%20Songs%20Five%20Music"
+  }
+ ],
+ "outrasMusicas": []
+}

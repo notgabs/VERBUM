@@ -1,0 +1,66 @@
+# Créditos das imagens do modo "Quem sou eu?"
+
+Imagens obtidas no Wikimedia Commons (imagem principal do artigo da Wikipédia de cada figura).
+Foram recortadas em quadrado e reduzidas para 512 x 512.
+
+- **afonso-ligorio**: [Liguori.jpg](https://commons.wikimedia.org/wiki/File:Liguori.jpg), Unknown authorUnknown author, CC BY-SA 3.0
+- **anchieta**: [Benedito_Calixto_de_Jesus_-_Retrato_do_Padre_José_de_Anchieta,_Acervo_do_Museu_Paulista_da_USP.jpg](https://commons.wikimedia.org/wiki/File:Benedito_Calixto_de_Jesus_-_Retrato_do_Padre_Jos%C3%A9_de_Anchieta%2C_Acervo_do_Museu_Paulista_da_USP.jpg), Benedito Calixto, Public domain
+- **bakhita**: [Bakhita_Szent_Jozefina.jpeg](https://commons.wikimedia.org/wiki/File:Bakhita_Szent_Jozefina.jpeg), Unknown authorUnknown author, Public domain
+- **bento-xvi**: [Benedykt_XVI_(2010-10-17)_2.jpg](https://commons.wikimedia.org/wiki/File:Benedykt_XVI_%282010-10-17%29_2.jpg), Kancelaria Prezydenta RP, GFDL 1.2
+- **bernadete**: [Bernadette_Soubirous.jpg](https://commons.wikimedia.org/wiki/File:Bernadette_Soubirous.jpg), abbé P. Bernadou, Public domain
+- **bernardo-claraval**: [San_Bernardo,_de_Juan_Correa_de_Vivar_(Museo_del_Prado).jpg](https://commons.wikimedia.org/wiki/File:San_Bernardo%2C_de_Juan_Correa_de_Vivar_%28Museo_del_Prado%29.jpg), autor desconhecido, Public domain
+- **carlo-acutis**: [Covent Garden, Corpus Christi Catholic Church, Carlo Acutis memorial.jpg](https://commons.wikimedia.org/wiki/File:Covent_Garden%2C_Corpus_Christi_Catholic_Church%2C_Carlo_Acutis_memorial.jpg), AndyScott, CC BY-SA 4.0
+- **catarina-sena**: [Giovanni_Battista_Tiepolo_096.jpg](https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Tiepolo_096.jpg), Giovanni Battista Tiepolo, Public domain
+- **charbel**: [Charbel.jpg](https://commons.wikimedia.org/wiki/File:Charbel.jpg), Unknown (Old Photo), Public domain
+- **cura-ars**: [São_João_Maria_Vianney.png](https://commons.wikimedia.org/wiki/File:S%C3%A3o_Jo%C3%A3o_Maria_Vianney.png), BarãoPandora, CC BY-SA 4.0
+- **damiao-molokai**: [Father_Damien,_photograph_by_William_Brigham.jpg](https://commons.wikimedia.org/wiki/File:Father_Damien%2C_photograph_by_William_Brigham.jpg), William Brigham, Public domain
+- **dom-bosco**: [Don_Bosco_@_Torino,_1880_(original).jpg](https://commons.wikimedia.org/wiki/File:Don_Bosco_%40_Torino%2C_1880_%28original%29.jpg), Attributed to Carlo Felice Deasti, Public domain
+- **edith-stein**: [Edith_Stein_(ca._1938-1939).jpg](https://commons.wikimedia.org/wiki/File:Edith_Stein_%28ca._1938-1939%29.jpg), Unknown authorUnknown author, Public domain
+- **faustina**: [Maria_Faustyna_Kowalska.jpg](https://commons.wikimedia.org/wiki/File:Maria_Faustyna_Kowalska.jpg), Stanisław Sztama, Public domain
+- **francisco-sales**: [Château_de_Bussy-Rabutin_-_Saint_François_de_Sales,_évêque_de_Genève_(bgw19_0375)_(cropped).jpg](https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Bussy-Rabutin_-_Saint_Fran%C3%A7ois_de_Sales%2C_%C3%A9v%C3%AAque_de_Gen%C3%A8ve_%28bgw19_0375%29_%28cropped%29.jpg), Benjamin Gavaudo, Public domain
+- **francisco-xavier**: [Franciscus_de_Xabier.jpg](https://commons.wikimedia.org/wiki/File:Franciscus_de_Xabier.jpg), autor desconhecido, Public domain
+- **frassati**: [PierGiorgioFrassati-Présentation.jpg](https://commons.wikimedia.org/wiki/File:PierGiorgioFrassati-Pr%C3%A9sentation.jpg), Luciana Frassati, Public domain
+- **frei-galvao**: [Freigalvao.jpg](https://commons.wikimedia.org/wiki/File:Freigalvao.jpg), autor desconhecido, Public domain
+- **gianna**: [Gianna_Beretta_Molla.jpg](https://commons.wikimedia.org/wiki/File:Gianna_Beretta_Molla.jpg), Unknown authorUnknown author, Public domain
+- **gregorio-magno**: [Gregory_the_Great_with_the_Holy_Spirit.jpg](https://commons.wikimedia.org/wiki/File:Gregory_the_Great_with_the_Holy_Spirit.jpg), British Library, CC0
+- **inacio-loyola**: [Ignatius_Loyola.jpg](https://commons.wikimedia.org/wiki/File:Ignatius_Loyola.jpg), AnonymousUnknown author, Public domain
+- **irma-dulce**: [Irma-dulce-santa-canonizada.jpg](https://commons.wikimedia.org/wiki/File:Irma-dulce-santa-canonizada.jpg), Nascimento Azevedo, CC BY-SA 4.0
+- **joana-darc**: [Joan_of_Arc_miniature_graded.jpg](https://commons.wikimedia.org/wiki/File:Joan_of_Arc_miniature_graded.jpg), autor desconhecido, Public domain
+- **joao-da-cruz**: [Zurbarán_(atribuido)-John_of_the_Cross-1656.jpg](https://commons.wikimedia.org/wiki/File:Zurbar%C3%A1n_%28atribuido%29-John_of_the_Cross-1656.jpg), Unknown authorUnknown author, Public domain
+- **joao-paulo-ii**: [ADAMELLO_-_PAPA_-_Giovanni_Paolo_II_-_panoramio_(cropped).jpg](https://commons.wikimedia.org/wiki/File:ADAMELLO_-_PAPA_-_Giovanni_Paolo_II_-_panoramio_%28cropped%29.jpg), Gregorini Demetrio, CC BY-SA 3.0
+- **joao-xxiii**: [Ioannes_XXIII,_by_De_Agostini,_1958–1963.jpg](https://commons.wikimedia.org/wiki/File:Ioannes_XXIII%2C_by_De_Agostini%2C_1958%E2%80%931963.jpg), De Agostini Editore, Public domain
+- **josemaria**: [Josemaria_Escriva.jpg](https://commons.wikimedia.org/wiki/File:Josemaria_Escriva.jpg), Oficina de Información de la Prelatura del Opus Dei en España, CC BY-SA 2.0
+- **juan-diego**: [MIguel_Cabrera_-_Fiel_retrato_do_venerável_Juan_Diego.jpg](https://commons.wikimedia.org/wiki/File:MIguel_Cabrera_-_Fiel_retrato_do_vener%C3%A1vel_Juan_Diego.jpg), Miguel Cabrera, Public domain
+- **leao-xiv**: [Pope_Leo_XIV_3_(3x4_cropped).png](https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_3_%283x4_cropped%29.png), Edgar Beltrán, The Pillar, CC BY-SA 4.0
+- **lourenco**: [Francisco de Zurbarán 044.jpg](https://commons.wikimedia.org/wiki/File:Francisco_de_Zurbar%C3%A1n_044.jpg), Francisco de Zurbarán, Public domain
+- **luis-gonzaga**: [Aloysius Gonzaga, PA04745.jpg](https://commons.wikimedia.org/wiki/File:Aloysius_Gonzaga%2C_PA04745.jpg), Gonzaga, Aloisius, S.J. (1568-1591) (depicted), Public domain
+- **madre-paulina**: [Santa_Paolina.jpg](https://commons.wikimedia.org/wiki/File:Santa_Paolina.jpg), Llorenzi, CC BY-SA 2.5
+- **madre-teresa**: [Mother_Teresa_1.jpg](https://commons.wikimedia.org/wiki/File:Mother_Teresa_1.jpg), Kingkongphoto &amp; www.celebrity-photos.com from Laurel  Maryland, USA, CC BY-SA 2.0
+- **martinho-lima**: [San_Martin_de_Porres_huaycan.jpg](https://commons.wikimedia.org/wiki/File:San_Martin_de_Porres_huaycan.jpg), AnonymousUnknown author, Public domain
+- **maximiliano-kolbe**: [Fr.Maximilian_Kolbe_in_1936.jpg](https://commons.wikimedia.org/wiki/File:Fr.Maximilian_Kolbe_in_1936.jpg), Unknown authorUnknown author, Public domain
+- **padre-pio**: [Padre_Pio_portraitFXD.jpg](https://commons.wikimedia.org/wiki/File:Padre_Pio_portraitFXD.jpg), File:Padre Pio portrait.jpg: The original uploader was Manfredonia at Italian Wikipedia.
+derivative work: MisterNox, Public domain
+- **papa-francisco**: [Pope_Francis_Korea_Haemi_Castle_19_(4x5_cropped).jpg](https://commons.wikimedia.org/wiki/File:Pope_Francis_Korea_Haemi_Castle_19_%284x5_cropped%29.jpg), Korea.net / Korean Culture and Information Service (Jeon Han), CC BY-SA 2.0 (herdada do original Pope_Francis_Korea_Haemi_Castle_19.jpg)
+- **paulo-vi**: [Pope_Paul_VI_1969_Portrait_(4x5_cropped).jpg](https://commons.wikimedia.org/wiki/File:Pope_Paul_VI_1969_Portrait_%284x5_cropped%29.jpg), Fotografia Felici, Public domain
+- **pio-x**: [Pius_X,_by_Ernest_Walter_Histed_(retouched).jpg](https://commons.wikimedia.org/wiki/File:Pius_X%2C_by_Ernest_Walter_Histed_%28retouched%29.jpg), autor desconhecido, Public domain
+- **rita-cassia**: [Santa_Rita_da_Cascia.jpg](https://commons.wikimedia.org/wiki/File:Santa_Rita_da_Cascia.jpg), Roscini Claudio, Public domain
+- **rosa-lima**: [Sta_Rosa_de_Lima_por_Claudio_Coello.jpg](https://commons.wikimedia.org/wiki/File:Sta_Rosa_de_Lima_por_Claudio_Coello.jpg), Claudio Coello, Public domain
+- **santa-cecilia**: [Guercino_-_St._Cecilia_-_Google_Art_Project.jpg](https://commons.wikimedia.org/wiki/File:Guercino_-_St._Cecilia_-_Google_Art_Project.jpg), Guercino, Public domain
+- **santa-clara**: [SDamiano-Clara.jpg](https://commons.wikimedia.org/wiki/File:SDamiano-Clara.jpg), Gunnar Bach Pedersen, Public domain
+- **santa-luzia**: [Niccolò_di_Segna_-_Saint_Lucy_-_Walters_37756.jpg](https://commons.wikimedia.org/wiki/File:Niccol%C3%B2_di_Segna_-_Saint_Lucy_-_Walters_37756.jpg), Niccolò di Segna, Public domain
+- **santa-monica**: [Monica_of_Hippo_by_Gozzoli.jpg](https://commons.wikimedia.org/wiki/File:Monica_of_Hippo_by_Gozzoli.jpg), Benozzo Gozzoli, Public domain
+- **santa-teresinha**: [Teresa-de-Lisieux.jpg](https://commons.wikimedia.org/wiki/File:Teresa-de-Lisieux.jpg), Céline Martin, Public domain
+- **santo-agostinho**: [Saint_Augustine_by_Philippe_de_Champaigne.jpg](https://commons.wikimedia.org/wiki/File:Saint_Augustine_by_Philippe_de_Champaigne.jpg), Philippe de Champaigne, Public domain
+- **santo-antonio**: [Francisco_de_Zurbarán_-_Sto_Antonio_de_Padua.jpg](https://commons.wikimedia.org/wiki/File:Francisco_de_Zurbar%C3%A1n_-_Sto_Antonio_de_Padua.jpg), Francisco de Zurbarán, Public domain
+- **sao-benedito**: [Capela_do_Divino_Espírito_Santo_em_Porto_Alegre_011-aa.JPG](https://commons.wikimedia.org/wiki/File:Capela_do_Divino_Esp%C3%ADrito_Santo_em_Porto_Alegre_011-aa.JPG), Eugenio Hansen, OFS, CC BY-SA 3.0
+- **sao-bento**: [Memling,_Trittico_di_Benedetto_Portinari,_San_Benedetto.jpg](https://commons.wikimedia.org/wiki/File:Memling%2C_Trittico_di_Benedetto_Portinari%2C_San_Benedetto.jpg), Hans Memling, Public domain
+- **sao-domingos**: [SaintDominic.jpg](https://commons.wikimedia.org/wiki/File:SaintDominic.jpg), Claudio Coello, Public domain
+- **sao-francisco**: [StFrancis_part.jpg](https://commons.wikimedia.org/wiki/File:StFrancis_part.jpg), Parzi, Public domain
+- **sao-jeronimo**: [MatthiasStom-SaintJerome-Nantes.jpg](https://commons.wikimedia.org/wiki/File:MatthiasStom-SaintJerome-Nantes.jpg), Matthias Stom, Public domain
+- **sao-jorge**: [Stgeorge-dragon.jpg](https://commons.wikimedia.org/wiki/File:Stgeorge-dragon.jpg), Gustave Moreau, Public domain
+- **sao-nicolau**: [Jaroslav_Čermák_(1831_-_1878)_-_Sv._Mikuláš_(cropped).jpg](https://commons.wikimedia.org/wiki/File:Jaroslav_%C4%8Cerm%C3%A1k_%281831_-_1878%29_-_Sv._Mikul%C3%A1%C5%A1_%28cropped%29.jpg), Jaroslav Čermák, Public domain
+- **sao-patricio**: [Our_Lady's_Island_Church_of_the_Assumption_East_Aisle_Window_Saint_Patrick_2010_09_26.jpg](https://commons.wikimedia.org/wiki/File:Our_Lady%27s_Island_Church_of_the_Assumption_East_Aisle_Window_Saint_Patrick_2010_09_26.jpg), Andreas F. Borchert, CC BY-SA 4.0
+- **sao-sebastiao**: [St._Sebastian_by_Sodoma.jpg](https://commons.wikimedia.org/wiki/File:St._Sebastian_by_Sodoma.jpg), Il Sodoma, Public domain
+- **sao-tomas**: [St-thomas-aquinasFXD.jpg](https://commons.wikimedia.org/wiki/File:St-thomas-aquinasFXD.jpg), Carlo Crivelli, Public domain
+- **sao-vicente-paulo**: [Simon_François_de_Tours_-_Portrait_Vincent_de_Paul_(4x5_cropped).jpeg](https://commons.wikimedia.org/wiki/File:Simon_Fran%C3%A7ois_de_Tours_-_Portrait_Vincent_de_Paul_%284x5_cropped%29.jpeg), Simon François de Tours (1606-1671), Public domain
+- **teresa-avila**: [Santa_Teresa_de_Jesús_(Museo_del_Prado).jpg](https://commons.wikimedia.org/wiki/File:Santa_Teresa_de_Jes%C3%BAs_%28Museo_del_Prado%29.jpg), Eduardo Balaca, Public domain

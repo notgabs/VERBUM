@@ -9,8 +9,15 @@
     "conhecidoPor": "Assassinado pelo seu irmão",
     "nascimento": "Antes de 4000 a.C.",
     "ocupacao": "Pastor",
-    "dica1": "Um dos primeiros humanos na terra",
-    "dica2": "O primeiro homem a sofrer a morte na história bíblica."
+    "povo": "Primeiras gerações",
+    "dica1": "Deus disse que o sangue dele 'clamava da terra'.",
+    "dica2": "Pastor cuja oferta agradou a Deus, foi morto por inveja pelo irmão Caim.",
+    "nascimentoAno": -4000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "abigail",
@@ -19,11 +26,21 @@
     "testamento": "Antigo",
     "divisao": "Históricos",
     "historiaNaBiblia": "1 Samuel 25; 1 Crônicas 3",
-    "conhecidoPor": "Impedir um ataque vingativo ao preparar uma refeição",
+    "conhecidoPor": "Impedir com prudência que Davi se vingasse de seu marido Nabal",
     "nascimento": "Por volta de 1030 a.C.",
-    "ocupacao": "Proprietário de terras",
-    "dica1": "Seu primeiro marido tinha um nome que significava 'insensato'.",
-    "dica2": "Preparou o que é considerado a primeira refeição 'para viagem' da Bíblia para acalmar Davi."
+    "ocupacao": "Esposa",
+    "povo": "Israelita",
+    "dica1": "Mulher inteligente e bonita, casada com um homem rico, grosseiro e mesquinho.",
+    "dica2": "Levou provisões a Davi para impedi-lo de se vingar de Nabal e, viúva, casou-se com ele.",
+    "nascimentoAno": -1030,
+    "referencias": [
+      {
+        "livro": "1 Samuel"
+      },
+      {
+        "livro": "1 Crônicas"
+      }
+    ]
   },
   {
     "id": "abimeleque",
@@ -35,8 +52,15 @@
     "conhecidoPor": "Matou seus irmãos para ser rei e teve o crânio rachado por uma pedra",
     "nascimento": "1170 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Uma mulher jogou uma pedra de moinho em sua cabeça.",
-    "dica2": "Pediu ao seu escudeiro que o matasse para não dizerem que morreu pelas mãos de uma mulher."
+    "povo": "Israelita (Manassés)",
+    "dica1": "Filho de um juiz de Israel, quis ser rei em Siquém.",
+    "dica2": "Matou setenta irmãos e morreu depois que uma mulher jogou uma pedra de moinho em sua cabeça.",
+    "nascimentoAno": -1170,
+    "referencias": [
+      {
+        "livro": "Juízes"
+      }
+    ]
   },
   {
     "id": "absalao",
@@ -48,8 +72,15 @@
     "conhecidoPor": "Liderar uma rebelião contra o próprio pai",
     "nascimento": "1000 a.C.",
     "ocupacao": "Guerreiro",
-    "dica1": "Tentou fugir montado em uma mula, mas seu cabelo ficou preso nos galhos de uma árvore.",
-    "dica2": "Terceiro filho de Davi."
+    "povo": "Israelita (Judá)",
+    "dica1": "Famoso pela beleza e pela cabeleira, que cortava uma vez por ano por causa do peso.",
+    "dica2": "Rebelou-se contra o pai, o rei Davi, e ficou preso pelos cabelos numa árvore.",
+    "nascimentoAno": -1000,
+    "referencias": [
+      {
+        "livro": "2 Samuel"
+      }
+    ]
   },
   {
     "id": "abraao",
@@ -58,11 +89,18 @@
     "testamento": "Antigo",
     "divisao": "Pentateuco",
     "historiaNaBiblia": "Gênesis 11-25",
-    "conhecidoPor": "Fundar a nação judaica",
+    "conhecidoPor": "Ser o pai de todos os que creem",
     "nascimento": "Por volta de 2166 a.C.",
     "ocupacao": "Patriarca",
-    "dica1": "Teve seu nome original mudado e foi chamado de amigo de Deus.",
-    "dica2": "Foi ordenado a levar seu filho Isaque ao monte Moriá para o sacrificar."
+    "povo": "Hebreu",
+    "dica1": "Deus lhe prometeu uma descendência tão numerosa quanto as estrelas do céu.",
+    "dica2": "Saiu de Ur, teve o nome mudado de Abrão e foi chamado a oferecer o filho Isaque no monte Moriá.",
+    "nascimentoAno": -2166,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "acabe",
@@ -74,8 +112,15 @@
     "conhecidoPor": "Levar Israel à idolatria",
     "nascimento": "Por volta de 874 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Sua morte foi profetizada após uma guerra motivada por um 'espírito mentiroso', e cães lamberam seu sangue.",
-    "dica2": "Casou-se com a perversa princesa pagã Jezabel e permitiu o culto a Baal em Israel."
+    "povo": "Israelita",
+    "dica1": "Rei de Israel que cobiçou a vinha de um vizinho.",
+    "dica2": "Marido de Jezabel, permitiu o culto a Baal e foi enfrentado pelo profeta Elias.",
+    "nascimentoAno": -874,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      }
+    ]
   },
   {
     "id": "acaz",
@@ -87,8 +132,21 @@
     "conhecidoPor": "Levar Judá à idolatria",
     "nascimento": "755 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Sacrificou seus próprios filhos ao deus pagão Moloque.",
-    "dica2": "Seu povo recusou enterrá-lo na sepultura real devido aos seus maus reinados."
+    "povo": "Israelita (Judá)",
+    "dica1": "Rei de Judá que, ameaçado por inimigos, preferiu pedir socorro à Assíria a confiar em Deus.",
+    "dica2": "Recusou pedir um sinal e ouviu de Isaías a profecia: 'a virgem conceberá'.",
+    "nascimentoAno": -755,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      },
+      {
+        "livro": "Isaías"
+      }
+    ]
   },
   {
     "id": "amos",
@@ -100,8 +158,15 @@
     "conhecidoPor": "Alertar sobre os tempos difíceis que estavam por vir",
     "nascimento": "780 a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Era criador de ovelhas e cuidava de um pomar de figos antes de ser enviado para pregar no reino do norte.",
-    "dica2": "Foi acusado de traição e expulso de Israel após seus contundentes discursos contra a opressão dos pobres."
+    "povo": "Israelita",
+    "dica1": "Dizia não ser profeta de profissão: cuidava de rebanhos e de sicômoros.",
+    "dica2": "Pastor de Técua enviado ao reino do Norte, denunciou a opressão dos pobres e foi mandado embora de Betel.",
+    "nascimentoAno": -780,
+    "referencias": [
+      {
+        "livro": "Amós"
+      }
+    ]
   },
   {
     "id": "adao",
@@ -113,8 +178,15 @@
     "conhecidoPor": "Primeiro homem criado por Deus",
     "nascimento": "Antes de 4000 a.C.",
     "ocupacao": "Agricultor",
-    "dica1": "Esta pessoa nunca foi um bebê",
-    "dica2": "Primeiro humano da história"
+    "povo": "Primeiras gerações",
+    "dica1": "Recebeu de Deus a tarefa de dar nome a todos os animais.",
+    "dica2": "Primeiro homem, formado do barro e colocado no jardim do Éden.",
+    "nascimentoAno": -4000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "ana-mae",
@@ -126,8 +198,15 @@
     "conhecidoPor": "Ser mãe do profeta Samuel",
     "nascimento": "Por volta de 1140 a.C.",
     "ocupacao": "Mãe",
-    "dica1": "A mais amada entre as mulheres de Elcana",
-    "dica2": "Mãe do profeta Samuel"
+    "povo": "Israelita",
+    "dica1": "Era estéril e sofria com as provocações da outra esposa do marido.",
+    "dica2": "Prometeu consagrar o filho a Deus e entregou o menino Samuel ao sacerdote Eli em Silo.",
+    "nascimentoAno": -1140,
+    "referencias": [
+      {
+        "livro": "1 Samuel"
+      }
+    ]
   },
   {
     "id": "ana-idosa",
@@ -139,8 +218,15 @@
     "conhecidoPor": "Proclamar que Jesus era o Messias",
     "nascimento": "Por volta de 100 a.C.",
     "ocupacao": "Profetisa",
-    "dica1": "Pertencia à tribo de Aser e era viúva havia 84 anos.",
-    "dica2": "Reconheceu o menino Jesus no templo e falou dele a todos que aguardavam a redenção de Jerusalém."
+    "povo": "Israelita (Aser)",
+    "dica1": "Profetisa idosa que não saía do Templo, servindo a Deus dia e noite com jejuns e orações.",
+    "dica2": "Filha de Fanuel, da tribo de Aser, falou do menino Jesus a todos que esperavam a redenção de Jerusalém.",
+    "nascimentoAno": -100,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "anas",
@@ -152,8 +238,18 @@
     "conhecidoPor": "Participar do julgamento de Jesus",
     "nascimento": "Por volta de 30 a.C.",
     "ocupacao": "Sumo Sacerdote",
-    "dica1": "Membro do Sinédrio, esteve presente também no julgamento de Pedro e João por pregar sobre Jesus.",
-    "dica2": "Sogro de Caifás e a primeira pessoa a questionar Jesus após a sua prisão."
+    "povo": "Israelita (Levi)",
+    "dica1": "Da família sacerdotal, esteve entre os que interrogaram Pedro e João depois da cura de um aleijado.",
+    "dica2": "Sogro de Caifás, foi o primeiro a interrogar Jesus depois da prisão.",
+    "nascimentoAno": -30,
+    "referencias": [
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "ananias",
@@ -162,11 +258,18 @@
     "testamento": "Novo",
     "divisao": "Históricos",
     "historiaNaBiblia": "Atos 5",
-    "conhecidoPor": "Tentaram enganar Deus e pagaram o preço por isso",
+    "conhecidoPor": "Mentir ao Espírito Santo sobre o valor da venda de um terreno",
     "nascimento": "Século I d.C.",
     "ocupacao": "Proprietário de terras",
-    "dica1": "Teve um fim trágico na comunidade de Jerusalém após esconder parte do lucro de uma venda.",
-    "dica2": "Caiu morto instantaneamente após ser confrontado por Pedro por tentar enganar o Espírito Santo."
+    "povo": "Israelita",
+    "dica1": "Membro da primeira comunidade de Jerusalém que vendeu uma propriedade.",
+    "dica2": "Escondeu parte do dinheiro, mentiu ao Espírito Santo e caiu morto diante de Pedro; a esposa teve o mesmo fim.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "safira",
@@ -175,11 +278,18 @@
     "testamento": "Novo",
     "divisao": "Históricos",
     "historiaNaBiblia": "Atos 5",
-    "conhecidoPor": "Tentaram enganar Deus e pagaram o preço por isso",
+    "conhecidoPor": "Mentir, junto com o marido, sobre o valor da venda de um terreno",
     "nascimento": "Século I d.C.",
-    "ocupacao": "Proprietário de terras",
-    "dica1": "Seguiu os passos do companheiro horas mais tarde sem saber o que o esperava ao chegar ao local.",
-    "dica2": "Caiu morta instantaneamente após ser questionada e repetir a mesma mentira de seu marido perante Pedro."
+    "ocupacao": "Proprietária de terras",
+    "povo": "Israelita",
+    "dica1": "Combinou com o marido guardar parte do dinheiro de uma venda.",
+    "dica2": "Repetiu a mentira do marido Ananias diante de Pedro e caiu morta horas depois dele.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "andre",
@@ -191,8 +301,27 @@
     "conhecidoPor": "Apresentar Pedro a Jesus",
     "nascimento": "Por volta de 5 d.C.",
     "ocupacao": "Pescador e Apóstolo",
-    "dica1": "Foi originalmente discípulo de João Batista e morava em Cafarnaum com seu irmão e sua sogra.",
-    "dica2": "Foi martirizado em uma cruz em formato de X."
+    "povo": "Israelita",
+    "dica1": "Era discípulo de João Batista antes de seguir Jesus.",
+    "dica2": "Pescador de Betsaida, foi um dos primeiros a seguir Jesus e levou até ele o irmão Simão Pedro.",
+    "nascimentoAno": 5,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "apolo",
@@ -201,11 +330,21 @@
     "testamento": "Novo",
     "divisao": "Históricos e Epístolas",
     "historiaNaBiblia": "Atos 18; 1 Coríntios 3",
-    "conhecidoPor": "Pregar sobre Jesus aos gentios",
+    "conhecidoPor": "Pregar Jesus com eloquência em Éfeso e em Corinto",
     "nascimento": "Século I d.C.",
     "ocupacao": "Pregador",
-    "dica1": "Chamado por Deus para pregar",
-    "dica2": "Criou uma rivalidade não intencional em corintios com Paulo"
+    "povo": "Israelita",
+    "dica1": "Judeu de Alexandria, eloquente e profundo conhecedor das Escrituras.",
+    "dica2": "Instruído por Áquila e Priscila em Éfeso, pregou em Corinto; Paulo escreveu: 'eu plantei, ele regou'.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "1 Coríntios"
+      }
+    ]
   },
   {
     "id": "arao",
@@ -217,8 +356,24 @@
     "conhecidoPor": "Primeiro Sumo Sacerdote de Israel",
     "nascimento": "1530 a.C.",
     "ocupacao": "Sumo Sacerdote",
-    "dica1": "Atuou como porta-voz de seu irmão perante o faraó e viu seu cajado transformar-se em uma serpente que engoliu as dos magos egípcios.",
-    "dica2": "Cedendo à pressão popular, fabricou um bezerro de ouro e faleceu no monte Hor aos 123 anos sem entrar na terra prometida."
+    "povo": "Israelita (Levi)",
+    "dica1": "Era mais velho que o irmão e falava em nome dele.",
+    "dica2": "Irmão de Moisés e primeiro sumo sacerdote de Israel; fez o bezerro de ouro.",
+    "nascimentoAno": -1530,
+    "referencias": [
+      {
+        "livro": "Êxodo"
+      },
+      {
+        "livro": "Levítico"
+      },
+      {
+        "livro": "Números"
+      },
+      {
+        "livro": "Deuteronômio"
+      }
+    ]
   },
   {
     "id": "asa",
@@ -230,8 +385,18 @@
     "conhecidoPor": "Fazer Judá voltar a prestar culto só a Deus",
     "nascimento": "Por volta de 932 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Em seus últimos anos, rejeitou a ajuda divina ao enfrentar uma doença nos pés, confiando apenas nos médicos.",
-    "dica2": "Reinou por 41 anos e chegou a destituir a própria avó do trono por causa da idolatria."
+    "povo": "Israelita (Judá)",
+    "dica1": "Rei de Judá que reinou por 41 anos e combateu a idolatria.",
+    "dica2": "Destituiu a avó Maacá por causa de um ídolo e, doente dos pés, procurou só os médicos e não o Senhor.",
+    "nascimentoAno": -932,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      }
+    ]
   },
   {
     "id": "atalia",
@@ -243,8 +408,18 @@
     "conhecidoPor": "Ser a única rainha governante na história de Judá",
     "nascimento": "Por volta de 880 a.C.",
     "ocupacao": "Rainha",
-    "dica1": "Tentou eliminar toda a descendência real de Judá para assumir o controle do trono.",
-    "dica2": "Seu governo de seis anos foi derrubado quando o sacerdote Joiada revelou e coroou o herdeiro que havia escapado.Também é a filha de Jezabel."
+    "povo": "Israelita",
+    "dica1": "A única mulher a governar Judá como rainha.",
+    "dica2": "Mandou matar a descendência real para tomar o trono, mas o menino Joás foi escondido no Templo e coroado.",
+    "nascimentoAno": -880,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      }
+    ]
   },
   {
     "id": "boaz",
@@ -253,11 +428,18 @@
     "testamento": "Antigo",
     "divisao": "Históricos",
     "historiaNaBiblia": "Rute",
-    "conhecidoPor": "Casar-se com Rute e resgatar toda sua família",
+    "conhecidoPor": "Resgatar Noemi e casar-se com Rute",
     "nascimento": "Por volta de 1200 a.C.",
     "ocupacao": "Proprietário de terras",
-    "dica1": "Se apaixonou por sua esposa quando estava colhendo milho e faz parte da genealogia de Jesus.",
-    "dica2": "Esposo de Rute"
+    "povo": "Israelita (Judá)",
+    "dica1": "Homem rico de Belém que deixou uma estrangeira respigar em seus campos.",
+    "dica2": "Casou-se com a moabita Rute, foi pai de Obed e bisavô do rei Davi.",
+    "nascimentoAno": -1200,
+    "referencias": [
+      {
+        "livro": "Rute"
+      }
+    ]
   },
   {
     "id": "balaao",
@@ -269,8 +451,15 @@
     "conhecidoPor": "Ser contratado para amaldiçoar Israel, mas abençoou",
     "nascimento": "1440 a.C.",
     "ocupacao": "Feiticeiro e Profeta",
-    "dica1": "Avistou um anjo no caminho com a ajuda de sua jumenta.",
-    "dica2": "Distribuía maldições e bênçãos e foi ordenado por Deus a dizer apenas o que o Senhor quisesse em uma de suas missões."
+    "povo": "Arameu",
+    "dica1": "Adivinho contratado por um rei estrangeiro para amaldiçoar Israel.",
+    "dica2": "Sua jumenta viu um anjo no caminho e falou com ele; acabou abençoando Israel em vez de amaldiçoar.",
+    "nascimentoAno": -1440,
+    "referencias": [
+      {
+        "livro": "Números"
+      }
+    ]
   },
   {
     "id": "barrabas",
@@ -282,8 +471,24 @@
     "conhecidoPor": "Escolhido para ser solto no lugar de Jesus",
     "nascimento": "Por volta de 1 d.C.",
     "ocupacao": "Criminoso",
-    "dica1": "Criminoso que apareceu poucas vezes e desapareceu depois.",
-    "dica2": "Escolhido no lugar de Jesus para ser solto na celebração da Páscoa."
+    "povo": "Israelita",
+    "dica1": "Estava preso por causa de uma revolta e de um homicídio em Jerusalém.",
+    "dica2": "A multidão pediu que ele fosse solto no lugar de Jesus durante a Páscoa.",
+    "nascimentoAno": 1,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "baraque",
@@ -295,8 +500,18 @@
     "conhecidoPor": "Vencer uma guerra contra os cananeus",
     "nascimento": "Por volta de 1350 a.C.",
     "ocupacao": "Líder militar",
-    "dica1": "Hesitou em ir à guerra contra os cananeus sem a presença da profetisa Débora, que o alertou de que a vitória traria glória a uma mulher.",
-    "dica2": "Comandou dez mil homens e derrotou o exército de Sísera após uma tempestade atolar os carros de guerra inimigos."
+    "povo": "Israelita (Neftali)",
+    "dica1": "Chefe militar de Neftali convocado por uma profetisa.",
+    "dica2": "Venceu Sísera ao lado de Débora, que o avisou de que a glória da vitória ficaria com uma mulher.",
+    "nascimentoAno": -1350,
+    "referencias": [
+      {
+        "livro": "Juízes"
+      },
+      {
+        "livro": "Hebreus"
+      }
+    ]
   },
   {
     "id": "barnabe",
@@ -308,8 +523,15 @@
     "conhecidoPor": "Pregar junto com Paulo aos gentios",
     "nascimento": "Primeiro século d.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Seu nome original era José, tendo vendido propriedades para ajudar a igreja primitiva.",
-    "dica2": "Apresentou Paulo aos apóstolos e viajou em missões com ele até se separarem por causa de uma desavença sobre seu primo Marcos."
+    "povo": "Israelita (Levi)",
+    "dica1": "Levita nascido em Chipre, a quem os apóstolos chamaram de 'filho da consolação'.",
+    "dica2": "Apresentou o recém-convertido Saulo aos apóstolos e fez com ele a primeira viagem missionária.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "bate-seba",
@@ -317,12 +539,25 @@
     "sexo": "Mulher",
     "testamento": "Antigo",
     "divisao": "Históricos",
-    "historiaNaBiblia": "2 Samuel 11; 1 Crônicas 3, 5",
+    "historiaNaBiblia": "2 Samuel 11-12; 1 Reis 1-2; 1 Crônicas 3,5",
     "conhecidoPor": "Ter sido objeto do maior pecado do rei Davi",
     "nascimento": "Por volta de 1010 a.C.",
     "ocupacao": "Rainha",
-    "dica1": "Era esposa de Urias, o hitita, antes de se tornar a sétima esposa do rei Davi.",
-    "dica2": "Mãe do rei Salomão, tendo ajudado a evitar uma conspiração para impedir que seu filho assumisse o trono."
+    "povo": "Israelita",
+    "dica1": "Era esposa de um soldado estrangeiro do exército do rei.",
+    "dica2": "Davi a viu se banhando, mandou matar seu marido Urias e ela se tornou mãe do rei Salomão.",
+    "nascimentoAno": -1010,
+    "referencias": [
+      {
+        "livro": "2 Samuel"
+      },
+      {
+        "livro": "1 Reis"
+      },
+      {
+        "livro": "1 Crônicas"
+      }
+    ]
   },
   {
     "id": "belsazar",
@@ -334,8 +569,15 @@
     "conhecidoPor": "Ter visto mãos humanas escreverem na parede",
     "nascimento": "Por volta de 600 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Teve o fim do seu reino decifrado pelo profeta Daniel e foi morto na mesma noite em que a Babilônia foi invadida.",
-    "dica2": "Usou taças sagradas roubadas do templo de Jerusalém em um grande banquete e tremeu ao ver uma mão escrever na parede."
+    "povo": "Babilônio",
+    "dica1": "Deu um banquete usando os vasos de ouro e prata tirados do Templo de Jerusalém.",
+    "dica2": "Uma mão escreveu 'Mene, Tequel, Peres' na parede; Daniel interpretou e ele morreu naquela noite.",
+    "nascimentoAno": -600,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      }
+    ]
   },
   {
     "id": "benjamim",
@@ -347,8 +589,15 @@
     "conhecidoPor": "Ser muito amado por Jacó e José",
     "nascimento": "Por volta de 1900 a.C.",
     "ocupacao": "Pastor",
-    "dica1": "Foi alvo de uma armação envolvendo um cálice de ouro escondido em sua bagagem durante a viagem dos irmãos ao Egito.",
-    "dica2": "Filho mais novo de Jacó e Raquel, teve seu nome original mudado de 'Benoni' para..."
+    "povo": "Israelita (Benjamim)",
+    "dica1": "O caçula de doze irmãos; a mãe morreu ao dá-lo à luz.",
+    "dica2": "Filho de Jacó e Raquel, teve a taça de prata do irmão José escondida em seu saco de mantimentos.",
+    "nascimentoAno": -1900,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "cam",
@@ -360,8 +609,15 @@
     "conhecidoPor": "Ter seu filho Canaã amaldiçoado por causa do seu pecado",
     "nascimento": "Desconhecido",
     "ocupacao": "Pastor e Trabalhador",
-    "dica1": "Teve seu filho um de seus filhos amaldiçoado.",
-    "dica2": "Foi uma das oito pessoas que entraram na arca e cometeu um pecado grave contra seu pai após o fim do dilúvio."
+    "povo": "Primeiras gerações",
+    "dica1": "Um dos oito sobreviventes do dilúvio.",
+    "dica2": "Filho de Noé, viu o pai embriagado e descoberto, e seu filho Canaã foi amaldiçoado.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "caifas",
@@ -373,8 +629,18 @@
     "conhecidoPor": "Orquestrar a execução de Jesus",
     "nascimento": "Por volta de 20 a.C.",
     "ocupacao": "Sumo Sacerdote",
-    "dica1": "Chefe do Sinédrio, era genro de Anás e desejou eliminar Jesus após a ressurreição de Lázaro por temer uma intervenção romana.",
-    "dica2": "Presidiu o julgamento ilegal em que acusou Jesus de blasfêmia e rasgou suas vestes."
+    "povo": "Israelita (Levi)",
+    "dica1": "Sumo sacerdote que disse ser melhor um só homem morrer pelo povo do que a nação inteira perecer.",
+    "dica2": "Genro de Anás, rasgou as vestes e acusou Jesus de blasfêmia no julgamento.",
+    "nascimentoAno": -20,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "caim",
@@ -386,8 +652,15 @@
     "conhecidoPor": "Matar seu irmão Abel por inveja",
     "nascimento": "Antes de 4000 a.C.",
     "ocupacao": "Agricultor",
-    "dica1": "Tornou-se um fugitivo marcado por Deus após cometer um pecado.",
-    "dica2": "Primeiro filho de Adão e Eva, que teve sua oferta rejeitada por Deus."
+    "povo": "Primeiras gerações",
+    "dica1": "Lavrador cuja oferta dos frutos da terra não agradou a Deus.",
+    "dica2": "Matou o irmão Abel e perguntou: 'Acaso sou eu o guarda do meu irmão?'",
+    "nascimentoAno": -4000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "calebe",
@@ -399,8 +672,18 @@
     "conhecidoPor": "Ajudar a liderar a conquista da terra prometida",
     "nascimento": "Por volta de 1486 a.C.",
     "ocupacao": "Guerreiro",
-    "dica2": "Foi um dos doze espias enviados por Moisés e um dos únicos adultos saídos do Egito a entrar na terra prometida por causa de sua fé.",
-    "dica1": "Aos 85 anos, conquistou a região de Hebrom e derrotou os gigantes enaquins, recebendo a terra como herança."
+    "povo": "Israelita (Judá)",
+    "dica2": "Ele e Josué foram os únicos espias que confiaram em Deus; aos 85 anos conquistou Hebron.",
+    "dica1": "Um dos doze enviados por Moisés para explorar Canaã.",
+    "nascimentoAno": -1486,
+    "referencias": [
+      {
+        "livro": "Números"
+      },
+      {
+        "livro": "Josué"
+      }
+    ]
   },
   {
     "id": "augusto",
@@ -412,8 +695,15 @@
     "conhecidoPor": "Governar durante o nascimento de Jesus",
     "nascimento": "63 a.C.",
     "ocupacao": "Imperador Romano",
-    "dica1": "Filho adotivo de Júlio César que derrotou Antônio e Cleópatra no Egito e afirmava ser um deus.",
-    "dica2": "Ordenou um censo na Judeia que fez José e Maria viajarem para Belém, onde Jesus nasceu."
+    "povo": "Romano",
+    "dica1": "Sobrinho-neto e herdeiro de Júlio César, venceu Marco Antônio na batalha de Ácio.",
+    "dica2": "Imperador cujo decreto de recenseamento levou José e Maria a Belém.",
+    "nascimentoAno": -63,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "tiberio",
@@ -425,8 +715,15 @@
     "conhecidoPor": "Governar durante o ministério público de Jesus",
     "nascimento": "42 a.C.",
     "ocupacao": "Imperador Romano",
-    "dica1": "Enteado de Augusto e líder militar de muito sucesso que nomeou Pôncio Pilatos como governador da Judeia.",
-    "dica2": "Deu liberdade aos judeus para observarem suas leis e foi sucedido pelo sobrinho-neto Calígula após a morte de seus filhos."
+    "povo": "Romano",
+    "dica1": "Enteado de Augusto, que o sucedeu no governo de Roma.",
+    "dica2": "No 15º ano do seu governo, João Batista começou a pregar; Pilatos governava a Judeia nesse tempo.",
+    "nascimentoAno": -42,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "claudio",
@@ -435,11 +732,18 @@
     "testamento": "Novo",
     "divisao": "Históricos",
     "historiaNaBiblia": "Atos 11.28; 18, 2",
-    "conhecidoPor": "Expulsar judeus cristãos de Roma e períodos de fome",
+    "conhecidoPor": "Expulsar os judeus de Roma",
     "nascimento": "10 a.C.",
     "ocupacao": "Imperador Romano",
-    "dica1": "Sobrinho de Tibério que assumiu o lugar de Calígula, era um pouco surdo e manco, e deu o controle total da Judeia a Herodes Agripa.",
-    "dica2": "Expulsou judeus cristãos de Roma (incluindo Áquila e Priscila) antes de ser assassinado pela própria esposa."
+    "povo": "Romano",
+    "dica1": "Imperador em cujo reinado veio a grande fome anunciada pelo profeta Ágabo.",
+    "dica2": "Mandou todos os judeus saírem de Roma; por isso Áquila e Priscila foram para Corinto.",
+    "nascimentoAno": -10,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "nero",
@@ -451,8 +755,18 @@
     "conhecidoPor": "Perseguir cristãos e executar Pedro e Paulo",
     "nascimento": "37 d.C.",
     "ocupacao": "Imperador Romano",
-    "dica1": "Enteado de Cláudio e o último césar a governar como imperador, considerava-se um deus e teve a mãe, o irmão e a mulher assassinados.",
-    "dica2": "Culpou os cristãos pelo incêndio de Roma em 64 d.C., lançando-os às arenas antes de cometer suicídio."
+    "povo": "Romano",
+    "dica1": "Último imperador da linhagem júlio-claudiana, mandou matar a própria mãe e a esposa.",
+    "dica2": "Culpou os cristãos pelo incêndio de Roma em 64; em sua perseguição Pedro e Paulo foram martirizados.",
+    "nascimentoAno": 37,
+    "referencias": [
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "Filipenses"
+      }
+    ]
   },
   {
     "id": "cornelio",
@@ -464,8 +778,15 @@
     "conhecidoPor": "Ser o primeiro gentio a se tornar cristão",
     "nascimento": "Primeiro século d.C.",
     "ocupacao": "Líder militar",
-    "dica2": "Oficial romano comandante de cem homens em Cesareia que era temente a Deus, mas não conhecia o evangelho por ser gentio.",
-    "dica1": "Teve uma visão de um anjo para chamar o apóstolo Pedro, resultando na descida do Espírito Santo sobre sua família e amigos."
+    "povo": "Romano",
+    "dica2": "Centurião que mandou chamar Pedro após a visão de um anjo; ele e sua casa receberam o Espírito Santo.",
+    "dica1": "Oficial romano de Cesareia, temente a Deus, que dava muitas esmolas.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "ciro",
@@ -474,11 +795,24 @@
     "testamento": "Antigo",
     "divisao": "Históricos e Proféticos",
     "historiaNaBiblia": "2 Crônicas 36; Esdras 1; Daniel 6",
-    "conhecidoPor": "Tirar os israelitas do exílio",
+    "conhecidoPor": "Permitir que os judeus voltassem do exílio para reconstruir o Templo",
     "nascimento": "Por volta de 599 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Rei sábio e grande líder militar que conquistou a Babilônia, os medos, a Lídia e a Assíria para formar o Império Persa.",
-    "dica2": "Permitiu que os judeus retornassem à sua terra natal e ordenou a reconstrução do templo em Jerusalém, conforme profetizado por Isaías."
+    "povo": "Persa",
+    "dica1": "Isaías o chama de 'ungido' do Senhor, mesmo sendo um rei estrangeiro.",
+    "dica2": "Rei da Pérsia que decretou o retorno dos judeus a Jerusalém para reconstruir o Templo.",
+    "nascimentoAno": -599,
+    "referencias": [
+      {
+        "livro": "2 Crônicas"
+      },
+      {
+        "livro": "Esdras"
+      },
+      {
+        "livro": "Daniel"
+      }
+    ]
   },
   {
     "id": "daniel",
@@ -486,12 +820,19 @@
     "sexo": "Homem",
     "testamento": "Antigo",
     "divisao": "Proféticos",
-    "historiaNaBiblia": "Livro de Daniel",
+    "historiaNaBiblia": "Daniel 1-14",
     "conhecidoPor": "Permanecer fiel ao Senhor enquanto servia a reis pagãos",
     "nascimento": "Por volta de 621 a.C.",
     "ocupacao": "Conselheiro e Profeta",
-    "dica1": "Levado cativo à Babilônia ainda adolescente, teve seu nome mudado para Beltessazar e recusou-se a comer as carnes da mesa do rei.",
-    "dica2": "Foi lançado em uma cova de leões por continuar orando a Deus contra a lei, mas sobreviveu após Deus enviar anjos para fechar a boca dos animais."
+    "povo": "Israelita (Judá)",
+    "dica1": "Jovem deportado que recebeu o nome de Beltessazar e recusou a comida do rei.",
+    "dica2": "Foi lançado na cova dos leões por continuar orando, e Deus enviou seu anjo para fechar a boca deles.",
+    "nascimentoAno": -621,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      }
+    ]
   },
   {
     "id": "davi",
@@ -503,8 +844,18 @@
     "conhecidoPor": "Ser o segundo e o maior rei de Israel",
     "nascimento": "Por volta de 1040 a.C.",
     "ocupacao": "Rei",
-    "dica2": "Pastor de ovelhas que derrotou o gigante Golias com uma pedra de funda e tocou harpa para acalmar o rei Saul.",
-    "dica1": "Conhecido como um homem segundo o coração de Deus, escrevu grande parte de um dos livros sapienciais."
+    "povo": "Israelita (Judá)",
+    "dica2": "Venceu o gigante Golias com uma funda e uma pedra e foi o segundo rei de Israel.",
+    "dica1": "O caçula de oito irmãos, foi ungido rei quando ainda cuidava das ovelhas.",
+    "nascimentoAno": -1040,
+    "referencias": [
+      {
+        "livro": "1 Samuel"
+      },
+      {
+        "livro": "2 Samuel"
+      }
+    ]
   },
   {
     "id": "debora",
@@ -516,8 +867,15 @@
     "conhecidoPor": "Liderar a vitória dos israelitas contra os cananeus",
     "nascimento": "Por volta de 1360 a.C.",
     "ocupacao": "Juíza e Profetisa",
-    "dica2": "Única mulher juíza na Bíblia e da tribo de Efraim.",
-    "dica1": "Acompanhou o relutante comandante Baraque à batalha contra os cananeus e compôs um cântico de louvor após a vitória."
+    "povo": "Israelita",
+    "dica2": "A única juíza de Israel, acompanhou Baraque à batalha contra Sísera e cantou a vitória.",
+    "dica1": "Profetisa que julgava Israel sentada debaixo de uma palmeira.",
+    "nascimentoAno": -1360,
+    "referencias": [
+      {
+        "livro": "Juízes"
+      }
+    ]
   },
   {
     "id": "dalila",
@@ -529,8 +887,15 @@
     "conhecidoPor": "Trair Sansão ao descobrir a fonte de sua força",
     "nascimento": "Por volta de 1110 a.C.",
     "ocupacao": "Mulher Filisteia",
-    "dica2": "Mulher de Soreque por quem o juiz Sansão se apaixonou, sendo a única citada pelo nome em sua história.",
-    "dica1": "Recebeu milhares de pedaços de prata dos filisteus para descobrir um segredo."
+    "povo": "Origem desconhecida",
+    "dica2": "Descobriu que a força de Sansão estava no cabelo e mandou cortá-lo enquanto ele dormia.",
+    "dica1": "Mulher do vale de Soreque a quem os chefes filisteus prometeram muita prata.",
+    "nascimentoAno": -1110,
+    "referencias": [
+      {
+        "livro": "Juízes"
+      }
+    ]
   },
   {
     "id": "eglom",
@@ -542,8 +907,15 @@
     "conhecidoPor": "Ser assassinado por um homem canhoto",
     "nascimento": "Por volta de 1300 a.C.",
     "ocupacao": "Rei",
-    "dica2": "Rei moabito usado por Deus para oprimir os israelitas desobedientes, conquistando Jericó com amonitas e amalequitas.",
-    "dica1": "Foi assassinado por Eúde com uma espada que sumiu em sua barriga devido ao seu excesso de peso."
+    "povo": "Moabita",
+    "dica2": "Era muito gordo e foi morto pelo canhoto Eúde, com um punhal que sumiu em sua barriga.",
+    "dica1": "Rei de Moabe que oprimiu Israel por dezoito anos.",
+    "nascimentoAno": -1300,
+    "referencias": [
+      {
+        "livro": "Juízes"
+      }
+    ]
   },
   {
     "id": "elias",
@@ -551,12 +923,25 @@
     "sexo": "Homem",
     "testamento": "Antigo",
     "divisao": "Históricos e Evangelhos",
-    "historiaNaBiblia": "1 Reis 18-19; 2 Reis 2",
-    "conhecidoPor": "Fazer a obra de Deus e ser cuidado por ele",
+    "historiaNaBiblia": "1 Reis 17-19; 21; 2 Reis 1-2; Mateus 17",
+    "conhecidoPor": "Defender o culto ao único Deus diante dos profetas de Baal",
     "nascimento": "Por volta de 900 a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Profeta corajoso que desafiou os 450 sacerdotes de Baal no monte Carmelo.",
-    "dica2": "Foi alimentado por corvos no deserto e acabou sendo arrebatado ao céu em uma carruagem de fogo."
+    "povo": "Israelita",
+    "dica1": "Profeta que anunciou uma longa seca sobre Israel e foi alimentado por corvos.",
+    "dica2": "Desafiou os profetas de Baal no monte Carmelo e subiu ao céu num carro de fogo.",
+    "nascimentoAno": -900,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      },
+      {
+        "livro": "2 Reis"
+      },
+      {
+        "livro": "Mateus"
+      }
+    ]
   },
   {
     "id": "elimas",
@@ -568,8 +953,15 @@
     "conhecidoPor": "Ficar cego por se opor ao evangelho",
     "nascimento": "Primeiro século d.C.",
     "ocupacao": "Feiticeiro",
-    "dica1": "Falso profeta judeu, também chamado de Barjesus.",
-    "dica2": "Tentou impedir a pregação de Paulo e Barnabé, sendo punido com a cegueira temporária após ser repreendido pelo apóstolo."
+    "povo": "Israelita",
+    "dica1": "Mago e falso profeta judeu, também chamado Bar-Jesus, que vivia junto de um procônsul em Chipre.",
+    "dica2": "Tentou afastar o procônsul da fé e ficou cego por um tempo depois de ser repreendido por Paulo.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "enoque",
@@ -581,8 +973,15 @@
     "conhecidoPor": "Andar com Deus e ter sido arrebatado",
     "nascimento": "Desconhecido",
     "ocupacao": "Profeta",
-    "dica2": "Sétima geração da família de Adão, pai de Matusalém e bisavô de Noé, conhecido por ter vivido 365 anos andando com Deus e depois ter sido arrebatado.",
-    "dica1": "É citado no livro de Hebreus como um herói da fé por não ter morrido."
+    "povo": "Primeiras gerações",
+    "dica2": "Pai de Matusalém, não morreu: desapareceu, porque Deus o levou.",
+    "dica1": "Viveu 365 anos e 'andou com Deus'.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "eliseu",
@@ -594,8 +993,18 @@
     "conhecidoPor": "Dar continuidade ao trabalho de Elias",
     "nascimento": "Por volta de 880 a.C.",
     "ocupacao": "Agricultor e Profeta",
-    "dica1": "Rico proprietário de terras e sucessor de Elias que pediu uma 'porção dupla' de seu espírito e herdou seu manto.",
-    "dica2": "Realizou inúmeros milagres, como curar a lepra de Naamã, alimentar uma multidão com poucos pães e ressuscitar alguém através de seus ossos."
+    "povo": "Israelita",
+    "dica1": "Arava a terra com doze juntas de bois quando foi chamado.",
+    "dica2": "Discípulo de Elias, ficou com seu manto, pediu porção dupla de seu espírito e curou Naamã da lepra.",
+    "nascimentoAno": -880,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      },
+      {
+        "livro": "2 Reis"
+      }
+    ]
   },
   {
     "id": "esau",
@@ -607,8 +1016,15 @@
     "conhecidoPor": "Vender seu direito de primogenitura por um prato de ensopado",
     "nascimento": "Por volta de 2000 a.C.",
     "ocupacao": "Caçador",
-    "dica1": "Irmão gêmeo mais velho de Jacó, conhecido por ser muito peludo, ruivo e hábil na caça.",
-    "dica2": "Vendeu sua primogenitura por um prato de ensopado, perdeu a bênção do pai e fundou a nação dos edomitas."
+    "povo": "Edomita",
+    "dica1": "Nasceu ruivo e peludo e se tornou um caçador habilidoso.",
+    "dica2": "Irmão gêmeo de Jacó, vendeu o direito de primogenitura por um prato de lentilhas.",
+    "nascimentoAno": -2000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "ezequiel",
@@ -616,12 +1032,19 @@
     "sexo": "Homem",
     "testamento": "Antigo",
     "divisao": "Proféticos",
-    "historiaNaBiblia": "Livro de Ezequiel",
+    "historiaNaBiblia": "Ezequiel 1-48",
     "conhecidoPor": "Profetizar a queda de Jerusalém e a sua futura restauração",
     "nascimento": "Por volta de 620 a.C.",
     "ocupacao": "Profeta e Sacerdote",
-    "dica1": "Foi levado cativo para a Babilônia aos 25 anos e teve sua esposa morta no exílio.",
-    "dica2": "Fazia profecias de maneiras bizarras ordenadas por Deus, como comer pergaminho e deitar-se de lado, e teve a visão dos ossos secos."
+    "povo": "Israelita (Levi)",
+    "dica1": "Sacerdote que profetizou entre os exilados junto ao rio Cobar.",
+    "dica2": "Comeu um rolo por ordem de Deus e teve a visão do vale de ossos secos que voltavam à vida.",
+    "nascimentoAno": -620,
+    "referencias": [
+      {
+        "livro": "Ezequiel"
+      }
+    ]
   },
   {
     "id": "ester",
@@ -629,12 +1052,19 @@
     "sexo": "Mulher",
     "testamento": "Antigo",
     "divisao": "Históricos",
-    "historiaNaBiblia": "Livro de Ester",
-    "conhecidoPor": "Salvar o povo judeu de um holocausto",
+    "historiaNaBiblia": "Ester 1-10",
+    "conhecidoPor": "Salvar o povo judeu do extermínio planejado por Hamã",
     "nascimento": "Por volta de 500 a.C.",
     "ocupacao": "Rainha",
-    "dica1": "Órfã judia chamada Hadassa que foi adotada pelo primo e se tornou rainha da Pérsia ao vencer um concurso de beleza.",
-    "dica2": "Arriscou a própria vida ao se apresentar ao rei Xerxes sem ser chamada para impedir o decreto de Hamã, salvando o povo judeu e originando a festa de Purim."
+    "povo": "Israelita",
+    "dica1": "Órfã criada pelo primo, também chamada Hadassa.",
+    "dica2": "Tornou-se rainha da Pérsia e arriscou a vida diante do rei para salvar os judeus do plano de Hamã.",
+    "nascimentoAno": -500,
+    "referencias": [
+      {
+        "livro": "Ester"
+      }
+    ]
   },
   {
     "id": "eva",
@@ -646,8 +1076,15 @@
     "conhecidoPor": "Ser tentada pela serpente e comer do fruto proibido",
     "nascimento": "Antes de 4000 a.C.",
     "ocupacao": "Matriarca",
-    "dica2": "Primeira mulher criada a partir da costela de Adão no Jardim do Éden, chamada de 'Mãe de todos os viventes'.",
-    "dica1": "Foi enganada, mudando toda a história da humanidade."
+    "povo": "Primeiras gerações",
+    "dica2": "Primeira mulher, formada da costela de Adão, comeu do fruto proibido depois de ouvir a serpente.",
+    "dica1": "Foi chamada de 'mãe de todos os viventes'.",
+    "nascimentoAno": -4000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "esdras",
@@ -659,8 +1096,18 @@
     "conhecidoPor": "Ensinar a Lei de Deus ao povo após o exílio",
     "nascimento": "Por volta de 480 a.C.",
     "ocupacao": "Sacerdote",
-    "dica1": "Retornou da Babilônia para ajudar a reconstruir a vida religiosa de Jerusalém.",
-    "dica2": "Era sacerdote e escriba versado na Lei; leu o Livro da Lei diante do povo reunido."
+    "povo": "Israelita (Levi)",
+    "dica1": "Sacerdote e escriba versado na Lei de Moisés que voltou da Babilônia no tempo de Artaxerxes.",
+    "dica2": "Leu o Livro da Lei diante de todo o povo reunido em Jerusalém depois do exílio.",
+    "nascimentoAno": -480,
+    "referencias": [
+      {
+        "livro": "Esdras"
+      },
+      {
+        "livro": "Neemias"
+      }
+    ]
   },
   {
     "id": "eli",
@@ -672,8 +1119,15 @@
     "conhecidoPor": "Orientar Samuel ainda menino no santuário de Silo",
     "nascimento": "Por volta de 1150 a.C.",
     "ocupacao": "Sacerdote",
-    "dica1": "Servia no santuário quando uma mulher aflita foi orar em silêncio.",
-    "dica2": "Percebeu que Samuel ouvia um chamado durante a noite e o orientou a responder ao Senhor."
+    "povo": "Israelita (Levi)",
+    "dica1": "Sacerdote em Silo cujos filhos desonravam o santuário.",
+    "dica2": "Pensou que Ana estava embriagada e ensinou o menino Samuel a dizer: 'Fala, Senhor, teu servo escuta'.",
+    "nascimentoAno": -1150,
+    "referencias": [
+      {
+        "livro": "1 Samuel"
+      }
+    ]
   },
   {
     "id": "estevao",
@@ -685,8 +1139,15 @@
     "conhecidoPor": "Ser o primeiro mártir cristão",
     "nascimento": "Século I d.C.",
     "ocupacao": "Diácono",
-    "dica1": "Foi escolhido pela comunidade de Jerusalém para um serviço de assistência.",
-    "dica2": "Diante do Sinédrio, viu o céu aberto e pediu perdão para os que o matavam."
+    "povo": "Israelita",
+    "dica1": "Um dos sete escolhidos para servir às mesas na comunidade de Jerusalém.",
+    "dica2": "Primeiro mártir cristão, foi apedrejado enquanto Saulo guardava os mantos dos que o matavam.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "ezequias",
@@ -698,8 +1159,18 @@
     "conhecidoPor": "Reformar o culto de Judá e confiar em Deus diante da Assíria",
     "nascimento": "Por volta de 740 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Governou Judá quando o império assírio ameaçava Jerusalém.",
-    "dica2": "Destruiu lugares de culto idolátrico e orou quando Senaqueribe cercou a cidade."
+    "povo": "Israelita (Judá)",
+    "dica1": "Rei de Judá que destruiu a serpente de bronze porque o povo a adorava.",
+    "dica2": "Orou diante da ameaça de Senaqueribe, e Deus lhe acrescentou quinze anos de vida.",
+    "nascimentoAno": -740,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      }
+    ]
   },
   {
     "id": "endemoniado-geraseno",
@@ -711,8 +1182,18 @@
     "conhecidoPor": "Ser libertado por Jesus de espíritos impuros",
     "nascimento": "Século I d.C.",
     "ocupacao": "Endemoniado",
-    "dica1": "Vivia isolado numa região à margem do lago, entre sepulcros.",
-    "dica2": "Depois de ser libertado, foi enviado por Jesus para contar à sua gente o que Deus havia feito por ele."
+    "povo": "Origem desconhecida",
+    "dica1": "Vivia entre os sepulcros, e ninguém conseguia prendê-lo, nem com correntes.",
+    "dica2": "Jesus expulsou dele uma 'legião' de demônios, que entraram numa manada de porcos.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "filipe-evangelista",
@@ -724,8 +1205,15 @@
     "conhecidoPor": "Anunciar Jesus na Samaria e batizar o eunuco etíope",
     "nascimento": "Século I d.C.",
     "ocupacao": "Diácono",
-    "dica1": "Foi escolhido pela comunidade de Jerusalém para o serviço aos irmãos necessitados.",
-    "dica2": "Explicou uma profecia de Isaías a um funcionário etíope e o batizou no caminho."
+    "povo": "Israelita",
+    "dica1": "Um dos sete escolhidos para servir à comunidade, pregou com sucesso na Samaria.",
+    "dica2": "Explicou Isaías a um eunuco etíope numa carruagem e o batizou no caminho.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "farao-exodo",
@@ -737,8 +1225,15 @@
     "conhecidoPor": "Oprimir os israelitas e recusar-se a libertá-los",
     "nascimento": "Data desconhecida",
     "ocupacao": "Rei",
-    "dica1": "Seu governo transformou a multiplicação de um povo estrangeiro em motivo de medo.",
-    "dica2": "Enfrentou Moisés e Aarão durante as pragas do Egito e perseguiu o povo até o mar."
+    "povo": "Egípcio",
+    "dica1": "Governante que mandou jogar no rio os meninos hebreus recém-nascidos.",
+    "dica2": "Recusou deixar o povo partir, enfrentou as pragas e viu seu exército afogado no mar.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Êxodo"
+      }
+    ]
   },
   {
     "id": "filipe-apostolo",
@@ -750,8 +1245,18 @@
     "conhecidoPor": "Ser um dos Doze apóstolos de Jesus",
     "nascimento": "Século I d.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Era de Betsaida, a mesma cidade de André e Pedro.",
-    "dica2": "Convidou Natanael a conhecer Jesus e, na Última Ceia, pediu que Jesus mostrasse o Pai."
+    "povo": "Israelita",
+    "dica1": "Apóstolo de Betsaida a quem Jesus perguntou como alimentar a multidão.",
+    "dica2": "Chamou Natanael ('Vem e vê') e, na Última Ceia, pediu: 'Senhor, mostra-nos o Pai'.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "fineias",
@@ -763,8 +1268,18 @@
     "conhecidoPor": "Agir contra a idolatria de Israel em Baal-Fegor",
     "nascimento": "Por volta de 1500 a.C.",
     "ocupacao": "Sacerdote",
-    "dica1": "Era neto de uma figura central no sacerdócio de Israel.",
-    "dica2": "Filho de Eleazar, interrompeu uma praga durante a crise de Baal-Fegor."
+    "povo": "Israelita (Levi)",
+    "dica1": "Neto de Arão, conhecido por seu zelo.",
+    "dica2": "Matou com uma lança um israelita e uma midianita e assim deteve a praga em Baal-Fegor.",
+    "nascimentoAno": -1500,
+    "referencias": [
+      {
+        "livro": "Números"
+      },
+      {
+        "livro": "Josué"
+      }
+    ]
   },
   {
     "id": "gabriel-arcanjo",
@@ -776,8 +1291,18 @@
     "conhecidoPor": "Anunciar mensagens decisivas no plano de Deus",
     "nascimento": "Antes da criação",
     "ocupacao": "Arcanjo",
-    "dica1": "Explicou visões a um profeta que vivia no exílio.",
-    "dica2": "Anunciou o nascimento de João Batista a Zacarias e a encarnação de Jesus a Maria."
+    "povo": "Ser espiritual (Anjo)",
+    "dica1": "Explicou visões a Daniel.",
+    "dica2": "Anjo que anunciou a Zacarias o nascimento de João e a Maria que ela seria a mãe de Jesus.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      },
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "gideao",
@@ -789,8 +1314,15 @@
     "conhecidoPor": "Vencer os madianitas com apenas trezentos homens",
     "nascimento": "Por volta de 1250 a.C.",
     "ocupacao": "Juiz",
-    "dica1": "Foi chamado quando Israel sofria ataques que destruíam suas colheitas.",
-    "dica2": "Pediu sinais com um velo de lã e conduziu trezentos homens com tochas e cântaros."
+    "povo": "Israelita (Manassés)",
+    "dica1": "Malhava trigo escondido num lagar quando um anjo o chamou de 'valente guerreiro'.",
+    "dica2": "Pediu o sinal do velo de lã e venceu os madianitas com apenas trezentos homens.",
+    "nascimentoAno": -1250,
+    "referencias": [
+      {
+        "livro": "Juízes"
+      }
+    ]
   },
   {
     "id": "golias",
@@ -802,8 +1334,15 @@
     "conhecidoPor": "Desafiar Israel e ser derrotado por Davi",
     "nascimento": "Por volta de 1050 a.C.",
     "ocupacao": "Guerreiro",
-    "dica1": "Era o campeão de um exército inimigo e vinha da cidade de Gat.",
-    "dica2": "Seu desafio no vale do Terebinto terminou quando um jovem o atingiu com uma pedra de funda."
+    "povo": "Filisteu",
+    "dica1": "Campeão de Gat que desafiava o exército de Israel.",
+    "dica2": "Gigante filisteu derrubado por uma pedra lançada da funda do jovem Davi.",
+    "nascimentoAno": -1050,
+    "referencias": [
+      {
+        "livro": "1 Samuel"
+      }
+    ]
   },
   {
     "id": "agar",
@@ -815,8 +1354,15 @@
     "conhecidoPor": "Ser mãe de Ismael e encontrar Deus no deserto",
     "nascimento": "Por volta de 2000 a.C.",
     "ocupacao": "Serva",
-    "dica1": "Era uma egípcia que viveu na casa de Abrão e Sarai.",
-    "dica2": "Fugiu para o deserto quando estava grávida e deu ao filho o nome de Ismael."
+    "povo": "Egípcio",
+    "dica1": "Escrava egípcia de uma senhora estéril.",
+    "dica2": "Teve Ismael com Abraão, foi mandada embora e um anjo a salvou no deserto com o menino.",
+    "nascimentoAno": -2000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "hama",
@@ -827,9 +1373,16 @@
     "historiaNaBiblia": "Ester 3-7",
     "conhecidoPor": "Planejar o extermínio dos judeus no império persa",
     "nascimento": "Por volta de 500 a.C.",
-    "ocupacao": "Governador",
-    "dica1": "Recebeu uma posição acima dos demais ministros da corte persa.",
-    "dica2": "Ficou furioso porque Mardoqueu não se curvava diante dele e acabou condenado na forca que havia preparado."
+    "ocupacao": "Administrador",
+    "povo": "Agagita",
+    "dica1": "Alto oficial do rei persa que exigia que todos se curvassem diante dele.",
+    "dica2": "Inimigo de Mardoqueu, planejou exterminar os judeus e foi enforcado na forca que preparara.",
+    "nascimentoAno": -500,
+    "referencias": [
+      {
+        "livro": "Ester"
+      }
+    ]
   },
   {
     "id": "herodes-o-grande",
@@ -841,8 +1394,15 @@
     "conhecidoPor": "Tentar eliminar Jesus ainda criança",
     "nascimento": "Por volta de 73 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Governava a Judeia quando visitantes do Oriente perguntaram por um novo rei.",
-    "dica2": "Mandou matar os meninos de Belém depois de ser enganado pelos magos."
+    "povo": "Idumeu",
+    "dica1": "Rei da Judeia que se perturbou ao ouvir falar de um recém-nascido 'rei dos judeus'.",
+    "dica2": "Enganado pelos magos, mandou matar os meninos de Belém.",
+    "nascimentoAno": -73,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      }
+    ]
   },
   {
     "id": "herodes-antipas",
@@ -854,8 +1414,21 @@
     "conhecidoPor": "Mandar decapitar João Batista",
     "nascimento": "Por volta de 20 a.C.",
     "ocupacao": "Governador",
-    "dica1": "Governava a Galileia e ouviu falar dos milagres de Jesus.",
-    "dica2": "Durante um banquete, atendeu ao pedido pela cabeça de João Batista."
+    "povo": "Idumeu",
+    "dica1": "Tetrarca da Galileia a quem Jesus chamou de 'raposa'.",
+    "dica2": "Mandou decapitar João Batista a pedido da filha de Herodíades.",
+    "nascimentoAno": -20,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "herodias",
@@ -867,8 +1440,18 @@
     "conhecidoPor": "Querer a morte de João Batista",
     "nascimento": "Por volta de 15 a.C.",
     "ocupacao": "Rainha",
-    "dica1": "A denúncia de um profeta contra seu casamento despertou seu rancor.",
-    "dica2": "Orientou a filha a pedir a cabeça de João Batista durante um banquete."
+    "povo": "Idumeu",
+    "dica1": "Casou-se com o irmão do marido, e um profeta denunciou esse casamento.",
+    "dica2": "Orientou a filha a pedir a cabeça de João Batista num prato.",
+    "nascimentoAno": -15,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      }
+    ]
   },
   {
     "id": "herodes-agripa-i",
@@ -880,8 +1463,15 @@
     "conhecidoPor": "Perseguir a Igreja de Jerusalém e prender Pedro",
     "nascimento": "Por volta de 10 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Sua perseguição à comunidade cristã incluiu a morte de um dos filhos de Zebedeu.",
-    "dica2": "Mandou prender Pedro, mas ele foi libertado da prisão durante a noite."
+    "povo": "Idumeu",
+    "dica1": "Rei que perseguiu a Igreja e viu que isso agradava aos judeus.",
+    "dica2": "Mandou matar Tiago à espada e prendeu Pedro, que foi libertado por um anjo.",
+    "nascimentoAno": -10,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "herodes-agripa-ii",
@@ -893,8 +1483,15 @@
     "conhecidoPor": "Ouvir a defesa de Paulo diante do governador Festo",
     "nascimento": "Por volta de 27 d.C.",
     "ocupacao": "Rei",
-    "dica1": "Visitou Cesareia acompanhado de sua irmã para cumprimentar um governador romano.",
-    "dica2": "Ouviu Paulo falar de sua conversão e concluiu que ele poderia ser solto se não tivesse apelado para César."
+    "povo": "Idumeu",
+    "dica1": "Rei que visitou Cesareia com a irmã Berenice para cumprimentar o governador.",
+    "dica2": "Ouviu a defesa de Paulo e disse que ele poderia ser solto se não tivesse apelado a César.",
+    "nascimentoAno": 27,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "ismael",
@@ -905,9 +1502,16 @@
     "historiaNaBiblia": "Gênesis 16; 21; 25",
     "conhecidoPor": "Ser filho de Abraão e Agar",
     "nascimento": "Por volta de 1900 a.C.",
-    "ocupacao": "Caçador",
-    "dica1": "Cresceu no deserto de Farã depois de partir da casa de seu pai.",
-    "dica2": "Sua mãe era uma egípcia e Deus prometeu fazer de sua descendência uma grande nação."
+    "ocupacao": "Arqueiro",
+    "povo": "Hebreu",
+    "dica1": "Cresceu no deserto e se tornou um hábil arqueiro.",
+    "dica2": "Filho de Abraão com a egípcia Agar, foi mandado embora com a mãe depois do nascimento de Isaque.",
+    "nascimentoAno": -1900,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "isabel",
@@ -919,8 +1523,15 @@
     "conhecidoPor": "Ser mãe de João Batista",
     "nascimento": "Por volta de 20 a.C.",
     "ocupacao": "Mãe",
-    "dica1": "Era descendente de Aarão e viveu muitos anos sem ter filhos.",
-    "dica2": "Ao receber Maria em casa, foi cheia do Espírito Santo e seu filho saltou em seu ventre."
+    "povo": "Israelita (Levi)",
+    "dica1": "Era 'das filhas de Arão' e foi estéril até a velhice.",
+    "dica2": "Na visita de Maria, o menino saltou em seu ventre; foi mãe de João Batista.",
+    "nascimentoAno": -20,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "isaias",
@@ -932,8 +1543,15 @@
     "conhecidoPor": "Profetizar sobre a santidade de Deus, a justiça e a esperança messiânica",
     "nascimento": "Por volta de 760 a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Seu chamado começou com uma visão no templo, no ano da morte de um rei de Judá.",
-    "dica2": "Viu serafins proclamando a santidade de Deus e anunciou que uma virgem conceberia um filho."
+    "povo": "Israelita",
+    "dica1": "Viu o Senhor no Templo, rodeado de serafins que clamavam 'Santo, Santo, Santo'.",
+    "dica2": "Profeta que anunciou: 'a virgem conceberá e dará à luz um filho, Emanuel'.",
+    "nascimentoAno": -760,
+    "referencias": [
+      {
+        "livro": "Isaías"
+      }
+    ]
   },
   {
     "id": "isaque",
@@ -945,8 +1563,15 @@
     "conhecidoPor": "Ser o filho da promessa de Abraão e Sara",
     "nascimento": "Por volta de 1850 a.C.",
     "ocupacao": "Patriarca",
-    "dica1": "Nasceu quando seus pais já eram idosos e seu nome está ligado ao riso.",
-    "dica2": "Subiu ao monte Moriá com o pai e se casou com Rebeca, pai de Esaú e Jacó."
+    "povo": "Hebreu",
+    "dica1": "Seu nome lembra o riso da mãe.",
+    "dica2": "Filho prometido a Abraão e Sara, foi levado pelo pai ao monte Moriá, e Deus providenciou um carneiro.",
+    "nascimentoAno": -1850,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "jaco",
@@ -958,8 +1583,15 @@
     "conhecidoPor": "Receber o nome de Israel e ser pai das doze tribos",
     "nascimento": "Por volta de 1850 a.C.",
     "ocupacao": "Patriarca",
-    "dica1": "Passou uma noite lutando junto a um rio antes de se reencontrar com o irmão.",
-    "dica2": "Era filho de Isaque e Rebeca, teve doze filhos e recebeu o nome de Israel."
+    "povo": "Israelita",
+    "dica1": "Sonhou com uma escada que ligava a terra ao céu.",
+    "dica2": "Comprou a primogenitura do irmão Esaú, lutou com Deus à noite e recebeu o nome de Israel.",
+    "nascimentoAno": -1850,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "jael",
@@ -971,8 +1603,15 @@
     "conhecidoPor": "Matar Sísera, comandante cananeu",
     "nascimento": "Por volta de 1250 a.C.",
     "ocupacao": "Mulher Quenita",
-    "dica1": "Acolheu em sua tenda um homem que fugia de uma batalha.",
-    "dica2": "Deu leite a Sísera e o matou com uma estaca enquanto ele dormia."
+    "povo": "Quenita",
+    "dica1": "Esposa do quenita Héber, recebeu um fugitivo em sua tenda.",
+    "dica2": "Deu leite a Sísera e o matou cravando uma estaca de tenda em sua têmpora.",
+    "nascimentoAno": -1250,
+    "referencias": [
+      {
+        "livro": "Juízes"
+      }
+    ]
   },
   {
     "id": "jairo",
@@ -984,8 +1623,21 @@
     "conhecidoPor": "Pedir a Jesus a cura de sua filha",
     "nascimento": "Século I d.C.",
     "ocupacao": "Chefe religioso",
-    "dica1": "Procurou Jesus em desespero por causa da doença de uma menina de sua casa.",
-    "dica2": "Era chefe da sinagoga e viu Jesus levantar sua filha de doze anos."
+    "povo": "Israelita",
+    "dica1": "Chefe de sinagoga que se lançou aos pés de Jesus.",
+    "dica2": "Jesus ressuscitou sua filha de doze anos dizendo: 'Talitá cum'.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "jorao",
@@ -997,8 +1649,15 @@
     "conhecidoPor": "Reinar sobre Israel após Acabe",
     "nascimento": "Por volta de 890 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Seu reinado foi marcado por guerra contra Moabe e por uma aliança com o rei de Judá.",
-    "dica2": "Era filho de Acabe e Jezabel e foi morto por Jeú no campo de Nabot."
+    "povo": "Israelita",
+    "dica1": "Rei de Israel, filho de Acabe e Jezabel.",
+    "dica2": "Foi morto por uma flecha de Jeú, e seu corpo foi lançado no campo de Nabot.",
+    "nascimentoAno": -890,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      }
+    ]
   },
   {
     "id": "josafa",
@@ -1010,8 +1669,18 @@
     "conhecidoPor": "Buscar o Senhor e promover a Lei em Judá",
     "nascimento": "Por volta de 910 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Enviou autoridades e levitas para ensinar a Lei nas cidades de Judá.",
-    "dica2": "Diante de um grande exército, convocou jejum e viu cantores seguirem à frente do povo."
+    "povo": "Israelita (Judá)",
+    "dica1": "Rei de Judá que mandou levitas ensinarem a Lei pelas cidades.",
+    "dica2": "Diante de um grande exército, proclamou jejum e pôs cantores à frente das tropas.",
+    "nascimentoAno": -910,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      }
+    ]
   },
   {
     "id": "jeremias",
@@ -1023,8 +1692,15 @@
     "conhecidoPor": "Anunciar a queda de Jerusalém e a nova aliança",
     "nascimento": "Por volta de 650 a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Foi chamado ainda jovem e viveu em Anatot, perto de Jerusalém.",
-    "dica2": "Comprou um campo durante o cerco da cidade e ficou conhecido como o profeta das lágrimas."
+    "povo": "Israelita (Levi)",
+    "dica1": "Disse a Deus que era jovem demais para falar quando foi chamado.",
+    "dica2": "Profeta de Anatot que anunciou a queda de Jerusalém, foi jogado numa cisterna e comprou um campo durante o cerco.",
+    "nascimentoAno": -650,
+    "referencias": [
+      {
+        "livro": "Jeremias"
+      }
+    ]
   },
   {
     "id": "jesus-cristo",
@@ -1036,8 +1712,24 @@
     "conhecidoPor": "Ser o Messias, Filho de Deus e Salvador",
     "nascimento": "Por volta de 6 a.C.",
     "ocupacao": "Salvador",
-    "dica1": "Nasceu em Belém e cresceu em Nazaré, anunciando a chegada do Reino de Deus.",
-    "dica2": "Morreu na cruz, ressuscitou ao terceiro dia e enviou seus discípulos a anunciar o Evangelho."
+    "povo": "Israelita (Judá)",
+    "dica1": "Cresceu em Nazaré e foi batizado no rio Jordão.",
+    "dica2": "Morreu crucificado e ressuscitou ao terceiro dia; é o Filho de Deus.",
+    "nascimentoAno": -6,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "jeu",
@@ -1049,8 +1741,15 @@
     "conhecidoPor": "Encerrar a dinastia de Acabe em Israel",
     "nascimento": "Por volta de 900 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Era comandante do exército quando recebeu uma unção secreta.",
-    "dica2": "Matou Jorão, ordenou a queda de Jezabel e destruiu o culto de Baal em Samaria."
+    "povo": "Israelita",
+    "dica1": "Comandante do exército ungido rei em segredo por um profeta enviado por Eliseu.",
+    "dica2": "Famoso por conduzir o carro com fúria, matou Jorão e mandou jogar Jezabel da janela.",
+    "nascimentoAno": -900,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      }
+    ]
   },
   {
     "id": "jefte",
@@ -1062,8 +1761,15 @@
     "conhecidoPor": "Libertar Israel dos amonitas após fazer um voto precipitado",
     "nascimento": "Por volta de 1200 a.C.",
     "ocupacao": "Juiz",
-    "dica1": "Foi afastado por seus irmãos, mas chamado de volta quando seu povo enfrentou uma guerra.",
-    "dica2": "Fez um voto antes de lutar contra os amonitas e sua filha foi a primeira a sair para encontrá-lo."
+    "povo": "Israelita",
+    "dica1": "Filho de uma prostituta, foi expulso pelos irmãos e chamado de volta para guerrear.",
+    "dica2": "Fez um voto antes de lutar contra os amonitas, e a filha foi a primeira a sair para recebê-lo.",
+    "nascimentoAno": -1200,
+    "referencias": [
+      {
+        "livro": "Juízes"
+      }
+    ]
   },
   {
     "id": "jezabel",
@@ -1075,8 +1781,18 @@
     "conhecidoPor": "Promover o culto a Baal em Israel",
     "nascimento": "Por volta de 900 a.C.",
     "ocupacao": "Rainha",
-    "dica1": "Era estrangeira e introduziu práticas religiosas que entraram em conflito com os profetas do Senhor.",
-    "dica2": "Mandou matar Nabote por causa de sua vinha e morreu ao ser lançada de uma janela."
+    "povo": "Sidônio",
+    "dica1": "Princesa de Sidônia que se casou com um rei de Israel.",
+    "dica2": "Promoveu o culto a Baal, perseguiu Elias, mandou matar Nabot e foi jogada de uma janela.",
+    "nascimentoAno": -900,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      },
+      {
+        "livro": "2 Reis"
+      }
+    ]
   },
   {
     "id": "jeroboao",
@@ -1088,8 +1804,15 @@
     "conhecidoPor": "Tornar-se o primeiro rei do reino do Norte",
     "nascimento": "Por volta de 950 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Recebeu de um profeta a promessa de governar a maior parte das tribos de Israel.",
-    "dica2": "Ergueu bezerros de ouro em Betel e Dã para impedir que o povo fosse a Jerusalém."
+    "povo": "Israelita (Efraim)",
+    "dica1": "Um profeta rasgou seu manto em doze pedaços e lhe deu dez.",
+    "dica2": "Primeiro rei do reino do Norte, fez bezerros de ouro em Betel e Dã.",
+    "nascimentoAno": -950,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      }
+    ]
   },
   {
     "id": "joabe",
@@ -1101,8 +1824,18 @@
     "conhecidoPor": "Comandar o exército de Davi",
     "nascimento": "Por volta de 1030 a.C.",
     "ocupacao": "Guerreiro",
-    "dica1": "Era sobrinho de um rei e tinha dois irmãos que também aparecem nas batalhas de Israel.",
-    "dica2": "Matou Abner e Absalão, apesar de Davi desejar que o filho fosse poupado."
+    "povo": "Israelita (Judá)",
+    "dica1": "Sobrinho do rei, comandou o exército dele por muitos anos.",
+    "dica2": "Chefe do exército de Davi, matou Abner e Absalão contra a vontade do rei.",
+    "nascimentoAno": -1030,
+    "referencias": [
+      {
+        "livro": "2 Samuel"
+      },
+      {
+        "livro": "1 Reis"
+      }
+    ]
   },
   {
     "id": "jo",
@@ -1114,8 +1847,15 @@
     "conhecidoPor": "Permanecer fiel a Deus em meio ao sofrimento",
     "nascimento": "Data desconhecida",
     "ocupacao": "Patriarca",
-    "dica1": "Perdeu bens, filhos e saúde, recebendo a visita de amigos que tentaram explicar seu sofrimento.",
-    "dica2": "Vivia na terra de Uz e, depois de questionar Deus, recebeu de volta em dobro o que havia perdido."
+    "povo": "Oriental",
+    "dica1": "Homem íntegro da terra de Uz, muito rico e temente a Deus.",
+    "dica2": "Perdeu filhos, bens e saúde, mas não amaldiçoou a Deus e no fim recebeu tudo em dobro.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Jó"
+      }
+    ]
   },
   {
     "id": "joao-apostolo",
@@ -1127,8 +1867,30 @@
     "conhecidoPor": "Ser um dos Doze e discípulo amado de Jesus",
     "nascimento": "Por volta de 10 d.C.",
     "ocupacao": "Pescador e Apóstolo",
-    "dica1": "Era pescador, irmão de Tiago e filho de Zebedeu.",
-    "dica2": "Esteve ao pé da cruz, recebeu Maria em sua casa e é tradicionalmente ligado ao quarto Evangelho."
+    "povo": "Israelita",
+    "dica1": "Pescador, filho de Zebedeu, chamado por Jesus de 'filho do trovão' junto com o irmão.",
+    "dica2": "O discípulo amado, que recebeu Maria em sua casa ao pé da cruz.",
+    "nascimentoAno": 10,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "Apocalipse"
+      }
+    ]
   },
   {
     "id": "joao-batista",
@@ -1140,8 +1902,24 @@
     "conhecidoPor": "Preparar o caminho para Jesus e batizá-lo",
     "nascimento": "Por volta de 5 a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Vivia no deserto, vestia-se de pelos de camelo e convocava o povo à conversão.",
-    "dica2": "Era filho de Zacarias e Isabel e foi decapitado por ordem de Herodes Antipas."
+    "povo": "Israelita (Levi)",
+    "dica1": "Vestia pelos de camelo e comia gafanhotos e mel silvestre.",
+    "dica2": "Batizou Jesus no rio Jordão e foi decapitado por ordem de Herodes.",
+    "nascimentoAno": -5,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "jonas",
@@ -1153,8 +1931,15 @@
     "conhecidoPor": "Ser enviado a Nínive depois de fugir de sua missão",
     "nascimento": "Por volta de 800 a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Tentou fugir de navio para uma cidade distante da missão que recebera.",
-    "dica2": "Passou três dias no ventre de um grande peixe e pregou a conversão em Nínive."
+    "povo": "Israelita",
+    "dica1": "Profeta que tentou fugir de navio para Társis em vez de cumprir sua missão.",
+    "dica2": "Ficou três dias no ventre de um grande peixe antes de pregar em Nínive.",
+    "nascimentoAno": -800,
+    "referencias": [
+      {
+        "livro": "Jonas"
+      }
+    ]
   },
   {
     "id": "jonatas",
@@ -1166,8 +1951,15 @@
     "conhecidoPor": "Ser amigo leal de Davi",
     "nascimento": "Por volta de 1050 a.C.",
     "ocupacao": "Guerreiro",
-    "dica1": "Era filho do primeiro rei de Israel e venceu uma guarnição filisteia com seu escudeiro.",
-    "dica2": "Fez uma aliança com Davi e morreu ao lado de seu pai na batalha do monte Gelboé."
+    "povo": "Israelita (Benjamim)",
+    "dica1": "Príncipe que atacou uma guarnição filisteia só com o seu escudeiro.",
+    "dica2": "Filho do rei Saul e grande amigo de Davi, morreu no monte Gelboé.",
+    "nascimentoAno": -1050,
+    "referencias": [
+      {
+        "livro": "1 Samuel"
+      }
+    ]
   },
   {
     "id": "jose-arimateia",
@@ -1179,8 +1971,24 @@
     "conhecidoPor": "Oferecer seu túmulo para o sepultamento de Jesus",
     "nascimento": "Século I d.C.",
     "ocupacao": "Conselheiro",
-    "dica1": "Era membro respeitado do conselho e aguardava o Reino de Deus.",
-    "dica2": "Pediu o corpo de Jesus a Pilatos e o colocou em um túmulo novo escavado na rocha."
+    "povo": "Israelita",
+    "dica1": "Membro ilustre do conselho, que esperava o Reino de Deus.",
+    "dica2": "Pediu a Pilatos o corpo de Jesus e o colocou em seu túmulo novo, escavado na rocha.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "jose-pai-jesus",
@@ -1192,8 +2000,18 @@
     "conhecidoPor": "Cuidar de Jesus e Maria",
     "nascimento": "Por volta de 30 a.C.",
     "ocupacao": "Carpinteiro",
-    "dica1": "Recebeu em sonho a orientação de não abandonar sua noiva.",
-    "dica2": "Era descendente de Davi, levou sua família ao Egito e trabalhava como carpinteiro em Nazaré."
+    "povo": "Israelita (Judá)",
+    "dica1": "Descendente de Davi, recebeu orientações de Deus em sonhos.",
+    "dica2": "Carpinteiro de Nazaré, esposo de Maria, fugiu com a família para o Egito.",
+    "nascimentoAno": -30,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "jose-genesis",
@@ -1205,8 +2023,15 @@
     "conhecidoPor": "Governar o Egito depois de ser vendido pelos irmãos",
     "nascimento": "Por volta de 1750 a.C.",
     "ocupacao": "Governador",
-    "dica1": "Seus sonhos causaram inveja entre seus irmãos e ele passou anos longe da família.",
-    "dica2": "Interpretou os sonhos do faraó, armazenou alimento para a fome e se reconciliou com seus irmãos."
+    "povo": "Israelita (José)",
+    "dica1": "Ganhou do pai uma túnica especial e teve sonhos que irritaram os irmãos.",
+    "dica2": "Vendido pelos irmãos, interpretou os sonhos do faraó e se tornou governador do Egito.",
+    "nascimentoAno": -1750,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "josias",
@@ -1218,8 +2043,18 @@
     "conhecidoPor": "Promover uma grande reforma religiosa em Judá",
     "nascimento": "Por volta de 650 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Começou a reinar ainda criança e ordenou a reforma do templo.",
-    "dica2": "Ao encontrar o Livro da Lei, rasgou as roupas e renovou a aliança do povo com Deus."
+    "povo": "Israelita (Judá)",
+    "dica1": "Começou a reinar com oito anos de idade.",
+    "dica2": "Durante a reforma do Templo encontrou o Livro da Lei e renovou a aliança do povo com Deus.",
+    "nascimentoAno": -650,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      }
+    ]
   },
   {
     "id": "juda",
@@ -1231,8 +2066,15 @@
     "conhecidoPor": "Ser filho de Jacó e ancestral da tribo real",
     "nascimento": "Por volta de 1800 a.C.",
     "ocupacao": "Patriarca",
-    "dica1": "Sugeriu que um irmão fosse vendido em vez de morto e mais tarde se ofereceu no lugar de outro.",
-    "dica2": "Era filho de Lia e Jacó; de sua tribo vieram Davi e, segundo a genealogia, Jesus."
+    "povo": "Israelita (Judá)",
+    "dica1": "Propôs vender o irmão em vez de matá-lo.",
+    "dica2": "Quarto filho de Jacó e Lia; de sua tribo vieram Davi e Jesus.",
+    "nascimentoAno": -1800,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "josue",
@@ -1244,8 +2086,21 @@
     "conhecidoPor": "Conduzir Israel à Terra Prometida após Moisés",
     "nascimento": "Por volta de 1400 a.C.",
     "ocupacao": "Líder",
-    "dica1": "Foi um dos poucos exploradores que confiou que a terra poderia ser conquistada.",
-    "dica2": "Sucedeu Moisés, atravessou o Jordão e liderou a queda das muralhas de Jericó."
+    "povo": "Israelita (Efraim)",
+    "dica1": "Auxiliar de Moisés que lutou contra Amalec e subiu com ele ao monte.",
+    "dica2": "Sucessor de Moisés, atravessou o Jordão e viu caírem as muralhas de Jericó.",
+    "nascimentoAno": -1400,
+    "referencias": [
+      {
+        "livro": "Êxodo"
+      },
+      {
+        "livro": "Números"
+      },
+      {
+        "livro": "Josué"
+      }
+    ]
   },
   {
     "id": "judas-iscariotes",
@@ -1257,8 +2112,27 @@
     "conhecidoPor": "Trair Jesus",
     "nascimento": "Século I d.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Era um dos Doze e cuidava da bolsa comum do grupo.",
-    "dica2": "Entregou Jesus por trinta moedas de prata e o identificou com um beijo no Getsêmani."
+    "povo": "Israelita",
+    "dica1": "Cuidava da bolsa comum dos Doze.",
+    "dica2": "Traiu Jesus por trinta moedas de prata e o entregou com um beijo.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "lazaro-betania",
@@ -1270,8 +2144,15 @@
     "conhecidoPor": "Ser ressuscitado por Jesus",
     "nascimento": "Século I d.C.",
     "ocupacao": "Discípulo",
-    "dica1": "Vivia em Betânia com duas irmãs que eram amigas de Jesus.",
-    "dica2": "Depois de quatro dias no túmulo, ouviu Jesus chamá-lo para fora."
+    "povo": "Israelita",
+    "dica1": "Amigo de Jesus, irmão de duas mulheres que o recebiam em casa.",
+    "dica2": "Estava morto havia quatro dias quando Jesus o chamou para fora do túmulo.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "lia",
@@ -1283,8 +2164,15 @@
     "conhecidoPor": "Ser mãe de seis filhos de Jacó",
     "nascimento": "Por volta de 1850 a.C.",
     "ocupacao": "Matriarca",
-    "dica1": "Era filha de Labão e irmã mais velha de Raquel.",
-    "dica2": "Foi dada a Jacó antes de Raquel e foi mãe de Rúben, Simeão, Levi, Judá, Issacar e Zebulon."
+    "povo": "Arameu",
+    "dica1": "Filha mais velha de Labão, menos amada pelo marido do que a irmã.",
+    "dica2": "Foi dada a Jacó no lugar de Raquel e foi mãe de Judá e Levi.",
+    "nascimentoAno": -1850,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "lucas",
@@ -1296,8 +2184,27 @@
     "conhecidoPor": "Escrever o Evangelho de Lucas e os Atos dos Apóstolos",
     "nascimento": "Século I d.C.",
     "ocupacao": "Médico",
-    "dica1": "Acompanhou Paulo em parte de suas viagens missionárias e permaneceu com ele no fim da vida.",
-    "dica2": "Era médico e é tradicionalmente reconhecido como autor do terceiro Evangelho e de Atos."
+    "povo": "Gentio",
+    "dica1": "Médico, companheiro de viagem de Paulo.",
+    "dica2": "Tradicionalmente reconhecido como autor do terceiro Evangelho e dos Atos dos Apóstolos.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "Colossenses"
+      },
+      {
+        "livro": "2 Timóteo"
+      },
+      {
+        "livro": "Filemom"
+      }
+    ]
   },
   {
     "id": "lidia",
@@ -1309,8 +2216,15 @@
     "conhecidoPor": "Ser a primeira convertida de Paulo na Europa",
     "nascimento": "Século I d.C.",
     "ocupacao": "Comerciante",
-    "dica1": "Era natural de Tiatira e vivia em Filipos, onde se reunia para orar junto a um rio.",
-    "dica2": "Vendia púrpura, foi batizada por Paulo e acolheu os missionários em sua casa."
+    "povo": "Gentio",
+    "dica1": "Mulher de Tiatira, temente a Deus, que orava junto a um rio em Filipos.",
+    "dica2": "Vendedora de púrpura, foi batizada por Paulo com toda a casa e hospedou os missionários.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "lo",
@@ -1322,8 +2236,15 @@
     "conhecidoPor": "Ser salvo da destruição de Sodoma",
     "nascimento": "Por volta de 2000 a.C.",
     "ocupacao": "Pastor",
-    "dica1": "Era sobrinho de Abraão e se separou dele quando seus rebanhos já não cabiam na mesma terra.",
-    "dica2": "Fugiu de Sodoma com as filhas, enquanto sua esposa olhou para trás e se tornou uma estátua de sal."
+    "povo": "Hebreu",
+    "dica1": "Escolheu morar perto de Sodoma quando se separou do tio.",
+    "dica2": "Sobrinho de Abraão, fugiu de Sodoma, e sua mulher virou uma estátua de sal ao olhar para trás.",
+    "nascimentoAno": -2000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "mulher-samaritana",
@@ -1335,8 +2256,15 @@
     "conhecidoPor": "Anunciar Jesus aos habitantes de sua cidade",
     "nascimento": "Século I d.C.",
     "ocupacao": "Discípula",
-    "dica1": "Encontrou Jesus ao meio-dia junto a um poço numa cidade da Samaria.",
-    "dica2": "Jesus lhe falou da água viva e ela levou muitos de sua cidade a conhecê-lo."
+    "povo": "Samaritano",
+    "dica1": "Foi buscar água ao meio-dia e encontrou um judeu cansado da viagem.",
+    "dica2": "Junto ao poço de Jacó, Jesus lhe falou da 'água viva' e revelou que ela tivera cinco maridos.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "manasses-rei",
@@ -1348,8 +2276,18 @@
     "conhecidoPor": "Reinar em Judá e promover a idolatria",
     "nascimento": "Por volta de 710 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Começou a reinar muito jovem e foi filho de um rei que havia promovido uma grande reforma religiosa.",
-    "dica2": "Reconstruiu altares pagãos, foi levado cativo pelos assírios e depois se humilhou diante de Deus."
+    "povo": "Israelita (Judá)",
+    "dica1": "Começou a reinar com doze anos e governou Judá por mais tempo que qualquer outro rei.",
+    "dica2": "Filho de Ezequias, encheu Judá de idolatria, foi levado preso pelos assírios e se arrependeu.",
+    "nascimentoAno": -710,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      }
+    ]
   },
   {
     "id": "marcos",
@@ -1361,8 +2299,24 @@
     "conhecidoPor": "Ser tradicionalmente ligado ao segundo Evangelho",
     "nascimento": "Século I d.C.",
     "ocupacao": "Evangelista",
-    "dica1": "Sua mãe possuía uma casa em Jerusalém onde a comunidade se reunia para rezar.",
-    "dica2": "Acompanhou Barnabé e Paulo, mais tarde foi útil a Paulo e é tradicionalmente associado ao Evangelho de Marcos."
+    "povo": "Israelita",
+    "dica1": "Sua mãe recebia a comunidade para rezar em sua casa, em Jerusalém.",
+    "dica2": "Primo de Barnabé, deixou Paulo no meio de uma viagem e é tradicionalmente o autor do segundo Evangelho.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "Colossenses"
+      },
+      {
+        "livro": "2 Timóteo"
+      },
+      {
+        "livro": "1 Pedro"
+      }
+    ]
   },
   {
     "id": "maria-mae-jesus",
@@ -1374,8 +2328,24 @@
     "conhecidoPor": "Ser a mãe de Jesus",
     "nascimento": "Por volta de 20 a.C.",
     "ocupacao": "Mãe",
-    "dica1": "Morava em Nazaré e recebeu a visita de um anjo com uma mensagem inesperada.",
-    "dica2": "Foi visitada por Gabriel, deu à luz Jesus em Belém e permaneceu junto à cruz."
+    "povo": "Israelita",
+    "dica1": "Jovem de Nazaré prometida em casamento a um descendente de Davi.",
+    "dica2": "Recebeu o anúncio do anjo Gabriel e se tornou a mãe de Jesus.",
+    "nascimentoAno": -20,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "maria-madalena",
@@ -1387,8 +2357,24 @@
     "conhecidoPor": "Ser testemunha da ressurreição de Jesus",
     "nascimento": "Século I d.C.",
     "ocupacao": "Discípula",
-    "dica1": "Jesus a havia libertado de espíritos malignos, e ela o acompanhava junto com outras mulheres.",
-    "dica2": "Foi ao túmulo na manhã de Páscoa e foi a primeira a encontrar Jesus ressuscitado segundo João."
+    "povo": "Israelita",
+    "dica1": "Jesus a libertou de sete demônios.",
+    "dica2": "Foi a primeira a ver Jesus ressuscitado e o confundiu com o jardineiro.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "marta",
@@ -1400,8 +2386,18 @@
     "conhecidoPor": "Receber Jesus em sua casa e professar fé nele",
     "nascimento": "Século I d.C.",
     "ocupacao": "Discípula",
-    "dica1": "Recebeu Jesus em sua casa, mas ficou preocupada com muitos afazeres.",
-    "dica2": "Era irmã de Maria e Lázaro e declarou a Jesus: tu és o Cristo, o Filho de Deus."
+    "povo": "Israelita",
+    "dica1": "Vivia em Betânia e se agitava com muitas tarefas quando recebia Jesus.",
+    "dica2": "Irmã de Maria e Lázaro, declarou: 'Tu és o Cristo, o Filho de Deus'.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "maria-betania",
@@ -1413,8 +2409,18 @@
     "conhecidoPor": "Ungir Jesus com perfume em Betânia",
     "nascimento": "Século I d.C.",
     "ocupacao": "Discípula",
-    "dica1": "Escolheu sentar-se aos pés de Jesus enquanto sua irmã se ocupava do serviço.",
-    "dica2": "Era irmã de Marta e Lázaro e ungiu os pés de Jesus com perfume, enxugando-os com os cabelos."
+    "povo": "Israelita",
+    "dica1": "Ficou sentada aos pés de Jesus, ouvindo-o, enquanto a irmã servia.",
+    "dica2": "Irmã de Marta e Lázaro, ungiu os pés de Jesus com perfume de nardo e os enxugou com os cabelos.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "mateus",
@@ -1426,8 +2432,24 @@
     "conhecidoPor": "Ser chamado por Jesus enquanto cobrava impostos",
     "nascimento": "Século I d.C.",
     "ocupacao": "Cobrador de impostos",
-    "dica1": "Deixou seu posto de trabalho para seguir Jesus e ofereceu um banquete em sua casa.",
-    "dica2": "Também era chamado Levi e figura na lista dos Doze apóstolos."
+    "povo": "Israelita",
+    "dica1": "Estava sentado no posto de impostos quando ouviu: 'Segue-me'.",
+    "dica2": "Cobrador de impostos também chamado Levi, apóstolo e tradicionalmente autor do primeiro Evangelho.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "melquisedeque",
@@ -1439,8 +2461,21 @@
     "conhecidoPor": "Abençoar Abraão e receber dele o dízimo",
     "nascimento": "Data desconhecida",
     "ocupacao": "Rei e Sacerdote",
-    "dica1": "Governava uma cidade chamada Salém e servia ao Deus Altíssimo.",
-    "dica2": "Saiu ao encontro de Abraão com pão e vinho e é apresentado em Hebreus como figura do sacerdócio eterno."
+    "povo": "Origem desconhecida",
+    "dica1": "Rei de Salém e sacerdote do Deus Altíssimo.",
+    "dica2": "Ofereceu pão e vinho a Abraão, abençoou-o e recebeu dele o dízimo.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      },
+      {
+        "livro": "Salmos"
+      },
+      {
+        "livro": "Hebreus"
+      }
+    ]
   },
   {
     "id": "miguel-arcanjo",
@@ -1452,8 +2487,21 @@
     "conhecidoPor": "Liderar os anjos na luta contra o mal",
     "nascimento": "Antes da criação",
     "ocupacao": "Arcanjo",
-    "dica1": "É apresentado como protetor do povo de Deus em uma visão profética.",
-    "dica2": "Combateu o dragão no céu e aparece com Gabriel entre os arcanjos mais conhecidos."
+    "povo": "Ser espiritual (Anjo)",
+    "dica1": "Chamado em Daniel de 'o grande príncipe', protetor do povo.",
+    "dica2": "Arcanjo que lutou com seus anjos contra o dragão no céu.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      },
+      {
+        "livro": "Judas"
+      },
+      {
+        "livro": "Apocalipse"
+      }
+    ]
   },
   {
     "id": "miriam",
@@ -1465,8 +2513,18 @@
     "conhecidoPor": "Cantar após a travessia do mar Vermelho",
     "nascimento": "Por volta de 1500 a.C.",
     "ocupacao": "Profetisa",
-    "dica1": "Acompanhou de longe um cesto colocado no rio quando ainda era criança.",
-    "dica2": "Era irmã de Moisés e Aarão, liderou as mulheres com tamborins após a travessia do mar."
+    "povo": "Israelita (Levi)",
+    "dica1": "Profetisa, irmã de dois líderes de Israel.",
+    "dica2": "Irmã de Moisés e Arão, cantou e dançou com tamborins depois da travessia do mar.",
+    "nascimentoAno": -1500,
+    "referencias": [
+      {
+        "livro": "Êxodo"
+      },
+      {
+        "livro": "Números"
+      }
+    ]
   },
   {
     "id": "moises",
@@ -1474,12 +2532,31 @@
     "sexo": "Homem",
     "testamento": "Antigo",
     "divisao": "Pentateuco e Evangelhos",
-    "historiaNaBiblia": "Êxodo; Levítico; Números; Deuteronômio",
+    "historiaNaBiblia": "Êxodo; Levítico; Números; Deuteronômio; Mateus 17",
     "conhecidoPor": "Libertar Israel do Egito e receber a Lei",
     "nascimento": "Por volta de 1500 a.C.",
     "ocupacao": "Líder e Profeta",
-    "dica1": "Foi criado no palácio do Egito, mas viveu muitos anos como pastor no deserto.",
-    "dica2": "Encontrou Deus na sarça ardente, conduziu o Êxodo e recebeu os Dez Mandamentos no Sinai."
+    "povo": "Israelita (Levi)",
+    "dica1": "Foi salvo das águas e criado como filho da filha do faraó.",
+    "dica2": "Viu a sarça ardente, tirou Israel do Egito e recebeu os Dez Mandamentos no Sinai.",
+    "nascimentoAno": -1500,
+    "referencias": [
+      {
+        "livro": "Êxodo"
+      },
+      {
+        "livro": "Levítico"
+      },
+      {
+        "livro": "Números"
+      },
+      {
+        "livro": "Deuteronômio"
+      },
+      {
+        "livro": "Mateus"
+      }
+    ]
   },
   {
     "id": "mardoqueu",
@@ -1491,8 +2568,15 @@
     "conhecidoPor": "Orientar Ester a defender o povo judeu",
     "nascimento": "Por volta de 500 a.C.",
     "ocupacao": "Conselheiro",
-    "dica1": "Criou uma jovem órfã que se tornou rainha no império persa.",
-    "dica2": "Recusou-se a se curvar diante de Hamã e pediu a Ester que intercedesse por seu povo."
+    "povo": "Israelita (Benjamim)",
+    "dica1": "Judeu de Susa que descobriu uma conspiração contra o rei.",
+    "dica2": "Primo de Ester, recusou-se a se curvar diante de Hamã e foi honrado pelo rei.",
+    "nascimentoAno": -500,
+    "referencias": [
+      {
+        "livro": "Ester"
+      }
+    ]
   },
   {
     "id": "naama",
@@ -1503,9 +2587,16 @@
     "historiaNaBiblia": "2 Reis 5",
     "conhecidoPor": "Ser curado da lepra após obedecer a Eliseu",
     "nascimento": "Por volta de 850 a.C.",
-    "ocupacao": "Guerreiro",
-    "dica1": "Era um estrangeiro respeitado pelo rei de seu país, mas sofria de uma doença grave.",
-    "dica2": "Era general sírio, mergulhou sete vezes no Jordão e reconheceu o Deus de Israel."
+    "ocupacao": "Comandante",
+    "povo": "Arameu",
+    "dica1": "Comandante do exército de Aram, respeitado pelo rei, mas leproso.",
+    "dica2": "Por conselho de uma menina israelita procurou Eliseu e ficou curado ao se banhar sete vezes no Jordão.",
+    "nascimentoAno": -850,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      }
+    ]
   },
   {
     "id": "nabote",
@@ -1517,8 +2608,15 @@
     "conhecidoPor": "Recusar-se a vender sua vinha ao rei Acabe",
     "nascimento": "Por volta de 900 a.C.",
     "ocupacao": "Agricultor",
-    "dica1": "Possuía uma propriedade que ficava perto do palácio real em Jezrael.",
-    "dica2": "Foi acusado por falsas testemunhas e morto para que Acabe tomasse sua vinha."
+    "povo": "Israelita",
+    "dica1": "Tinha uma vinha em Jezrael, junto ao palácio do rei.",
+    "dica2": "Recusou vender a vinha a Acabe e foi morto por falsas acusações tramadas por Jezabel.",
+    "nascimentoAno": -900,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      }
+    ]
   },
   {
     "id": "noemi",
@@ -1530,8 +2628,15 @@
     "conhecidoPor": "Ser sogra de Rute e retornar a Belém após grandes perdas",
     "nascimento": "Por volta de 1200 a.C.",
     "ocupacao": "Sogra",
-    "dica1": "Mudou-se para Moab por causa de uma fome e perdeu marido e dois filhos.",
-    "dica2": "Pediu para ser chamada de Mara, mas sua nora moabita decidiu acompanhá-la até Belém."
+    "povo": "Israelita (Judá)",
+    "dica1": "Perdeu o marido e os dois filhos em Moabe.",
+    "dica2": "Sogra de Rute, voltou a Belém e pediu para ser chamada de Mara.",
+    "nascimentoAno": -1200,
+    "referencias": [
+      {
+        "livro": "Rute"
+      }
+    ]
   },
   {
     "id": "nabucodonosor",
@@ -1543,8 +2648,18 @@
     "conhecidoPor": "Conquistar Jerusalém e levar Judá ao exílio babilônico",
     "nascimento": "Por volta de 630 a.C.",
     "ocupacao": "Rei",
-    "dica1": "Governou um império que conquistou Jerusalém e levou jovens judeus para sua corte.",
-    "dica2": "Teve sonhos interpretados por Daniel, mandou lançar três jovens numa fornalha e viveu um período como animal do campo."
+    "povo": "Babilônio",
+    "dica1": "Rei que tomou Jerusalém e levou o povo de Judá para o exílio.",
+    "dica2": "Mandou jogar três jovens numa fornalha e passou um tempo comendo capim como um boi.",
+    "nascimentoAno": -630,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      },
+      {
+        "livro": "Jeremias"
+      }
+    ]
   },
   {
     "id": "nata",
@@ -1556,8 +2671,18 @@
     "conhecidoPor": "Confrontar Davi por seu pecado e apoiar a sucessão de Salomão",
     "nascimento": "Por volta de 1050 a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Usou uma história sobre uma cordeirinha para levar um rei a reconhecer sua culpa.",
-    "dica2": "Disse a Davi 'tu és esse homem' depois do caso com Bate-Seba e ajudou Salomão a ser rei."
+    "povo": "Israelita",
+    "dica1": "Profeta que anunciou a Davi que sua dinastia duraria para sempre.",
+    "dica2": "Contou a Davi a história da cordeirinha e disse: 'Esse homem és tu!'",
+    "nascimentoAno": -1050,
+    "referencias": [
+      {
+        "livro": "2 Samuel"
+      },
+      {
+        "livro": "1 Reis"
+      }
+    ]
   },
   {
     "id": "natanael",
@@ -1569,8 +2694,27 @@
     "conhecidoPor": "Reconhecer Jesus como Filho de Deus ao ser chamado por Filipe",
     "nascimento": "Século I d.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Era de Caná da Galileia e ficou inicialmente desconfiado de alguém vindo de Nazaré.",
-    "dica2": "Filipe o levou a Jesus, que disse tê-lo visto debaixo de uma figueira."
+    "povo": "Israelita",
+    "dica1": "Duvidou: 'De Nazaré pode sair algo de bom?'",
+    "dica2": "Jesus o chamou de 'verdadeiro israelita' e disse tê-lo visto debaixo da figueira.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "neemias",
@@ -1582,8 +2726,15 @@
     "conhecidoPor": "Reconstruir os muros de Jerusalém após o exílio",
     "nascimento": "Por volta de 450 a.C.",
     "ocupacao": "Governador",
-    "dica1": "Trabalhava na corte persa e chorou ao ouvir notícias sobre Jerusalém.",
-    "dica2": "Era copeiro do rei Artaxerxes e organizou a reconstrução dos muros apesar da oposição."
+    "povo": "Israelita",
+    "dica1": "Copeiro do rei persa que chorou ao saber da situação de Jerusalém.",
+    "dica2": "Governador que reconstruiu os muros de Jerusalém em 52 dias, apesar da oposição.",
+    "nascimentoAno": -450,
+    "referencias": [
+      {
+        "livro": "Neemias"
+      }
+    ]
   },
   {
     "id": "nicodemos",
@@ -1595,8 +2746,15 @@
     "conhecidoPor": "Conversar com Jesus sobre nascer de novo",
     "nascimento": "Século I d.C.",
     "ocupacao": "Conselheiro",
-    "dica1": "Era fariseu e procurou Jesus à noite para fazer perguntas.",
-    "dica2": "Era membro do Sinédrio, ouviu sobre o novo nascimento e ajudou no sepultamento de Jesus."
+    "povo": "Israelita",
+    "dica1": "Fariseu e chefe dos judeus que procurou Jesus de noite.",
+    "dica2": "Ouviu de Jesus que é preciso 'nascer de novo' e levou mirra e aloés para o sepultamento.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "ninrode",
@@ -1608,8 +2766,15 @@
     "conhecidoPor": "Ser um poderoso caçador e fundador de cidades",
     "nascimento": "Data desconhecida",
     "ocupacao": "Caçador",
-    "dica1": "Descendia de Cam e foi lembrado pela força entre os primeiros povos após o dilúvio.",
-    "dica2": "Foi chamado de grande caçador e seu reino começou em Babel, na terra de Senaar."
+    "povo": "Primeiras gerações",
+    "dica1": "Descendente de Cuch, foi o primeiro grande poderoso da terra.",
+    "dica2": "Valente caçador diante do Senhor; seu reino começou na Babilônia, na terra de Senaar.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "noe",
@@ -1621,8 +2786,15 @@
     "conhecidoPor": "Construir uma arca e sobreviver ao dilúvio",
     "nascimento": "Antes de 4000 a.C.",
     "ocupacao": "Agricultor",
-    "dica1": "Recebeu instruções detalhadas para construir algo enorme antes de uma grande catástrofe.",
-    "dica2": "Reuniu animais em uma arca, enviou uma pomba depois do dilúvio e plantou uma vinha."
+    "povo": "Primeiras gerações",
+    "dica1": "Homem justo e íntegro em sua geração, que andava com Deus.",
+    "dica2": "Construiu a arca e salvou a família e os animais do dilúvio.",
+    "nascimentoAno": -4000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "ogue",
@@ -1634,8 +2806,21 @@
     "conhecidoPor": "Ser derrotado por Israel e ter seu reino em Basã conquistado",
     "nascimento": "Data desconhecida",
     "ocupacao": "Rei",
-    "dica1": "Governava uma região a leste do Jordão, conhecida por suas muitas cidades fortificadas.",
-    "dica2": "Foi o rei de Basã vencido por Moisés em Edrai, depois da derrota de Seon."
+    "povo": "Amorreu",
+    "dica1": "Rei amorreu de Basã, a leste do Jordão.",
+    "dica2": "Derrotado por Moisés em Edrei, era tão grande que sua cama de ferro media nove côvados.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Números"
+      },
+      {
+        "livro": "Deuteronômio"
+      },
+      {
+        "livro": "Salmos"
+      }
+    ]
   },
   {
     "id": "oseias",
@@ -1647,8 +2832,15 @@
     "conhecidoPor": "Anunciar a fidelidade de Deus a Israel por meio de sua própria história familiar",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Recebeu uma missão pessoal difícil que se tornou sinal da relação entre Deus e seu povo.",
-    "dica2": "Seu casamento com Gomer e os nomes dados aos filhos expressavam a infidelidade de Israel e a promessa de reconciliação."
+    "povo": "Israelita",
+    "dica1": "Deus lhe pediu que se casasse com uma mulher infiel, como sinal para Israel.",
+    "dica2": "Casou-se com Gômer e deu aos filhos nomes como 'Não-meu-povo'.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Oséias"
+      }
+    ]
   },
   {
     "id": "paulo",
@@ -1656,12 +2848,58 @@
     "sexo": "Homem",
     "testamento": "Novo",
     "divisao": "Epístolas e Históricos",
-    "historiaNaBiblia": "Atos 7-9; 13-28",
+    "historiaNaBiblia": "Atos 7-9; 13-28; Romanos a Filemom",
     "conhecidoPor": "Anunciar Jesus aos gentios após converter-se de perseguidor em apóstolo",
     "nascimento": "Por volta de 5 d.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Era cidadão romano, estudou aos pés de Gamaliel e inicialmente perseguiu os seguidores de Jesus.",
-    "dica2": "A caminho de Damasco, encontrou o Ressuscitado e realizou longas viagens missionárias pelo Mediterrâneo."
+    "povo": "Israelita (Benjamim)",
+    "dica1": "Fariseu da tribo de Benjamim, educado aos pés de Gamaliel.",
+    "dica2": "Perseguia os cristãos até ver Jesus no caminho de Damasco e se tornar o apóstolo dos gentios.",
+    "nascimentoAno": 5,
+    "referencias": [
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "Romanos"
+      },
+      {
+        "livro": "1 Coríntios"
+      },
+      {
+        "livro": "2 Coríntios"
+      },
+      {
+        "livro": "Gálatas"
+      },
+      {
+        "livro": "Efésios"
+      },
+      {
+        "livro": "Filipenses"
+      },
+      {
+        "livro": "Colossenses"
+      },
+      {
+        "livro": "1 Tessalonicenses"
+      },
+      {
+        "livro": "2 Tessalonicenses"
+      },
+      {
+        "livro": "1 Timóteo"
+      },
+      {
+        "livro": "2 Timóteo"
+      },
+      {
+        "livro": "Tito"
+      },
+      {
+        "livro": "Filemom"
+      }
+    ]
   },
   {
     "id": "pedro",
@@ -1673,8 +2911,21 @@
     "conhecidoPor": "Ser um dos principais apóstolos e testemunha da ressurreição de Jesus",
     "nascimento": "Século I a.C.",
     "ocupacao": "Pescador e Apóstolo",
-    "dica1": "Trabalhava com o irmão às margens de um lago e tinha um temperamento impulsivo.",
-    "dica2": "Negou conhecer Jesus três vezes, mas depois recebeu a missão de cuidar de seu rebanho."
+    "povo": "Israelita",
+    "dica1": "Pescador impulsivo que andou sobre as águas e afundou por medo.",
+    "dica2": "Negou Jesus três vezes antes de o galo cantar e recebeu as chaves do Reino.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "poncio-pilatos",
@@ -1686,8 +2937,24 @@
     "conhecidoPor": "Presidir o julgamento de Jesus e entregá-lo para ser crucificado",
     "nascimento": "Data desconhecida",
     "ocupacao": "Governador",
-    "dica1": "Representava o poder romano na Judeia e precisou julgar um acusado durante a festa da Páscoa.",
-    "dica2": "Perguntou a Jesus sobre a verdade, declarou não encontrar crime nele e mandou lavar as mãos diante da multidão."
+    "povo": "Romano",
+    "dica1": "Governador romano da Judeia cuja esposa teve um sonho sobre um justo.",
+    "dica2": "Lavou as mãos diante da multidão e entregou Jesus para ser crucificado.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      }
+    ]
   },
   {
     "id": "priscila",
@@ -1698,9 +2965,25 @@
     "historiaNaBiblia": "Atos 18; Romanos 16; 1 Coríntios 16; 2 Timóteo 4",
     "conhecidoPor": "Colaborar na missão cristã e instruir Apolo junto com seu marido",
     "nascimento": "Século I d.C.",
-    "ocupacao": "Comerciante e Missionária",
-    "dica1": "Precisou deixar Roma com o marido por causa de um decreto imperial e depois acolheu uma comunidade em casa.",
-    "dica2": "Trabalhou com Paulo em Corinto e, em Éfeso, ajudou a explicar mais profundamente o caminho de Deus a Apolo."
+    "ocupacao": "Fabricante de tendas e Missionária",
+    "povo": "Israelita",
+    "dica1": "Saiu de Roma com o marido por causa de um decreto do imperador.",
+    "dica2": "Fabricante de tendas com o marido Áquila, ajudou Paulo e explicou melhor o Caminho a Apolo.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "Romanos"
+      },
+      {
+        "livro": "1 Coríntios"
+      },
+      {
+        "livro": "2 Timóteo"
+      }
+    ]
   },
   {
     "id": "aquila",
@@ -1711,9 +2994,25 @@
     "historiaNaBiblia": "Atos 18; Romanos 16; 1 Coríntios 16; 2 Timóteo 4",
     "conhecidoPor": "Colaborar na missão cristã e instruir Apolo junto com sua esposa",
     "nascimento": "Século I d.C.",
-    "ocupacao": "Comerciante e Missionário",
-    "dica1": "Era judeu natural do Ponto e, após sair da Itália, passou a viver e trabalhar com um grande evangelizador.",
-    "dica2": "Junto com sua esposa, acolheu uma igreja em sua casa e ajudou Apolo a compreender melhor o caminho de Deus."
+    "ocupacao": "Fabricante de tendas e Missionário",
+    "povo": "Israelita",
+    "dica1": "Judeu natural do Ponto e fabricante de tendas.",
+    "dica2": "Com a esposa Priscila, hospedou Paulo em Corinto e explicou melhor o Caminho a Apolo.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "Romanos"
+      },
+      {
+        "livro": "1 Coríntios"
+      },
+      {
+        "livro": "2 Timóteo"
+      }
+    ]
   },
   {
     "id": "rainha-de-saba",
@@ -1725,8 +3024,24 @@
     "conhecidoPor": "Visitar Salomão para conhecer sua sabedoria e sua riqueza",
     "nascimento": "Século X a.C.",
     "ocupacao": "Rainha",
-    "dica1": "Viajou de uma terra distante com uma grande comitiva e valiosos presentes para fazer perguntas a um rei.",
-    "dica2": "Levou ouro, perfumes e pedras preciosas a Jerusalém para provar Salomão com enigmas e admirou sua sabedoria."
+    "povo": "Sabeu",
+    "dica1": "Soberana estrangeira que veio de longe para pôr um rei à prova com enigmas.",
+    "dica2": "Visitou Salomão com ouro, perfumes e pedras preciosas e admirou sua sabedoria.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      },
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "raabe",
@@ -1738,8 +3053,24 @@
     "conhecidoPor": "Esconder os espiões israelitas em Jericó e salvar sua família",
     "nascimento": "Data desconhecida",
     "ocupacao": "Prostituta",
-    "dica1": "Morava numa cidade fortificada e reconheceu o poder do Deus de Israel antes de sua queda.",
-    "dica2": "Escondeu dois espiões sob talos de linho e marcou sua casa com um cordão vermelho para ser poupada."
+    "povo": "Cananeu",
+    "dica1": "Mulher de Jericó que reconheceu o poder do Deus de Israel.",
+    "dica2": "Escondeu os espias de Josué e pendurou um cordão vermelho na janela para ser poupada.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Josué"
+      },
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Hebreus"
+      },
+      {
+        "livro": "Tiago"
+      }
+    ]
   },
   {
     "id": "raquel",
@@ -1751,8 +3082,15 @@
     "conhecidoPor": "Ser a esposa amada de Jacó e mãe de José e Benjamim",
     "nascimento": "Por volta de 1900 a.C.",
     "ocupacao": "Matriarca",
-    "dica1": "Era filha de Labão e conheceu o futuro marido quando levava o rebanho de seu pai para beber água.",
-    "dica2": "Por causa dela, Jacó trabalhou muitos anos para Labão; foi mãe de José e morreu ao dar à luz Benjamim."
+    "povo": "Arameu",
+    "dica1": "Pastoreava as ovelhas do pai quando conheceu o futuro marido junto a um poço.",
+    "dica2": "Por ela Jacó trabalhou catorze anos; foi mãe de José e Benjamim.",
+    "nascimentoAno": -1900,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "rebeca",
@@ -1764,8 +3102,15 @@
     "conhecidoPor": "Ser esposa de Isaque e mãe de Esaú e Jacó",
     "nascimento": "Por volta de 1900 a.C.",
     "ocupacao": "Matriarca",
-    "dica1": "Demonstrou generosidade ao oferecer água a um viajante e também aos seus camelos junto a uma fonte.",
-    "dica2": "Foi escolhida para se casar com Isaque e ajudou Jacó a receber a bênção destinada ao primogênito."
+    "povo": "Arameu",
+    "dica1": "Deu de beber a um servo e também a todos os seus camelos.",
+    "dica2": "Esposa de Isaque, ajudou Jacó a receber a bênção destinada a Esaú.",
+    "nascimentoAno": -1900,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "rute",
@@ -1777,8 +3122,18 @@
     "conhecidoPor": "Permanecer fiel a Noemi e tornar-se ancestral do rei Davi",
     "nascimento": "Data desconhecida",
     "ocupacao": "Matriarca",
-    "dica1": "Era estrangeira e decidiu acompanhar a sogra quando ambas voltaram a Belém após um tempo de fome.",
-    "dica2": "Respigou nos campos de Booz, casou-se com ele e foi bisavó de Davi."
+    "povo": "Moabita",
+    "dica1": "Viúva estrangeira que disse à sogra: 'Teu povo será o meu povo'.",
+    "dica2": "Moabita que respigou no campo de Boaz, casou-se com ele e foi bisavó de Davi.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Rute"
+      },
+      {
+        "livro": "Mateus"
+      }
+    ]
   },
   {
     "id": "roboao",
@@ -1790,8 +3145,18 @@
     "conhecidoPor": "Reinar sobre Judá após a divisão do reino de Israel",
     "nascimento": "Século X a.C.",
     "ocupacao": "Rei",
-    "dica1": "Herdou o trono de um rei famoso por sua sabedoria, mas enfrentou uma crise logo no início do reinado.",
-    "dica2": "Rejeitou o conselho dos anciãos, ameaçou aumentar o peso sobre o povo e viu dez tribos se separarem de seu reino."
+    "povo": "Israelita (Judá)",
+    "dica1": "Seguiu o conselho dos jovens, e não o dos anciãos, e prometeu ao povo um jugo mais pesado.",
+    "dica2": "Filho de Salomão, viu dez tribos se separarem e formarem o reino do Norte.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      }
+    ]
   },
   {
     "id": "sadraque",
@@ -1803,8 +3168,15 @@
     "conhecidoPor": "Permanecer fiel a Deus na fornalha ardente",
     "nascimento": "Século VII a.C.",
     "ocupacao": "Administrador",
-    "dica1": "Era um jovem judeu levado para a Babilônia, onde recebeu um novo nome e serviu no palácio real.",
-    "dica2": "Recusou-se a adorar uma estátua de ouro e foi lançado numa fornalha junto com dois companheiros."
+    "povo": "Israelita (Judá)",
+    "dica1": "Jovem de Judá levado à Babilônia que, com os amigos, preferiu legumes à comida do rei.",
+    "dica2": "Seu nome hebraico era Ananias; foi jogado na fornalha ardente com Mesaque e Abede-Nego.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      }
+    ]
   },
   {
     "id": "mesaque",
@@ -1816,8 +3188,15 @@
     "conhecidoPor": "Permanecer fiel a Deus na fornalha ardente",
     "nascimento": "Século VII a.C.",
     "ocupacao": "Administrador",
-    "dica1": "Era um jovem judeu levado para a Babilônia, onde recebeu um novo nome e serviu no palácio real.",
-    "dica2": "Recusou-se a adorar uma estátua de ouro e foi lançado numa fornalha junto com dois companheiros."
+    "povo": "Israelita (Judá)",
+    "dica1": "Jovem de Judá levado à Babilônia que, com os amigos, preferiu legumes à comida do rei.",
+    "dica2": "Seu nome hebraico era Misael; foi jogado na fornalha ardente com Sadraque e Abede-Nego.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      }
+    ]
   },
   {
     "id": "abede-nego",
@@ -1829,8 +3208,15 @@
     "conhecidoPor": "Permanecer fiel a Deus na fornalha ardente",
     "nascimento": "Século VII a.C.",
     "ocupacao": "Administrador",
-    "dica1": "Era um jovem judeu levado para a Babilônia, onde recebeu um novo nome e serviu no palácio real.",
-    "dica2": "Recusou-se a adorar uma estátua de ouro e foi lançado numa fornalha junto com dois companheiros."
+    "povo": "Israelita (Judá)",
+    "dica1": "Jovem de Judá levado à Babilônia que, com os amigos, preferiu legumes à comida do rei.",
+    "dica2": "Seu nome hebraico era Azarias; foi jogado na fornalha ardente com Sadraque e Mesaque.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      }
+    ]
   },
   {
     "id": "salomao",
@@ -1842,8 +3228,18 @@
     "conhecidoPor": "Receber sabedoria de Deus e construir o Templo de Jerusalém",
     "nascimento": "Século X a.C.",
     "ocupacao": "Rei",
-    "dica1": "Começou a reinar ainda jovem e pediu a Deus sabedoria para governar o povo.",
-    "dica2": "Resolveu a disputa de duas mulheres sobre um bebê e construiu o primeiro Templo de Jerusalém."
+    "povo": "Israelita (Judá)",
+    "dica1": "Pediu a Deus um coração sábio em vez de riquezas e vida longa.",
+    "dica2": "Filho de Davi, resolveu a disputa de duas mães por um bebê e construiu o Templo.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "1 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      }
+    ]
   },
   {
     "id": "samuel",
@@ -1855,8 +3251,15 @@
     "conhecidoPor": "Ungir Saul e Davi como reis de Israel",
     "nascimento": "Século XI a.C.",
     "ocupacao": "Profeta e Sacerdote",
-    "dica1": "Ainda menino, viveu no santuário de Silo e aprendeu a reconhecer a voz de Deus durante a noite.",
-    "dica2": "Foi consagrado por sua mãe, serviu sob Eli e ungiu os dois primeiros reis de Israel."
+    "povo": "Israelita",
+    "dica1": "Ainda menino, ouviu Deus chamá-lo de noite mais de uma vez.",
+    "dica2": "Filho de Ana, criado pelo sacerdote Eli, ungiu Saul e depois Davi como reis.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "1 Samuel"
+      }
+    ]
   },
   {
     "id": "sansao",
@@ -1868,8 +3271,15 @@
     "conhecidoPor": "Receber força extraordinária e lutar contra os filisteus",
     "nascimento": "Século XII a.C.",
     "ocupacao": "Juiz",
-    "dica1": "Foi consagrado a Deus antes de nascer e não devia cortar o cabelo nem beber vinho.",
-    "dica2": "Sua força estava ligada ao voto de nazireu; depois de ser traído, derrubou as colunas de um templo filisteu."
+    "povo": "Israelita (Dã)",
+    "dica1": "Matou um leão com as próprias mãos e propôs um enigma sobre mel.",
+    "dica2": "Juiz nazireu cuja força estava nos cabelos; traído por Dalila, derrubou o templo dos filisteus.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Juízes"
+      }
+    ]
   },
   {
     "id": "sara",
@@ -1881,8 +3291,15 @@
     "conhecidoPor": "Dar à luz Isaque na velhice, conforme a promessa de Deus",
     "nascimento": "Por volta de 2000 a.C.",
     "ocupacao": "Matriarca",
-    "dica1": "Acompanhou o marido numa longa jornada de fé e passou muitos anos sem poder ter filhos.",
-    "dica2": "Riu ao ouvir que teria um filho na velhice e se tornou mãe de Isaque."
+    "povo": "Hebreu",
+    "dica1": "Teve o nome mudado por ordem de Deus e foi mãe já muito idosa.",
+    "dica2": "Esposa de Abraão, riu ao ouvir que teria um filho e foi mãe de Isaque.",
+    "nascimentoAno": -2000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "satanas",
@@ -1894,8 +3311,27 @@
     "conhecidoPor": "Tentar afastar as pessoas de Deus e opor-se ao seu plano",
     "nascimento": "Antes da criação humana",
     "ocupacao": "Demônio",
-    "dica1": "É apresentado como adversário e acusador, procurando levar as pessoas a desconfiar de Deus.",
-    "dica2": "Tentou Jesus no deserto e é simbolizado no Apocalipse como o antigo dragão e a antiga serpente."
+    "povo": "Ser espiritual (Demônio)",
+    "dica1": "Acusou Jó diante de Deus.",
+    "dica2": "Tentou Jesus no deserto; o Apocalipse o chama de antiga serpente e dragão.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      },
+      {
+        "livro": "Jó"
+      },
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "Apocalipse"
+      }
+    ]
   },
   {
     "id": "saul",
@@ -1907,8 +3343,18 @@
     "conhecidoPor": "Ser o primeiro rei de Israel e perseguir Davi",
     "nascimento": "Século XI a.C.",
     "ocupacao": "Rei",
-    "dica1": "Saiu à procura das jumentas de seu pai e acabou encontrando um profeta que o ungiu.",
-    "dica2": "Foi o primeiro rei de Israel, perdeu o favor de Deus por desobedecer e passou a perseguir Davi."
+    "povo": "Israelita (Benjamim)",
+    "dica1": "Procurava as jumentas perdidas do pai quando encontrou o profeta que o ungiu.",
+    "dica2": "Primeiro rei de Israel, desobedeceu a Deus e perseguiu Davi.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "1 Samuel"
+      },
+      {
+        "livro": "2 Samuel"
+      }
+    ]
   },
   {
     "id": "silas",
@@ -1920,12 +3366,24 @@
     "conhecidoPor": "Acompanhar Paulo em viagens missionárias e anunciar o Evangelho",
     "nascimento": "Século I d.C.",
     "ocupacao": "Missionário",
-    "dica1": "Foi escolhido pela comunidade de Jerusalém para levar uma decisão importante aos cristãos de Antioquia.",
-    "dica2": "Foi preso com Paulo em Filipos, onde ambos rezavam e cantavam hinos durante a noite."
+    "povo": "Israelita",
+    "dica1": "Enviado pela comunidade de Jerusalém para levar a decisão dos apóstolos a Antioquia.",
+    "dica2": "Companheiro de Paulo, foi preso com ele em Filipos, onde os dois cantavam hinos à meia-noite.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "2 Coríntios"
+      },
+      {
+        "livro": "1 Pedro"
+      }
+    ]
   },
   {
     "id": "simao-o-mago",
-    "imagem": "/personagens/simao-mago.png",
     "nome": "Simão, o Mago",
     "sexo": "Homem",
     "testamento": "Novo",
@@ -1934,12 +3392,18 @@
     "conhecidoPor": "Tentar comprar o poder de conceder o Espírito Santo",
     "nascimento": "Século I d.C.",
     "ocupacao": "Feiticeiro",
-    "dica1": "Em Samaria, impressionava a população com artes mágicas e dizia ser alguém importante.",
-    "dica2": "Após receber o batismo, ofereceu dinheiro aos apóstolos para obter o poder ligado à imposição das mãos."
+    "povo": "Samaritano",
+    "dica1": "Impressionava a Samaria com artes mágicas e se dizia alguém importante.",
+    "dica2": "Depois de batizado, ofereceu dinheiro a Pedro e João para comprar o poder de dar o Espírito Santo.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "simao-de-cirene",
-    "imagem": "/personagens/simao-cirene.png",
     "nome": "Simão de Cirene",
     "sexo": "Homem",
     "testamento": "Novo",
@@ -1948,8 +3412,21 @@
     "conhecidoPor": "Ser obrigado a ajudar Jesus a carregar a cruz",
     "nascimento": "Século I d.C.",
     "ocupacao": "Agricultor",
-    "dica1": "Vinha do campo quando soldados romanos o obrigaram a participar de uma marcha rumo à execução.",
-    "dica2": "Era natural de Cirene e carregou a cruz de Jesus no caminho para o Calvário."
+    "povo": "Cireneu",
+    "dica1": "Vinha do campo e era pai de Alexandre e Rufo.",
+    "dica2": "Foi obrigado pelos soldados a carregar a cruz de Jesus.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "tiago-irmao-de-jesus",
@@ -1961,8 +3438,24 @@
     "conhecidoPor": "Liderar a comunidade cristã de Jerusalém e participar do Concílio de Jerusalém",
     "nascimento": "Século I a.C.",
     "ocupacao": "Líder",
-    "dica1": "Teve papel importante na comunidade de Jerusalém e foi procurado por Paulo após suas viagens missionárias.",
-    "dica2": "No Concílio de Jerusalém, propôs que os cristãos vindos de outros povos não fossem obrigados a seguir toda a Lei de Moisés."
+    "povo": "Israelita",
+    "dica1": "Uma das 'colunas' da Igreja de Jerusalém, segundo Paulo.",
+    "dica2": "Chamado 'irmão do Senhor', propôs no Concílio de Jerusalém não impor toda a Lei aos gentios.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "Gálatas"
+      },
+      {
+        "livro": "Tiago"
+      }
+    ]
   },
   {
     "id": "tiago-filho-do-trovao",
@@ -1974,8 +3467,21 @@
     "conhecidoPor": "Ser um dos doze apóstolos e acompanhar Jesus em momentos decisivos",
     "nascimento": "Século I a.C.",
     "ocupacao": "Pescador e Apóstolo",
-    "dica1": "Trabalhava em uma barca com o pai e o irmão antes de deixar as redes para seguir Jesus.",
-    "dica2": "Jesus lhe deu, junto com seu irmão João, o apelido de Filho do Trovão; presenciou a Transfiguração e foi morto por ordem de Herodes."
+    "povo": "Israelita",
+    "dica1": "Pescador que deixou o barco e o pai para seguir Jesus.",
+    "dica2": "Filho de Zebedeu e irmão de João, foi morto à espada por ordem do rei Herodes.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "timoteo",
@@ -1987,8 +3493,21 @@
     "conhecidoPor": "Ser colaborador de Paulo e servir as comunidades cristãs",
     "nascimento": "Século I d.C.",
     "ocupacao": "Missionário",
-    "dica1": "Era de Listra, tinha mãe judia cristã e pai grego, e gozava de boa reputação entre os irmãos.",
-    "dica2": "Paulo o levou em suas viagens e lhe escreveu cartas aconselhando-o a conduzir a comunidade com fidelidade."
+    "povo": "Israelita",
+    "dica1": "Discípulo de Listra, filho de mãe judia e pai grego.",
+    "dica2": "Jovem colaborador de Paulo, que lhe escreveu duas cartas.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      },
+      {
+        "livro": "1 Timóteo"
+      },
+      {
+        "livro": "2 Timóteo"
+      }
+    ]
   },
   {
     "id": "tito",
@@ -2000,8 +3519,24 @@
     "conhecidoPor": "Colaborar com Paulo na organização e no cuidado das comunidades cristãs",
     "nascimento": "Século I d.C.",
     "ocupacao": "Missionário",
-    "dica1": "Era cristão de origem não judaica e acompanhou Paulo em uma viagem importante a Jerusalém.",
-    "dica2": "Foi enviado a Creta para organizar as comunidades e recebeu uma carta com orientações sobre a escolha de presbíteros."
+    "povo": "Grego",
+    "dica1": "Grego que Paulo levou a Jerusalém sem obrigá-lo à circuncisão.",
+    "dica2": "Colaborador de Paulo deixado em Creta para nomear presbíteros e destinatário de uma carta.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Gálatas"
+      },
+      {
+        "livro": "2 Coríntios"
+      },
+      {
+        "livro": "Tito"
+      },
+      {
+        "livro": "2 Timóteo"
+      }
+    ]
   },
   {
     "id": "tome",
@@ -2013,8 +3548,21 @@
     "conhecidoPor": "Professar fé no Cristo ressuscitado após pedir para ver suas feridas",
     "nascimento": "Século I a.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Também era chamado por um nome que significa gêmeo e mostrou disposição para acompanhar Jesus mesmo diante do perigo.",
-    "dica2": "Não acreditou de imediato no testemunho dos outros discípulos sobre a ressurreição e depois declarou: “Meu Senhor e meu Deus!”."
+    "povo": "Israelita",
+    "dica1": "Também chamado Dídimo, disse aos outros: 'Vamos também nós, para morrer com ele'.",
+    "dica2": "Só acreditou na ressurreição depois de ver as chagas e exclamou: 'Meu Senhor e meu Deus!'",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "uzias",
@@ -2026,8 +3574,21 @@
     "conhecidoPor": "Reinar longamente sobre Judá e ser atingido por lepra após agir com orgulho",
     "nascimento": "Século IX a.C.",
     "ocupacao": "Rei",
-    "dica1": "Começou a reinar muito jovem, fortaleceu cidades e tornou Judá próspero e militarmente forte.",
-    "dica2": "Tentou queimar incenso no Templo sem ser sacerdote e ficou leproso até o fim da vida."
+    "povo": "Israelita (Judá)",
+    "dica1": "Rei de Judá que começou a reinar aos dezesseis anos e prosperou muito.",
+    "dica2": "Ficou leproso por queimar incenso no Templo; no ano de sua morte, Isaías teve sua visão.",
+    "nascimentoAno": -805,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      },
+      {
+        "livro": "Isaías"
+      }
+    ]
   },
   {
     "id": "xerxes",
@@ -2039,8 +3600,15 @@
     "conhecidoPor": "Reinar sobre o império persa no tempo de Ester",
     "nascimento": "Século V a.C.",
     "ocupacao": "Rei",
-    "dica1": "Governava um vasto império de muitas províncias e mantinha sua corte na cidade de Susa.",
-    "dica2": "Também chamado Assuero, destituiu Vasti e escolheu Ester como rainha, sem saber inicialmente de sua origem judaica."
+    "povo": "Persa",
+    "dica1": "Rei persa que governava 127 províncias, da Índia à Etiópia.",
+    "dica2": "Também chamado Assuero, destituiu a rainha Vasti e escolheu Ester como rainha.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Ester"
+      }
+    ]
   },
   {
     "id": "zacarias",
@@ -2052,8 +3620,15 @@
     "conhecidoPor": "Anunciar a restauração de Jerusalém após o exílio e trazer esperança messiânica",
     "nascimento": "Século VI a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Exerceu seu ministério depois do exílio babilônico e chamou o povo a voltar para Deus.",
-    "dica2": "Teve visões noturnas de cavalos, candelabros e um rolo voador, e profetizou sobre um rei humilde montado num jumento."
+    "povo": "Israelita",
+    "dica1": "Profeta do pós-exílio que teve visões noturnas de cavalos e de um candelabro.",
+    "dica2": "Anunciou um rei humilde 'montado num jumento' e, com Ageu, animou a reconstrução do Templo.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Zacarias"
+      }
+    ]
   },
   {
     "id": "zaqueu",
@@ -2065,8 +3640,15 @@
     "conhecidoPor": "Converter-se após receber Jesus em sua casa",
     "nascimento": "Século I d.C.",
     "ocupacao": "Cobrador de impostos",
-    "dica1": "Era rico, de baixa estatura e desejava muito ver Jesus passar por sua cidade.",
-    "dica2": "Subiu numa árvore para ver Jesus e prometeu dar metade dos bens aos pobres e restituir quatro vezes o que tivesse tomado injustamente."
+    "povo": "Israelita",
+    "dica1": "Chefe dos cobradores de impostos de Jericó, homem rico.",
+    "dica2": "Era baixo, subiu num sicômoro para ver Jesus, e Jesus se hospedou em sua casa.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "zedequias",
@@ -2078,8 +3660,21 @@
     "conhecidoPor": "Ser o último rei de Judá antes da destruição de Jerusalém pelos babilônios",
     "nascimento": "Século VII a.C.",
     "ocupacao": "Rei",
-    "dica1": "Foi colocado no trono de Judá por um rei estrangeiro, após a deportação de seu sobrinho para a Babilônia.",
-    "dica2": "Rebelou-se contra Nabucodonosor; viu seus filhos serem mortos, foi cegado e levado cativo quando Jerusalém caiu."
+    "povo": "Israelita (Judá)",
+    "dica1": "Último rei de Judá, posto no trono por Nabucodonosor.",
+    "dica2": "Rebelou-se contra a Babilônia, viu os filhos serem mortos, teve os olhos furados e foi levado cativo.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      },
+      {
+        "livro": "Jeremias"
+      }
+    ]
   },
   {
     "id": "tobit",
@@ -2091,8 +3686,15 @@
     "conhecidoPor": "Permanecer fiel a Deus no exílio e recuperar a visão",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Patriarca",
-    "dica1": "Vivia no exílio, praticava obras de misericórdia e ficou cego depois de um acidente incomum.",
-    "dica2": "Enviou o filho a uma longa viagem e teve os olhos curados com o fel de um peixe."
+    "povo": "Israelita (Neftali)",
+    "dica1": "Judeu deportado para Nínive que enterrava os mortos do seu povo.",
+    "dica2": "Ficou cego e foi curado quando o filho, guiado pelo anjo Rafael, pôs fel de peixe em seus olhos.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Tobias"
+      }
+    ]
   },
   {
     "id": "tobias",
@@ -2104,12 +3706,18 @@
     "conhecidoPor": "Viajar acompanhado por Rafael, casar-se com Sara e curar o pai",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Filho",
-    "dica1": "Partiu para uma cidade distante a fim de recuperar uma quantia guardada por um parente.",
-    "dica2": "Viajava com um companheiro que era um anjo, casou-se com Sara e usou o fel de um peixe para curar a cegueira do pai."
+    "povo": "Israelita (Neftali)",
+    "dica1": "Jovem enviado pelo pai numa longa viagem para buscar um dinheiro guardado na Média.",
+    "dica2": "Viajou com o anjo Rafael, casou-se com Sara e curou a cegueira do pai Tobit.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Tobias"
+      }
+    ]
   },
   {
     "id": "rafael",
-    "imagem": "/personagens/rafael-arcanjo.png",
     "nome": "Rafael",
     "sexo": "Outro",
     "testamento": "Antigo",
@@ -2118,8 +3726,15 @@
     "conhecidoPor": "Acompanhar Tobias e trazer cura para Tobit e Sara",
     "nascimento": "Antes da criação humana",
     "ocupacao": "Arcanjo",
-    "dica1": "Apresentou-se como um companheiro de viagem de confiança e orientou um jovem em uma missão familiar.",
-    "dica2": "Revelou ser um dos sete anjos que assistem diante do Senhor e ensinou como vencer um demônio e curar a cegueira."
+    "povo": "Ser espiritual (Anjo)",
+    "dica1": "Viajou disfarçado de companheiro de um jovem.",
+    "dica2": "Um dos sete anjos que estão diante do Senhor; guiou Tobias e expulsou o demônio Asmodeu.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Tobias"
+      }
+    ]
   },
   {
     "id": "sara-esposa-de-tobias",
@@ -2131,8 +3746,15 @@
     "conhecidoPor": "Ser libertada de um demônio e casar-se com Tobias",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Esposa",
-    "dica1": "Morava em Ecbátana, na Média, e sofria por causa de uma acusação cruel feita por uma serva.",
-    "dica2": "Um demônio havia matado seus sete noivos, mas ela foi libertada após a oração e o casamento com um jovem viajante."
+    "povo": "Israelita",
+    "dica1": "Filha única de uma família da Média, foi insultada por uma serva.",
+    "dica2": "Seus sete maridos morreram na noite de núpcias por causa do demônio Asmodeu, até se casar com Tobias.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Tobias"
+      }
+    ]
   },
   {
     "id": "raguel",
@@ -2144,8 +3766,15 @@
     "conhecidoPor": "Acolher Tobias e conceder-lhe a mão de sua filha Sara",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Patriarca",
-    "dica1": "Vivia na Média com a esposa e tinha apenas uma filha, cuja situação lhe causava grande preocupação.",
-    "dica2": "Recebeu Tobias em casa, temeu pelo novo casamento da filha e depois celebrou sua libertação com uma festa."
+    "povo": "Israelita",
+    "dica1": "Pai de uma filha única que sofria por causa de um demônio.",
+    "dica2": "Parente de Tobit, recebeu Tobias em Ecbátana e lhe deu a filha Sara em casamento.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Tobias"
+      }
+    ]
   },
   {
     "id": "edna",
@@ -2157,8 +3786,15 @@
     "conhecidoPor": "Acolher Tobias e alegrar-se com a libertação de sua filha Sara",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Mãe",
-    "dica1": "Recebeu em casa um jovem viajante que se parecia muito com um parente de sua família.",
-    "dica2": "Era esposa de Raguel e mãe de Sara; chorou temendo pelo noivo da filha, mas depois celebrou o casamento."
+    "povo": "Israelita",
+    "dica1": "Mulher da Média cujo marido reconheceu num jovem visitante o filho de um parente.",
+    "dica2": "Esposa de Raguel e mãe de Sara, chorou temendo pelo novo noivo da filha.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Tobias"
+      }
+    ]
   },
   {
     "id": "asmodeu",
@@ -2170,8 +3806,15 @@
     "conhecidoPor": "Perseguir Sara e matar seus noivos antes de ser expulso",
     "nascimento": "Antes da criação humana",
     "ocupacao": "Demônio",
-    "dica1": "Afligia uma jovem na Média e transformava seus casamentos em motivo de luto para sua família.",
-    "dica2": "Matou sete noivos de Sara, mas foi expulso por um anjo para o deserto do Alto Egito."
+    "povo": "Ser espiritual (Demônio)",
+    "dica1": "Atormentava uma jovem da Média.",
+    "dica2": "Demônio que matou os sete maridos de Sara e fugiu para o Egito com o cheiro do peixe queimado por Tobias.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Tobias"
+      }
+    ]
   },
   {
     "id": "judite",
@@ -2183,8 +3826,15 @@
     "conhecidoPor": "Libertar seu povo ao derrotar Holofernes",
     "nascimento": "Data desconhecida",
     "ocupacao": "Viúva",
-    "dica1": "Era uma mulher piedosa e respeitada que decidiu agir quando sua cidade se viu ameaçada por um exército estrangeiro.",
-    "dica2": "Entrou no acampamento inimigo, orou por força e decapitou Holofernes enquanto ele estava embriagado."
+    "povo": "Israelita (Simeão)",
+    "dica1": "Viúva piedosa e bonita de Betúlia que repreendeu os chefes da cidade.",
+    "dica2": "Entrou no acampamento inimigo e cortou a cabeça de Holofernes.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Judite"
+      }
+    ]
   },
   {
     "id": "holofernes",
@@ -2196,8 +3846,15 @@
     "conhecidoPor": "Comandar o exército que cercou Betúlia e ser derrotado por Judite",
     "nascimento": "Data desconhecida",
     "ocupacao": "Líder militar",
-    "dica1": "Era o marechal de um grande exército enviado contra os povos que recusavam obedecer ao rei.",
-    "dica2": "Cercou Betúlia, ficou embriagado em sua tenda e foi decapitado por uma viúva israelita."
+    "povo": "Assírio",
+    "dica1": "General-chefe de um rei que se dizia senhor de toda a terra.",
+    "dica2": "Cercou Betúlia e, embriagado em sua tenda, foi decapitado por Judite.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Judite"
+      }
+    ]
   },
   {
     "id": "matatias",
@@ -2209,8 +3866,15 @@
     "conhecidoPor": "Iniciar a revolta contra a perseguição religiosa do rei Antíoco",
     "nascimento": "Século II a.C.",
     "ocupacao": "Sacerdote",
-    "dica1": "Era sacerdote, vivia em Modin e recusou honras e riquezas oferecidas em troca de abandonar a Lei.",
-    "dica2": "Recusou-se a sacrificar aos ídolos, chamou os fiéis para o deserto e deixou a liderança da luta a seu filho Judas."
+    "povo": "Israelita (Levi)",
+    "dica1": "Sacerdote de Modin que se recusou a oferecer sacrifício aos ídolos.",
+    "dica2": "Pai de Judas Macabeu, iniciou a revolta contra Antíoco e fugiu com os filhos para as montanhas.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "1 Macabeus"
+      }
+    ]
   },
   {
     "id": "judas-macabeu",
@@ -2222,8 +3886,18 @@
     "conhecidoPor": "Liderar a revolta judaica e purificar o Templo de Jerusalém",
     "nascimento": "Século II a.C.",
     "ocupacao": "Líder militar",
-    "dica1": "Assumiu a liderança de um pequeno grupo que resistia à imposição de costumes estrangeiros.",
-    "dica2": "Recebeu o apelido Macabeu, venceu exércitos maiores e restaurou o culto no Templo, origem da festa da Dedicação."
+    "povo": "Israelita (Levi)",
+    "dica1": "Guerreiro desde a juventude, venceu exércitos muito maiores que o seu.",
+    "dica2": "Filho de Matatias, purificou o Templo e deu origem à festa da Dedicação.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "1 Macabeus"
+      },
+      {
+        "livro": "2 Macabeus"
+      }
+    ]
   },
   {
     "id": "eleazar-o-martir",
@@ -2235,8 +3909,15 @@
     "conhecidoPor": "Morrer fiel à Lei em vez de negar sua fé",
     "nascimento": "Século II a.C.",
     "ocupacao": "Escriba",
-    "dica1": "Era um ancião respeitado e recebeu a proposta de apenas fingir que comia um alimento proibido.",
-    "dica2": "Recusou-se a comer carne de porco e preferiu morrer para deixar aos jovens o exemplo de fidelidade à Lei."
+    "povo": "Israelita",
+    "dica1": "Escriba idoso e respeitado a quem propuseram apenas fingir que comia um alimento proibido.",
+    "dica2": "Recusou comer carne de porco e morreu para deixar aos jovens um exemplo de fidelidade.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "2 Macabeus"
+      }
+    ]
   },
   {
     "id": "antioco-iv-epifanio",
@@ -2248,8 +3929,18 @@
     "conhecidoPor": "Perseguir os judeus e profanar o Templo de Jerusalém",
     "nascimento": "Século III a.C.",
     "ocupacao": "Rei",
-    "dica1": "Era um rei grego que tentou impor a cultura helenista e uma religião única ao povo judeu.",
-    "dica2": "Proibiu práticas da Lei, profanou o Templo e sua perseguição provocou a revolta dos Macabeus."
+    "povo": "Grego",
+    "dica1": "Rei grego que proibiu as práticas da Lei judaica.",
+    "dica2": "Profanou o Templo de Jerusalém com a 'abominação da desolação' e provocou a revolta dos Macabeus.",
+    "nascimentoAno": -215,
+    "referencias": [
+      {
+        "livro": "1 Macabeus"
+      },
+      {
+        "livro": "2 Macabeus"
+      }
+    ]
   },
   {
     "id": "baruc",
@@ -2261,8 +3952,18 @@
     "conhecidoPor": "Ser secretário de Jeremias e transmitir suas palavras ao povo",
     "nascimento": "Século VII a.C.",
     "ocupacao": "Escriba",
-    "dica1": "Trabalhou ao lado de um profeta de Judá e colocou por escrito suas mensagens em um rolo.",
-    "dica2": "Leu no Templo os oráculos ditados por Jeremias, e um rei queimou o rolo que ele havia escrito."
+    "povo": "Israelita",
+    "dica1": "Escriba, filho de Nerias.",
+    "dica2": "Escreveu num rolo as palavras ditadas por Jeremias, e o rei queimou o rolo no braseiro.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Jeremias"
+      },
+      {
+        "livro": "Baruc"
+      }
+    ]
   },
   {
     "id": "jesus-filho-de-sirac",
@@ -2274,8 +3975,15 @@
     "conhecidoPor": "Escrever ensinamentos de sabedoria reunidos no Eclesiástico",
     "nascimento": "Século III a.C.",
     "ocupacao": "Sábio",
-    "dica1": "Era um mestre judeu de Jerusalém que reuniu ensinamentos sobre sabedoria, justiça, família e temor de Deus.",
-    "dica2": "Seu livro também é conhecido pelo nome de seu pai, Sirac, e afirma que o temor do Senhor é o princípio da sabedoria."
+    "povo": "Israelita",
+    "dica1": "Mestre de Jerusalém que ensinou que o princípio da sabedoria é o temor do Senhor.",
+    "dica2": "Autor do livro do Eclesiástico, que também leva o nome de seu antepassado Sirac.",
+    "nascimentoAno": -250,
+    "referencias": [
+      {
+        "livro": "Eclesiástico"
+      }
+    ]
   },
   {
     "id": "susana",
@@ -2287,8 +3995,15 @@
     "conhecidoPor": "Ser inocentada por Daniel de uma falsa acusação",
     "nascimento": "Século VI a.C.",
     "ocupacao": "Esposa",
-    "dica1": "Era uma mulher piedosa da Babilônia, criada segundo a Lei de Moisés, e foi observada secretamente por dois anciãos.",
-    "dica2": "Recusou a proposta dos dois juízes, foi acusada injustamente e acabou salva quando Daniel interrogou os acusadores separadamente."
+    "povo": "Israelita",
+    "dica1": "Mulher bonita e temente a Deus, espiada por dois anciãos no jardim de casa.",
+    "dica2": "Acusada falsamente de adultério, foi salva quando Daniel interrogou os acusadores separadamente.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      }
+    ]
   },
   {
     "id": "tiago-filho-de-alfeu",
@@ -2300,8 +4015,24 @@
     "conhecidoPor": "Ser um dos doze apóstolos escolhidos por Jesus",
     "nascimento": "Século I a.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Fez parte do grupo dos Doze, mas os Evangelhos preservam poucos episódios pessoais sobre ele.",
-    "dica2": "É identificado nas listas apostólicas pelo nome de seu pai, para não ser confundido com outro apóstolo de mesmo nome."
+    "povo": "Israelita",
+    "dica1": "Apóstolo pouco citado nos Evangelhos, identificado pelo nome do pai.",
+    "dica2": "Um dos Doze, chamado 'filho de Alfeu' para não ser confundido com o irmão de João.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "tadeu",
@@ -2313,12 +4044,30 @@
     "conhecidoPor": "Ser um dos doze apóstolos e perguntar a Jesus sobre sua manifestação aos discípulos",
     "nascimento": "Século I a.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Aparece nas listas dos Doze com dois modos de ser chamado, o que ajuda a distingui-lo do traidor.",
-    "dica2": "Na Última Ceia, perguntou por que Jesus se manifestaria aos discípulos e não ao mundo."
+    "povo": "Israelita",
+    "dica1": "Apóstolo que aparece nas listas com dois nomes diferentes.",
+    "dica2": "Na Última Ceia, 'Judas, não o Iscariotes', perguntou por que Jesus se manifestaria só aos discípulos.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "João"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "simao-o-zelote",
-    "imagem": "/personagens/simao-zelote.png",
     "nome": "Simão, o Zelote",
     "sexo": "Homem",
     "testamento": "Novo",
@@ -2327,8 +4076,24 @@
     "conhecidoPor": "Ser um dos doze apóstolos escolhidos por Jesus",
     "nascimento": "Século I a.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Recebeu um título que o diferenciava de outros homens com o mesmo nome entre os seguidores de Jesus.",
-    "dica2": "É chamado de Zelote, ou Cananeu, nas listas apostólicas e permaneceu com os Onze após a ascensão."
+    "povo": "Israelita",
+    "dica1": "Apóstolo com um apelido que o distingue de outro apóstolo de mesmo nome.",
+    "dica2": "Um dos Doze, chamado 'o Zelote' ou 'o Cananeu'.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Mateus"
+      },
+      {
+        "livro": "Marcos"
+      },
+      {
+        "livro": "Lucas"
+      },
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "matias",
@@ -2340,8 +4105,15 @@
     "conhecidoPor": "Ser escolhido para ocupar o lugar deixado por Judas Iscariotes entre os Doze",
     "nascimento": "Século I a.C.",
     "ocupacao": "Apóstolo",
-    "dica1": "Acompanhava Jesus e os apóstolos desde o batismo de João até a ascensão.",
-    "dica2": "Foi indicado com José Barsabás como possível substituto de Judas e escolhido por sorteio após a oração da comunidade."
+    "povo": "Israelita",
+    "dica1": "Acompanhou Jesus desde o batismo de João até a Ascensão.",
+    "dica2": "Escolhido por sorteio, entre ele e José Barsabás, para ocupar o lugar de Judas entre os Doze.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "set",
@@ -2353,8 +4125,15 @@
     "conhecidoPor": "Ser o filho dado a Adão e Eva após a morte de Abel",
     "nascimento": "Antes de 4000 a.C.",
     "ocupacao": "Patriarca",
-    "dica1": "Nasceu numa família marcada por uma grande perda entre dois irmãos.",
-    "dica2": "Foi dado a Adão e Eva depois que Caim matou Abel e tornou-se ancestral de Noé."
+    "povo": "Primeiras gerações",
+    "dica1": "Nasceu depois de uma grande tragédia na família.",
+    "dica2": "Filho de Adão e Eva, dado por Deus 'no lugar de Abel', a quem Caim matou.",
+    "nascimentoAno": -4000,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "labao",
@@ -2366,8 +4145,15 @@
     "conhecidoPor": "Ser pai de Lia e Raquel e sogro de Jacó",
     "nascimento": "Por volta de 1900 a.C.",
     "ocupacao": "Pastor",
-    "dica1": "Recebeu em sua casa um servo enviado para procurar esposa para um parente distante.",
-    "dica2": "Fez Jacó trabalhar anos por suas filhas e trocou a noiva na noite do casamento."
+    "povo": "Arameu",
+    "dica1": "Arameu de Harã que recebeu o servo enviado para buscar uma esposa para Isaque.",
+    "dica2": "Fez Jacó trabalhar catorze anos por suas filhas e trocou a noiva na noite do casamento.",
+    "nascimentoAno": -1900,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "dina",
@@ -2379,8 +4165,15 @@
     "conhecidoPor": "Ser filha de Jacó cuja história levou ao conflito com Siquém",
     "nascimento": "Por volta de 1900 a.C.",
     "ocupacao": "Filha",
-    "dica1": "Era a única filha mencionada de um patriarca que teve muitos filhos homens.",
-    "dica2": "Sua ida à cidade de Siquém desencadeou uma vingança violenta de dois de seus irmãos."
+    "povo": "Israelita",
+    "dica1": "A única filha de Jacó citada pelo nome.",
+    "dica2": "Filha de Jacó e Lia; depois do que lhe aconteceu em Siquém, seus irmãos Simeão e Levi atacaram a cidade.",
+    "nascimentoAno": -1900,
+    "referencias": [
+      {
+        "livro": "Gênesis"
+      }
+    ]
   },
   {
     "id": "joatao",
@@ -2392,8 +4185,21 @@
     "conhecidoPor": "Reinar sobre Judá após Uzias",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Rei",
-    "dica1": "Assumiu responsabilidades no reino enquanto seu pai vivia isolado por causa de uma doença.",
-    "dica2": "Foi filho de Uzias, fortaleceu Judá e construiu a porta superior do Templo."
+    "povo": "Israelita (Judá)",
+    "dica1": "Governou o povo enquanto o pai, leproso, vivia isolado.",
+    "dica2": "Filho do rei Uzias, construiu a porta superior do Templo.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "2 Reis"
+      },
+      {
+        "livro": "2 Crônicas"
+      },
+      {
+        "livro": "Isaías"
+      }
+    ]
   },
   {
     "id": "zorobabel",
@@ -2405,8 +4211,21 @@
     "conhecidoPor": "Liderar o retorno do exílio e a reconstrução do Templo",
     "nascimento": "Século VI a.C.",
     "ocupacao": "Governador",
-    "dica1": "Conduziu parte do povo de volta a Jerusalém depois do exílio babilônico.",
-    "dica2": "Reconstruiu o altar e lançou os alicerces do segundo Templo, apoiado pelos profetas Ageu e Zacarias."
+    "povo": "Israelita (Judá)",
+    "dica1": "Descendente de Davi que liderou um grupo de exilados de volta a Jerusalém.",
+    "dica2": "Governador que lançou os alicerces do segundo Templo, animado pelos profetas Ageu e Zacarias.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Esdras"
+      },
+      {
+        "livro": "Ageu"
+      },
+      {
+        "livro": "Zacarias"
+      }
+    ]
   },
   {
     "id": "joel",
@@ -2418,8 +4237,15 @@
     "conhecidoPor": "Chamar o povo à conversão e anunciar o derramamento do Espírito",
     "nascimento": "Data desconhecida",
     "ocupacao": "Profeta",
-    "dica1": "Usou uma devastadora praga como imagem para convocar o povo ao jejum e à oração.",
-    "dica2": "Anunciou que Deus derramaria seu Espírito sobre toda carne, promessa recordada em Pentecostes."
+    "povo": "Israelita",
+    "dica1": "Usou uma praga de gafanhotos para chamar o povo ao jejum.",
+    "dica2": "Profetizou: 'Derramarei o meu espírito sobre toda carne', palavra lembrada por Pedro em Pentecostes.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Joel"
+      }
+    ]
   },
   {
     "id": "abdias",
@@ -2431,8 +4257,15 @@
     "conhecidoPor": "Profetizar o juízo contra Edom por sua violência contra Judá",
     "nascimento": "Data desconhecida",
     "ocupacao": "Profeta",
-    "dica1": "Sua mensagem é a mais breve entre os livros proféticos do Antigo Testamento.",
-    "dica2": "Denunciou o orgulho de Edom e sua alegria diante da queda de Jerusalém."
+    "povo": "Israelita",
+    "dica1": "Autor do livro mais curto do Antigo Testamento.",
+    "dica2": "Profeta que anunciou o castigo de Edom por se alegrar com a queda de Jerusalém.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Abdias"
+      }
+    ]
   },
   {
     "id": "miqueias",
@@ -2444,8 +4277,15 @@
     "conhecidoPor": "Anunciar justiça, misericórdia e o nascimento de um governante em Belém",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Veio de uma pequena cidade de Judá e denunciou a exploração dos pobres e a corrupção dos líderes.",
-    "dica2": "Profetizou que de Belém sairia aquele que governaria Israel e resumiu a fé em praticar justiça, amar a misericórdia e caminhar com Deus."
+    "povo": "Israelita",
+    "dica1": "Profeta de Moreset que denunciou os que exploravam os pobres.",
+    "dica2": "Anunciou que de Belém sairia o governante de Israel e resumiu: praticar a justiça, amar a bondade e andar humildemente com Deus.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Miquéias"
+      }
+    ]
   },
   {
     "id": "naum",
@@ -2457,8 +4297,15 @@
     "conhecidoPor": "Anunciar a queda de Nínive, capital da Assíria",
     "nascimento": "Século VII a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Proclamou uma mensagem contra uma cidade poderosa que havia oprimido muitos povos.",
-    "dica2": "Anunciou a queda de Nínive e o fim da violência do império assírio."
+    "povo": "Israelita",
+    "dica1": "Profeta de Elcós cuja mensagem é toda contra uma grande cidade.",
+    "dica2": "Anunciou a queda de Nínive, capital da Assíria.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Naum"
+      }
+    ]
   },
   {
     "id": "habacuque",
@@ -2470,8 +4317,15 @@
     "conhecidoPor": "Dialogar com Deus sobre a injustiça e proclamar que o justo viverá pela fé",
     "nascimento": "Século VII a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Questionou Deus sobre a violência e não se conformou em ver os maus prevalecerem.",
-    "dica2": "Recebeu a resposta de que o justo viverá por sua fidelidade e terminou seu livro com uma oração de confiança."
+    "povo": "Israelita",
+    "dica1": "Perguntou a Deus até quando gritaria contra a violência sem ser ouvido.",
+    "dica2": "Recebeu a resposta: 'o justo viverá por sua fé'.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Habacuque"
+      }
+    ]
   },
   {
     "id": "sofonias",
@@ -2483,8 +4337,15 @@
     "conhecidoPor": "Anunciar o Dia do Senhor e a restauração de um povo humilde",
     "nascimento": "Século VII a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Profetizou em Judá durante o reinado de Josias, denunciando idolatria e injustiça.",
-    "dica2": "Anunciou o Dia do Senhor, mas também que Deus se alegraria novamente com seu povo restaurado."
+    "povo": "Israelita",
+    "dica1": "Profeta descendente do rei Ezequias, no tempo do rei Josias.",
+    "dica2": "Anunciou o 'Dia do Senhor' e disse que Deus exultaria de alegria pelo seu povo.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Sofonias"
+      }
+    ]
   },
   {
     "id": "ageu",
@@ -2496,8 +4357,15 @@
     "conhecidoPor": "Incentivar a reconstrução do Templo após o exílio",
     "nascimento": "Século VI a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Falou ao povo que havia voltado do exílio, quando muitos cuidavam de suas próprias casas e esqueciam a casa de Deus.",
-    "dica2": "Exortou Zorobabel e o sumo sacerdote Josué a retomarem a obra do segundo Templo."
+    "povo": "Israelita",
+    "dica1": "Repreendeu o povo por morar em casas bem cobertas enquanto a casa de Deus estava em ruínas.",
+    "dica2": "Profeta que, com Zacarias, incentivou Zorobabel a reconstruir o Templo.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Ageu"
+      }
+    ]
   },
   {
     "id": "malaquias",
@@ -2509,8 +4377,15 @@
     "conhecidoPor": "Exortar o povo e os sacerdotes à fidelidade e anunciar um mensageiro do Senhor",
     "nascimento": "Século V a.C.",
     "ocupacao": "Profeta",
-    "dica1": "Dirigiu-se a um povo já de volta do exílio, mas ainda marcado por culto descuidado e injustiça.",
-    "dica2": "Anunciou a vinda de um mensageiro que prepararia o caminho do Senhor e mencionou a volta de Elias."
+    "povo": "Israelita",
+    "dica1": "O último dos profetas do Antigo Testamento na ordem da Bíblia.",
+    "dica2": "Anunciou um mensageiro para preparar o caminho do Senhor e a volta do profeta Elias.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Malaquias"
+      }
+    ]
   },
   {
     "id": "zacarias-pai-de-joao-batista",
@@ -2522,8 +4397,15 @@
     "conhecidoPor": "Receber o anúncio do nascimento de João Batista",
     "nascimento": "Século I a.C.",
     "ocupacao": "Sacerdote",
-    "dica1": "Servia no Templo e, já idoso, recebeu uma notícia inesperada durante uma oferta de incenso.",
-    "dica2": "O anjo Gabriel anunciou que seria pai de João; por duvidar, permaneceu sem falar até o nascimento do filho."
+    "povo": "Israelita (Levi)",
+    "dica1": "Sacerdote idoso que oferecia incenso no Templo quando lhe apareceu um anjo.",
+    "dica2": "Ficou mudo por duvidar do anjo Gabriel até o nascimento do filho João.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "simeao-o-justo",
@@ -2535,8 +4417,15 @@
     "conhecidoPor": "Reconhecer Jesus como a salvação de Deus no Templo",
     "nascimento": "Século I a.C.",
     "ocupacao": "Ancião",
-    "dica1": "Era homem justo e piedoso, e esperava a consolação de Israel guiado pelo Espírito Santo.",
-    "dica2": "Tomou o menino Jesus nos braços no Templo e proclamou que seus olhos tinham visto a salvação."
+    "povo": "Israelita",
+    "dica1": "Homem justo a quem o Espírito revelou que não morreria antes de ver o Messias.",
+    "dica2": "Tomou o menino Jesus nos braços no Templo e disse: 'Agora deixas teu servo ir em paz'.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Lucas"
+      }
+    ]
   },
   {
     "id": "salome-discipula",
@@ -2548,8 +4437,15 @@
     "conhecidoPor": "Acompanhar Jesus, presenciar sua morte e ir ao túmulo",
     "nascimento": "Século I d.C.",
     "ocupacao": "Discípula",
-    "dica1": "Acompanhou Jesus na Galileia junto com outras mulheres e permaneceu próxima no momento da crucificação.",
-    "dica2": "Foi ao túmulo com aromas na manhã após o sábado e encontrou a notícia da ressurreição."
+    "povo": "Israelita",
+    "dica1": "Uma das mulheres que observavam a crucificação de longe.",
+    "dica2": "Foi ao túmulo com Maria Madalena levando aromas e ouviu que Jesus havia ressuscitado.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Marcos"
+      }
+    ]
   },
   {
     "id": "gamaliel",
@@ -2561,8 +4457,15 @@
     "conhecidoPor": "Aconselhar o Sinédrio a não perseguir precipitadamente os apóstolos",
     "nascimento": "Século I a.C.",
     "ocupacao": "Mestre da Lei",
-    "dica1": "Era fariseu respeitado por todo o povo e ensinou um futuro grande missionário cristão.",
-    "dica2": "No Sinédrio, pediu que deixassem os apóstolos em paz, pois se a obra viesse de Deus ninguém poderia destruí-la."
+    "povo": "Israelita",
+    "dica1": "Fariseu e mestre da Lei respeitado por todo o povo.",
+    "dica2": "Aconselhou o Sinédrio a deixar os apóstolos em paz e foi mestre de Paulo.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "ananias-de-damasco",
@@ -2574,8 +4477,15 @@
     "conhecidoPor": "Ajudar Saulo a recuperar a visão e receber o batismo",
     "nascimento": "Século I d.C.",
     "ocupacao": "Discípulo",
-    "dica1": "Recebeu em visão uma missão que inicialmente lhe pareceu perigosa, pois envolvia um perseguidor dos cristãos.",
-    "dica2": "Impôs as mãos sobre Saulo em Damasco, algo como escamas caiu de seus olhos e ele foi batizado."
+    "povo": "Israelita",
+    "dica1": "Discípulo que teve medo da missão recebida numa visão, pois ela envolvia um perseguidor dos cristãos.",
+    "dica2": "Impôs as mãos sobre Saulo cego, que voltou a enxergar e foi batizado.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "dorcas-tabita",
@@ -2587,8 +4497,15 @@
     "conhecidoPor": "Ser ressuscitada por Pedro em Jope",
     "nascimento": "Século I d.C.",
     "ocupacao": "Discípula",
-    "dica1": "Era conhecida pelas boas obras e pelas roupas que fazia para ajudar pessoas necessitadas.",
-    "dica2": "Morreu em Jope, mas Pedro rezou por ela e a chamou de volta à vida diante das viúvas."
+    "povo": "Origem desconhecida",
+    "dica1": "Discípula de Jope conhecida pelas boas obras e esmolas.",
+    "dica2": "Fazia roupas para as viúvas e foi ressuscitada por Pedro.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "agabo",
@@ -2600,8 +4517,15 @@
     "conhecidoPor": "Profetizar uma grande fome e a prisão de Paulo",
     "nascimento": "Século I d.C.",
     "ocupacao": "Profeta",
-    "dica1": "Veio da Judeia até Antioquia e levou uma mensagem que incentivou os cristãos a socorrer seus irmãos.",
-    "dica2": "Usou o cinto de Paulo para simbolizar que ele seria amarrado e entregue aos pagãos em Jerusalém."
+    "povo": "Israelita",
+    "dica1": "Profeta que desceu de Jerusalém a Antioquia.",
+    "dica2": "Anunciou uma grande fome e amarrou-se com o cinto de Paulo para mostrar que ele seria preso.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "felix",
@@ -2613,8 +4537,15 @@
     "conhecidoPor": "Manter Paulo preso em Cesareia enquanto esperava favores",
     "nascimento": "Século I d.C.",
     "ocupacao": "Governador",
-    "dica1": "Era autoridade romana na Judeia e ouviu uma defesa cristã ao lado de sua esposa judia.",
-    "dica2": "Tremeu ao ouvir Paulo falar de justiça, domínio próprio e juízo, mas o manteve preso esperando receber dinheiro."
+    "povo": "Romano",
+    "dica1": "Governador romano casado com a judia Drusila.",
+    "dica2": "Ficou com medo ao ouvir Paulo falar do juízo e o manteve preso esperando receber dinheiro.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "festo",
@@ -2626,8 +4557,15 @@
     "conhecidoPor": "Ouvir a defesa de Paulo e encaminhar seu apelo ao imperador",
     "nascimento": "Século I d.C.",
     "ocupacao": "Governador",
-    "dica1": "Substituiu outro governador romano e precisou lidar com acusações religiosas contra um prisioneiro.",
-    "dica2": "Ouviu Paulo diante de Agripa e declarou que ele poderia ser libertado se não tivesse apelado para César."
+    "povo": "Romano",
+    "dica1": "Sucedeu outro governador romano e herdou um prisioneiro famoso.",
+    "dica2": "Disse a Paulo 'Estás louco' e o enviou a Roma porque ele havia apelado a César.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Atos"
+      }
+    ]
   },
   {
     "id": "febe",
@@ -2639,8 +4577,15 @@
     "conhecidoPor": "Servir a igreja de Cencreia e ser recomendada por Paulo aos cristãos de Roma",
     "nascimento": "Século I d.C.",
     "ocupacao": "Diaconisa",
-    "dica1": "Era membro de uma comunidade portuária próxima a Corinto e ajudou muitas pessoas, inclusive Paulo.",
-    "dica2": "Paulo a recomendou à igreja de Roma, pedindo que fosse recebida no Senhor e ajudada no que precisasse."
+    "povo": "Origem desconhecida",
+    "dica1": "Servia à igreja de Cencreia, perto de Corinto.",
+    "dica2": "Diaconisa recomendada por Paulo aos cristãos de Roma no fim da carta aos Romanos.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Romanos"
+      }
+    ]
   },
   {
     "id": "filemon",
@@ -2648,12 +4593,22 @@
     "sexo": "Homem",
     "testamento": "Novo",
     "divisao": "Epístolas",
-    "historiaNaBiblia": "Filemon; Colossenses 4",
+    "historiaNaBiblia": "Filemom",
     "conhecidoPor": "Receber de Paulo um apelo para acolher Onésimo como irmão",
     "nascimento": "Século I d.C.",
     "ocupacao": "Líder",
-    "dica1": "Era colaborador de Paulo e acolhia uma comunidade cristã em sua própria casa.",
-    "dica2": "Recebeu uma carta em favor de Onésimo, que deveria ser acolhido não apenas como servo, mas como irmão em Cristo."
+    "povo": "Origem desconhecida",
+    "dica1": "Colaborador de Paulo que reunia a igreja em sua casa.",
+    "dica2": "Destinatário de uma carta curta de Paulo pedindo que recebesse Onésimo como irmão.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Filemon"
+      },
+      {
+        "livro": "Colossenses"
+      }
+    ]
   },
   {
     "id": "onesimo",
@@ -2665,8 +4620,18 @@
     "conhecidoPor": "Converter-se e ser recomendado por Paulo a Filemon como irmão",
     "nascimento": "Século I d.C.",
     "ocupacao": "Servo",
-    "dica1": "Encontrou Paulo enquanto ele estava preso e se tornou muito útil para o anúncio do Evangelho.",
-    "dica2": "Paulo o enviou de volta a Filemon com uma carta pedindo que fosse recebido como irmão amado."
+    "povo": "Origem desconhecida",
+    "dica1": "Encontrou Paulo enquanto ele estava preso e passou a lhe ser 'útil'.",
+    "dica2": "Escravo que Paulo enviou de volta a Filemom pedindo que fosse recebido como irmão amado.",
+    "nascimentoAno": 50,
+    "referencias": [
+      {
+        "livro": "Filemon"
+      },
+      {
+        "livro": "Colossenses"
+      }
+    ]
   },
   {
     "id": "ana-esposa-de-tobit",
@@ -2678,8 +4643,15 @@
     "conhecidoPor": "Cuidar de Tobit durante sua cegueira e receber Tobias de volta da viagem",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Esposa",
-    "dica1": "Viveu com a família no exílio em Nínive e sustentou a casa trabalhando quando o marido perdeu a visão.",
-    "dica2": "Era mãe de Tobias e viu o marido recuperar a visão quando o filho retornou de uma longa viagem."
+    "povo": "Israelita",
+    "dica1": "Trabalhava tecendo para sustentar a casa quando o marido ficou cego.",
+    "dica2": "Esposa de Tobit e mãe de Tobias, ficava olhando a estrada esperando a volta do filho.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Tobias"
+      }
+    ]
   },
   {
     "id": "gabael",
@@ -2691,8 +4663,15 @@
     "conhecidoPor": "Guardar o dinheiro de Tobit em Ragés, na Média",
     "nascimento": "Século VIII a.C.",
     "ocupacao": "Comerciante",
-    "dica1": "Recebeu uma grande quantia em prata de um homem de sua tribo, registrada por meio de um recibo.",
-    "dica2": "Entregou o dinheiro a Rafael durante a viagem de Tobias e participou da alegria do casamento em Ecbátana."
+    "povo": "Israelita",
+    "dica1": "Parente de um judeu exilado, guardava para ele uma grande soma em Ragés, na Média.",
+    "dica2": "Entregou o dinheiro de Tobit ao anjo Rafael durante a viagem de Tobias.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Tobias"
+      }
+    ]
   },
   {
     "id": "aquior",
@@ -2704,8 +4683,15 @@
     "conhecidoPor": "Defender a fé no Deus de Israel diante de Holofernes",
     "nascimento": "Data desconhecida",
     "ocupacao": "Líder",
-    "dica1": "Era chefe de um povo vizinho e explicou a um exército invasor por que Israel seria protegido se permanecesse fiel a Deus.",
-    "dica2": "Foi entregue aos israelitas por ordem de Holofernes, viu sua derrota e passou a fazer parte do povo de Israel."
+    "povo": "Amonita",
+    "dica1": "Chefe dos amonitas que contou a história de Israel a um general inimigo.",
+    "dica2": "Foi entregue aos israelitas de Betúlia por ordem de Holofernes e depois se converteu ao Deus de Israel.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Judite"
+      }
+    ]
   },
   {
     "id": "joaquim-esposo-de-susana",
@@ -2717,8 +4703,15 @@
     "conhecidoPor": "Ser marido de Susana e respeitado entre os judeus da Babilônia",
     "nascimento": "Século VI a.C.",
     "ocupacao": "Proprietário de terras",
-    "dica1": "Era um homem rico da Babilônia e sua casa, que tinha um jardim, servia de lugar de reunião para muitos judeus.",
-    "dica2": "Dois anciãos frequentavam sua casa e acusaram falsamente sua esposa de adultério."
+    "povo": "Israelita",
+    "dica1": "Judeu muito rico da Babilônia, em cuja casa com jardim muitos se reuniam.",
+    "dica2": "Esposo de Susana, que foi acusada falsamente por dois anciãos.",
+    "nascimentoAno": null,
+    "referencias": [
+      {
+        "livro": "Daniel"
+      }
+    ]
   },
   {
     "id": "simao-macabeu",
@@ -2730,8 +4723,15 @@
     "conhecidoPor": "Suceder seus irmãos na liderança do povo judeu e alcançar autonomia para a Judeia",
     "nascimento": "Século II a.C.",
     "ocupacao": "Líder militar",
-    "dica1": "Era um dos filhos de Matatias e combateu ao lado de dois irmãos durante a revolta contra os opressores.",
-    "dica2": "Assumiu a liderança após Judas e Jônatas, tornou-se sumo sacerdote e chefe do povo, e foi assassinado por uma traição."
+    "povo": "Israelita (Levi)",
+    "dica1": "Filho de Matatias, a quem o pai chamou de sábio e mandou que os irmãos ouvissem sempre.",
+    "dica2": "Sucedeu Judas e Jônatas, foi sumo sacerdote e chefe do povo e foi assassinado num banquete.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "1 Macabeus"
+      }
+    ]
   },
   {
     "id": "jonatas-macabeu",
@@ -2743,8 +4743,15 @@
     "conhecidoPor": "Liderar a revolta judaica após a morte de Judas Macabeu",
     "nascimento": "Século II a.C.",
     "ocupacao": "Líder militar",
-    "dica1": "Era filho de Matatias e tomou a liderança de seus partidários quando um irmão morreu em batalha.",
-    "dica2": "Foi feito sumo sacerdote, mas caiu numa emboscada de Trifão e acabou morto."
+    "povo": "Israelita (Levi)",
+    "dica1": "Assumiu a liderança da revolta quando o irmão morreu em batalha.",
+    "dica2": "Irmão de Judas Macabeu, foi feito sumo sacerdote e morto por Trifão depois de ser preso à traição.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "1 Macabeus"
+      }
+    ]
   },
   {
     "id": "joao-hircano",
@@ -2756,8 +4763,15 @@
     "conhecidoPor": "Assumir a liderança após a morte de Simão Macabeu",
     "nascimento": "Século II a.C.",
     "ocupacao": "Líder militar",
-    "dica1": "Era filho de um líder judeu e recebeu dele o comando de todas as tropas.",
-    "dica2": "Sobreviveu à emboscada que matou seu pai e seus irmãos e assumiu o governo do povo judeu."
+    "povo": "Israelita (Levi)",
+    "dica1": "Filho de um sumo sacerdote, recebeu do pai o comando das tropas.",
+    "dica2": "Escapou dos assassinos enviados por Ptolomeu, que matara seu pai Simão, e assumiu o governo.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "1 Macabeus"
+      }
+    ]
   },
   {
     "id": "mae-dos-sete-irmaos",
@@ -2769,7 +4783,14 @@
     "conhecidoPor": "Encorajar seus sete filhos a permanecer fiéis à Lei até o martírio",
     "nascimento": "Século II a.C.",
     "ocupacao": "Mãe",
-    "dica1": "Viu seus filhos serem torturados por se recusarem a obedecer uma ordem contrária à Lei de Deus.",
-    "dica2": "Encorajou cada um dos sete filhos a aceitar o martírio e professou a esperança de que o Criador lhes devolveria a vida."
+    "povo": "Israelita",
+    "dica1": "Viu os filhos serem torturados, um após o outro, por fidelidade à Lei.",
+    "dica2": "Encorajou os sete filhos ao martírio, dizendo que o Criador lhes devolveria a vida.",
+    "nascimentoAno": -50,
+    "referencias": [
+      {
+        "livro": "2 Macabeus"
+      }
+    ]
   }
 ]

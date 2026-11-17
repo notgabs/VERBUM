@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { GameStats } from "@/types/game";
+import { applyDailyResult, currentStreak } from "@/domain/game/streak";
 
 const STORAGE_KEY = "verbum_stats_v2";
 
@@ -38,66 +39,37 @@ export function useGameStats() {
     return () => cancelAnimationFrame(frame);
   }, []);
 
-  const recordGameResult = (won: boolean, attempts: number, hintsUsed: number) => {
+  /** Grava o resultado de um desafio diário. */
+  const record = (won: boolean, change: (prev: GameStats) => Partial<GameStats>) => {
     setStats((prev) => {
-      const newJogos = prev.jogosRealizados + 1;
-      const newVitorias = won ? prev.vitorias + 1 : prev.vitorias;
-      const newStreak = won ? prev.sequenciaAtual + 1 : 0;
-      const newMaxStreak = Math.max(prev.maiorSequencia, newStreak);
-      const newHints = prev.dicasUtilizadas + hintsUsed;
-
-      // Calculate weighted average attempts
-      const totalAttemptsBefore = prev.tentativasMedias * prev.jogosRealizados;
-      const newAverageAttempts =
-        newJogos > 0
-          ? Number(((totalAttemptsBefore + attempts) / newJogos).toFixed(1))
-          : attempts;
-
       const updated: GameStats = {
-        jogosRealizados: newJogos,
-        sequenciaAtual: newStreak,
-        maiorSequencia: newMaxStreak,
-        tentativasMedias: newAverageAttempts,
-        dicasUtilizadas: newHints,
-        vitorias: newVitorias,
-        musicGamesPlayed: prev.musicGamesPlayed ?? 0,
-        musicWins: prev.musicWins ?? 0,
+        ...prev,
+        jogosRealizados: prev.jogosRealizados + 1,
+        vitorias: prev.vitorias + (won ? 1 : 0),
+        ...applyDailyResult(prev, won),
+        ...change(prev),
       };
-
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
       } catch {
-        // Storage fail fallback
+        // Sem armazenamento: segue só na memória
       }
-
       return updated;
     });
   };
 
-  const recordMusicResult = (won: boolean) => {
-    setStats((prev) => {
-      const newJogos = prev.jogosRealizados + 1;
-      const newVitorias = won ? prev.vitorias + 1 : prev.vitorias;
-      const newStreak = won ? prev.sequenciaAtual + 1 : 0;
-      const newMaxStreak = Math.max(prev.maiorSequencia, newStreak);
-      
-      const updated: GameStats = {
-        ...prev,
-        jogosRealizados: newJogos,
-        vitorias: newVitorias,
-        sequenciaAtual: newStreak,
-        maiorSequencia: newMaxStreak,
-        musicGamesPlayed: (prev.musicGamesPlayed ?? 0) + 1,
-        musicWins: (prev.musicWins ?? 0) + (won ? 1 : 0),
-      };
+  const recordGameResult = (won: boolean, attempts: number, hintsUsed: number) =>
+    record(won, (prev) => ({
+      dicasUtilizadas: prev.dicasUtilizadas + hintsUsed,
+      // Média ponderada de tentativas
+      tentativasMedias: Number(((prev.tentativasMedias * prev.jogosRealizados + attempts) / (prev.jogosRealizados + 1)).toFixed(1)),
+    }));
 
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
-      } catch {}
-      
-      return updated;
-    });
-  };
+  const recordMusicResult = (won: boolean) =>
+    record(won, (prev) => ({
+      musicGamesPlayed: (prev.musicGamesPlayed ?? 0) + 1,
+      musicWins: (prev.musicWins ?? 0) + (won ? 1 : 0),
+    }));
 
   const winRate =
     stats.jogosRealizados > 0
@@ -106,6 +78,8 @@ export function useGameStats() {
 
   return {
     stats,
+    /** Dias seguidos com vitória num desafio diário (zera se passou um dia inteiro sem vitória). */
+    streak: currentStreak(stats),
     winRate,
     isLoaded,
     recordGameResult,

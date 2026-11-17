@@ -1,3 +1,8 @@
 node_modules/
 .next/
 .env
+# logs e arquivos gerados
+*.log
+tsconfig.tsbuildinfo
+.env*
+out/

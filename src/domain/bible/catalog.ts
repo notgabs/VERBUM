@@ -55,6 +55,14 @@ function buildAliases(name: string): string[] {
   if (name === "João") aliases.push("Joao", "Jo.");
   if (name === "Eclesiástico") aliases.push("Sirácida", "Siracida", "Eclo");
   if (name === "Apocalipse") aliases.push("Ap");
+  // Grafias católicas/alternativas usadas nos dados
+  if (name === "Obadias") aliases.push("Abdias");
+  if (name === "Filemom") aliases.push("Filemon", "Filêmon");
+  if (name === "Habacuque") aliases.push("Habacuc");
+  if (name === "Oséias") aliases.push("Oseias");
+  if (name === "Miqueias") aliases.push("Miquéias");
+  if (name === "Cantares") aliases.push("Cântico dos Cânticos", "Cânticos");
+  if (name === "Atos") aliases.push("Atos dos Apóstolos");
   return aliases;
 }
 

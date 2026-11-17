@@ -1,0 +1,148 @@
+/**
+ * Passagens dos livros proféticos (Isaías a Malaquias, com Baruc e as partes gregas de Daniel).
+ * Mesmo formato de passagens.mjs: [capitulo, versiculo, versiculoFim|null, texto, dica2, contexto].
+ * Versículos iniciais e grafias conferidos na Bíblia Ave-Maria (bibliaonline.com.br/avm).
+ * Na Ave-Maria, Joel tem 4 capítulos, Malaquias tem 3, e Daniel inclui o cântico dos três jovens (cap. 3), Suzana (13) e Bel e o dragão (14).
+ * O texto e a dica 2 nunca citam o nome que dá título ao livro, para não entregar a resposta.
+ */
+
+export const passagensProfeticos = {
+  "Isaías": [
+    [1, 18, null, "Deus diz ao povo: \"Se vossos pecados forem escarlates, se tornarão brancos como a neve! Se forem vermelhos como a púrpura, ficarão brancos como a lã\".", "Antes, o Senhor rejeitou as festas e sacrifícios de um povo de mãos manchadas de sangue.", "O profeta abre o livro chamando Judá à conversão e anunciando o perdão generoso de Deus."],
+    [2, 4, null, "\"De suas espadas forjarão relhas de arados, e de suas lanças, foices. Uma nação não levantará a espada contra outra.\"", "Todas as nações subirão ao monte da casa do Senhor.", "A visão da paz messiânica, quando os povos aprenderão a Lei de Deus em Jerusalém. O mesmo oráculo aparece em Miqueias."],
+    [6, 3, null, "Os serafins clamam uns aos outros: \"Santo, santo, santo é o Senhor Deus do universo! A terra inteira proclama a sua glória!\".", "O profeta tem a visão no ano da morte do rei Ozias.", "Na vocação de Isaías, os serafins cantam o hino que a Igreja repete em toda missa, no Santo."],
+    [6, 6, null, "Um dos serafins voa até o profeta trazendo na mão uma brasa viva, tirada do altar com uma tenaz.", "A brasa toca seus lábios, e o pecado dele é tirado.", "Isaías se sentia um homem de lábios impuros, e Deus o purifica antes de enviá-lo."],
+    [6, 8, null, "A voz do Senhor pergunta: \"Quem enviarei eu? E quem irá por nós?\". E o profeta responde: \"Eis-me aqui, enviai-me\".", "Pouco antes, um serafim tocou seus lábios com uma brasa.", "É a resposta generosa de Isaías à sua vocação, modelo de disponibilidade para a missão."],
+    [7, 14, null, "\"O próprio Senhor vos dará um sinal: uma virgem conceberá e dará à luz um filho, e o chamará 'Deus Conosco'.\"", "O rei Acaz tinha se recusado a pedir um sinal, dizendo que não queria tentar o Senhor.", "A profecia do Emanuel é citada por Mateus a respeito do nascimento virginal de Jesus."],
+    [9, 5, null, "\"Um menino nos nasceu, um filho nos foi dado; ele se chama: Conselheiro admirável, Deus forte, Pai eterno, Príncipe da paz.\"", "Antes, o texto fala do povo que andava nas trevas e viu uma grande luz.", "A profecia do rei messiânico é lida na Missa da Noite de Natal."],
+    [11, 1, null, "\"Um renovo sairá do tronco de Jessé, e um rebento brotará de suas raízes.\"", "Jessé era o pai do rei Davi.", "O Messias virá da descendência de Davi. A tradição representa essa profecia na 'árvore de Jessé'."],
+    [11, 2, null, "\"Sobre ele repousará o Espírito do Senhor, Espírito de sabedoria e de entendimento, Espírito de prudência e de coragem, Espírito de ciência e de temor do Senhor.\"", "A Igreja tirou deste texto a lista dos sete dons do Espírito Santo.", "Na tradução grega e latina, a lista ganha também a piedade, formando os sete dons recebidos na Crisma."],
+    [11, 6, null, "\"O lobo será hóspede do cordeiro, a pantera se deitará ao pé do cabrito, o touro e o leão comerão juntos, e um menino pequeno os conduzirá.\"", "A criança de peito brincará junto à toca da serpente.", "A imagem da paz messiânica mostra a criação reconciliada no reinado do descendente de Davi."],
+    [35, 5, null, "\"Então se abrirão os olhos do cego, e se desimpedirão os ouvidos dos surdos; o coxo saltará como um cervo.\"", "O deserto e a terra árida vão florescer.", "Jesus aponta para estes sinais quando os discípulos de João Batista perguntam se ele é o Messias."],
+    [40, 3, null, "Uma voz exclama: \"Abri no deserto um caminho para o Senhor, traçai reta na estepe uma pista para nosso Deus\".", "O capítulo começa com \"Consolai, consolai o meu povo\".", "Os quatro Evangelhos aplicam este texto a João Batista, que prepara a vinda de Jesus."],
+    [40, 31, null, "\"Aqueles que contam com o Senhor renovam suas forças; ele dá-lhes asas de águia. Correm sem se cansar, vão para a frente sem se fatigar.\"", "Antes, o texto diz que até os jovens se cansam e tropeçam.", "O profeta consola os exilados: quem confia em Deus recebe forças novas."],
+    [43, 1, null, "Deus diz a seu povo: \"Nada temas, pois eu te resgato, eu te chamo pelo nome, és meu\".", "Ele promete estar junto quando o povo atravessar as águas e o fogo.", "Uma das palavras mais consoladoras do livro, dirigida aos exilados na Babilônia."],
+    [49, 15, null, "\"Pode uma mulher esquecer-se daquele que amamenta? E mesmo que ela o esquecesse, eu não te esqueceria nunca.\"", "Sião tinha dito: \"O Senhor me abandonou\".", "Deus usa a imagem do amor materno para mostrar que seu amor é ainda maior."],
+    [52, 7, null, "\"Como são belos sobre as montanhas os pés do mensageiro que anuncia a felicidade, que traz as boas-novas e diz a Sião: 'Teu Deus reina!'\"", "São Paulo cita esse versículo em Romanos ao falar dos que anunciam o Evangelho.", "O profeta anuncia a volta do exílio. A Igreja vê nele a missão de anunciar a Boa-Nova."],
+    [53, 5, null, "O Servo é castigado por nossos crimes e esmagado por nossas iniquidades; graças às suas chagas fomos curados.", "É um dos 'cânticos do Servo', lido na Sexta-feira Santa.", "A Igreja reconhece em Jesus o Servo sofredor que carrega os pecados de muitos."],
+    [53, 7, null, "\"Foi maltratado e resignou-se; não abriu a boca, como um cordeiro que se conduz ao matadouro.\"", "O eunuco etíope lia exatamente esse trecho quando Filipe o encontrou.", "O Servo sofredor é identificado com Jesus, o Cordeiro de Deus, em Atos dos Apóstolos."],
+    [55, 8, null, "\"Meus pensamentos não são os vossos, e vosso modo de agir não é o meu, diz o Senhor.\"", "Logo depois: tanto quanto o céu domina a terra.", "Deus convida o povo a voltar para ele, confiando em seus caminhos, mesmo quando não os compreende."],
+    [61, 1, null, "\"O Espírito do Senhor repousa sobre mim, porque o Senhor consagrou-me pela unção; enviou-me a levar a boa-nova aos humildes.\"", "Jesus leu esse trecho na sinagoga de Nazaré e disse: \"Hoje se cumpriu\".", "Jesus apresenta sua missão com estas palavras no início do ministério, segundo Lucas."],
+    [66, 13, null, "\"Como uma criança que a mãe consola, sereis consolados em Jerusalém.\"", "Está no último capítulo do livro.", "No fim do livro, Deus se compara a uma mãe que consola os filhos."],
+  ],
+  "Jeremias": [
+    [1, 5, null, "Deus diz ao jovem: \"Antes que no seio fosses formado, eu já te conhecia; antes de teu nascimento, eu já te havia consagrado, e te havia designado profeta das nações\".", "Ele era filho de um sacerdote de Anatot.", "A vocação de Jeremias mostra que Deus conhece e chama cada pessoa desde o seio materno."],
+    [1, 6, null, "O chamado responde: \"Ah! Senhor Javé, eu nem sei falar, pois que sou apenas uma criança\".", "Deus toca sua boca e põe nela as suas palavras.", "Jeremias resiste ao chamado, mas Deus promete estar com ele para livrá-lo."],
+    [13, 1, null, "Deus manda o profeta comprar um cinto de linho e colocá-lo nos rins, sem mergulhá-lo na água.", "Depois ele deve escondê-lo na fenda de um rochedo junto ao Eufrates.", "O cinto apodrecido é um gesto profético: assim Deus fará apodrecer o orgulho de Judá."],
+    [18, 6, null, "Diante do oleiro trabalhando no torno, Deus diz: \"O que é a argila em suas mãos, assim sois vós nas minhas, casa de Israel\".", "O profeta tinha descido à casa do oleiro e o viu refazer um vaso que saiu mal.", "A imagem do oleiro mostra o poder e a paciência de Deus, que pode refazer seu povo."],
+    [19, 10, null, "Diante dos anciãos, o profeta quebra uma bilha de barro e anuncia que assim Deus quebrará o povo e a cidade.", "Aconteceu junto à porta dos Cacos, no vale de Ben-Enom.", "Outro gesto profético de Jeremias anunciando a destruição de Jerusalém."],
+    [20, 7, null, "\"Seduzistes-me, Senhor, e eu me deixei seduzir! Dominastes-me e obtivestes o triunfo. Sou objeto de contínua irrisão.\"", "Ele tinha acabado de passar a noite preso no tronco.", "Nas 'confissões', Jeremias desabafa o peso da missão, mas diz que a palavra de Deus é um fogo que não consegue conter."],
+    [29, 11, null, "Deus diz aos deportados que conhece os desígnios que tem para eles: desígnios de prosperidade, de um futuro e de uma esperança.", "Faz parte de uma carta enviada aos exilados na Babilônia.", "Mesmo no exílio, Deus garante que tem planos de paz para o seu povo e que o fará voltar."],
+    [31, 15, null, "\"Ouve-se em Ramá uma voz, lamentos e amargos soluços. É Raquel que chora os filhos, recusando ser consolada, porque já não existem.\"", "Mateus cita esse versículo depois da matança dos inocentes por Herodes.", "O choro de Raquel pelos exilados é aplicado ao massacre das crianças de Belém."],
+    [31, 31, null, "\"Dias virão em que firmarei nova aliança com as casas de Israel e de Judá.\"", "Deus diz que escreverá a sua lei nos corações.", "A promessa da nova aliança é retomada por Jesus na Última Ceia e pela Carta aos Hebreus."],
+    [38, 6, null, "Os chefes descem o profeta com cordas numa cisterna sem água, e ele afunda na lama.", "Um eunuco etíope intercedeu junto ao rei para tirá-lo de lá.", "Jeremias é perseguido por anunciar a queda de Jerusalém, e Ebed-Melec o salva da cisterna."],
+  ],
+  "Lamentações": [
+    [1, 12, null, "\"Ó vós todos, que passais pelo caminho: olhai e julgai se existe dor igual à dor que me atormenta.\"", "Quem fala é a própria cidade destruída, personificada.", "O lamento de Jerusalém é aplicado pela liturgia da Semana Santa a Cristo e a Nossa Senhora das Dores."],
+    [3, 22, null, "Em meio às ruínas da cidade, o poeta reconhece que não foram aniquilados porque a piedade do Senhor não se esgotou.", "Os poemas do livro seguem a ordem das letras do alfabeto hebraico.", "No luto pela destruição de Jerusalém, nasce a esperança na misericórdia de Deus, que se renova a cada manhã."],
+    [3, 32, null, "\"Após haver afligido, ele tem piedade, porque é grande sua misericórdia.\"", "O mesmo poema diz que é bom esperar em silêncio a salvação do Senhor.", "O poeta reconhece que o castigo de Deus não é para sempre."],
+  ],
+  "Baruc": [
+    [3, 14, null, "O povo exilado é chamado a aprender onde se acham a prudência, a força e a inteligência.", "Faz parte de um poema que identifica a sabedoria com a Lei de Deus.", "O texto convida os exilados a reencontrar na Lei a verdadeira sabedoria, que dá vida e paz."],
+    [3, 38, null, "\"Foi então que ela apareceu sobre a terra, onde permanece entre os homens.\"", "Fala da sabedoria que Deus deu a Jacó, seu servo.", "Os Padres da Igreja leram este versículo como anúncio da Encarnação do Verbo."],
+    [5, 1, null, "\"Tira, Jerusalém, a veste de luto e de miséria; reveste, para sempre, os adornos da glória divina.\"", "É lido no segundo domingo do Advento.", "O profeta anuncia a volta dos exilados e a glória da cidade restaurada."],
+    [6, 3, null, "Os exilados são avisados de que verão na Babilônia deuses de prata, ouro e madeira, carregados aos ombros.", "É apresentado como uma carta enviada por Jeremias aos deportados.", "A Carta de Jeremias, que forma o último capítulo, ridiculariza os ídolos que não falam nem se movem."],
+  ],
+  "Ezequiel": [
+    [1, 10, null, "Os quatro seres vivos têm, cada um, face de homem, face de leão à direita, face de touro à esquerda e face de águia.", "O profeta tem a visão junto ao rio Cobar, entre os exilados.", "A tradição cristã associou esses quatro rostos aos quatro evangelistas."],
+    [3, 1, null, "Deus diz: \"Filho do homem, come o rolo que aqui está, e, em seguida, vai falar à casa de Israel\".", "O rolo era doce na boca, como o mel.", "O profeta assimila a Palavra de Deus antes de anunciá-la. O Apocalipse retoma a cena."],
+    [18, 23, null, "\"Terei eu prazer com a morte do malvado? Não desejo eu, antes, que ele mude de proceder e viva?\"", "O capítulo ensina que cada um responde pelos próprios pecados.", "Deus quer a conversão do pecador, e não a sua morte."],
+    [34, 11, null, "Deus diz: \"Vou tomar eu próprio o cuidado com minhas ovelhas, velarei sobre elas\".", "Antes, ele condenou os pastores que só cuidavam de si mesmos.", "Deus promete ser ele mesmo o pastor de Israel. Jesus se apresenta como o Bom Pastor."],
+    [36, 26, null, "Deus promete: \"Eu vos darei um coração novo… tirarei do vosso peito o coração de pedra e vos darei um coração de carne\".", "O profeta falava aos exilados, prometendo a volta à terra.", "Deus promete renovar o povo por dentro, com um espírito novo. A Igreja vê aqui um anúncio da obra do Espírito Santo."],
+    [37, 1, null, "A mão do Senhor leva o profeta em espírito a uma planície coberta de ossos inteiramente secos.", "Ele recebe a ordem de profetizar sobre os ossos, que se juntam e recebem carne.", "A visão dos ossos secos anuncia a restauração de Israel e é lida pela Igreja como figura da ressurreição."],
+    [44, 2, null, "\"Este pórtico ficará fechado. Ninguém o abrirá, ninguém aí passará, porque o Senhor, Deus de Israel, aí passou.\"", "É a porta do lado oriental do santuário.", "Os Padres da Igreja viram nesta porta fechada uma figura da virgindade perpétua de Maria."],
+    [47, 1, null, "Águas jorram de sob o limiar do templo, em direção ao oriente, e vão se tornando um rio.", "Por onde o rio passa, tudo vive, e até o mar salgado fica saudável.", "A visão das águas que saem do templo é lida como figura da graça e do Batismo, cantada no 'Vidi aquam' do tempo pascal."],
+  ],
+  "Daniel": [
+    [1, 8, null, "Um jovem exilado decide não se contaminar com os alimentos e o vinho do rei e pede para se abster deles.", "Ao fim de dez dias, ele e os companheiros estavam com melhor aparência que os outros.", "Daniel e os três amigos permanecem fiéis à Lei mesmo na corte da Babilônia."],
+    [2, 31, null, "O jovem descreve o sonho do rei: uma estátua enorme, de cabeça de ouro e pés de ferro e barro.", "Uma pedra solta da montanha, sem mão humana, a reduz a pó.", "Daniel interpreta o sonho de Nabucodonosor: os reinos humanos passarão e Deus estabelecerá um reino eterno."],
+    [3, 24, null, "Os três jovens passeiam dentro das chamas, louvando a Deus e bendizendo o Senhor.", "O rei tinha mandado aquecer a fornalha sete vezes mais que o normal.", "Esse trecho grego, que inclui a oração de Azarias e o cântico, faz parte da Bíblia católica."],
+    [3, 57, null, "\"Obras do Senhor, bendizei todas o Senhor, louvai-o e exaltai-o eternamente!\"", "O cântico é rezado nas Laudes dos domingos e festas.", "É o Cântico dos três jovens na fornalha, que convida toda a criação a louvar a Deus."],
+    [3, 92, null, "O rei se espanta: \"Eu vejo quatro homens soltos, que passeiam impunemente no meio do fogo; o quarto tem a aparência de um filho dos deuses\".", "Só três jovens tinham sido amarrados e lançados ao fogo.", "Ananias, Azarias e Misael saem ilesos da fornalha, e Nabucodonosor bendiz o Deus deles."],
+    [5, 25, null, "A inscrição na parede diz: \"MENÊ, Tequêl e PERÊS\".", "O rei bebia nos vasos sagrados tirados do Templo de Jerusalém.", "No banquete de Baltazar, a mão misteriosa anuncia o fim de seu reino, que cai naquela mesma noite."],
+    [6, 17, null, "O rei manda jogar o jovem na cova dos leões e lhe diz: \"Que o Deus que tu adoras com tanta fidelidade queira ele mesmo salvar-te!\".", "Ele continuou rezando três vezes ao dia, voltado para Jerusalém, apesar da proibição.", "Os ministros invejosos armam uma cilada contra Daniel, e o rei Dario é obrigado a cumprir o próprio decreto."],
+    [6, 23, null, "De dentro da cova, o profeta diz ao rei que Deus enviou seu anjo e fechou a boca dos leões.", "Ele foi condenado por continuar rezando três vezes ao dia voltado para Jerusalém.", "A fidelidade na oração é recompensada, e o próprio rei passa a louvar o Deus de Israel."],
+    [7, 13, null, "Na visão noturna, um ser semelhante ao filho do homem vem sobre as nuvens do céu e é conduzido até o Ancião.", "Ele recebe um império eterno que nunca será destruído.", "Jesus usa o título 'Filho do Homem' para si mesmo e cita esta visão diante do Sinédrio."],
+    [9, 24, null, "\"Setenta semanas foram fixadas a teu povo e à tua cidade santa para dar fim à prevaricação e instaurar uma justiça eterna.\"", "Quem traz a revelação é o anjo Gabriel.", "A profecia das setenta semanas foi lida pela tradição cristã como anúncio do tempo do Messias."],
+    [12, 2, null, "\"Muitos daqueles que dormem no pó da terra despertarão, uns para uma vida eterna, outros para a ignomínia eterna.\"", "Fala do tempo em que o arcanjo Miguel se levantará.", "É um dos textos mais claros do Antigo Testamento sobre a ressurreição dos mortos e o juízo."],
+    [13, 2, null, "Um homem rico da Babilônia, chamado Joaquim, tinha se casado com uma mulher de grande beleza e piedosa, filha de Helcias.", "Dois anciãos juízes se apaixonaram por ela ao vê-la no jardim.", "Começa a história de Suzana, a mulher casta falsamente acusada, que faz parte da Bíblia católica."],
+    [13, 45, null, "Quando a mulher condenada é levada à morte, o Senhor suscita o espírito íntegro de um adolescente.", "Ele interroga os acusadores separados, e um fala de um lentisco e o outro de um carvalho.", "O jovem Daniel desmascara os anciãos mentirosos e salva Suzana."],
+    [14, 5, null, "O rei pergunta por que o judeu não adora Bel, e ele responde que só venera o Deus vivo que criou o céu e a terra.", "Ele espalhou cinza no chão do templo e descobriu as pegadas dos sacerdotes.", "Na história de Bel e o dragão, Daniel prova que o ídolo não come nada, ridicularizando a idolatria."],
+  ],
+  "Oséias": [
+    [1, 3, null, "Por ordem de Deus, o profeta se casa com Gomer, filha de Deblaim, que concebe e lhe dá um filho.", "Deus tinha mandado tomar uma mulher de prostituição.", "O casamento do profeta com uma mulher infiel simboliza a infidelidade de Israel ao seu Deus."],
+    [2, 16, null, "Deus diz da esposa infiel: \"Eu a atrairei, a conduzirei ao deserto e lhe falarei ao coração\".", "Ela tinha corrido atrás de outros amantes.", "Deus promete reconquistar seu povo com ternura, como um esposo que perdoa."],
+    [6, 3, null, "\"Apliquemo-nos a conhecer o Senhor; sua vinda é certa como a da aurora.\"", "O profeta compara a vinda de Deus à chuva da primavera que irriga a terra.", "O povo é chamado a voltar a Deus com sinceridade, e não com uma devoção passageira."],
+    [6, 6, null, "\"Eu quero o amor mais que os sacrifícios, e o conhecimento de Deus mais que os holocaustos.\"", "Jesus citou duas vezes esse versículo aos fariseus.", "O profeta mostra que Deus quer o coração, e não só o culto exterior. Jesus o cita em Mateus."],
+    [11, 1, null, "\"Israel era ainda criança, e já eu o amava, e do Egito chamei meu filho.\"", "Mateus aplica o versículo à volta da Sagrada Família do Egito.", "Deus fala de seu amor paterno por Israel desde o Êxodo."],
+  ],
+  "Joel": [
+    [2, 13, null, "\"Rasgai vossos corações e não vossas vestes; voltai ao Senhor, vosso Deus, porque ele é bom e compassivo.\"", "É lido na Quarta-feira de Cinzas.", "O profeta convoca o povo a uma conversão interior, por causa de uma praga de gafanhotos."],
+    [3, 1, null, "Deus promete: \"Derramarei o meu Espírito sobre todo ser vivo: vossos filhos e vossas filhas profetizarão\".", "Pedro citará esta profecia no dia de Pentecostes.", "A promessa se cumpre em Pentecostes, quando o Espírito Santo é derramado sobre os discípulos."],
+  ],
+  "Amós": [
+    [5, 24, null, "\"Que jorre a equidade como uma fonte e a justiça como torrente que não seca.\"", "Logo antes, Deus diz que rejeita as festas e os sacrifícios do povo.", "O profeta denuncia um culto que convive com a injustiça social: Deus quer justiça na vida, não só ritos."],
+    [7, 14, null, "O profeta responde ao sacerdote de Betel: \"Eu não sou profeta nem filho de profeta. Sou pastor e cultivador de sicômoros\".", "O sacerdote Amasias o mandou voltar para Judá.", "Amós mostra que foi chamado por Deus, e não por profissão, para profetizar contra Israel."],
+    [8, 11, null, "\"Virão dias em que enviarei fome sobre a terra, não uma fome de pão, nem uma sede de água, mas de ouvir a palavra do Senhor.\"", "Antes, o profeta denuncia os que vendem o pobre por um par de sandálias.", "O pior castigo anunciado é a falta da Palavra de Deus."],
+  ],
+  "Obadias": [
+    [1, 4, null, "\"Ainda que tivesses colocado o teu ninho tão alto como a águia, ou entre os astros, eu te precipitaria dali.\"", "Fala contra um povo que morava nas fendas das rochas.", "O menor livro do Antigo Testamento anuncia a queda do orgulhoso Edom."],
+    [1, 15, null, "\"O dia do Senhor está próximo para todas as nações: como tiveres feito, assim se fará contigo.\"", "O livro tem um só capítulo e fala contra o povo de Edom.", "Edom é condenado por se alegrar com a queda de Jerusalém; o dia do Senhor trará justiça a todos."],
+  ],
+  "Jonas": [
+    [1, 3, null, "O profeta, mandado a Nínive, desce a Jope e embarca num navio para Társis, para fugir do Senhor.", "Társis ficava no lado oposto ao que Deus tinha mandado.", "O profeta tenta fugir da missão de pregar aos inimigos de Israel."],
+    [1, 7, null, "Na tempestade, os marinheiros tiram a sorte para saber quem é a causa do mal, e a sorte cai sobre o profeta.", "Ele estava dormindo no porão do navio.", "O próprio Jonas pede para ser lançado ao mar, e a tempestade se acalma."],
+    [2, 1, null, "O Senhor faz surgir um grande peixe para engolir o profeta, que fica três dias e três noites no ventre do animal.", "Ele tinha sido lançado ao mar pelos marinheiros.", "Jesus cita o 'sinal de Jonas' como figura de sua morte e ressurreição ao terceiro dia."],
+    [2, 2, null, "Do fundo das entranhas de um peixe, um profeta faz uma prece ao Senhor.", "Ele estava ali porque tentou fugir da missão que recebeu.", "Jesus cita esse episódio: assim como o profeta ficou três dias no peixe, o Filho do Homem ficaria três dias no seio da terra."],
+    [3, 5, null, "Os habitantes da grande cidade creem na mensagem de Deus, proclamam um jejum e se vestem de saco, do maior ao menor.", "O profeta tinha anunciado: \"Daqui a quarenta dias a cidade será destruída\".", "A conversão de Nínive mostra que a misericórdia de Deus alcança também os pagãos."],
+    [4, 6, null, "Deus faz crescer um pé de mamona acima do profeta para lhe dar sombra, e ele se alegra muito.", "No dia seguinte, um verme fez a planta secar.", "Com a planta, Deus ensina ao profeta irritado que tem compaixão de todos, até dos ninivitas."],
+  ],
+  "Miqueias": [
+    [5, 1, null, "\"Mas tu, Belém de Éfrata, tão pequena entre os clãs de Judá, é de ti que sairá aquele que é chamado a governar Israel.\"", "Os sacerdotes citaram essa profecia a Herodes quando os magos chegaram.", "A profecia do nascimento do Messias em Belém é citada por Mateus."],
+    [6, 8, null, "\"O que o Senhor reclama de ti: que pratiques a justiça, que ames a bondade e que andes com humildade diante do teu Deus.\"", "O povo perguntava que sacrifício deveria oferecer para agradar a Deus.", "O profeta resume a fé verdadeira: mais que ofertas, Deus quer justiça, bondade e humildade."],
+    [7, 18, null, "\"Qual é o Deus que, como vós, apaga a iniquidade e perdoa o pecado do resto de seu povo, porque prefere a misericórdia?\"", "Logo depois, Deus promete lançar ao fundo do mar todos os pecados.", "O livro termina exaltando a misericórdia de Deus, que perdoa."],
+  ],
+  "Naum": [
+    [1, 7, null, "\"O Senhor é bom, é um refúgio na tribulação; conhece os que nele confiam.\"", "O livro anuncia a queda de Nínive.", "Em meio ao anúncio do juízo sobre a Assíria, o profeta lembra que Deus protege quem se refugia nele."],
+    [2, 1, null, "\"Eis que vem sobre as montanhas um mensageiro de boa-nova, alguém que anuncia a felicidade. Celebra as tuas festas, ó Judá!\"", "Isaías usa uma imagem muito parecida.", "Judá recebe a notícia de que o opressor assírio não passará mais por suas terras."],
+    [3, 1, null, "\"Ai da cidade sanguinária, cheia de fraude e de violência, e que não põe termo à sua rapinagem!\"", "É a capital da Assíria.", "O profeta descreve a queda de Nínive, que aconteceu em 612 a.C."],
+  ],
+  "Habacuque": [
+    [1, 2, null, "\"Até quando, Senhor, implorarei sem que escuteis? Até quando vos clamarei: 'Violência!', sem que venhais em socorro?\"", "Deus responde que está suscitando os caldeus.", "O profeta questiona Deus sobre o mal no mundo, num diálogo sincero com o Senhor."],
+    [2, 4, null, "\"O justo vive por sua fidelidade.\"", "O profeta tinha perguntado a Deus até quando os maus prevaleceriam.", "Paulo retomará este versículo para falar da justificação pela fé."],
+    [3, 17, null, "\"A figueira não brotará, nulo será o produto das vinhas, faltará o fruto da oliveira, e os campos não darão de comer.\"", "Logo depois: \"Eu, porém, me alegrarei no Senhor\".", "O cântico final expressa a fé que se alegra em Deus mesmo na falta de tudo."],
+  ],
+  "Sofonias": [
+    [1, 15, null, "\"Esse dia será um dia de ira, dia de angústia e de aflição, dia de ruína e de devastação, dia de trevas e escuridão.\"", "Um famoso hino latino dos defuntos começa com essas palavras: Dies irae.", "O profeta anuncia o terrível 'dia do Senhor', que inspirou a sequência Dies irae."],
+    [3, 14, null, "\"Solta gritos de alegria, filha de Sião! Alegra-te e rejubila-te de todo o teu coração, filha de Jerusalém!\"", "A saudação do anjo Gabriel a Maria ecoa este convite.", "Depois do juízo, o profeta convida Jerusalém à alegria, porque o Senhor está no meio dela."],
+    [3, 17, null, "O Senhor está no meio do seu povo como herói salvador e exulta de alegria por causa dele.", "Antes, o livro anunciava o terrível 'dia do Senhor'.", "Depois do juízo, o profeta anuncia um Deus que se alegra com o seu povo restaurado."],
+  ],
+  "Ageu": [
+    [1, 4, null, "\"É então o momento de habitardes em casas confortáveis, estando esta casa em ruínas?\"", "O povo tinha voltado do exílio, mas deixado a obra do Templo parada.", "O profeta repreende os repatriados por cuidarem só de si e os anima a reconstruir o Templo."],
+    [2, 9, null, "\"O esplendor desta casa sobrepujará o da primeira.\"", "Os que voltaram do exílio achavam o novo Templo pobre perto do antigo.", "O profeta anima os construtores: a glória de Deus no novo Templo será maior que a do primeiro."],
+  ],
+  "Zacarias": [
+    [4, 6, null, "\"Não pelo poder, nem pela violência, mas sim pelo meu Espírito é que ele cumprirá a sua missão.\"", "O oráculo é dirigido a Zorobabel, que reconstruía o Templo.", "Deus lembra que a obra da reconstrução depende de seu Espírito, e não da força humana."],
+    [9, 9, null, "\"Eis que vem a ti o teu rei, justo e vitorioso; ele é simples e vem montado num jumento.\"", "Os Evangelhos citam este oráculo na entrada de Jesus em Jerusalém.", "O Messias anunciado não vem como conquistador, mas como rei humilde e pacífico."],
+    [11, 12, null, "O pastor pede o seu salário, e lhe pagam apenas trinta moedas de prata.", "Ele lança o dinheiro no tesouro da casa do Senhor.", "Mateus vê nesta profecia o preço da traição de Judas e o campo comprado com o dinheiro."],
+    [12, 10, null, "\"Eles voltarão os seus olhos para mim. Farão lamentações sobre aquele que traspassaram, como se fosse um filho único.\"", "João cita esse versículo depois que a lança abriu o lado de Jesus.", "A profecia é aplicada ao Cristo crucificado e ao olhar de fé dirigido a ele."],
+    [13, 7, null, "\"Fere o pastor, que as ovelhas sejam dispersas.\"", "Jesus citou essas palavras no caminho do monte das Oliveiras.", "Jesus aplica o versículo à fuga dos discípulos na noite de sua prisão."],
+  ],
+  "Malaquias": [
+    [1, 11, null, "\"Do nascente ao poente, meu nome é grande entre as nações, e em todo lugar se oferecem ao meu nome o incenso, sacrifícios e oblações puras.\"", "Antes, Deus repreende os sacerdotes que ofereciam animais defeituosos.", "A Igreja vê aqui o anúncio do sacrifício da Missa, oferecido em toda a terra, citado na Oração Eucarística III."],
+    [3, 1, null, "\"Vou mandar o meu mensageiro para preparar o meu caminho. E imediatamente virá ao seu Templo o Senhor que buscais.\"", "Jesus aplicou essas palavras a João Batista.", "A profecia é lida na festa da Apresentação do Senhor no Templo."],
+    [3, 10, null, "Deus desafia o povo a pagar integralmente os dízimos ao tesouro do templo: \"Fazei a experiência e vereis\".", "É o último livro profético do Antigo Testamento.", "O profeta repreende o descaso com o culto e convida a confiar na generosidade de Deus."],
+    [3, 20, null, "\"Sobre vós que temeis o meu nome se levantará o sol de justiça que traz a salvação em seus raios.\"", "Os que forem salvos sairão saltando como bezerros ao saírem do estábulo.", "A tradição cristã chama Cristo de 'Sol da justiça', título muito usado na liturgia do Natal."],
+    [3, 23, null, "\"Vou mandar-vos o profeta Elias, antes que venha o grande e temível dia do Senhor.\"", "É praticamente o último versículo do Antigo Testamento na ordem das Bíblias.", "Jesus explica que Elias já veio na pessoa de João Batista."],
+  ],
+};

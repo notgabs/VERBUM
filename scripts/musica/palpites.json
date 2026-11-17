@@ -1,0 +1,726 @@
+[
+ {
+  "titulo": "Pai Nosso",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Noites Traiçoeiras",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Maria Passa à Frente",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "A Casa é Sua",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Nossa Senhora",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Força e Vitória",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Ninguém Te Ama Como Eu / Basta Querer / Não Dá Mais pra Voltar Ao Vivo",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Anjos De Deus",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Basta Querer",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Oração de São Francisco Bonus Track",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Eu Te Levantarei",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Tudo é do Pai",
+  "artista": "Padre Marcelo Rossi"
+ },
+ {
+  "titulo": "Como És Lindo",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Confia em Mim",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Diante do Rei",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Perfeito É Quem Te Criou",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Gratidão",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Deus Imenso",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Incendeia Minha Alma",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Vida que Reluz",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Vinde Espírito Santo",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Celebra a Vitória",
+  "artista": "Vida Reluz"
+ },
+ {
+  "titulo": "Eis-Me Aqui",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Queima de Novo",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Jesus Meu Esposo",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Casa",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Mística Sublime",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Cheiro de Rosas",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Acaso Não Sabeis",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Desperta",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Yeshua",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Ave Maria",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Amor Incomparável",
+  "artista": "Colo de Deus"
+ },
+ {
+  "titulo": "Nas Asas do Senhor",
+  "artista": "Padre Fábio de Melo"
+ },
+ {
+  "titulo": "Tudo Posso",
+  "artista": "Padre Fábio de Melo"
+ },
+ {
+  "titulo": "Viver Pra Mim é Cristo",
+  "artista": "Padre Fábio de Melo"
+ },
+ {
+  "titulo": "Em Tua Presença",
+  "artista": "Padre Fábio de Melo"
+ },
+ {
+  "titulo": "Tantum Ergo",
+  "artista": "Padre Fábio de Melo"
+ },
+ {
+  "titulo": "Humano Amor de Deus",
+  "artista": "Padre Fábio de Melo"
+ },
+ {
+  "titulo": "Te Desejo Vida",
+  "artista": "Padre Fábio de Melo"
+ },
+ {
+  "titulo": "Vida",
+  "artista": "Padre Fábio de Melo"
+ },
+ {
+  "titulo": "Verbum Panis",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Pão e Vinho",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Entre Nós",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Vamos Celebrar",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Eu Quero Me Apaixonar",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Glória a Deus nas Alturas",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "A Procura",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Quero Confessar (Kyrie)",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Fonte do Viver",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Recebe Adoração",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Amor e Adoração ( Vamos celebrar / Quero confessar (Kyrie) / Luz para meu caminho / Pão e Vinho / Verbum panis / Entre nós / Jesus",
+  "artista": "Ministério Amor e Adoração"
+ },
+ {
+  "titulo": "Sou um Milagre",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Saudade de Ti",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Estás Entre Nós",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Chuva de Graça",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Consagrado para Amar",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Estás Entre Nós (Tu És Minha Vida)",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Regaço Acolhedor",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Força e Vitória ao vivo",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Conheço um Coração",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Barco a Vela",
+  "artista": "Eliana Ribeiro"
+ },
+ {
+  "titulo": "Abraço de Pai",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Em Teu Altar",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Imagem e Semelhança",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "O Cântico de Maria",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Foi Assim",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Bem-Aventurados os Misericordiosos (Hino Oficial da JMJ Cracóvia 2016)",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Ofertório JMJ",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Onde Está o Teu Irmão?",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Estar Contigo",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Quando Uniam-se os Músicos",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Medley de Louvor e Adoração: Eu Te Louvarei / Te Adorar",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Deus É Bom e Fiel",
+  "artista": "Walmir Alencar"
+ },
+ {
+  "titulo": "Estou Aqui",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Tua Família",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Amigos Pela Fé/Mais que Amigos",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Foi por Você",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Anjos de Resgate",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Amigos pela Fé",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Pão dos Anjos",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Maria e o Anjo",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Pra Te Adorar",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Sou Teu Anjo",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Eternos Amigos",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Oração Pela Família",
+  "artista": "Anjos de Resgate"
+ },
+ {
+  "titulo": "Eu Te Levantarei (Remix)",
+  "artista": "Frei Gilson"
+ },
+ {
+  "titulo": "Kyrie Eleison",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "O Elevador",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Belíssimo Esposo",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Fogo Abrasador",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Amor Divino",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Estar em Tuas Mãos",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Nosso Rei Ressuscitou",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Eu Serei o Amor",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Nosso Sacrifício de Louvor",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Todo Tempo do Mundo",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "O Meu Coração É Teu",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Busco a Ti Meu Deus",
+  "artista": "Comunidade Católica Shalom"
+ },
+ {
+  "titulo": "Realiza um Milagre em Mim",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "A barca (Pescador de hombres)",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Quero e Preciso",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Restauração",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Como Não Falar do Seu Amor",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Eu Te Chamo Jesus",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Lugar do Coração",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Receba a Força",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Partiu Tô Indo Acampar",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Vem Amigo",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Ei Amigo",
+  "artista": "Dunga"
+ },
+ {
+  "titulo": "Pelos Prados e Campinas Salmo 22",
+  "artista": "Padre Zezinho"
+ },
+ {
+  "titulo": "Um certo Galileu Ao Vivo",
+  "artista": "Padre Zezinho"
+ },
+ {
+  "titulo": "Música Pegadas na Areia",
+  "artista": "Padre Zezinho"
+ },
+ {
+  "titulo": "El Rocío de la Mañana",
+  "artista": "Padre Zezinho"
+ },
+ {
+  "titulo": "Totus Tuus",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "Sanctus",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "O Que Agrada a Deus",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "Alma Missionária",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "Fogo Suave",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "Arvoreando",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "Viver pra Acreditar",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "Prisioneiro do Amor",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "Nada Te Perturbe",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "Meu Jeito de Arrumar",
+  "artista": "Ziza Fernandes"
+ },
+ {
+  "titulo": "Hoje Livre Sou",
+  "artista": "Ministério Adoração e Vida"
+ },
+ {
+  "titulo": "O Céu Se Abre",
+  "artista": "Ministério Adoração e Vida"
+ },
+ {
+  "titulo": "Medley Halleluya: Por Isso Eu Te Louvo / Bom e Agradavel / Deus É Bom e Fiel",
+  "artista": "Ministério Adoração e Vida"
+ },
+ {
+  "titulo": "Shekinah",
+  "artista": "Ministério Adoração e Vida"
+ },
+ {
+  "titulo": "Ele Vive e Reinará",
+  "artista": "Ministério Adoração e Vida"
+ },
+ {
+  "titulo": "Brilhará",
+  "artista": "Ministério Adoração e Vida"
+ },
+ {
+  "titulo": "Espírito Santo Repousa",
+  "artista": "Celina Borges"
+ },
+ {
+  "titulo": "Melhor e Mais Feliz",
+  "artista": "Celina Borges"
+ },
+ {
+  "titulo": "Derrama o Teu Amor Aqui",
+  "artista": "Celina Borges"
+ },
+ {
+  "titulo": "Fica Senhor Comigo",
+  "artista": "Celina Borges"
+ },
+ {
+  "titulo": "Eu Quero Ser de Deus",
+  "artista": "Celina Borges"
+ },
+ {
+  "titulo": "Busque o Alto",
+  "artista": "Celina Borges"
+ },
+ {
+  "titulo": "Quem É Você",
+  "artista": "Celina Borges"
+ },
+ {
+  "titulo": "Tesouro singelo",
+  "artista": "Celina Borges"
+ },
+ {
+  "titulo": "Seu Amor É Demais",
+  "artista": "Banda DOM"
+ },
+ {
+  "titulo": "Aos Pés da Tua Cruz",
+  "artista": "Banda DOM"
+ },
+ {
+  "titulo": "Fiat (Faça-Se)",
+  "artista": "Banda DOM"
+ },
+ {
+  "titulo": "O Amor Vai Falar",
+  "artista": "Banda DOM"
+ },
+ {
+  "titulo": "Tu És o Centro",
+  "artista": "Banda DOM"
+ },
+ {
+  "titulo": "Aos Pés de Tua Cruz",
+  "artista": "Banda DOM"
+ },
+ {
+  "titulo": "Eu Sou O que Sou",
+  "artista": "Banda DOM"
+ },
+ {
+  "titulo": "Canção de Pedro",
+  "artista": "Banda DOM"
+ },
+ {
+  "titulo": "Deus É Dez",
+  "artista": "Banda DOM"
+ },
+ {
+  "titulo": "Eu Navegarei",
+  "artista": "Padre Reginaldo Manzotti"
+ },
+ {
+  "titulo": "Ninguém Te Ama Como Eu",
+  "artista": "Padre Reginaldo Manzotti"
+ },
+ {
+  "titulo": "A Tempestade Vai Passar",
+  "artista": "Padre Reginaldo Manzotti"
+ },
+ {
+  "titulo": "Podes Reinar",
+  "artista": "Padre Reginaldo Manzotti"
+ },
+ {
+  "titulo": "Ninguém Te Ama Como Eu (Mensagem Entrega)",
+  "artista": "Padre Reginaldo Manzotti"
+ },
+ {
+  "titulo": "Faça Um Milagre",
+  "artista": "Padre Reginaldo Manzotti"
+ },
+ {
+  "titulo": "Cura, Senhor",
+  "artista": "Padre Reginaldo Manzotti"
+ },
+ {
+  "titulo": "Consagração a Nossa Senhora",
+  "artista": "Irmã Kelly Patrícia"
+ },
+ {
+  "titulo": "Faz do Meu Nada Amor",
+  "artista": "Irmã Kelly Patrícia"
+ },
+ {
+  "titulo": "Generalíssima",
+  "artista": "Irmã Kelly Patrícia"
+ },
+ {
+  "titulo": "Passarinho",
+  "artista": "Irmã Kelly Patrícia"
+ },
+ {
+  "titulo": "Augusta Rainha",
+  "artista": "Irmã Kelly Patrícia"
+ },
+ {
+  "titulo": "Ladainha de Nossa Senhora Cantada",
+  "artista": "Irmã Kelly Patrícia"
+ },
+ {
+  "titulo": "São Miguel",
+  "artista": "Irmã Kelly Patrícia"
+ },
+ {
+  "titulo": "A Treze de Maio",
+  "artista": "Irmã Kelly Patrícia"
+ },
+ {
+  "titulo": "Divino Esposo",
+  "artista": "Irmã Kelly Patrícia"
+ },
+ {
+  "titulo": "Amar-Te Mais",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Por Que Temer?",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Sacramento da Comunhão",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Noite Feliz",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Segura a Minha Mão",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Milagre de Amor",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Tomé",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Com Tua Mão",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Quem É Esta Que Avança Como Aurora",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Tão Dentro em Mim",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Cheios de Fervor",
+  "artista": "Davidson Silva"
+ },
+ {
+  "titulo": "Jesus",
+  "artista": "Missionário Shalom "
+ },
+ {
+  "titulo": "Suficiente para Mim",
+  "artista": "Missionário Shalom "
+ },
+ {
+  "titulo": "A Tua Ternura",
+  "artista": "Missionário Shalom "
+ },
+ {
+  "titulo": "O Teu Amor Me Sustentará",
+  "artista": "Missionário Shalom "
+ },
+ {
+  "titulo": "Quero Ouvir Tua Voz",
+  "artista": "Missionário Shalom "
+ },
+ {
+  "titulo": "Meu Pai",
+  "artista": "Missionário Shalom "
+ },
+ {
+  "titulo": "Todo Teu, Ó Mãe",
+  "artista": "Missionário Shalom "
+ }
+]

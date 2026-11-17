@@ -1,364 +1,341 @@
 "use client";
 
-import React, { useState, useMemo, useRef } from "react";
-import { QuemSouEu } from "@/types/game";
+import React, { useState, useMemo, useRef, useEffect, Suspense } from "react";
 import { compareQuemSouEu } from "@/game/quemSouEuLogic";
 import { useGameStats } from "@/hooks/useGameStats";
-import {
-  playClickSound,
-  playVictorySound,
-  playWrongSound,
-} from "@/utils/sound";
+import { playClickSound, playRevealSound, playVictorySound, playWrongSound } from "@/utils/sound";
 import { VictoryModal } from "@/components/VictoryModal";
+import { CharacterPhoto } from "@/components/CharacterPhoto";
 import { normalizeForSearch } from "@/utils/text";
-import { selectRandomId } from "@/domain/game/dailyChallenge";
+import { selectDailyId, getLocalDayKey } from "@/domain/game/dailyChallenge";
+import { QUEM_SOU_EU_DAILY_STORAGE_KEY } from "@/domain/game/storageKeys";
 import { useQuemSouEuCatalog } from "@/hooks/useQuemSouEuCatalog";
 import { useTimeoutRegistry } from "@/hooks/useTimeoutRegistry";
 import { CatalogState } from "@/components/CatalogState";
-import { ModalBase } from "@/components/ModalBase";
-import { motion, useReducedMotion } from "motion/react";
-import { GAME_CONFIG } from "@/config/game";
+import { FitText } from "@/components/FitText";
+import { NextChallengeCountdown } from "@/components/NextChallengeCountdown";
+import { SearchCombobox } from "@/components/ui/SearchCombobox";
+import { Button } from "@/components/ui/Button";
+import { CheckIcon } from "@/components/ui/Icons";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import type { QuemSouEu } from "@/types/game";
 
-export const QuemSouEuGame: React.FC = () => {
-  const shouldReduceMotion = useReducedMotion();
+const TOTAL_PISTAS = 6;
+/** Com as 6 pistas abertas (após 5 erros) sobra só mais 1 tentativa: 6 palpites no total. */
+const MAX_GUESSES = TOTAL_PISTAS;
+/** Duração da virada de cada carta (mais lenta, para dar tempo de acompanhar). */
+const FLIP_SECONDS = 1.2;
+/** Intervalo entre as cartas que se abrem em sequência quando o jogador acerta. */
+const WIN_CASCADE_SECONDS = 0.45;
+
+const TIPO_LABEL: Record<string, string> = { Santo: "Santo", Papa: "Papa", Clero: "Clero", Outro: "Outro" };
+
+/**
+ * As pistas vêm do catálogo como [Pista 1 ... Pista 6]: a 1 entrega a resposta e a 6 é a mais difícil.
+ * O jogo abre a Pista 6 e, a cada erro, revela a próxima número abaixo, até a Pista 1.
+ */
+const pistaNumber = (revealOrder: number) => TOTAL_PISTAS - revealOrder; // ordem 0 -> Pista 6
+const pistaText = (person: QuemSouEu | null, numero: number) => person?.dicas[numero - 1] ?? "";
+
+const QuemSouEuGameInner: React.FC = () => {
+
+  const reduce = useReducedMotion();
   const [query, setQuery] = useState("");
+  /** Palpites, do mais recente ao mais antigo, guardados pelo id da figura. */
   const [guesses, setGuesses] = useState<string[]>([]);
   const [isWon, setIsWon] = useState(false);
   const [isVictoryModalOpen, setIsVictoryModalOpen] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(false);
-  const [activeOptionIndex, setActiveOptionIndex] = useState(-1);
-  const [showIntro, setShowIntro] = useState(true);
-  const [hasStarted, setHasStarted] = useState(false);
-
-  const handleStartGame = () => {
-    playClickSound();
-    setShowIntro(false);
-    schedule(() => setHasStarted(true), 350);
-  };
 
   const { recordGameResult } = useGameStats();
   const inputRef = useRef<HTMLInputElement | null>(null);
   const { schedule } = useTimeoutRegistry();
   const { data: catalog, isLoading, error, retry } = useQuemSouEuCatalog();
+  const byId = useMemo(() => new Map(catalog.map((c) => [c.id, c])), [catalog]);
 
   const targetPerson = useMemo(() => {
     if (catalog.length === 0) return null;
-    const configuredId = GAME_CONFIG.developmentMode ? undefined : undefined;
-    const targetId = configuredId ?? selectRandomId(catalog.map((c) => c.id));
+    const ids = catalog.map((c) => c.id);
+    const targetId = selectDailyId(ids);
     return catalog.find((c) => c.id === targetId) ?? catalog[0];
   }, [catalog]);
 
-  const visibleHintsCount = Math.min(6, guesses.length + 1);
+  // Restaura o progresso do desafio diário
+  useEffect(() => {
+    if (!targetPerson || byId.size === 0) return;
+    try {
+      const saved = JSON.parse(localStorage.getItem(QUEM_SOU_EU_DAILY_STORAGE_KEY) ?? "null");
+      if (saved?.date !== getLocalDayKey() || saved.targetId !== targetPerson.id || !Array.isArray(saved.guesses)) return;
+      const loaded = (saved.guesses as unknown[])
+        .filter((g): g is string => typeof g === "string" && byId.has(g))
+        .reverse();
+      if (loaded.length === 0) return;
+      // Aplica no próximo quadro para não encadear renderizações dentro do efeito
+      const frame = requestAnimationFrame(() => {
+        setGuesses((current) => (current.length === 0 ? loaded : current));
+        if (loaded[0] === targetPerson.id) {
+          setIsWon(true);
+          setIsVictoryModalOpen(true);
+        }
+      });
+      return () => cancelAnimationFrame(frame);
+    } catch { /* estado salvo inválido: ignora */ }
+  }, [targetPerson, byId]);
 
-  const handleSelect = (selectedName: string) => {
-    if (!targetPerson || isWon) return;
+  // Salva o progresso do desafio diário
+  useEffect(() => {
+    if (!targetPerson || guesses.length === 0) return;
+    try {
+      localStorage.setItem(QUEM_SOU_EU_DAILY_STORAGE_KEY, JSON.stringify({
+        date: getLocalDayKey(),
+        targetId: targetPerson.id,
+        guesses: [...guesses].reverse(),
+      }));
+    } catch { /* armazenamento indisponível: segue sem salvar */ }
+  }, [guesses, targetPerson]);
 
-    const normSelected = normalizeForSearch(selectedName);
-    const alreadyGuessed = guesses.some((g) => normalizeForSearch(g) === normSelected);
-    
-    if (alreadyGuessed) {
-      setQuery("");
-      setActiveDropdown(false);
-      setIsShaking(true);
-      schedule(() => setIsShaking(false), 400);
-      return;
-    }
+  /** Quantas pistas o jogador já viu (começa com 1: a Pista 6). Ao acertar, todas se abrem. */
+  const wrongGuesses = isWon ? guesses.slice(1) : guesses;
+  const isLost = !isWon && guesses.length >= MAX_GUESSES;
+  const attemptsLeft = Math.max(0, MAX_GUESSES - guesses.length);
+  const seenCount = Math.min(TOTAL_PISTAS, wrongGuesses.length + 1);
+  const revealedCount = isWon ? TOTAL_PISTAS : seenCount;
+  const currentPista = pistaNumber(seenCount - 1);
 
-    const { isCorrect } = compareQuemSouEu(selectedName, targetPerson);
-    const updatedGuesses = [selectedName, ...guesses];
-    
+  const shake = () => { setIsShaking(true); schedule(() => setIsShaking(false), 400); };
+
+  const handleSelect = (selected: QuemSouEu) => {
+    if (!targetPerson || isWon || isLost) return;
+    if (guesses.includes(selected.id)) { setQuery(""); shake(); return; }
+
+    const { isCorrect } = compareQuemSouEu(selected.nome, targetPerson);
+    const updatedGuesses = [selected.id, ...guesses];
     setGuesses(updatedGuesses);
     setQuery("");
-    setActiveDropdown(false);
 
     if (isCorrect) {
       setIsWon(true);
       playVictorySound();
-      void import("canvas-confetti").then(({ default: confetti }) => 
-        confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 }, colors: ["#ffd700", "#4ec25f", "#ffffff"] })
-      );
-      
-      const hintsUsed = Math.min(6, guesses.length + 1);
-      recordGameResult(true, updatedGuesses.length, hintsUsed);
-      schedule(() => setIsVictoryModalOpen(true), 1500);
+      recordGameResult(true, updatedGuesses.length, seenCount);
+      // A tela de vitória sobe na hora; as pistas restantes se abrem por trás e ficam visíveis ao fechá-la
+      setIsVictoryModalOpen(true);
     } else {
       playWrongSound();
-      setIsShaking(true);
-      schedule(() => setIsShaking(false), 400);
+      if (updatedGuesses.length < MAX_GUESSES) schedule(() => playRevealSound(), 250);
+      // Esgotou a última tentativa: derrota
+      else recordGameResult(false, updatedGuesses.length, TOTAL_PISTAS);
+      shake();
     }
   };
 
   const filteredOptions = useMemo(() => {
-    if (!query.trim()) return catalog;
     const normQuery = normalizeForSearch(query.trim());
     return catalog.filter(
       (c) =>
-        c.aliases.some(a => normalizeForSearch(a).includes(normQuery)) &&
-        !guesses.some((g) => normalizeForSearch(g) === normalizeForSearch(c.nome))
+        (!normQuery ||
+          normalizeForSearch(c.nome).includes(normQuery) ||
+          c.aliases.some((a) => normalizeForSearch(a).includes(normQuery))) &&
+        !guesses.includes(c.id)
     );
   }, [catalog, guesses, query]);
 
-  const replay = () => {
-    if (!GAME_CONFIG.allowReplay) return;
-    setGuesses([]); 
-    setIsWon(false); 
-    setIsVictoryModalOpen(false); 
-    inputRef.current?.focus();
-  };
-
   if (isLoading || error) return <CatalogState error={error ? error.message : null} onRetry={retry} />;
 
+  /** Enter ou "Chutar": usa a primeira sugestão; texto que não está no catálogo não gasta tentativa. */
+  const submitFirst = () => {
+    if (!query.trim() || isWon || isLost) return;
+    const first = filteredOptions[0];
+    if (first) { playClickSound(); handleSelect(first); }
+    else shake();
+  };
+
+  const chronological = [...guesses].reverse();
+  const subtitle = isWon
+    ? `Você acertou em ${guesses.length} ${guesses.length === 1 ? "palpite" : "palpites"}!`
+    : isLost
+    ? "Acabaram as tentativas."
+    : attemptsLeft === 1
+    ? "Última tentativa!"
+    : "";
+
   return (
-    <motion.div
-      animate={!shouldReduceMotion && isShaking ? { x: [0, -4, 4, -2, 2, 0] } : {}}
-      transition={{ duration: 0.3 }}
-      className="w-full max-w-[760px] flex flex-col items-center gap-4"
-    >
-      {showIntro && (
-        <ModalBase
-          labelledBy="intro-title"
-          onClose={handleStartGame}
-          className="bg-[var(--color-bg-app)] w-full max-w-lg border border-[var(--color-border-subtle)] rounded-xl p-6 sm:p-8 shadow-2xl custom-scrollbar"
-        >
-          <div className="mb-6 flex items-start justify-between gap-4">
-            <h2 id="intro-title" className="font-serif text-2xl font-black uppercase tracking-wider text-[var(--color-text-accent)]">
-              Como jogar
-            </h2>
-            <button
-              onClick={handleStartGame}
-              className="flex h-8 w-8 items-center justify-center rounded-md border border-[var(--color-border-subtle)] bg-[var(--color-bg-app)] text-[var(--color-text-main)] transition-colors hover:bg-[var(--color-border-subtle)]"
-              aria-label="Fechar informações"
-            >
-              ✕
-            </button>
+    <div className="mx-auto flex min-h-0 w-full max-w-4xl flex-1 flex-col gap-2.5 sm:gap-3">
+      {/* Cabeçalho compacto */}
+      <header className="flex shrink-0 items-center justify-between gap-3">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2">
+            <h1 className="text-[clamp(22px,3.5vw,30px)] font-black leading-tight tracking-[-0.02em]">Quem sou eu?</h1>
           </div>
-          <div className="space-y-4 text-[0.95rem] leading-relaxed text-[var(--color-text-main)] font-medium">
-            <p>
-              Descubra qual é a figura católica (Bíblica, Santo, Papa ou Anjo) por trás das pistas.
-            </p>
-            <p>
-              Você recebe uma pista por vez. Se errar o palpite, uma nova pista é revelada, até o máximo de 6 pistas.
-            </p>
-            <p>
-              O jogo não possui limite de tentativas.
-            </p>
-          </div>
-          <div className="mt-8 flex justify-end">
-            <button
-              onClick={handleStartGame}
-              className="px-6 py-2 bg-[var(--color-text-accent)] text-white font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
-            >
-              Começar
-            </button>
-          </div>
-        </ModalBase>
-      )}
+          {subtitle && <p className={`text-[13px] font-semibold ${!isWon && !isLost && attemptsLeft === 1 ? "text-[var(--color-status-wrong)]" : "text-[var(--color-text-muted)]"}`}>{subtitle}</p>}
+        </div>
+        <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[var(--color-surface)] px-3.5 py-1.5 text-[13px] font-extrabold tabular-nums shadow-[var(--shadow-soft)]" aria-label={`${guesses.length} de ${MAX_GUESSES} tentativas`}>
+          <motion.span key={guesses.length} initial={{ scale: 1.6, color: "var(--color-primary)" }} animate={{ scale: 1, color: "var(--color-text-main)" }} transition={{ type: "spring", stiffness: 400, damping: 15 }}>
+            {guesses.length}
+          </motion.span>
+          <span className="text-[var(--color-text-muted)]">/ {MAX_GUESSES}</span>
+        </span>
+      </header>
 
-      {/* Title & Subtitle */}
-      <div className="text-center -mt-6 sm:-mt-8 mb-2 flex flex-col gap-1">
-        <h1 className="text-2xl sm:text-3xl font-black tracking-widest text-[var(--color-text-accent)] uppercase drop-shadow-sm">
-          Quem Sou Eu?
-        </h1>
-        <p className="text-xs sm:text-sm font-sans font-bold text-[#183c5b] uppercase tracking-wider opacity-90">
-          Descubra quem está por trás das pistas
-        </p>
-      </div>
+      {/* As 6 cartas, da 6 à 1: ocupam o espaço que sobra na tela, sem rolagem */}
+      <section className="grid min-h-0 w-full flex-1 grid-cols-2 grid-rows-[repeat(3,minmax(120px,1fr))] gap-2.5 md:grid-cols-3 md:grid-rows-[repeat(2,minmax(130px,1fr))] md:gap-3 [@media(orientation:landscape)_and_(max-height:600px)]:grid-cols-3 [@media(orientation:landscape)_and_(max-height:600px)]:grid-rows-[repeat(2,minmax(130px,1fr))]" aria-label="Pistas">
+        {Array.from({ length: TOTAL_PISTAS }).map((_, order) => {
+          const numero = pistaNumber(order);
+          const isRevealed = order < revealedCount;
+          const isCurrent = !isWon && !isLost && numero === currentPista;
+          const isBonus = (isWon || isLost) && order >= seenCount;
+          const text = pistaText(targetPerson, numero);
+          const delay = isBonus ? (order - seenCount) * WIN_CASCADE_SECONDS : 0.15;
 
-      {/* 6 Cards Grid */}
-      <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-        {Array.from({ length: 6 }).map((_, index) => {
-          const isRevealed = index < visibleHintsCount && hasStarted;
-          const isNewlyRevealed = index === visibleHintsCount - 1 && !isWon && hasStarted;
-          const dicaText = targetPerson?.dicas[index];
-
-          // FULL 3D FLIP CARD
           return (
-            <div 
-              key={index} 
-              className="scene relative w-full h-[160px] sm:h-[180px]" 
-              style={{ perspective: "1000px" }}
-            >
+            <div key={`${targetPerson?.id}-${numero}`} className="relative min-h-0" style={{ perspective: 1200 }}>
               <motion.div
-                className="card relative w-full h-full"
+                className="relative h-full w-full"
                 initial={false}
                 animate={{ rotateY: isRevealed ? 180 : 0 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                style={{ 
-                  transformStyle: "preserve-3d",
-                  WebkitTransformStyle: "preserve-3d"
-                }}
+                transition={reduce ? { duration: 0 } : { duration: FLIP_SECONDS, ease: [0.45, 0.05, 0.25, 1], delay }}
+                style={{ transformStyle: "preserve-3d" }}
               >
-                {/* FRONT FACE (LOCKED) */}
+                {/* Frente: fechada */}
                 <div
-                  className="face front absolute inset-0 w-full h-full bg-[#183c5b] border border-[#2875a8] rounded-2xl flex items-center justify-center shadow-md"
-                  style={{ 
-                    backfaceVisibility: "hidden", 
-                    WebkitBackfaceVisibility: "hidden" 
-                  }}
+                  className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 rounded-[20px] bg-[linear-gradient(160deg,#1f4f8f,#0f2a4a)] text-[var(--color-gold)] shadow-[inset_0_0_0_2px_color-mix(in_srgb,var(--color-gold)_45%,transparent),0_10px_24px_rgba(15,42,74,0.25)]"
+                  style={{ backfaceVisibility: "hidden" }}
                 >
-                  <span className="text-5xl font-black text-[#f9f6ef] opacity-80 drop-shadow-sm">
-                    {index + 1}
-                  </span>
+                  <span className="text-[44px] font-black leading-none sm:text-[56px]">{numero}</span>
                 </div>
 
-                {/* BACK FACE (REVEALED) */}
+                {/* Verso: pista aberta */}
                 <div
-                  className={`face back absolute inset-0 w-full h-full bg-[#f9f6ef] border rounded-2xl p-4 sm:p-5 flex flex-col items-start text-left shadow-md ${isNewlyRevealed ? "border-[var(--color-text-accent)] ring-1 ring-[var(--color-text-accent)]/50" : "border-[var(--color-border-subtle)]"}`}
-                  style={{ 
-                    backfaceVisibility: "hidden", 
-                    WebkitBackfaceVisibility: "hidden",
-                    transform: "rotateY(180deg)" 
-                  }}
+                  className={`surface absolute inset-0 flex flex-col overflow-y-auto rounded-[20px] p-3 text-left sm:p-4 ${
+                    isCurrent
+                      ? "outline-[3px] outline-offset-0 outline-[var(--color-primary)] [outline-style:solid]"
+                      : isBonus
+                      ? "outline-2 outline-offset-0 outline-[var(--color-gold)] [outline-style:solid]"
+                      : ""
+                  }`}
+                  style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
                 >
-                  <h3 className={`text-[10px] font-black uppercase tracking-widest mb-2 flex items-center gap-1.5 ${isNewlyRevealed ? "text-[var(--color-text-accent)]" : "text-[#b08b3a] opacity-90"}`}>
-                    Dica {index + 1}
-                  </h3>
-                  
-                  <div className="flex-1 w-full flex flex-col justify-center">
-                    <p className={`font-serif text-[#183c5b] font-semibold ${
-                      !dicaText ? "text-[14px] sm:text-[15px] leading-relaxed" 
-                      : dicaText.length > 115 ? "text-[12px] sm:text-[12.5px] leading-snug" 
-                      : dicaText.length > 85 ? "text-[13px] sm:text-[13.5px] leading-normal" 
-                      : "text-[14px] sm:text-[15px] leading-relaxed"
-                    }`}>
-                      {dicaText}
-                    </p>
-                  </div>
-                  
-                  {isNewlyRevealed && (
-                    <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-[var(--color-text-accent)]/15 to-transparent pointer-events-none rounded-tr-2xl" />
-                  )}
+                  <span className={`eyebrow ${isCurrent ? "!text-[var(--color-text-accent)]" : ""}`}>Pista {numero}</span>
+                  <FitText max={15} min={10} className="my-auto py-1 font-semibold leading-snug">
+                    {text}
+                  </FitText>
                 </div>
               </motion.div>
             </div>
           );
         })}
-      </div>
+      </section>
 
-      {/* Guess Input & Confirm Button */}
-      {!isWon && (
-        <div className="w-full bg-[var(--color-surface)] border border-[var(--color-border-subtle)] rounded-2xl p-5 sm:p-6 shadow-md flex flex-col gap-3">
-          <label htmlFor="quem-search" className="text-[12px] font-black uppercase text-[var(--color-text-main)] tracking-widest">
-            Seu Palpite
-          </label>
-          <div className="relative">
-            <input
-              id="quem-search"
-              autoComplete="off"
-              ref={inputRef}
-              type="text"
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                setActiveDropdown(true);
-                setActiveOptionIndex(-1);
-              }}
-              onFocus={() => setActiveDropdown(true)}
-              onKeyDown={(event) => {
-                if (event.key === "ArrowDown") {
-                  event.preventDefault();
-                  setActiveOptionIndex((index) => Math.min(index + 1, filteredOptions.length - 1));
-                } else if (event.key === "ArrowUp") {
-                  event.preventDefault();
-                  setActiveOptionIndex((index) => Math.max(index - 1, 0));
-                } else if (event.key === "Enter") {
-                  event.preventDefault();
-                  if (activeDropdown && query.trim().length > 0 && filteredOptions.length > 0) {
-                    const indexToSelect = activeOptionIndex >= 0 ? activeOptionIndex : 0;
-                    const selected = filteredOptions[indexToSelect];
-                    if (selected) { 
-                      playClickSound();
-                      setQuery(selected.nome);
-                      setActiveDropdown(false);
-                    }
-                  } else {
-                    handleSelect(query);
-                  }
-                } else if (event.key === "Escape") {
-                  setActiveDropdown(false);
-                  setActiveOptionIndex(-1);
-                }
-              }}
-              placeholder="Digite um nome..."
-              className="w-full bg-white text-[#183c5b] border-2 border-[var(--color-border-subtle)] focus:border-[#2875a8] rounded-xl px-4 py-3.5 text-[16px] font-sans font-bold focus:outline-none focus:ring-0 placeholder:text-[#91a0b3] transition-colors shadow-sm"
-            />
+      {/* As 6 tentativas: foto e nome de cada palpite */}
+      <section className="grid shrink-0 grid-cols-6 gap-2" aria-label="Tentativas">
+        {Array.from({ length: MAX_GUESSES }).map((_, slot) => {
+          const person = chronological[slot] ? byId.get(chronological[slot]) : undefined;
+          const isWinningGuess = isWon && slot === chronological.length - 1;
+          return (
+            <figure key={slot} className="flex min-w-0 flex-col items-center gap-1 text-center">
+              {person ? (
+                <motion.span
+                  initial={reduce ? false : { opacity: 0, scale: 0.7 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                  className={`relative block aspect-square w-full max-w-[52px] overflow-hidden rounded-[14px] sm:max-w-[60px] ${
+                    isWinningGuess ? "ring-[3px] ring-[var(--color-status-correct)]" : "ring-[3px] ring-[var(--color-status-wrong)]"
+                  }`}
+                >
+                  <CharacterPhoto image={person.imagem} alt={`Imagem de ${person.nome}`} className={`h-full w-full object-cover ${isWinningGuess ? "" : "grayscale-[35%]"}`} />
+                  <span
+                    className={`absolute right-0.5 top-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-black text-white ${
+                      isWinningGuess ? "bg-[var(--color-status-correct)]" : "bg-[var(--color-status-wrong)]"
+                    }`}
+                    aria-hidden="true"
+                  >
+                    {isWinningGuess ? <CheckIcon size={10} /> : "✕"}
+                  </span>
+                </motion.span>
+              ) : (
+                <span className="flex aspect-square w-full max-w-[52px] items-center justify-center rounded-[14px] border-2 border-dashed border-[color-mix(in_srgb,var(--color-text-muted)_40%,transparent)] text-[13px] font-extrabold text-[var(--color-text-muted)] sm:max-w-[60px]" aria-hidden="true">
+                  {slot + 1}
+                </span>
+              )}
+              <figcaption className="line-clamp-2 h-[2.3em] w-full text-[10px] font-bold leading-[1.15] sm:text-[11.5px]">{person ? person.nome : ""}</figcaption>
+            </figure>
+          );
+        })}
+      </section>
 
-            {activeDropdown && query.trim().length > 0 && (
-              <motion.div
-                initial={{ opacity: 0, y: shouldReduceMotion ? 0 : -4, scale: shouldReduceMotion ? 1 : 0.99 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.15 }}
-                className="absolute top-full left-0 right-0 mt-2 z-40 bg-[#1f608c] backdrop-blur-md border border-[#183c5b] rounded-xl shadow-2xl max-h-56 overflow-y-auto py-1 custom-scrollbar"
-              >
-                {filteredOptions.length > 0 ? (
-                  filteredOptions.map((opt, index) => (
-                    <button
-                      key={opt.id}
-                      onClick={() => {
-                        playClickSound();
-                        setQuery(opt.nome);
-                        setActiveDropdown(false);
-                      }}
-                      className={`w-full text-left px-4 py-3.5 flex items-center justify-between font-sans transition-colors ${activeOptionIndex === index ? "bg-[#183c5b]" : "hover:bg-[#183c5b]"}`}
-                    >
-                      <span className="text-[15px] font-bold text-white">{opt.nome}</span>
-                      <span className="text-[11px] font-semibold text-[#bce1f7] px-2 py-0.5 rounded bg-[#183c5b]/50 border border-[#bce1f7]/20 uppercase tracking-wide">{opt.tipo}</span>
-                    </button>
-                  ))
-                ) : (
-                  <div className="px-4 py-4 text-[13px] text-[#bce1f7] font-sans text-center font-medium">
-                    Nenhum personagem encontrado
-                  </div>
-                )}
-              </motion.div>
+      {/* Barra de chute / fim de jogo */}
+      {isWon ? (
+        <div className="surface flex shrink-0 flex-wrap items-center justify-center gap-2 rounded-[22px] px-3 py-2.5">
+          <NextChallengeCountdown />
+        </div>
+      ) : isLost && targetPerson ? (
+        <div className="surface flex h-14 shrink-0 items-center gap-3 rounded-full py-1.5 pl-2 pr-2">
+          <CharacterPhoto image={targetPerson.imagem} alt={`Imagem de ${targetPerson.nome}`} className="h-11 w-11 shrink-0 rounded-full object-cover ring-[3px] ring-[var(--color-gold)]" />
+          <span className="min-w-0 flex-1">
+            <span className="eyebrow block">Era</span>
+            <span className="block truncate text-[15px] font-black leading-tight sm:text-[17px]">{targetPerson.nome}</span>
+          </span>
+          <NextChallengeCountdown />
+        </div>
+      ) : (
+        <motion.div
+          animate={!reduce && isShaking ? { x: [0, -8, 8, -4, 4, 0] } : { x: 0 }}
+          transition={{ duration: 0.4 }}
+          className="relative z-20 flex shrink-0 gap-2"
+        >
+          <SearchCombobox
+            id="quem-search"
+            label="Seu palpite"
+            className="flex-1"
+            inputClassName="!h-14 !rounded-full !border-2 !border-transparent !bg-[var(--color-surface)] !text-[17px] !font-bold !shadow-[var(--shadow-soft)] focus:!border-[var(--color-primary)]"
+            value={query}
+            onChange={setQuery}
+            items={filteredOptions}
+            getKey={(o) => o.id}
+            inputRef={inputRef}
+            placeholder="Quem sou eu? Digite um nome…"
+            emptyText="Nenhuma figura encontrada"
+            dropUp
+            onPick={(o) => { playClickSound(); handleSelect(o); }}
+            onSubmitRaw={submitFirst}
+            renderItem={(o) => (
+              <span className="flex items-center gap-3">
+                <CharacterPhoto image={o.imagem} alt="" className="h-10 w-10 shrink-0 rounded-full bg-[var(--color-fill)] object-cover" />
+                <span className="flex-1 text-[16px] font-bold">{o.nome}</span>
+                <span className="rounded-full bg-[var(--color-fill)] px-2 py-0.5 text-[11px] font-extrabold text-[var(--color-text-muted)]">
+                  {TIPO_LABEL[o.tipo] ?? o.tipo}
+                </span>
+              </span>
             )}
-          </div>
-
-          <motion.button
-            whileTap={shouldReduceMotion ? {} : { scale: 0.97 }}
-            onClick={() => {
-              playClickSound();
-              handleSelect(query);
-            }}
-            disabled={!query.trim()}
-            className="w-full mt-2 bg-[var(--color-interactive-surface-hover)] hover:bg-[#0f2a42] disabled:bg-[#dcd4c3] disabled:text-[#9faab5] disabled:cursor-not-allowed text-white font-black uppercase tracking-widest text-[13px] py-4 rounded-xl shadow-md disabled:shadow-none transition-all flex items-center justify-center border border-transparent disabled:border-[#dcd4c3]"
-          >
-            Confirmar Palpite
-          </motion.button>
-        </div>
+          />
+          <Button size="lg" className="!h-14 shrink-0 px-6" disabled={!query.trim()} onClick={submitFirst}>
+            Chutar
+          </Button>
+        </motion.div>
       )}
 
-      {/* Guesses History */}
-      {guesses.length > 0 && (
-        <div className="w-full max-w-[600px] flex flex-wrap gap-2 justify-center mt-2 px-2">
-          {guesses.map((g, i) => (
-            <div key={i} className="bg-[#fceeed] border border-[#f5c6c4] text-[#9b2a26] px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2 shadow-sm">
-              <span>{g}</span>
-              <span className="text-[9px] opacity-70">✕</span>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {isVictoryModalOpen && targetPerson && (
+      {isWon && isVictoryModalOpen && targetPerson && (
         <VictoryModal
           solutionName={targetPerson.nome}
           solutionImage={targetPerson.imagem}
-          solutionImageId={targetPerson.personagemId || targetPerson.id}
-          attemptsCount={guesses.length + 1}
-          hintsUsedCount={Math.min(6, guesses.length + 1)}
+          attemptsCount={guesses.length}
+          hintsUsedCount={seenCount}
           characterKnownFor={targetPerson.conhecidoPor}
-          characterType={targetPerson.tipo}
+          characterType={TIPO_LABEL[targetPerson.tipo] ?? targetPerson.tipo}
           characterSummary={targetPerson.resumo}
-          nextGameHref="/personagem"
-          nextGameLabel="Personagem"
-          nextGameDescription="Adivinhe por atributos"
-          nextGameIcon="/personagem-emoji.svg"
+          nextGameHref="/"
+          nextGameLabel="Início"
+          nextGameDescription="Escolha seu próximo desafio"
+          nextGameIcon="/personagem-emoji.webp"
           onClose={() => setIsVictoryModalOpen(false)}
-          onReplay={GAME_CONFIG.allowReplay ? replay : undefined}
+          showCountdown
         />
       )}
-    </motion.div>
+    </div>
   );
 };
+
+export const QuemSouEuGame: React.FC = () => (
+  <Suspense fallback={<CatalogState />}>
+    <QuemSouEuGameInner />
+  </Suspense>
+);

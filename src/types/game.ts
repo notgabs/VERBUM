@@ -1,4 +1,4 @@
-export type TileMatch = "CORRECT" | "PARTIAL" | "WRONG";
+﻿export type TileMatch = "CORRECT" | "PARTIAL" | "WRONG";
 
 export interface Personagem {
   id: string;
@@ -10,7 +10,11 @@ export interface Personagem {
   historiaNaBiblia: string;
   conhecidoPor: string;
   nascimento: string;
+  nascimentoAno?: number | null;
+  referencias?: { livro: string }[];
   ocupacao: string;
+  /** Povo / origem: "Israelita (Judá)", "Romano", "Ser espiritual (Anjo)"… */
+  povo: string;
   dica1: string;
   dica2: string;
 }
@@ -22,9 +26,7 @@ export interface PersonagemGuessComparison {
   divisaoMatch: TileMatch;
   historiaNaBibliaMatch: TileMatch;
   historiaNaBibliaComparison: NumberComparison;
-  conhecidoPorMatch: TileMatch;
-  nascimentoMatch: TileMatch;
-  nascimentoComparison: NumberComparison;
+  povoMatch: TileMatch;
   ocupacaoMatch: TileMatch;
   isFullyCorrect: boolean;
 }
@@ -69,6 +71,8 @@ export interface GameStats {
   vitorias: number;
   musicGamesPlayed?: number;
   musicWins?: number;
+  /** Último dia (AAAA-MM-DD, horário local) com vitória num desafio diário. */
+  ultimoDiaVitoria?: string;
 }
 
 export interface RawQuemSouEu {

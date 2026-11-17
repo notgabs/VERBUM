@@ -1,0 +1,722 @@
+{
+ "sao-francisco": {
+  "arquivo": "StFrancis_part.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:StFrancis_part.jpg",
+  "autor": "Parzi",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "sao-francisco.jpg",
+  "tamanho": [
+   735,
+   1024
+  ]
+ },
+ "santa-clara": {
+  "arquivo": "SDamiano-Clara.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:SDamiano-Clara.jpg",
+  "autor": "Gunnar Bach Pedersen",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "santa-clara.jpg",
+  "tamanho": [
+   2646,
+   2311
+  ]
+ },
+ "santo-antonio": {
+  "arquivo": "Francisco_de_Zurbarán_-_Sto_Antonio_de_Padua.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Francisco_de_Zurbar%C3%A1n_-_Sto_Antonio_de_Padua.jpg",
+  "autor": "Francisco de Zurbarán",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "santo-antonio.jpg",
+  "tamanho": [
+   2806,
+   4314
+  ]
+ },
+ "santa-teresinha": {
+  "arquivo": "Teresa-de-Lisieux.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Teresa-de-Lisieux.jpg",
+  "autor": "Céline Martin",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "santa-teresinha.jpg",
+  "tamanho": [
+   565,
+   720
+  ]
+ },
+ "madre-teresa": {
+  "arquivo": "Mother_Teresa_1.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Mother_Teresa_1.jpg",
+  "autor": "Kingkongphoto &amp; www.celebrity-photos.com from Laurel  Maryland, USA",
+  "licenca": "CC BY-SA 2.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/2.0",
+  "baixado": "madre-teresa.jpg",
+  "tamanho": [
+   4000,
+   5512
+  ]
+ },
+ "sao-bento": {
+  "arquivo": "Memling,_Trittico_di_Benedetto_Portinari,_San_Benedetto.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Memling%2C_Trittico_di_Benedetto_Portinari%2C_San_Benedetto.jpg",
+  "autor": "Hans Memling",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "sao-bento.jpg",
+  "tamanho": [
+   725,
+   1013
+  ]
+ },
+ "santo-agostinho": {
+  "arquivo": "Saint_Augustine_by_Philippe_de_Champaigne.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Saint_Augustine_by_Philippe_de_Champaigne.jpg",
+  "autor": "Philippe de Champaigne",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "santo-agostinho.jpg",
+  "tamanho": [
+   3135,
+   4000
+  ]
+ },
+ "sao-tomas": {
+  "arquivo": "St-thomas-aquinasFXD.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:St-thomas-aquinasFXD.jpg",
+  "autor": "Carlo Crivelli",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "sao-tomas.jpg",
+  "tamanho": [
+   4004,
+   6000
+  ]
+ },
+ "faustina": {
+  "arquivo": "Maria_Faustyna_Kowalska.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Maria_Faustyna_Kowalska.jpg",
+  "autor": "Stanisław Sztama",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "faustina.jpg",
+  "tamanho": [
+   658,
+   874
+  ]
+ },
+ "rita-cassia": {
+  "arquivo": "Santa_Rita_da_Cascia.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Rita_da_Cascia.jpg",
+  "autor": "Roscini Claudio",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "rita-cassia.jpg",
+  "tamanho": [
+   1002,
+   1446
+  ]
+ },
+ "paulo-vi": {
+  "arquivo": "Pope_Paul_VI_1969_Portrait_(4x5_cropped).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Pope_Paul_VI_1969_Portrait_%284x5_cropped%29.jpg",
+  "autor": "Fotografia Felici",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "paulo-vi.jpg",
+  "tamanho": [
+   2713,
+   3393
+  ]
+ },
+ "pio-x": {
+  "arquivo": "Pius_X,_by_Ernest_Walter_Histed_(retouched).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Pius_X%2C_by_Ernest_Walter_Histed_%28retouched%29.jpg",
+  "autor": "",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "pio-x.jpg",
+  "tamanho": [
+   2450,
+   3072
+  ]
+ },
+ "gregorio-magno": {
+  "arquivo": "Gregory_the_Great_with_the_Holy_Spirit.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Gregory_the_Great_with_the_Holy_Spirit.jpg",
+  "autor": "British Library",
+  "licenca": "CC0",
+  "url_licenca": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "baixado": "gregorio-magno.jpg",
+  "tamanho": [
+   1375,
+   1500
+  ]
+ },
+ "leao-xiv": {
+  "arquivo": "Pope_Leo_XIV_3_(3x4_cropped).png",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_3_%283x4_cropped%29.png",
+  "autor": "Edgar Beltrán, The Pillar",
+  "licenca": "CC BY-SA 4.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+  "baixado": "leao-xiv.png",
+  "tamanho": [
+   2064,
+   2755
+  ]
+ },
+ "frassati": {
+  "arquivo": "PierGiorgioFrassati-Présentation.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:PierGiorgioFrassati-Pr%C3%A9sentation.jpg",
+  "autor": "Luciana Frassati",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "frassati.jpg",
+  "tamanho": [
+   1181,
+   1956
+  ]
+ },
+ "joao-paulo-ii": {
+  "arquivo": "ADAMELLO_-_PAPA_-_Giovanni_Paolo_II_-_panoramio_(cropped).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:ADAMELLO_-_PAPA_-_Giovanni_Paolo_II_-_panoramio_%28cropped%29.jpg",
+  "autor": "Gregorini Demetrio",
+  "licenca": "CC BY-SA 3.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
+  "baixado": "joao-paulo-ii.jpg",
+  "tamanho": [
+   762,
+   889
+  ]
+ },
+ "padre-pio": {
+  "arquivo": "Padre_Pio_portraitFXD.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Padre_Pio_portraitFXD.jpg",
+  "autor": "File:Padre Pio portrait.jpg: The original uploader was Manfredonia at Italian Wikipedia.\nderivative work: MisterNox",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "padre-pio.jpg",
+  "tamanho": [
+   1200,
+   1494
+  ]
+ },
+ "maximiliano-kolbe": {
+  "arquivo": "Fr.Maximilian_Kolbe_in_1936.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Fr.Maximilian_Kolbe_in_1936.jpg",
+  "autor": "Unknown authorUnknown author",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "maximiliano-kolbe.jpg",
+  "tamanho": [
+   726,
+   981
+  ]
+ },
+ "sao-domingos": {
+  "arquivo": "SaintDominic.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:SaintDominic.jpg",
+  "autor": "Claudio Coello",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "sao-domingos.jpg",
+  "tamanho": [
+   1952,
+   2952
+  ]
+ },
+ "sao-vicente-paulo": {
+  "arquivo": "Simon_François_de_Tours_-_Portrait_Vincent_de_Paul_(4x5_cropped).jpeg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Simon_Fran%C3%A7ois_de_Tours_-_Portrait_Vincent_de_Paul_%284x5_cropped%29.jpeg",
+  "autor": "Simon François de Tours (1606-1671)",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "sao-vicente-paulo.jpeg",
+  "tamanho": [
+   1239,
+   1535
+  ]
+ },
+ "luis-gonzaga": {
+  "arquivo": "Aloysius Gonzaga, PA04745.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Aloysius_Gonzaga%2C_PA04745.jpg",
+  "autor": "Gonzaga, Aloisius, S.J. (1568-1591) (depicted)",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "luis-gonzaga.jpg",
+  "tamanho": [
+   851,
+   1217
+  ]
+ },
+ "lourenco": {
+  "arquivo": "Francisco de Zurbarán 044.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Francisco_de_Zurbar%C3%A1n_044.jpg",
+  "autor": "Francisco de Zurbarán",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "lourenco.jpg",
+  "tamanho": [
+   992,
+   746
+  ]
+ },
+ "bento-xvi": {
+  "arquivo": "Benedykt_XVI_(2010-10-17)_2.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Benedykt_XVI_%282010-10-17%29_2.jpg",
+  "autor": "Kancelaria Prezydenta RP",
+  "licenca": "GFDL 1.2",
+  "url_licenca": "https://gnu.org/licenses/old-licenses/fdl-1.2.html",
+  "baixado": "bento-xvi.jpg",
+  "tamanho": [
+   742,
+   1000
+  ]
+ },
+ "papa-francisco": {
+  "arquivo": "Pope_Francis_Korea_Haemi_Castle_19_(4x5_cropped).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Pope_Francis_Korea_Haemi_Castle_19_%284x5_cropped%29.jpg",
+  "autor": "Korea.net / Korean Culture and Information Service (Jeon Han)",
+  "licenca": "CC BY-SA 2.0 (herdada do original Pope_Francis_Korea_Haemi_Castle_19.jpg)",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/2.0",
+  "baixado": "papa-francisco.jpg",
+  "tamanho": [
+   1734,
+   2174
+  ]
+ },
+ "teresa-avila": {
+  "arquivo": "Santa_Teresa_de_Jesús_(Museo_del_Prado).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Teresa_de_Jes%C3%BAs_%28Museo_del_Prado%29.jpg",
+  "autor": "Eduardo Balaca",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "teresa-avila.jpg",
+  "tamanho": [
+   2203,
+   2952
+  ]
+ },
+ "joao-da-cruz": {
+  "arquivo": "Zurbarán_(atribuido)-John_of_the_Cross-1656.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Zurbar%C3%A1n_%28atribuido%29-John_of_the_Cross-1656.jpg",
+  "autor": "Unknown authorUnknown author",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "joao-da-cruz.jpg",
+  "tamanho": [
+   631,
+   804
+  ]
+ },
+ "inacio-loyola": {
+  "arquivo": "Ignatius_Loyola.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Ignatius_Loyola.jpg",
+  "autor": "AnonymousUnknown author",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "inacio-loyola.jpg",
+  "tamanho": [
+   249,
+   300
+  ]
+ },
+ "francisco-xavier": {
+  "arquivo": "Franciscus_de_Xabier.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Franciscus_de_Xabier.jpg",
+  "autor": "",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "francisco-xavier.jpg",
+  "tamanho": [
+   6589,
+   8402
+  ]
+ },
+ "anchieta": {
+  "arquivo": "Benedito_Calixto_de_Jesus_-_Retrato_do_Padre_José_de_Anchieta,_Acervo_do_Museu_Paulista_da_USP.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Benedito_Calixto_de_Jesus_-_Retrato_do_Padre_Jos%C3%A9_de_Anchieta%2C_Acervo_do_Museu_Paulista_da_USP.jpg",
+  "autor": "Benedito Calixto",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "anchieta.jpg",
+  "tamanho": [
+   2425,
+   3364
+  ]
+ },
+ "frei-galvao": {
+  "arquivo": "Freigalvao.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Freigalvao.jpg",
+  "autor": "",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "frei-galvao.jpg",
+  "tamanho": [
+   397,
+   524
+  ]
+ },
+ "dom-bosco": {
+  "arquivo": "Don_Bosco_@_Torino,_1880_(original).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Don_Bosco_%40_Torino%2C_1880_%28original%29.jpg",
+  "autor": "Attributed to Carlo Felice Deasti",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "dom-bosco.jpg",
+  "tamanho": [
+   712,
+   953
+  ]
+ },
+ "cura-ars": {
+  "arquivo": "São_João_Maria_Vianney.png",
+  "pagina": "https://commons.wikimedia.org/wiki/File:S%C3%A3o_Jo%C3%A3o_Maria_Vianney.png",
+  "autor": "BarãoPandora",
+  "licenca": "CC BY-SA 4.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+  "baixado": "cura-ars.png",
+  "tamanho": [
+   1365,
+   2048
+  ]
+ },
+ "bernadete": {
+  "arquivo": "Bernadette_Soubirous.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Bernadette_Soubirous.jpg",
+  "autor": "abbé P. Bernadou",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "bernadete.jpg",
+  "tamanho": [
+   1273,
+   1643
+  ]
+ },
+ "joana-darc": {
+  "arquivo": "Joan_of_Arc_miniature_graded.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Joan_of_Arc_miniature_graded.jpg",
+  "autor": "",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "joana-darc.jpg",
+  "tamanho": [
+   1812,
+   2700
+  ]
+ },
+ "catarina-sena": {
+  "arquivo": "Giovanni_Battista_Tiepolo_096.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Tiepolo_096.jpg",
+  "autor": "Giovanni Battista Tiepolo",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "catarina-sena.jpg",
+  "tamanho": [
+   955,
+   1221
+  ]
+ },
+ "santa-monica": {
+  "arquivo": "Monica_of_Hippo_by_Gozzoli.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Monica_of_Hippo_by_Gozzoli.jpg",
+  "autor": "Benozzo Gozzoli",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "santa-monica.jpg",
+  "tamanho": [
+   600,
+   1433
+  ]
+ },
+ "sao-jeronimo": {
+  "arquivo": "MatthiasStom-SaintJerome-Nantes.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:MatthiasStom-SaintJerome-Nantes.jpg",
+  "autor": "Matthias Stom",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "sao-jeronimo.jpg",
+  "tamanho": [
+   450,
+   548
+  ]
+ },
+ "sao-patricio": {
+  "arquivo": "Our_Lady's_Island_Church_of_the_Assumption_East_Aisle_Window_Saint_Patrick_2010_09_26.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Our_Lady%27s_Island_Church_of_the_Assumption_East_Aisle_Window_Saint_Patrick_2010_09_26.jpg",
+  "autor": "Andreas F. Borchert",
+  "licenca": "CC BY-SA 4.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+  "baixado": "sao-patricio.jpg",
+  "tamanho": [
+   1275,
+   2746
+  ]
+ },
+ "sao-nicolau": {
+  "arquivo": "Jaroslav_Čermák_(1831_-_1878)_-_Sv._Mikuláš_(cropped).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Jaroslav_%C4%8Cerm%C3%A1k_%281831_-_1878%29_-_Sv._Mikul%C3%A1%C5%A1_%28cropped%29.jpg",
+  "autor": "Jaroslav Čermák",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "sao-nicolau.jpg",
+  "tamanho": [
+   408,
+   544
+  ]
+ },
+ "sao-sebastiao": {
+  "arquivo": "St._Sebastian_by_Sodoma.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:St._Sebastian_by_Sodoma.jpg",
+  "autor": "Il Sodoma",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "sao-sebastiao.jpg",
+  "tamanho": [
+   1742,
+   2385
+  ]
+ },
+ "santa-luzia": {
+  "arquivo": "Niccolò_di_Segna_-_Saint_Lucy_-_Walters_37756.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Niccol%C3%B2_di_Segna_-_Saint_Lucy_-_Walters_37756.jpg",
+  "autor": "Niccolò di Segna",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "santa-luzia.jpg",
+  "tamanho": [
+   1106,
+   1747
+  ]
+ },
+ "santa-cecilia": {
+  "arquivo": "Guercino_-_St._Cecilia_-_Google_Art_Project.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Guercino_-_St._Cecilia_-_Google_Art_Project.jpg",
+  "autor": "Guercino",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "santa-cecilia.jpg",
+  "tamanho": [
+   3785,
+   4591
+  ]
+ },
+ "bernardo-claraval": {
+  "arquivo": "San_Bernardo,_de_Juan_Correa_de_Vivar_(Museo_del_Prado).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:San_Bernardo%2C_de_Juan_Correa_de_Vivar_%28Museo_del_Prado%29.jpg",
+  "autor": "",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "bernardo-claraval.jpg",
+  "tamanho": [
+   779,
+   1920
+  ]
+ },
+ "afonso-ligorio": {
+  "arquivo": "Liguori.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Liguori.jpg",
+  "autor": "Unknown authorUnknown author",
+  "licenca": "CC BY-SA 3.0",
+  "url_licenca": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "baixado": "afonso-ligorio.jpg",
+  "tamanho": [
+   640,
+   941
+  ]
+ },
+ "josemaria": {
+  "arquivo": "Josemaria_Escriva.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Josemaria_Escriva.jpg",
+  "autor": "Oficina de Información de la Prelatura del Opus Dei en España",
+  "licenca": "CC BY-SA 2.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/2.0",
+  "baixado": "josemaria.jpg",
+  "tamanho": [
+   2062,
+   2585
+  ]
+ },
+ "francisco-sales": {
+  "arquivo": "Château_de_Bussy-Rabutin_-_Saint_François_de_Sales,_évêque_de_Genève_(bgw19_0375)_(cropped).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Bussy-Rabutin_-_Saint_Fran%C3%A7ois_de_Sales%2C_%C3%A9v%C3%AAque_de_Gen%C3%A8ve_%28bgw19_0375%29_%28cropped%29.jpg",
+  "autor": "Benjamin Gavaudo",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "francisco-sales.jpg",
+  "tamanho": [
+   3447,
+   4329
+  ]
+ },
+ "gianna": {
+  "arquivo": "Gianna_Beretta_Molla.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Gianna_Beretta_Molla.jpg",
+  "autor": "Unknown authorUnknown author",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "gianna.jpg",
+  "tamanho": [
+   390,
+   451
+  ]
+ },
+ "bakhita": {
+  "arquivo": "Bakhita_Szent_Jozefina.jpeg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Bakhita_Szent_Jozefina.jpeg",
+  "autor": "Unknown authorUnknown author",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "bakhita.jpeg",
+  "tamanho": [
+   193,
+   314
+  ]
+ },
+ "martinho-lima": {
+  "arquivo": "San_Martin_de_Porres_huaycan.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:San_Martin_de_Porres_huaycan.jpg",
+  "autor": "AnonymousUnknown author",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "martinho-lima.jpg",
+  "tamanho": [
+   260,
+   350
+  ]
+ },
+ "rosa-lima": {
+  "arquivo": "Sta_Rosa_de_Lima_por_Claudio_Coello.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Sta_Rosa_de_Lima_por_Claudio_Coello.jpg",
+  "autor": "Claudio Coello",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "rosa-lima.jpg",
+  "tamanho": [
+   1966,
+   2952
+  ]
+ },
+ "juan-diego": {
+  "arquivo": "MIguel_Cabrera_-_Fiel_retrato_do_venerável_Juan_Diego.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:MIguel_Cabrera_-_Fiel_retrato_do_vener%C3%A1vel_Juan_Diego.jpg",
+  "autor": "Miguel Cabrera",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "juan-diego.jpg",
+  "tamanho": [
+   434,
+   661
+  ]
+ },
+ "charbel": {
+  "arquivo": "Charbel.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Charbel.jpg",
+  "autor": "Unknown (Old Photo)",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "charbel.jpg",
+  "tamanho": [
+   419,
+   595
+  ]
+ },
+ "edith-stein": {
+  "arquivo": "Edith_Stein_(ca._1938-1939).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Edith_Stein_%28ca._1938-1939%29.jpg",
+  "autor": "Unknown authorUnknown author",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "edith-stein.jpg",
+  "tamanho": [
+   1408,
+   1600
+  ]
+ },
+ "joao-xxiii": {
+  "arquivo": "Ioannes_XXIII,_by_De_Agostini,_1958–1963.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Ioannes_XXIII%2C_by_De_Agostini%2C_1958%E2%80%931963.jpg",
+  "autor": "De Agostini Editore",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "joao-xxiii.jpg",
+  "tamanho": [
+   1772,
+   2334
+  ]
+ },
+ "damiao-molokai": {
+  "arquivo": "Father_Damien,_photograph_by_William_Brigham.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Father_Damien%2C_photograph_by_William_Brigham.jpg",
+  "autor": "William Brigham",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "damiao-molokai.jpg",
+  "tamanho": [
+   1002,
+   1468
+  ]
+ },
+ "sao-benedito": {
+  "arquivo": "Capela_do_Divino_Espírito_Santo_em_Porto_Alegre_011-aa.JPG",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Capela_do_Divino_Esp%C3%ADrito_Santo_em_Porto_Alegre_011-aa.JPG",
+  "autor": "Eugenio Hansen, OFS",
+  "licenca": "CC BY-SA 3.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/3.0",
+  "baixado": "sao-benedito.jpg",
+  "tamanho": [
+   1124,
+   1788
+  ]
+ },
+ "irma-dulce": {
+  "arquivo": "Irma-dulce-santa-canonizada.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Irma-dulce-santa-canonizada.jpg",
+  "autor": "Nascimento Azevedo",
+  "licenca": "CC BY-SA 4.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+  "baixado": "irma-dulce.jpg",
+  "tamanho": [
+   367,
+   550
+  ]
+ },
+ "madre-paulina": {
+  "arquivo": "Santa_Paolina.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Paolina.jpg",
+  "autor": "Llorenzi",
+  "licenca": "CC BY-SA 2.5",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/2.5",
+  "baixado": "madre-paulina.jpg",
+  "tamanho": [
+   1213,
+   1593
+  ]
+ },
+ "sao-jorge": {
+  "arquivo": "Stgeorge-dragon.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Stgeorge-dragon.jpg",
+  "autor": "Gustave Moreau",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "baixado": "sao-jorge.jpg",
+  "tamanho": [
+   2859,
+   4226
+  ]
+ },
+ "carlo-acutis": {
+  "arquivo": "Covent Garden, Corpus Christi Catholic Church, Carlo Acutis memorial.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Covent_Garden%2C_Corpus_Christi_Catholic_Church%2C_Carlo_Acutis_memorial.jpg",
+  "autor": "AndyScott",
+  "licenca": "CC BY-SA 4.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+  "baixado": "carlo-acutis.jpg",
+  "tamanho": [
+   2793,
+   4500
+  ]
+ }
+}
