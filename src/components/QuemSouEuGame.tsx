@@ -45,6 +45,8 @@ const QuemSouEuGameInner: React.FC = () => {
   const [guesses, setGuesses] = useState<string[]>([]);
   const [isWon, setIsWon] = useState(false);
   const [isVictoryModalOpen, setIsVictoryModalOpen] = useState(false);
+  /** true só quando o jogador acabou de acertar (confete e som); ao voltar à tela já vencida, não. */
+  const [justWon, setJustWon] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
 
   const { recordGameResult } = useGameStats();
@@ -115,6 +117,7 @@ const QuemSouEuGameInner: React.FC = () => {
 
     if (isCorrect) {
       setIsWon(true);
+      setJustWon(true);
       playVictorySound();
       recordGameResult(true, updatedGuesses.length, seenCount);
       // A tela de vitória sobe na hora; as pistas restantes se abrem por trás e ficam visíveis ao fechá-la
@@ -159,7 +162,8 @@ const QuemSouEuGameInner: React.FC = () => {
     : "";
 
   return (
-    <div className="mx-auto flex min-h-0 w-full max-w-4xl flex-1 flex-col gap-2.5 sm:gap-3">
+    <>
+    <div className="mx-auto flex min-h-0 w-full max-w-4xl flex-1 flex-col max-md:min-h-[calc(100dvh-4.5rem)] gap-2.5 sm:gap-3">
       {/* Cabeçalho compacto */}
       <header className="flex shrink-0 items-center justify-between gap-3">
         <div className="min-w-0">
@@ -313,24 +317,24 @@ const QuemSouEuGameInner: React.FC = () => {
         </motion.div>
       )}
 
-      {isWon && isVictoryModalOpen && targetPerson && (
-        <VictoryModal
-          solutionName={targetPerson.nome}
-          solutionImage={targetPerson.imagem}
-          attemptsCount={guesses.length}
-          hintsUsedCount={seenCount}
-          characterKnownFor={targetPerson.conhecidoPor}
-          characterType={TIPO_LABEL[targetPerson.tipo] ?? targetPerson.tipo}
-          characterSummary={targetPerson.resumo}
-          nextGameHref="/"
-          nextGameLabel="Início"
-          nextGameDescription="Escolha seu próximo desafio"
-          nextGameIcon="/personagem-emoji.webp"
-          onClose={() => setIsVictoryModalOpen(false)}
-          showCountdown
-        />
-      )}
     </div>
+  {isWon && targetPerson && (
+    <VictoryModal
+      solutionName={targetPerson.nome}
+      solutionImage={targetPerson.imagem}
+      attemptsCount={guesses.length}
+      hintsUsedCount={seenCount}
+      characterKnownFor={targetPerson.conhecidoPor}
+      characterType={TIPO_LABEL[targetPerson.tipo] ?? targetPerson.tipo}
+      characterSummary={targetPerson.resumo}
+      game="quem-sou-eu"
+      open={isVictoryModalOpen}
+      celebrate={justWon}
+      onClose={() => setIsVictoryModalOpen(false)}
+      showCountdown
+    />
+  )}
+    </>
   );
 };
 

@@ -5,10 +5,12 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { playClickSound } from "@/utils/sound";
 import { CharacterPhoto } from "@/components/CharacterPhoto";
-import { ModalBase } from "@/components/ModalBase";
+import { ResultShell } from "@/components/ResultShell";
+import { Silhueta } from "@/components/Silhueta";
+import { GAME_INFO, NEXT_GAME, type GameKey } from "@/domain/games";
 import { NextChallengeCountdown } from "@/components/NextChallengeCountdown";
 import { Button } from "@/components/ui/Button";
-import { ChevronRight, RefreshIcon } from "@/components/ui/Icons";
+import { ChevronRight } from "@/components/ui/Icons";
 import { asset } from "@/utils/asset";
 
 interface VictoryModalProps {
@@ -17,10 +19,12 @@ interface VictoryModalProps {
   solutionImageId?: string;
   attemptsCount: number;
   hintsUsedCount: number;
-  nextGameHref: string;
-  nextGameLabel: string;
-  nextGameDescription: string;
-  nextGameIcon: string;
+  /** Jogo atual: a tela leva ao próximo da sequência (o último volta ao início). */
+  game: GameKey;
+  /** PC: janela aberta. Celular: ao virar true, a página desce até o painel. */
+  open: boolean;
+  /** Confete e brilho só quando o jogador acabou de acertar (não ao voltar à tela depois). */
+  celebrate: boolean;
   passageTitle?: string;
   passageExplanation?: string;
   characterReference?: string;
@@ -28,7 +32,6 @@ interface VictoryModalProps {
   characterType?: string;
   characterSummary?: string;
   onClose?: () => void;
-  onReplay?: () => void;
   /** Mostra quanto falta para o próximo desafio diário. */
   showCountdown?: boolean;
 }
@@ -67,10 +70,14 @@ export const VictoryModal: React.FC<VictoryModalProps> = (props) => {
   const isPassage = Boolean(props.passageTitle);
 
   useEffect(() => {
+    if (!props.celebrate) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t = setTimeout(fireConfetti, 250);
     return () => clearTimeout(t);
-  }, []);
+  }, [props.celebrate]);
+
+  const next = NEXT_GAME[props.game];
+  const nextInfo = next ? GAME_INFO[next] : null;
 
   const enter = (delay: number) => ({
     initial: reduce ? { opacity: 0 } : { opacity: 0, x: 16 },
@@ -79,7 +86,7 @@ export const VictoryModal: React.FC<VictoryModalProps> = (props) => {
   });
 
   return (
-    <ModalBase label="Vitória" onClose={props.onClose} className="max-w-[820px] overflow-hidden !p-0">
+    <ResultShell label="Vitória" open={props.open} onClose={() => props.onClose?.()} className="max-w-[820px] overflow-hidden !p-0">
       <div className="grid md:grid-cols-[minmax(0,320px)_1fr]">
         {/* Palco: retrato com raios de luz */}
         <div className="relative flex flex-col items-center justify-center overflow-hidden bg-[linear-gradient(170deg,#2f8cff_0%,#1a4fa8_55%,#122f6b_100%)] px-6 pb-7 pt-9 text-center text-white md:pb-10 md:pt-12">
@@ -198,30 +205,34 @@ export const VictoryModal: React.FC<VictoryModalProps> = (props) => {
             </div>
           </motion.div>
 
-          {props.onReplay && (
-            <motion.div {...enter(0.48)} className="flex">
-              <Button size="lg" variant="tinted" onClick={() => { playClickSound(); props.onReplay?.(); }} className="flex-1">
-                <RefreshIcon size={17} /> Jogar de novo
-              </Button>
-            </motion.div>
-          )}
 
           <motion.div {...enter(0.54)}>
             <Link
-              href={props.nextGameHref}
+              href={nextInfo ? nextInfo.href : "/"}
               onClick={() => playClickSound()}
               className="group flex items-center gap-3 rounded-[18px] border-2 border-[var(--color-border-subtle)] p-3 transition-colors hover:bg-[var(--color-fill)]"
             >
-              <img src={asset(props.nextGameIcon)} alt="" className="h-11 w-11 shrink-0 object-contain" />
+              {nextInfo ? (
+                <span
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] p-2 text-white/90"
+                  style={{ background: nextInfo.color }}
+                  aria-hidden="true"
+                >
+                  <Silhueta src={nextInfo.art} ratio={nextInfo.artRatio} />
+                </span>
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={asset("/icon.svg")} alt="" className="h-11 w-11 shrink-0 rounded-[14px] object-contain" />
+              )}
               <span className="min-w-0 flex-1">
                 <span className="block text-[12px] font-extrabold uppercase tracking-[0.06em] text-[var(--color-text-muted)]">Próximo jogo</span>
-                <span className="block text-[16px] font-black">{props.nextGameLabel}</span>
+                <span className="block text-[16px] font-black">{nextInfo ? nextInfo.title : "Início"}</span>
               </span>
               <ChevronRight size={18} className="text-[var(--color-text-tertiary)] transition-transform group-hover:translate-x-0.5" />
             </Link>
           </motion.div>
         </div>
       </div>
-    </ModalBase>
+    </ResultShell>
   );
 };

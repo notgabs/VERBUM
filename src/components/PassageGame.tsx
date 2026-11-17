@@ -97,6 +97,8 @@ const PassageGameInner: React.FC = () => {
   const [guesses, setGuesses] = useState<PassagemGuessComparison[]>([]);
   const [isWon, setIsWon] = useState(false);
   const [isVictoryModalOpen, setIsVictoryModalOpen] = useState(false);
+  /** true só quando o jogador acabou de acertar (confete e som); ao voltar à tela já vencida, não. */
+  const [justWon, setJustWon] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
   const [invalidFields, setInvalidFields] = useState({ book: false, chapter: false, verse: false });
   const [isRevealing, setIsRevealing] = useState(false);
@@ -155,7 +157,10 @@ const PassageGameInner: React.FC = () => {
       // Aplica no próximo quadro para não encadear renderizações dentro do efeito
       const frame = requestAnimationFrame(() => {
         setGuesses((current) => (current.length === 0 ? loaded : current));
-        if (loaded[0].isFullyCorrect) setIsWon(true);
+        if (loaded[0].isFullyCorrect) {
+          setIsWon(true);
+          setIsVictoryModalOpen(true);
+        }
       });
       return () => cancelAnimationFrame(frame);
     } catch { /* estado salvo inválido: ignora */ }
@@ -208,6 +213,7 @@ const PassageGameInner: React.FC = () => {
       // Só declara a vitória depois que as três peças virarem
       schedule(() => {
         setIsWon(true);
+        setJustWon(true);
         setIsVictoryModalOpen(true);
         playVictorySound();
         playShinySound();
@@ -260,7 +266,7 @@ const PassageGameInner: React.FC = () => {
               <span className="text-[15px] font-semibold">{targetPassage && formatPassageReference(targetPassage)}</span>
             </span>
             <span className="flex flex-wrap gap-2">
-              <Button size="sm" variant="tinted" onClick={() => { playClickSound(); setIsVictoryModalOpen(true); }}>Ver resultado</Button>
+              <Button size="sm" variant="tinted" className="max-md:hidden" onClick={() => { playClickSound(); setIsVictoryModalOpen(true); }}>Ver resultado</Button>
             </span>
           </div>
           <div className="flex justify-center"><NextChallengeCountdown /></div>
@@ -358,17 +364,16 @@ const PassageGameInner: React.FC = () => {
         <HintDialog hint={activeHint} text={activeHint === "h1" ? targetPassage.dica1 : targetPassage.dica2} onClose={() => setActiveHint(null)} />
       )}
 
-      {isWon && isVictoryModalOpen && targetPassage && (
+      {isWon && targetPassage && (
         <VictoryModal
           solutionName={formatPassageReference(targetPassage)}
           passageTitle={targetPassage.texto}
           passageExplanation={getPassageExplanation(targetPassage)}
           attemptsCount={guesses.length}
           hintsUsedCount={hintsUsed}
-          nextGameHref="/"
-          nextGameLabel="Início"
-          nextGameDescription="Escolha seu próximo desafio"
-          nextGameIcon="/personagem-emoji.webp"
+          game="passagem"
+          open={isVictoryModalOpen}
+          celebrate={justWon}
           showCountdown
           onClose={() => setIsVictoryModalOpen(false)}
         />

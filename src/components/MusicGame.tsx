@@ -1,7 +1,9 @@
 "use client";
 
 import React, { Suspense, useEffect, useMemo, useRef, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
+import Link from "next/link";
+import { asset } from "@/utils/asset";
 import catalogo from "../../public/data/musicas.json";
 import {
   CLIP_STEPS, MAX_ATTEMPTS, clipForAttempts, formatSeconds, isCorrectGuess, musicGameStatus, timelinePosition, titleKey,
@@ -16,8 +18,8 @@ import { playClickSound, playVictorySound, playWrongSound } from "@/utils/sound"
 import { normalizeForSearch } from "@/utils/text";
 import { SearchCombobox } from "@/components/ui/SearchCombobox";
 import { Button } from "@/components/ui/Button";
-import { CheckIcon, MusicIcon, RefreshIcon } from "@/components/ui/Icons";
-import { ModalBase } from "@/components/ModalBase";
+import { CheckIcon, ChevronRight, MusicIcon, RefreshIcon } from "@/components/ui/Icons";
+import { ResultShell } from "@/components/ResultShell";
 import { NextChallengeCountdown } from "@/components/NextChallengeCountdown";
 import { CatalogState } from "@/components/CatalogState";
 
@@ -160,7 +162,8 @@ const MusicGameInner: React.FC = () => {
     : "";
 
   return (
-    <div className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col gap-2.5 sm:gap-3">
+    <>
+    <div className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col gap-2.5 max-md:min-h-[calc(100dvh-4.5rem)] sm:gap-3">
       <header className="flex shrink-0 items-center justify-between gap-3">
         <div className="min-w-0">
           <div className="flex items-center gap-2">
@@ -260,7 +263,7 @@ const MusicGameInner: React.FC = () => {
       {/* Barra de chute / fim de jogo */}
       {isOver ? (
         <div className="surface flex h-14 shrink-0 items-center justify-center gap-2 rounded-full px-2">
-          <Button variant="gold" className="!h-11" onClick={() => { playClickSound(); setIsResultOpen(true); }}>
+          <Button variant="gold" className="!h-11 max-md:hidden" onClick={() => { playClickSound(); setIsResultOpen(true); }}>
             <MusicIcon size={18} /> Ver a música
           </Button>
           <NextChallengeCountdown />
@@ -293,9 +296,9 @@ const MusicGameInner: React.FC = () => {
         </motion.div>
       )}
 
-      <AnimatePresence>
-        {isOver && isResultOpen && (
-          <MusicResult
+    </div>
+    {isOver && (
+      <MusicResult
             musica={target}
             cover={player.cover}
             won={status === "won"}
@@ -304,11 +307,11 @@ const MusicGameInner: React.FC = () => {
             onStop={player.stop}
             isPlaying={player.isPlaying}
             canPlay={player.status === "ready"}
-            onClose={() => setIsResultOpen(false)}
-          />
-        )}
-      </AnimatePresence>
-    </div>
+            open={isResultOpen}
+        onClose={() => setIsResultOpen(false)}
+      />
+    )}
+    </>
   );
 };
 
@@ -321,18 +324,19 @@ interface MusicResultProps {
   canPlay: boolean;
   onPlay: () => void;
   onStop: () => void;
+  open: boolean;
   onClose: () => void;
 }
 
 /** Tela final: capa, título, artista e links para ouvir a música completa. */
-function MusicResult({ musica, cover, won, attemptsCount, isPlaying, canPlay, onPlay, onStop, onClose }: MusicResultProps) {
+function MusicResult({ musica, cover, won, attemptsCount, isPlaying, canPlay, onPlay, onStop, open, onClose }: MusicResultProps) {
   const links = [
     { label: "Spotify", href: musica.spotify, cls: "bg-[#1db954] text-white" },
     { label: "YouTube", href: musica.youtube, cls: "bg-[#ff0033] text-white" },
     { label: "Deezer", href: musica.deezer, cls: "bg-[#a238ff] text-white" },
   ];
   return (
-    <ModalBase label={won ? "Você acertou" : "Fim de jogo"} onClose={onClose} className="max-w-md overflow-hidden !p-0">
+    <ResultShell label={won ? "Você acertou" : "Fim de jogo"} open={open} onClose={onClose} className="max-w-md overflow-hidden !p-0">
       <div className={`flex flex-col items-center px-6 pb-6 pt-8 text-center text-white ${won ? "bg-[linear-gradient(170deg,#2f8cff,#122f6b)]" : "bg-[linear-gradient(170deg,#5b6b8c,#1e2a44)]"}`}>
         <div className="relative h-36 w-36 overflow-hidden rounded-[24px] bg-[#0f2a4a] shadow-[0_0_0_4px_#ffd166,0_16px_30px_rgba(0,0,0,0.3)]">
           {cover ? (
@@ -367,12 +371,23 @@ function MusicResult({ musica, cover, won, attemptsCount, isPlaying, canPlay, on
             </a>
           ))}
         </div>
-        
-          <div className="rounded-[18px] border-2 border-[var(--color-border-subtle)] px-4 py-3"><NextChallengeCountdown /></div>
-        
+        <div className="rounded-[18px] border-2 border-[var(--color-border-subtle)] px-4 py-3 max-md:hidden"><NextChallengeCountdown /></div>
+        <Link
+          href="/"
+          onClick={() => playClickSound()}
+          className="group flex items-center gap-3 rounded-[18px] border-2 border-[var(--color-border-subtle)] p-3 transition-colors hover:bg-[var(--color-fill)]"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={asset("/icon.svg")} alt="" className="h-11 w-11 shrink-0 rounded-[14px] object-contain" />
+          <span className="min-w-0 flex-1">
+            <span className="block text-[12px] font-extrabold uppercase tracking-[0.06em] text-[var(--color-text-muted)]">Próximo jogo</span>
+            <span className="block text-[16px] font-black">Início</span>
+          </span>
+          <ChevronRight size={18} className="text-[var(--color-text-tertiary)] transition-transform group-hover:translate-x-0.5" />
+        </Link>
         <p className="text-center text-[11px] font-semibold text-[var(--color-text-muted)]">Trecho: prévia oficial do Deezer.</p>
       </div>
-    </ModalBase>
+    </ResultShell>
   );
 }
 

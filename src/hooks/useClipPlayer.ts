@@ -2,18 +2,23 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { fetchDeezerTrack } from "@/utils/deezer";
+import { getAudioContext } from "@/utils/audioContext";
 
 export type ClipPlayerStatus = "loading" | "ready" | "error";
 
 /**
  * Toca trechos exatos do início da prévia do Deezer com a Web Audio API.
- * O link da prévia expira, por isso é buscado de novo a cada música.
  * O elemento <audio> comum atrasa uns 100 ms ao pausar, o que estragaria os trechos curtos (0,2 s).
+ * O link da prévia expira, por isso é buscado de novo a cada música.
+ *
+ * Se o navegador (ex.: celular) não liberar a Web Audio, toca com um <audio> comum, menos preciso mas audível.
  */
 export function useClipPlayer(deezerId: number | null) {
-  const ctxRef = useRef<AudioContext | null>(null);
   const bufferRef = useRef<AudioBuffer | null>(null);
+  const previewUrlRef = useRef<string | null>(null);
   const sourceRef = useRef<AudioBufferSourceNode | null>(null);
+  const elementRef = useRef<HTMLAudioElement | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const frameRef = useRef<number | null>(null);
   /** Resultado do último carregamento; vale só para a música (e tentativa) indicada em `key`. */
   const [loaded, setLoaded] = useState<{ key: string; status: "ready" | "error"; cover: string | null } | null>(null);
@@ -25,12 +30,17 @@ export function useClipPlayer(deezerId: number | null) {
   const halt = useCallback(() => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = null;
+    if (timerRef.current !== null) clearTimeout(timerRef.current);
+    timerRef.current = null;
     const src = sourceRef.current;
     sourceRef.current = null;
     if (src) {
       src.onended = null;
       try { src.stop(); } catch { /* já parou */ }
     }
+    const el = elementRef.current;
+    elementRef.current = null;
+    if (el) { el.onended = null; el.pause(); }
   }, []);
 
   const stop = useCallback(() => { halt(); setElapsed(null); }, [halt]);
@@ -43,6 +53,7 @@ export function useClipPlayer(deezerId: number | null) {
     let cancelled = false;
     halt();
     bufferRef.current = null;
+    previewUrlRef.current = null;
     (async () => {
       let cover: string | null = null;
       try {
@@ -50,11 +61,13 @@ export function useClipPlayer(deezerId: number | null) {
         if (cancelled) return;
         setElapsed(null);
         cover = info.cover;
+        previewUrlRef.current = info.preview;
         const bytes = await fetch(info.preview).then((r) => (r.ok ? r.arrayBuffer() : Promise.reject(new Error("prévia"))));
-        ctxRef.current ??= new AudioContext();
-        const buffer = await ctxRef.current.decodeAudioData(bytes);
+        const ctx = getAudioContext();
+        if (ctx) {
+          try { bufferRef.current = await ctx.decodeAudioData(bytes); } catch { bufferRef.current = null; /* usa o plano B */ }
+        }
         if (cancelled) return;
-        bufferRef.current = buffer;
         setLoaded({ key: loadKey, status: "ready", cover });
       } catch {
         if (!cancelled) setLoaded({ key: loadKey, status: "error", cover });
@@ -67,15 +80,37 @@ export function useClipPlayer(deezerId: number | null) {
   const status: ClipPlayerStatus = current?.status ?? "loading";
   const cover = current?.cover ?? null;
 
-  useEffect(() => () => { stop(); void ctxRef.current?.close(); ctxRef.current = null; }, [stop]);
+  useEffect(() => () => halt(), [halt]);
+
+  /** Plano B: <audio> comum, para quando a Web Audio não está liberada. */
+  const playWithElement = useCallback((seconds: number) => {
+    const url = previewUrlRef.current;
+    if (!url) return;
+    const el = new Audio(url);
+    elementRef.current = el;
+    const finish = () => { if (elementRef.current === el) stop(); };
+    el.onended = finish;
+    void el.play().then(() => {
+      timerRef.current = setTimeout(finish, seconds * 1000);
+      const tick = () => {
+        setElapsed(Math.min(seconds, el.currentTime));
+        frameRef.current = requestAnimationFrame(tick);
+      };
+      tick();
+    }).catch(() => { elementRef.current = null; });
+  }, [stop]);
 
   /** Toca os primeiros `seconds` segundos, com fade curtinho nas pontas para não estalar. */
   const play = useCallback(async (seconds: number) => {
-    const ctx = ctxRef.current;
-    const buffer = bufferRef.current;
-    if (!ctx || !buffer) return;
     stop();
-    if (ctx.state === "suspended") await ctx.resume();
+    const ctx = getAudioContext();
+    const buffer = bufferRef.current;
+    if (ctx && ctx.state !== "running") {
+      // Dentro do toque do jogador: pede para o navegador liberar o som
+      try { await ctx.resume(); } catch { /* cai no plano B */ }
+    }
+    if (!ctx || !buffer || ctx.state !== "running") { playWithElement(seconds); return; }
+
     const duration = Math.min(seconds, buffer.duration);
     const fade = Math.min(0.012, duration / 4);
     const gain = ctx.createGain();
@@ -95,7 +130,7 @@ export function useClipPlayer(deezerId: number | null) {
       frameRef.current = requestAnimationFrame(tick);
     };
     tick();
-  }, [stop]);
+  }, [stop, playWithElement]);
 
   return { status, cover, elapsed, isPlaying: elapsed !== null, play, stop, retry: () => setReloadKey((k) => k + 1) };
 }

@@ -7,6 +7,7 @@
  */
 
 import type { TileMatch } from "@/types/game";
+import { getAudioContext, getMasterGain } from "@/utils/audioContext";
 import { asset } from "@/utils/asset";
 
 const SOUND_FILES = {
@@ -33,26 +34,11 @@ interface PlayOptions {
   jitter?: number;
 }
 
-const MASTER_VOLUME = 0.8;
-
-let ctx: AudioContext | null = null;
-let master: GainNode | null = null;
 const buffers = new Map<SoundName, AudioBuffer>();
 let loading: Promise<void> | null = null;
 
 function getContext(): AudioContext | null {
-  if (typeof window === "undefined") return null;
-  if (!ctx) {
-    const Ctor = window.AudioContext ||
-      (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-    if (!Ctor) return null;
-    ctx = new Ctor();
-    master = ctx.createGain();
-    master.gain.value = MASTER_VOLUME;
-    master.connect(ctx.destination);
-  }
-  if (ctx.state === "suspended") ctx.resume().catch(() => {});
-  return ctx;
+  return getAudioContext();
 }
 
 /** Baixa e decodifica todos os sons (≈90 KB). Seguro chamar várias vezes. */
@@ -77,11 +63,12 @@ export function preloadSounds(): Promise<void> {
 function play(name: SoundName, { volume = 1, delay = 0, rate = 1, jitter = 0 }: PlayOptions = {}): void {
   if (isAudioMuted()) return;
   const audio = getContext();
+  const master = getMasterGain();
   if (!audio || !master) return;
 
   const start = (offset: number) => {
     const buffer = buffers.get(name);
-    if (!buffer || !master) return;
+    if (!buffer) return;
     const source = audio.createBufferSource();
     source.buffer = buffer;
     source.playbackRate.value = rate * (1 + (Math.random() * 2 - 1) * jitter);
@@ -101,27 +88,6 @@ function play(name: SoundName, { volume = 1, delay = 0, rate = 1, jitter = 0 }: 
       if (late < 0.4) start(delay - late);
     });
   }
-}
-
-const fileBuffers = new Map<string, Promise<AudioBuffer | null>>();
-
-/** Toca um arquivo avulso (usado na página de teste de sons). */
-export function playFile(url: string, { volume = 1, delay = 0, rate = 1 }: PlayOptions = {}): void {
-  const audio = getContext();
-  if (!audio || !master) return;
-  if (!fileBuffers.has(url)) {
-    fileBuffers.set(url, fetch(url).then((r) => r.arrayBuffer()).then((d) => audio.decodeAudioData(d)).catch(() => null));
-  }
-  void fileBuffers.get(url)!.then((buffer) => {
-    if (!buffer || !master) return;
-    const source = audio.createBufferSource();
-    source.buffer = buffer;
-    source.playbackRate.value = rate;
-    const gain = audio.createGain();
-    gain.gain.value = volume;
-    source.connect(gain).connect(master);
-    source.start(audio.currentTime + delay);
-  });
 }
 
 const MUTE_KEY = "verbum_audio_muted";

@@ -7,15 +7,11 @@ import { AppShell, Wordmark } from "@/components/AppShell";
 import { useGameStats } from "@/hooks/useGameStats";
 import { playClickSound } from "@/utils/sound";
 import { FlameIcon, LockIcon } from "@/components/ui/Icons";
+import { Silhueta } from "@/components/Silhueta";
 import { asset } from "@/utils/asset";
 
 const spring = { type: "spring", stiffness: 260, damping: 24 } as const;
 
-/** Silhueta (gerada no ComfyUI): usa a imagem como máscara e se pinta com a cor do texto do contêiner. */
-function Silhueta({ src, ratio }: { src: string; ratio: number }) {
-  const mask = `url(${asset(src)}) center / contain no-repeat`;
-  return <span className="block h-full bg-current" style={{ aspectRatio: ratio, maxWidth: "100%", mask, WebkitMask: mask }} />;
-}
 const CruzSilhueta = () => <Silhueta src="/menu/silhueta-cruz.webp" ratio={314 / 480} />;
 const LivroSilhueta = () => <Silhueta src="/menu/silhueta-livro.webp" ratio={640 / 449} />;
 const PessoaSilhueta = () => <Silhueta src="/menu/silhueta-pessoa.webp" ratio={520 / 507} />;

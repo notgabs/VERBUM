@@ -88,6 +88,8 @@ const CharacterGameInner: React.FC = () => {
   const [guesses, setGuesses] = useState<PersonagemGuessComparison[]>([]);
   const [isWon, setIsWon] = useState(false);
   const [isVictoryModalOpen, setIsVictoryModalOpen] = useState(false);
+  /** true só quando o jogador acabou de acertar (confete e som); ao voltar à tela já vencida, não. */
+  const [justWon, setJustWon] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
   const [hintsUnlocked, setHintsUnlocked] = useState<Record<HintKey, boolean>>({ h1: false, h2: false });
   const [activeHint, setActiveHint] = useState<HintKey | null>(null);
@@ -181,6 +183,7 @@ const CharacterGameInner: React.FC = () => {
       // Só declara a vitória depois que a última peça virar (todas verdes)
       schedule(() => {
         setIsWon(true);
+        setJustWon(true);
         setIsVictoryModalOpen(true);
         playVictorySound();
         recordGameResult(true, updatedGuesses.length, hintsUsed);
@@ -251,7 +254,7 @@ const CharacterGameInner: React.FC = () => {
 
         {isWon ? (
           <div className="mt-6 flex flex-col items-center gap-4">
-            <Button size="lg" variant="gold" onClick={() => { playClickSound(); setIsVictoryModalOpen(true); }}>
+            <Button size="lg" variant="gold" className="max-md:hidden" onClick={() => { playClickSound(); setIsVictoryModalOpen(true); }}>
               <CheckIcon size={18} /> Ver resultado
             </Button>
             <NextChallengeCountdown />
@@ -347,7 +350,7 @@ const CharacterGameInner: React.FC = () => {
         <HintDialog hint={activeHint} text={activeHint === "h1" ? targetChar.dica1 : targetChar.dica2} onClose={() => setActiveHint(null)} />
       )}
 
-      {isWon && isVictoryModalOpen && targetChar && (
+      {isWon && targetChar && (
         <VictoryModal
           solutionName={targetChar.nome}
           solutionImage={targetChar.imagem}
@@ -356,10 +359,9 @@ const CharacterGameInner: React.FC = () => {
           characterKnownFor={targetChar.conhecidoPor}
           attemptsCount={guesses.length}
           hintsUsedCount={hintsUsed}
-          nextGameHref="/passagem"
-          nextGameLabel="Passagem"
-          nextGameDescription="Adivinhe livro, capítulo e versículo"
-          nextGameIcon="/passagem-emoji.webp"
+          game="personagem"
+          open={isVictoryModalOpen}
+          celebrate={justWon}
           onClose={() => setIsVictoryModalOpen(false)}
           showCountdown
         />
